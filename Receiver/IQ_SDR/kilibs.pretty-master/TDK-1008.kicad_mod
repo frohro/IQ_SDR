@@ -1,0 +1,12 @@
+(module TDK-1008 (layer F.Cu) (tedit 55F9B76C)
+  (fp_text reference REF** (at 0 2.25) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.15)))
+  )
+  (fp_text value TDK-1008 (at 0 -2) (layer F.Fab) hide
+    (effects (font (size 1.5 1.5) (thickness 0.15)))
+  )
+  (fp_line (start -1.25 1) (end 1.25 1) (layer F.SilkS) (width 0.15))
+  (fp_line (start -1.25 -1) (end 1.25 -1) (layer F.SilkS) (width 0.15))
+  (pad 1 smd rect (at -1.25 0) (size 1 1.5) (layers F.Cu F.Paste F.Mask))
+  (pad 2 smd rect (at 1.25 0) (size 1 1.5) (layers F.Cu F.Paste F.Mask))
+)

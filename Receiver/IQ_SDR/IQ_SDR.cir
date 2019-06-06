@@ -1,0 +1,58 @@
+.title KiCad schematic
+.include "IQ_SDR_Spice.lib"
+XU2 +3V3 Net-_U2-Pad2_ Net-_U2-Pad3_ "/SCL" "/SDA" Net-_J4-Pad1_ +3V3 GND Net-_J3-Pad1_ Net-_J5-Pad1_ Si5351a
+CON1 GND Net-_CON1-Pad2_ Net-_CON1-Pad3_ SJ1-3523N
+XU4 +3V3 "/LO_Q" Net-_J5-Pad1_ +3V3 Net-_U4-Pad12_ "/LO_I" GND "/LO_Q" NC_01 +3V3 Net-_J5-Pad1_ Net-_U4-Pad12_ +3V3 +3V3 SN74LVC74APWR
+C14 +3V3 GND 0.1uF
+C16 +3V3 GND 0.1uF
+C18 "/VCC_SW" GND 0.1uF
+C15 +5V GND 0.01
+C27 +5V GND 0.1uF
+C24 +3V3 GND 0.1uF
+C8 Net-_C4-Pad1_ GND 680pF
+L11 Net-_C4-Pad1_ Net-_C12-Pad2_ 1.0uH
+C12 Net-_C12-Pad1_ Net-_C12-Pad2_ 180pF
+L7 Net-_C4-Pad1_ GND 0.27uH
+L3 Net-_L3-Pad1_ Net-_C4-Pad2_ 1.0uH
+C4 Net-_C4-Pad1_ Net-_C4-Pad2_ 180pF
+R1 +5V GNDA 2.2k
+R2 GNDA GND 2.2k
+C19 Net-_C19-Pad1_ GND 0.01uF
+C17 Net-_C17-Pad1_ GND 0.01uF
+C25 Net-_C25-Pad1_ Net-_C22-Pad1_ 10uF
+R7 Net-_CON1-Pad3_ Net-_C25-Pad1_ 100
+C26 Net-_C26-Pad1_ Net-_C23-Pad1_ 10uF
+R8 Net-_CON1-Pad2_ Net-_C26-Pad1_ 100
+R4 Net-_C23-Pad2_ Net-_C19-Pad1_ 10
+R6 Net-_C23-Pad1_ Net-_C23-Pad2_ 4.7k
+C23 Net-_C23-Pad1_ Net-_C23-Pad2_ 390pF
+R3 Net-_C22-Pad2_ Net-_C17-Pad1_ 10
+R5 Net-_C22-Pad1_ Net-_C22-Pad2_ 4.7k
+C22 Net-_C22-Pad1_ Net-_C22-Pad2_ 390pF
+C20 GND GNDA 10uF
+C21 GND GNDA 0.1uF
+D2 Net-_D1-Pad2_ GND 1N914
+D1 GND Net-_D1-Pad2_ 1N914
+C7 Net-_C3-Pad1_ GND 1500pF
+L10 Net-_C3-Pad1_ Net-_C11-Pad2_ 2.0uH
+C11 Net-_C11-Pad1_ Net-_C11-Pad2_ 390pF
+L6 Net-_C3-Pad1_ GND 0.46uH
+L2 Net-_L2-Pad1_ Net-_C3-Pad2_ 2.0uH
+C3 Net-_C3-Pad1_ Net-_C3-Pad2_ 390pF
+C6 Net-_C2-Pad1_ GND 1500pF
+L9 Net-_C2-Pad1_ Net-_C10-Pad2_ 5.5uH
+C10 Net-_C10-Pad1_ Net-_C10-Pad2_ 680pF
+L5 Net-_C2-Pad1_ GND 2.6uH
+L1 Net-_L1-Pad1_ Net-_C2-Pad2_ 5.5uH
+C2 Net-_C2-Pad1_ Net-_C2-Pad2_ 680pF
+C9 Net-_C5-Pad1_ GND 390pF
+L12 Net-_C5-Pad1_ Net-_C13-Pad2_ 0.46uH
+C13 Net-_C13-Pad1_ Net-_C13-Pad2_ 100pF
+L8 Net-_C5-Pad1_ GND 0.13uH
+L4 Net-_L4-Pad1_ Net-_C5-Pad2_ 0.46uH
+C5 Net-_C5-Pad1_ Net-_C5-Pad2_ 100pF
+C1 +5V GND 0.01
+V1 "/RF_IN" GND sin(0 10u {freq})
+.param freq=10000000
+.param if_freq={freq + 1000}
+.end
