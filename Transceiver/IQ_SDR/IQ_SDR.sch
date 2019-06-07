@@ -1,0 +1,2866 @@
+EESchema Schematic File Version 4
+LIBS:IQ_SDR-cache
+EELAYER 29 0
+EELAYER END
+$Descr USLedger 17000 11000
+encoding utf-8
+Sheet 1 1
+Title "IQ_SDR Transceiver"
+Date "2019-05-29"
+Rev "0.1"
+Comp "Walla Walla University"
+Comment1 "Ultra Cheap HF QSD SDR"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Oscillator:Si5351A-B-GT U2
+U 1 1 5CEEB368
+P 4300 4100
+F 0 "U2" H 4300 4100 50  0000 C CNN
+F 1 "Si5351A-B-GT" H 3900 3650 50  0000 C CNN
+F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 4300 3300 50  0001 C CNN
+F 3 "https://www.silabs.com/documents/public/data-sheets/Si5351-B.pdf" H 3950 4000 50  0001 C CNN
+F 4 "X" H 4300 4100 50  0001 C CNN "Spice_Primitive"
+F 5 "Si5351a" H 4300 4100 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4300 4100 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "IQ_SDR_Spice.lib" H 4300 4100 50  0001 C CNN "Spice_Lib_File"
+	1    4300 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5CEECC71
+P 11100 9000
+F 0 "A1" H 11100 8950 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 11600 8050 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 11250 8050 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/uploads/Main/Arduino_Nano-Rev3.2-SCH.pdf" H 11100 8000 50  0001 C CNN
+F 4 "R" H 11100 9000 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 11100 9000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 11100 9000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    11100 9000
+	1    0    0    -1  
+$EndComp
+$Comp
+L IQ_SDR-rescue:BNC-lt6231 P1
+U 1 1 5CEF3045
+P 900 9750
+F 0 "P1" H 854 9988 50  0000 C CNN
+F 1 "BNC" H 854 9897 50  0000 C CNN
+F 2 "" H 900 9750 50  0000 C CNN
+F 3 "" H 900 9750 50  0000 C CNN
+F 4 "R" H 900 9750 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 900 9750 50  0001 C CNN "Spice_Model"
+F 6 "N" H 900 9750 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    900  9750
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Amplifier_Operational:NJM5532 U5
+U 2 1 5CEF95BA
+P 8650 7650
+F 0 "U5" H 8600 7650 50  0000 C CNN
+F 1 "SA5532 or LT6231" H 8900 7850 50  0000 C CNN
+F 2 "SMA:DMP8" H 8650 7650 50  0001 C CNN
+F 3 "http://www.njr.com/semicon/PDF/NJM5532_E.pdf" H 8650 7650 50  0001 C CNN
+F 4 "X" H 8650 7650 50  0001 C CNN "Spice_Primitive"
+F 5 "NJM5532" H 8650 7650 50  0001 C CNN "Spice_Model"
+F 6 "N" H 8650 7650 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "IQ_SDR_Spice.lib" H 8650 7650 50  0001 C CNN "Spice_Lib_File"
+	2    8650 7650
+	1    0    0    1   
+$EndComp
+$Comp
+L Amplifier_Operational:NJM5532 U5
+U 3 1 5CEFAA95
+P 5900 9450
+F 0 "U5" H 5858 9496 50  0000 L CNN
+F 1 "SA5532 or LT6231" H 5950 9950 50  0000 L CNN
+F 2 "SMA:DMP8" H 5900 9450 50  0001 C CNN
+F 3 "http://www.njr.com/semicon/PDF/NJM5532_E.pdf" H 5900 9450 50  0001 C CNN
+	3    5900 9450
+	1    0    0    -1  
+$EndComp
+$Comp
+L dk_Barrel-Audio-Connectors:SJ1-3523N CON1
+U 1 1 5CF0CEB7
+P 10150 6550
+F 0 "CON1" H 10200 6850 60  0000 R CNN
+F 1 "SJ1-3523N" H 10150 6250 60  0001 R CNN
+F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 10350 6750 60  0001 L CNN
+F 3 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 10350 6850 60  0001 L CNN
+F 4 "CP1-3523N-ND" H 10350 6950 60  0001 L CNN "Digi-Key_PN"
+F 5 "SJ1-3523N" H 10350 7050 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 10350 7150 60  0001 L CNN "Category"
+F 7 "Barrel - Audio Connectors" H 10350 7250 60  0001 L CNN "Family"
+F 8 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 10350 7350 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/cui-inc/SJ1-3523N/CP1-3523N-ND/738689" H 10350 7450 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN JACK STEREO 3.5MM R/A" H 10350 7550 60  0001 L CNN "Description"
+F 11 "CUI Inc." H 10350 7650 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 10350 7750 60  0001 L CNN "Status"
+	1    10150 6550
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR069
+U 1 1 5CF0DF98
+P 11300 7850
+F 0 "#PWR069" H 11300 7700 50  0001 C CNN
+F 1 "+5V" H 11315 8023 50  0000 C CNN
+F 2 "" H 11300 7850 50  0001 C CNN
+F 3 "" H 11300 7850 50  0001 C CNN
+	1    11300 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR051
+U 1 1 5CF0F6E4
+P 5800 8950
+F 0 "#PWR051" H 5800 8800 50  0001 C CNN
+F 1 "+5V" H 5815 9123 50  0000 C CNN
+F 2 "" H 5800 8950 50  0001 C CNN
+F 3 "" H 5800 8950 50  0001 C CNN
+	1    5800 8950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR039
+U 1 1 5CF0FB4E
+P 4200 3600
+F 0 "#PWR039" H 4200 3450 50  0001 C CNN
+F 1 "+3.3V" H 4215 3773 50  0000 C CNN
+F 2 "" H 4200 3600 50  0001 C CNN
+F 3 "" H 4200 3600 50  0001 C CNN
+	1    4200 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR068
+U 1 1 5CF10A3E
+P 11200 7850
+F 0 "#PWR068" H 11200 7700 50  0001 C CNN
+F 1 "+3.3V" H 11000 7950 50  0000 C CNN
+F 2 "" H 11200 7850 50  0001 C CNN
+F 3 "" H 11200 7850 50  0001 C CNN
+	1    11200 7850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR052
+U 1 1 5CF12BC2
+P 5800 9750
+F 0 "#PWR052" H 5800 9500 50  0001 C CNN
+F 1 "GND" H 5805 9577 50  0000 C CNN
+F 2 "" H 5800 9750 50  0001 C CNN
+F 3 "" H 5800 9750 50  0001 C CNN
+	1    5800 9750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR040
+U 1 1 5CF13271
+P 4300 4600
+F 0 "#PWR040" H 4300 4350 50  0001 C CNN
+F 1 "GND" H 4305 4427 50  0000 C CNN
+F 2 "" H 4300 4600 50  0001 C CNN
+F 3 "" H 4300 4600 50  0001 C CNN
+	1    4300 4600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5CF13F37
+P 900 9950
+F 0 "#PWR01" H 900 9700 50  0001 C CNN
+F 1 "GND" H 905 9777 50  0000 C CNN
+F 2 "" H 900 9950 50  0001 C CNN
+F 3 "" H 900 9950 50  0001 C CNN
+	1    900  9950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR070
+U 1 1 5CF1458E
+P 9650 6300
+F 0 "#PWR070" H 9650 6050 50  0001 C CNN
+F 1 "GND" H 9655 6127 50  0000 C CNN
+F 2 "" H 9650 6300 50  0001 C CNN
+F 3 "" H 9650 6300 50  0001 C CNN
+	1    9650 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR067
+U 1 1 5CF1500E
+P 11150 10000
+F 0 "#PWR067" H 11150 9750 50  0001 C CNN
+F 1 "GND" H 11155 9827 50  0000 C CNN
+F 2 "" H 11150 10000 50  0001 C CNN
+F 3 "" H 11150 10000 50  0001 C CNN
+	1    11150 10000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11100 10000 11150 10000
+Wire Wire Line
+	11150 10000 11200 10000
+Connection ~ 11150 10000
+Text Label 11600 9400 0    50   ~ 0
+SDA
+Text Label 11600 9500 0    50   ~ 0
+SCL
+Text Label 3800 4400 2    50   ~ 0
+SDA
+Text Label 3800 4300 2    50   ~ 0
+SCL
+$Comp
+L cx3225:CX3225 Y1
+U 1 1 5CF1B840
+P 3300 3900
+F 0 "Y1" V 3346 3722 50  0000 R CNN
+F 1 "CX3225" V 3255 3722 50  0000 R CNN
+F 2 "Crystals:Crystal_SMD_Abracon_ABM8G-4pin_3.2x2.5mm" H 3300 3900 50  0001 C CNN
+F 3 "https://global.kyocera.com/prdct/electro/product/pdf/cx3225sb_e.pdf" H 3300 3900 50  0001 C CNN
+F 4 "R" H 3300 3900 50  0001 C CNN "Spice_Primitive"
+F 5 "1" H 3300 3900 50  0001 C CNN "Spice_Model"
+F 6 "N" H 3300 3900 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3300 3900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	3300 3750 3800 3750
+Wire Wire Line
+	3800 3750 3800 3800
+Wire Wire Line
+	3800 4000 3800 4050
+Wire Wire Line
+	3800 4050 3300 4050
+$Comp
+L power:GND #PWR033
+U 1 1 5CF1E1F5
+P 3200 4100
+F 0 "#PWR033" H 3200 3850 50  0001 C CNN
+F 1 "GND" H 3205 3927 50  0000 C CNN
+F 2 "" H 3200 4100 50  0001 C CNN
+F 3 "" H 3200 4100 50  0001 C CNN
+	1    3200 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3700 3100 3700
+Wire Wire Line
+	3100 3700 3100 4100
+Wire Wire Line
+	3100 4100 3200 4100
+Connection ~ 3200 4100
+$Comp
+L dk_Logic-Flip-Flops:SN74HC74N U6
+U 1 1 5CF21139
+P 6000 4200
+F 0 "U6" H 5900 3650 60  0000 C CNN
+F 1 "74ALVC74D" H 5800 4750 60  0000 C CNN
+F 2 "SMA:SO14" H 6200 4400 60  0001 L CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/74ALVC74.pdf" H 6200 4500 60  0001 L CNN
+F 4 "1727-6097-ND" H 6200 4600 60  0001 L CNN "Digi-Key_PN"
+F 5 "SN74HC74N" H 6200 4700 60  0001 L CNN "MPN"
+F 6 "Integrated Circuits (ICs)" H 6200 4800 60  0001 L CNN "Category"
+F 7 "Logic - Flip Flops" H 6200 4900 60  0001 L CNN "Family"
+F 8 "" H 6200 5000 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/texas-instruments/SN74HC74N/296-1602-5-ND/277248" H 6200 5100 60  0001 L CNN "DK_Detail_Page"
+F 10 "Dual Flip Flop" H 6200 5200 60  0001 L CNN "Description"
+F 11 "Nexperia" H 6200 5300 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 6200 5400 60  0001 L CNN "Status"
+F 13 "X" H 6000 4200 50  0001 C CNN "Spice_Primitive"
+F 14 "SN74LVC74APWR" H 6000 4200 50  0001 C CNN "Spice_Model"
+F 15 "Y" H 6000 4200 50  0001 C CNN "Spice_Netlist_Enabled"
+F 16 "IQ_SDR_Spice.lib" H 6000 4200 50  0001 C CNN "Spice_Lib_File"
+	1    6000 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR055
+U 1 1 5CF22E3D
+P 6100 4800
+F 0 "#PWR055" H 6100 4550 50  0001 C CNN
+F 1 "GND" H 6050 4650 50  0000 C CNN
+F 2 "" H 6100 4800 50  0001 C CNN
+F 3 "" H 6100 4800 50  0001 C CNN
+	1    6100 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR054
+U 1 1 5CF23D33
+P 6100 3550
+F 0 "#PWR054" H 6100 3400 50  0001 C CNN
+F 1 "+3.3V" H 6115 3723 50  0000 C CNN
+F 2 "" H 6100 3550 50  0001 C CNN
+F 3 "" H 6100 3550 50  0001 C CNN
+	1    6100 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11200 7850 11200 7900
+Wire Wire Line
+	11300 7850 11300 7900
+Wire Wire Line
+	9550 6650 9750 6650
+$Comp
+L power:GND #PWR042
+U 1 1 5CF50DFE
+P 4950 7950
+F 0 "#PWR042" H 4950 7700 50  0001 C CNN
+F 1 "GND" H 4955 7777 50  0000 C CNN
+F 2 "" H 4950 7950 50  0001 C CNN
+F 3 "" H 4950 7950 50  0001 C CNN
+	1    4950 7950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 6750 5900 6750
+Text Label 6450 6450 0    50   ~ 0
+LO_I
+Text Label 6550 8100 0    50   ~ 0
+LO_Q
+$Comp
+L power:GNDA #PWR050
+U 1 1 5CF5C6F9
+P 5750 6950
+F 0 "#PWR050" H 5750 6700 50  0001 C CNN
+F 1 "GNDA" H 5600 6900 50  0000 C CNN
+F 2 "" H 5750 6950 50  0001 C CNN
+F 3 "" H 5750 6950 50  0001 C CNN
+	1    5750 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR046
+U 1 1 5CF636F6
+P 5300 4200
+F 0 "#PWR046" H 5300 4050 50  0001 C CNN
+F 1 "+3.3V" H 5400 4350 50  0000 C CNN
+F 2 "" H 5300 4200 50  0001 C CNN
+F 3 "" H 5300 4200 50  0001 C CNN
+	1    5300 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 4200 5300 4200
+Wire Wire Line
+	5200 4200 5200 4000
+Wire Wire Line
+	5600 4400 5200 4400
+Wire Wire Line
+	5200 4400 5200 4200
+Connection ~ 5200 4200
+Wire Wire Line
+	5600 4600 5200 4600
+Wire Wire Line
+	5200 4600 5200 4400
+Connection ~ 5200 4400
+Wire Wire Line
+	6300 4100 6550 4100
+Wire Wire Line
+	6550 4100 6550 5050
+Wire Wire Line
+	6550 5050 5450 5050
+Wire Wire Line
+	5450 5050 5450 4500
+Wire Wire Line
+	5450 4500 5600 4500
+Wire Wire Line
+	6500 5000 5500 5000
+Wire Wire Line
+	5500 5000 5500 4100
+Wire Wire Line
+	5500 4100 5600 4100
+Text Label 6300 4200 0    50   ~ 0
+LO_I
+Text Label 6300 4400 0    50   ~ 0
+LO_Q
+Wire Wire Line
+	5600 4300 5550 4300
+Wire Wire Line
+	5600 4000 5200 4000
+Wire Wire Line
+	5300 4200 5200 4200
+Wire Wire Line
+	6100 3550 6100 3600
+$Comp
+L power:GND #PWR027
+U 1 1 5CF7DFD5
+P 2900 3950
+F 0 "#PWR027" H 2900 3700 50  0001 C CNN
+F 1 "GND" H 3050 3900 50  0001 C CNN
+F 2 "" H 2900 3950 50  0001 C CNN
+F 3 "" H 2900 3950 50  0001 C CNN
+	1    2900 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C23
+U 1 1 5CF79F41
+P 2900 3800
+F 0 "C23" H 2700 3900 50  0000 L CNN
+F 1 "0.1uF" H 2650 3700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2938 3650 50  0001 C CNN
+F 3 "~" H 2900 3800 50  0001 C CNN
+	1    2900 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C38
+U 1 1 5CF85568
+P 6400 3750
+F 0 "C38" H 6515 3796 50  0000 L CNN
+F 1 "0.1uF" H 6515 3705 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 6438 3600 50  0001 C CNN
+F 3 "~" H 6400 3750 50  0001 C CNN
+	1    6400 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR057
+U 1 1 5CF85EBD
+P 6400 3900
+F 0 "#PWR057" H 6400 3650 50  0001 C CNN
+F 1 "GND" H 6550 3850 50  0000 C CNN
+F 2 "" H 6400 3900 50  0001 C CNN
+F 3 "" H 6400 3900 50  0001 C CNN
+	1    6400 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3600 6100 3600
+Connection ~ 6100 3600
+Wire Wire Line
+	6100 3600 6100 3700
+Wire Wire Line
+	5800 8950 5800 9050
+$Comp
+L Device:C C37
+U 1 1 5CF8D1A8
+P 6100 9200
+F 0 "C37" H 6215 9246 50  0000 L CNN
+F 1 "0.01" H 6215 9155 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 6138 9050 50  0001 C CNN
+F 3 "~" H 6100 9200 50  0001 C CNN
+	1    6100 9200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR056
+U 1 1 5CF8D9FF
+P 6100 9350
+F 0 "#PWR056" H 6100 9100 50  0001 C CNN
+F 1 "GND" H 6250 9300 50  0000 C CNN
+F 2 "" H 6100 9350 50  0001 C CNN
+F 3 "" H 6100 9350 50  0001 C CNN
+	1    6100 9350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 9050 5800 9050
+Connection ~ 5800 9050
+Wire Wire Line
+	5800 9050 5800 9150
+$Comp
+L Device:C C48
+U 1 1 5CF8F2B6
+P 11650 8050
+F 0 "C48" H 11765 8096 50  0000 L CNN
+F 1 "0.1uF" H 11765 8005 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 11688 7900 50  0001 C CNN
+F 3 "~" H 11650 8050 50  0001 C CNN
+	1    11650 8050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11300 7900 11650 7900
+Connection ~ 11300 7900
+Wire Wire Line
+	11300 7900 11300 8000
+$Comp
+L Device:C C45
+U 1 1 5CF90FB5
+P 10500 8050
+F 0 "C45" H 10615 8096 50  0000 L CNN
+F 1 "0.1uF" H 10250 7950 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 10538 7900 50  0001 C CNN
+F 3 "~" H 10500 8050 50  0001 C CNN
+	1    10500 8050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10500 7900 11200 7900
+Connection ~ 11200 7900
+Wire Wire Line
+	11200 7900 11200 8000
+$Comp
+L power:GND #PWR066
+U 1 1 5CF92CAB
+P 10500 8200
+F 0 "#PWR066" H 10500 7950 50  0001 C CNN
+F 1 "GND" H 10650 8150 50  0000 C CNN
+F 2 "" H 10500 8200 50  0001 C CNN
+F 3 "" H 10500 8200 50  0001 C CNN
+	1    10500 8200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR071
+U 1 1 5CF9325E
+P 11650 8200
+F 0 "#PWR071" H 11650 7950 50  0001 C CNN
+F 1 "GND" H 11800 8150 50  0000 C CNN
+F 2 "" H 11650 8200 50  0001 C CNN
+F 3 "" H 11650 8200 50  0001 C CNN
+	1    11650 8200
+	1    0    0    -1  
+$EndComp
+NoConn ~ 11000 8000
+NoConn ~ 10600 8400
+NoConn ~ 10600 8500
+NoConn ~ 10600 8600
+NoConn ~ 10600 8700
+NoConn ~ 10600 9100
+NoConn ~ 10600 9200
+NoConn ~ 10600 9300
+NoConn ~ 10600 9400
+NoConn ~ 10600 9500
+NoConn ~ 10600 9600
+NoConn ~ 10600 9700
+NoConn ~ 11600 9700
+NoConn ~ 11600 9600
+NoConn ~ 11600 9300
+NoConn ~ 11600 9200
+NoConn ~ 11600 9100
+NoConn ~ 11600 9000
+NoConn ~ 11600 8800
+NoConn ~ 11600 8500
+NoConn ~ 11600 8400
+$Comp
+L Device:C C17
+U 1 1 5CFAE5FB
+P 2700 7350
+F 0 "C17" H 2750 7450 50  0000 L CNN
+F 1 "680pF" H 2450 7250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2738 7200 50  0001 C CNN
+F 3 "~" H 2700 7350 50  0001 C CNN
+	1    2700 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L19
+U 1 1 5CFAFFA5
+P 3250 7200
+F 0 "L19" V 3440 7200 50  0000 C CNN
+F 1 "1.0uH" V 3349 7200 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3250 7200 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3250 7200 50  0001 C CNN
+	1    3250 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C26
+U 1 1 5CFB25E4
+P 3550 7200
+F 0 "C26" V 3298 7200 50  0000 C CNN
+F 1 "180pF" V 3389 7200 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3588 7050 50  0001 C CNN
+F 3 "~" H 3550 7200 50  0001 C CNN
+	1    3550 7200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 5CFB2B25
+P 2700 7500
+F 0 "#PWR020" H 2700 7250 50  0001 C CNN
+F 1 "GND" H 2705 7327 50  0000 C CNN
+F 2 "" H 2700 7500 50  0001 C CNN
+F 3 "" H 2700 7500 50  0001 C CNN
+	1    2700 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR030
+U 1 1 5CFB3821
+P 2950 7500
+F 0 "#PWR030" H 2950 7250 50  0001 C CNN
+F 1 "GND" H 2955 7327 50  0000 C CNN
+F 2 "" H 2950 7500 50  0001 C CNN
+F 3 "" H 2950 7500 50  0001 C CNN
+	1    2950 7500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L15
+U 1 1 5CFBF0C4
+P 2950 7350
+F 0 "L15" H 3003 7396 50  0000 L CNN
+F 1 "0.27uH" H 3003 7305 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 7350 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 7350 50  0001 C CNN
+	1    2950 7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L7
+U 1 1 5CFD3358
+P 2150 7200
+F 0 "L7" V 2340 7200 50  0000 C CNN
+F 1 "1.0uH" V 2249 7200 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2150 7200 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2150 7200 50  0001 C CNN
+	1    2150 7200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C13
+U 1 1 5CFD335E
+P 2450 7200
+F 0 "C13" V 2500 7050 50  0000 C CNN
+F 1 "180pF" V 2289 7200 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 2488 7050 50  0001 C CNN
+F 3 "~" H 2450 7200 50  0001 C CNN
+	1    2450 7200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2600 7200 2700 7200
+Wire Wire Line
+	2700 7200 2950 7200
+Connection ~ 2700 7200
+Wire Wire Line
+	2950 7200 3100 7200
+Connection ~ 2950 7200
+$Comp
+L Device:R R6
+U 1 1 5CFD8143
+P 7600 6500
+F 0 "R6" H 7670 6546 50  0000 L CNN
+F 1 "2.2k" H 7670 6455 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 7530 6500 50  0001 C CNN
+F 3 "~" H 7600 6500 50  0001 C CNN
+	1    7600 6500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDA #PWR063
+U 1 1 5CFD8B56
+P 7900 7100
+F 0 "#PWR063" H 7900 6850 50  0001 C CNN
+F 1 "GNDA" H 7905 6927 50  0000 C CNN
+F 2 "" H 7900 7100 50  0001 C CNN
+F 3 "" H 7900 7100 50  0001 C CNN
+	1    7900 7100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR062
+U 1 1 5CFD92C7
+P 7600 7100
+F 0 "#PWR062" H 7600 6850 50  0001 C CNN
+F 1 "GND" H 7605 6927 50  0000 C CNN
+F 2 "" H 7600 7100 50  0001 C CNN
+F 3 "" H 7600 7100 50  0001 C CNN
+	1    7600 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 6800 7600 6750
+Wire Wire Line
+	7600 6750 7900 6750
+Connection ~ 7600 6750
+Wire Wire Line
+	7600 6750 7600 6650
+$Comp
+L Device:R R7
+U 1 1 5CFDF685
+P 7600 6950
+F 0 "R7" H 7670 6996 50  0000 L CNN
+F 1 "2.2k" H 7670 6905 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 7530 6950 50  0001 C CNN
+F 3 "~" H 7600 6950 50  0001 C CNN
+	1    7600 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7900 7100 7900 6750
+Wire Wire Line
+	7900 6350 8350 6350
+Connection ~ 7900 6750
+$Comp
+L power:GNDA #PWR065
+U 1 1 5CFE1AFB
+P 8350 7750
+F 0 "#PWR065" H 8350 7500 50  0001 C CNN
+F 1 "GNDA" H 8355 7577 50  0000 C CNN
+F 2 "" H 8350 7750 50  0001 C CNN
+F 3 "" H 8350 7750 50  0001 C CNN
+	1    8350 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C40
+U 1 1 5CFE22C1
+P 7000 7950
+F 0 "C40" H 7115 7996 50  0000 L CNN
+F 1 "0.1uF" H 7115 7905 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 7038 7800 50  0001 C CNN
+F 3 "~" H 7000 7950 50  0001 C CNN
+	1    7000 7950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C39
+U 1 1 5CFE2B9E
+P 6900 6300
+F 0 "C39" H 7015 6346 50  0000 L CNN
+F 1 "0.1uF" H 7015 6255 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 6938 6150 50  0001 C CNN
+F 3 "~" H 6900 6300 50  0001 C CNN
+	1    6900 6300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR058
+U 1 1 5CFE32C2
+P 6900 6450
+F 0 "#PWR058" H 6900 6200 50  0001 C CNN
+F 1 "GND" H 7050 6400 50  0000 C CNN
+F 2 "" H 6900 6450 50  0001 C CNN
+F 3 "" H 6900 6450 50  0001 C CNN
+	1    6900 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR059
+U 1 1 5CFE3701
+P 7000 8100
+F 0 "#PWR059" H 7000 7850 50  0001 C CNN
+F 1 "GND" H 7150 8050 50  0000 C CNN
+F 2 "" H 7000 8100 50  0001 C CNN
+F 3 "" H 7000 8100 50  0001 C CNN
+	1    7000 8100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 7800 7000 7800
+Wire Wire Line
+	6900 6150 6750 6150
+$Comp
+L Device:C C46
+U 1 1 5CFE7D41
+P 9100 6250
+F 0 "C46" V 8848 6250 50  0000 C CNN
+F 1 "10uF" V 8939 6250 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 9138 6100 50  0001 C CNN
+F 3 "~" H 9100 6250 50  0001 C CNN
+	1    9100 6250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R12
+U 1 1 5CFE8566
+P 9400 6250
+F 0 "R12" V 9193 6250 50  0000 C CNN
+F 1 "100" V 9284 6250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 9330 6250 50  0001 C CNN
+F 3 "~" H 9400 6250 50  0001 C CNN
+	1    9400 6250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C47
+U 1 1 5CFEEFEF
+P 9100 7650
+F 0 "C47" V 8848 7650 50  0000 C CNN
+F 1 "10uF" V 8939 7650 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 9138 7500 50  0001 C CNN
+F 3 "~" H 9100 7650 50  0001 C CNN
+	1    9100 7650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R13
+U 1 1 5CFEEFF5
+P 9400 7650
+F 0 "R13" V 9193 7650 50  0000 C CNN
+F 1 "100" V 9284 7650 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 9330 7650 50  0001 C CNN
+F 3 "~" H 9400 7650 50  0001 C CNN
+	1    9400 7650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R9
+U 1 1 5CFF66E0
+P 8050 7550
+F 0 "R9" V 7843 7550 50  0000 C CNN
+F 1 "10" V 7934 7550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7980 7550 50  0001 C CNN
+F 3 "~" H 8050 7550 50  0001 C CNN
+F 4 "R" H 8050 7550 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 8050 7550 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 8050 7550 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    8050 7550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R11
+U 1 1 5CFF71A6
+P 8650 7200
+F 0 "R11" V 8443 7200 50  0000 C CNN
+F 1 "1.0k" V 8534 7200 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 8580 7200 50  0001 C CNN
+F 3 "~" H 8650 7200 50  0001 C CNN
+	1    8650 7200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C44
+U 1 1 5CFF7C11
+P 8650 6850
+F 0 "C44" V 8600 7000 50  0000 C CNN
+F 1 "0.002uF" V 8500 6850 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 8688 6700 50  0001 C CNN
+F 3 "~" H 8650 6850 50  0001 C CNN
+	1    8650 6850
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5CFF8217
+P 8000 6150
+F 0 "R8" V 7793 6150 50  0000 C CNN
+F 1 "10" V 7884 6150 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 7930 6150 50  0001 C CNN
+F 3 "~" H 8000 6150 50  0001 C CNN
+	1    8000 6150
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R10
+U 1 1 5D00029B
+P 8650 5800
+F 0 "R10" V 8443 5800 50  0000 C CNN
+F 1 "4.7k" V 8534 5800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 8580 5800 50  0001 C CNN
+F 3 "~" H 8650 5800 50  0001 C CNN
+	1    8650 5800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C43
+U 1 1 5D0002A1
+P 8650 5450
+F 0 "C43" V 8600 5700 50  0000 C CNN
+F 1 "0.002uF" V 8600 5250 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 8688 5300 50  0001 C CNN
+F 3 "~" H 8650 5450 50  0001 C CNN
+	1    8650 5450
+	0    1    1    0   
+$EndComp
+Connection ~ 6900 6150
+Wire Wire Line
+	8150 6150 8350 6150
+Wire Wire Line
+	8350 6150 8350 5800
+Wire Wire Line
+	8350 5450 8500 5450
+Connection ~ 8350 6150
+Wire Wire Line
+	8500 5800 8350 5800
+Connection ~ 8350 5800
+Wire Wire Line
+	8350 5800 8350 5450
+Wire Wire Line
+	8800 5450 8950 5450
+Wire Wire Line
+	8950 5450 8950 5800
+Connection ~ 8950 6250
+Wire Wire Line
+	8800 5800 8950 5800
+Connection ~ 8950 5800
+Wire Wire Line
+	8950 5800 8950 6250
+Wire Wire Line
+	7600 7550 7900 7550
+Wire Wire Line
+	8200 7550 8350 7550
+Wire Wire Line
+	8350 7550 8350 7200
+Wire Wire Line
+	8350 6850 8500 6850
+Connection ~ 8350 7550
+Wire Wire Line
+	8500 7200 8350 7200
+Connection ~ 8350 7200
+Wire Wire Line
+	8350 7200 8350 6850
+Wire Wire Line
+	8800 7200 8950 7200
+Wire Wire Line
+	8950 7200 8950 7650
+Connection ~ 8950 7650
+Wire Wire Line
+	8800 6850 8950 6850
+Wire Wire Line
+	8950 6850 8950 7200
+Connection ~ 8950 7200
+Wire Wire Line
+	9550 6250 9550 6550
+$Comp
+L Device:C C41
+U 1 1 5D043017
+P 7350 6950
+F 0 "C41" H 7450 7050 50  0000 C CNN
+F 1 "10uF" H 7600 6950 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 7388 6800 50  0001 C CNN
+F 3 "~" H 7350 6950 50  0001 C CNN
+	1    7350 6950
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR060
+U 1 1 5D0438C2
+P 7350 7100
+F 0 "#PWR060" H 7350 6850 50  0001 C CNN
+F 1 "GND" H 7355 6927 50  0000 C CNN
+F 2 "" H 7350 7100 50  0001 C CNN
+F 3 "" H 7350 7100 50  0001 C CNN
+	1    7350 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 6800 7350 6750
+Wire Wire Line
+	7350 6750 7600 6750
+$Comp
+L Device:C C42
+U 1 1 5D04EBE2
+P 8100 7900
+F 0 "C42" H 8250 7750 50  0000 C CNN
+F 1 "0.1uF" H 8250 8000 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 8138 7750 50  0001 C CNN
+F 3 "~" H 8100 7900 50  0001 C CNN
+	1    8100 7900
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR064
+U 1 1 5D04EBE8
+P 8100 8050
+F 0 "#PWR064" H 8100 7800 50  0001 C CNN
+F 1 "GND" H 8200 8050 50  0000 C CNN
+F 2 "" H 8100 8050 50  0001 C CNN
+F 3 "" H 8100 8050 50  0001 C CNN
+	1    8100 8050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8100 7750 8350 7750
+$Comp
+L Device:D_ALT D2
+U 1 1 5D051BF1
+P 1550 9900
+F 0 "D2" V 1504 9979 50  0000 L CNN
+F 1 "1N914" V 1550 9600 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-323" H 1550 9900 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/1N914BWS-D.pdf" H 1550 9900 50  0001 C CNN
+F 4 "D" H 1550 9900 50  0001 C CNN "Spice_Primitive"
+F 5 "1N914" H 1550 9900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1550 9900 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "IQ_SDR_Spice.lib" H 1550 9900 50  0001 C CNN "Spice_Lib_File"
+	1    1550 9900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR07
+U 1 1 5D05544B
+P 1150 10050
+F 0 "#PWR07" H 1150 9800 50  0001 C CNN
+F 1 "GND" H 1155 9877 50  0000 C CNN
+F 2 "" H 1150 10050 50  0001 C CNN
+F 3 "" H 1150 10050 50  0001 C CNN
+	1    1150 10050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5D055719
+P 1550 10050
+F 0 "#PWR010" H 1550 9800 50  0001 C CNN
+F 1 "GND" H 1555 9877 50  0000 C CNN
+F 2 "" H 1550 10050 50  0001 C CNN
+F 3 "" H 1550 10050 50  0001 C CNN
+	1    1550 10050
+	1    0    0    -1  
+$EndComp
+Connection ~ 1550 9750
+Connection ~ 8350 7750
+Wire Wire Line
+	6900 6150 7200 6150
+Wire Wire Line
+	7600 7550 7600 7800
+Connection ~ 7000 7800
+Wire Wire Line
+	9550 6550 9750 6550
+$Comp
+L power:PWR_FLAG #FLG02
+U 1 1 5D08FF65
+P 7900 6750
+F 0 "#FLG02" H 7900 6825 50  0001 C CNN
+F 1 "PWR_FLAG" V 7900 6878 50  0000 L CNN
+F 2 "" H 7900 6750 50  0001 C CNN
+F 3 "~" H 7900 6750 50  0001 C CNN
+F 4 "R" H 7900 6750 50  0001 C CNN "Spice_Primitive"
+F 5 "1" H 7900 6750 50  0001 C CNN "Spice_Model"
+F 6 "N" H 7900 6750 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    7900 6750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG01
+U 1 1 5D0906A3
+P 5800 9750
+F 0 "#FLG01" H 5800 9825 50  0001 C CNN
+F 1 "PWR_FLAG" V 5800 9878 50  0000 L CNN
+F 2 "" H 5800 9750 50  0001 C CNN
+F 3 "~" H 5800 9750 50  0001 C CNN
+	1    5800 9750
+	0    1    1    0   
+$EndComp
+Connection ~ 5800 9750
+Wire Wire Line
+	1050 9750 1150 9750
+$Comp
+L Device:D_ALT D1
+U 1 1 5D09E5BC
+P 1150 9900
+F 0 "D1" V 1250 9750 50  0000 L CNN
+F 1 "1N914" V 1000 9650 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-323" H 1150 9900 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/1N914BWS-D.pdf" H 1150 9900 50  0001 C CNN
+F 4 "D" H 1150 9900 50  0001 C CNN "Spice_Primitive"
+F 5 "1N914" H 1150 9900 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1150 9900 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "IQ_SDR_Spice.lib" H 1150 9900 50  0001 C CNN "Spice_Lib_File"
+	1    1150 9900
+	0    -1   -1   0   
+$EndComp
+Connection ~ 1150 9750
+Wire Wire Line
+	1150 9750 1400 9750
+Text Notes 6200 7150 0    50   ~ 0
+Doubly Balanced\nSampling Mixers
+$Comp
+L Device:C C16
+U 1 1 5D0A5CE8
+P 2700 6800
+F 0 "C16" H 2750 6900 50  0000 L CNN
+F 1 "1500pF" H 2400 6700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2738 6650 50  0001 C CNN
+F 3 "~" H 2700 6800 50  0001 C CNN
+	1    2700 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L18
+U 1 1 5D0A5CEE
+P 3250 6650
+F 0 "L18" V 3440 6650 50  0000 C CNN
+F 1 "2.0uH" V 3349 6650 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3250 6650 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3250 6650 50  0001 C CNN
+	1    3250 6650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C25
+U 1 1 5D0A5CF4
+P 3550 6650
+F 0 "C25" V 3298 6650 50  0000 C CNN
+F 1 "390pF" V 3389 6650 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3588 6500 50  0001 C CNN
+F 3 "~" H 3550 6650 50  0001 C CNN
+	1    3550 6650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 5D0A5CFA
+P 2700 6950
+F 0 "#PWR019" H 2700 6700 50  0001 C CNN
+F 1 "GND" H 2705 6777 50  0000 C CNN
+F 2 "" H 2700 6950 50  0001 C CNN
+F 3 "" H 2700 6950 50  0001 C CNN
+	1    2700 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 5D0A5D00
+P 2950 6950
+F 0 "#PWR029" H 2950 6700 50  0001 C CNN
+F 1 "GND" H 2955 6777 50  0000 C CNN
+F 2 "" H 2950 6950 50  0001 C CNN
+F 3 "" H 2950 6950 50  0001 C CNN
+	1    2950 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L14
+U 1 1 5D0A5D07
+P 2950 6800
+F 0 "L14" H 3003 6846 50  0000 L CNN
+F 1 "0.46uH" H 3003 6755 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 6800 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 6800 50  0001 C CNN
+	1    2950 6800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L6
+U 1 1 5D0A5D0D
+P 2150 6650
+F 0 "L6" V 2340 6650 50  0000 C CNN
+F 1 "2.0uH" V 2249 6650 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2150 6650 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2150 6650 50  0001 C CNN
+	1    2150 6650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C12
+U 1 1 5D0A5D13
+P 2450 6650
+F 0 "C12" V 2500 6500 50  0000 C CNN
+F 1 "390pF" V 2289 6650 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 2488 6500 50  0001 C CNN
+F 3 "~" H 2450 6650 50  0001 C CNN
+	1    2450 6650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2600 6650 2700 6650
+Wire Wire Line
+	2700 6650 2950 6650
+Connection ~ 2700 6650
+Wire Wire Line
+	2950 6650 3100 6650
+Connection ~ 2950 6650
+$Comp
+L Device:C C15
+U 1 1 5D0AC8B4
+P 2700 6250
+F 0 "C15" H 2750 6350 50  0000 L CNN
+F 1 "1500pF" H 2400 6150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2738 6100 50  0001 C CNN
+F 3 "~" H 2700 6250 50  0001 C CNN
+	1    2700 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L17
+U 1 1 5D0AC8BA
+P 3250 6100
+F 0 "L17" V 3440 6100 50  0000 C CNN
+F 1 "5.5uH" V 3349 6100 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3250 6100 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3250 6100 50  0001 C CNN
+	1    3250 6100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C24
+U 1 1 5D0AC8C0
+P 3550 6100
+F 0 "C24" V 3298 6100 50  0000 C CNN
+F 1 "680pF" V 3389 6100 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3588 5950 50  0001 C CNN
+F 3 "~" H 3550 6100 50  0001 C CNN
+	1    3550 6100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 5D0AC8C6
+P 2700 6400
+F 0 "#PWR018" H 2700 6150 50  0001 C CNN
+F 1 "GND" H 2705 6227 50  0000 C CNN
+F 2 "" H 2700 6400 50  0001 C CNN
+F 3 "" H 2700 6400 50  0001 C CNN
+	1    2700 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR028
+U 1 1 5D0AC8CC
+P 2950 6400
+F 0 "#PWR028" H 2950 6150 50  0001 C CNN
+F 1 "GND" H 2955 6227 50  0000 C CNN
+F 2 "" H 2950 6400 50  0001 C CNN
+F 3 "" H 2950 6400 50  0001 C CNN
+	1    2950 6400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L13
+U 1 1 5D0AC8D3
+P 2950 6250
+F 0 "L13" H 3003 6296 50  0000 L CNN
+F 1 "2.6uH" H 3003 6205 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 6250 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 6250 50  0001 C CNN
+	1    2950 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L5
+U 1 1 5D0AC8D9
+P 2150 6100
+F 0 "L5" V 2340 6100 50  0000 C CNN
+F 1 "5.5uH" V 2249 6100 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2150 6100 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2150 6100 50  0001 C CNN
+	1    2150 6100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C11
+U 1 1 5D0AC8DF
+P 2450 6100
+F 0 "C11" V 2198 6100 50  0000 C CNN
+F 1 "680pF" V 2289 6100 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 2488 5950 50  0001 C CNN
+F 3 "~" H 2450 6100 50  0001 C CNN
+	1    2450 6100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2600 6100 2700 6100
+Wire Wire Line
+	2700 6100 2950 6100
+Connection ~ 2700 6100
+Wire Wire Line
+	2950 6100 3100 6100
+Connection ~ 2950 6100
+$Comp
+L Device:C C18
+U 1 1 5D0B1C54
+P 2700 7900
+F 0 "C18" H 2750 8000 50  0000 L CNN
+F 1 "390pF" H 2700 7800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2738 7750 50  0001 C CNN
+F 3 "~" H 2700 7900 50  0001 C CNN
+	1    2700 7900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L20
+U 1 1 5D0B1C5A
+P 3250 7750
+F 0 "L20" V 3440 7750 50  0000 C CNN
+F 1 "0.46uH" V 3349 7750 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3250 7750 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3250 7750 50  0001 C CNN
+	1    3250 7750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C27
+U 1 1 5D0B1C60
+P 3550 7750
+F 0 "C27" V 3298 7750 50  0000 C CNN
+F 1 "100pF" V 3389 7750 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3588 7600 50  0001 C CNN
+F 3 "~" H 3550 7750 50  0001 C CNN
+	1    3550 7750
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR021
+U 1 1 5D0B1C66
+P 2700 8050
+F 0 "#PWR021" H 2700 7800 50  0001 C CNN
+F 1 "GND" H 2705 7877 50  0000 C CNN
+F 2 "" H 2700 8050 50  0001 C CNN
+F 3 "" H 2700 8050 50  0001 C CNN
+	1    2700 8050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR031
+U 1 1 5D0B1C6C
+P 2950 8050
+F 0 "#PWR031" H 2950 7800 50  0001 C CNN
+F 1 "GND" H 2955 7877 50  0000 C CNN
+F 2 "" H 2950 8050 50  0001 C CNN
+F 3 "" H 2950 8050 50  0001 C CNN
+	1    2950 8050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L16
+U 1 1 5D0B1C73
+P 2950 7900
+F 0 "L16" H 3003 7946 50  0000 L CNN
+F 1 "0.13uH" H 3003 7855 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 7900 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 7900 50  0001 C CNN
+	1    2950 7900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L8
+U 1 1 5D0B1C79
+P 2150 7750
+F 0 "L8" V 2340 7750 50  0000 C CNN
+F 1 "0.46uH" V 2249 7750 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2150 7750 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2150 7750 50  0001 C CNN
+	1    2150 7750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C14
+U 1 1 5D0B1C7F
+P 2450 7750
+F 0 "C14" V 2500 7600 50  0000 C CNN
+F 1 "100pF" V 2289 7750 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 2488 7600 50  0001 C CNN
+F 3 "~" H 2450 7750 50  0001 C CNN
+	1    2450 7750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2600 7750 2700 7750
+Wire Wire Line
+	2700 7750 2950 7750
+Connection ~ 2700 7750
+Wire Wire Line
+	2950 7750 3100 7750
+Connection ~ 2950 7750
+$Comp
+L onsemi:FST3253 U1
+U 1 1 5D1B613B
+P 2850 9300
+F 0 "U1" V 2896 8470 50  0000 R CNN
+F 1 "FST3253" V 2805 8470 50  0000 R CNN
+F 2 "IPC7351-Nominal:SOIC127P600X180-16" H 2850 8400 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/FST3253-D.pdf" H 2850 8200 50  0001 C CNN
+F 4 "DIST DIGIKEY FST3253MXFSCT-ND" H 2850 8300 60  0001 C CNN "BOM"
+F 5 "R" H 2850 9300 50  0001 C CNN "Spice_Primitive"
+F 6 "10" H 2850 9300 50  0001 C CNN "Spice_Model"
+F 7 "N" H 2850 9300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2850 9300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1900 10200 2400 10200
+Wire Wire Line
+	2400 10200 2400 10050
+Wire Wire Line
+	1550 9750 1900 9750
+Wire Wire Line
+	3000 9900 3000 10200
+Wire Wire Line
+	3000 10200 4150 10200
+Wire Wire Line
+	4350 6750 4950 6750
+$Comp
+L power:GND #PWR034
+U 1 1 5D23D6CA
+P 3600 9900
+F 0 "#PWR034" H 3600 9650 50  0001 C CNN
+F 1 "GND" H 3605 9727 50  0000 C CNN
+F 2 "" H 3600 9900 50  0001 C CNN
+F 3 "" H 3600 9900 50  0001 C CNN
+	1    3600 9900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR032
+U 1 1 5D23DB1C
+P 3100 9900
+F 0 "#PWR032" H 3100 9650 50  0001 C CNN
+F 1 "GND" H 3105 9727 50  0000 C CNN
+F 2 "" H 3100 9900 50  0001 C CNN
+F 3 "" H 3100 9900 50  0001 C CNN
+	1    3100 9900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR017
+U 1 1 5D23EDA8
+P 2500 9900
+F 0 "#PWR017" H 2500 9650 50  0001 C CNN
+F 1 "GND" H 2600 9900 50  0000 C CNN
+F 2 "" H 2500 9900 50  0001 C CNN
+F 3 "" H 2500 9900 50  0001 C CNN
+	1    2500 9900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR016
+U 1 1 5D23FE13
+P 2000 9150
+F 0 "#PWR016" H 2000 9000 50  0001 C CNN
+F 1 "+5V" H 2015 9323 50  0000 C CNN
+F 2 "" H 2000 9150 50  0001 C CNN
+F 3 "" H 2000 9150 50  0001 C CNN
+	1    2000 9150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 9150 2000 9300
+Wire Wire Line
+	2000 9900 2100 9900
+$Comp
+L Device:C C5
+U 1 1 5D24A68D
+P 1700 9450
+F 0 "C5" H 1815 9496 50  0000 L CNN
+F 1 "0.01" H 1815 9405 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1738 9300 50  0001 C CNN
+F 3 "~" H 1700 9450 50  0001 C CNN
+	1    1700 9450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR011
+U 1 1 5D24A693
+P 1700 9600
+F 0 "#PWR011" H 1700 9350 50  0001 C CNN
+F 1 "GND" H 1850 9550 50  0000 C CNN
+F 2 "" H 1700 9600 50  0001 C CNN
+F 3 "" H 1700 9600 50  0001 C CNN
+	1    1700 9600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1700 9300 2000 9300
+Connection ~ 2000 9300
+Wire Wire Line
+	2000 9300 2000 9900
+Text Label 3350 9900 3    50   ~ 0
+B0
+Text Label 3450 9900 3    50   ~ 0
+B1
+Text Label 10600 8800 2    50   ~ 0
+B0
+Text Label 10600 8900 2    50   ~ 0
+B1
+$Comp
+L Connector_Generic:Conn_01x01 J2
+U 1 1 5D286945
+P 1150 9600
+F 0 "J2" V 1114 9512 50  0000 R CNN
+F 1 "FIL_I" V 1250 9700 50  0000 R CNN
+F 2 "Connectors:PINTST" H 1150 9600 50  0001 C CNN
+F 3 "~" H 1150 9600 50  0001 C CNN
+F 4 "J" H 1150 9600 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 1150 9600 50  0001 C CNN "Spice_Model"
+F 6 "N" H 1150 9600 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1150 9600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J4
+U 1 1 5D291C51
+P 4150 10000
+F 0 "J4" V 4114 9912 50  0000 R CNN
+F 1 "FIL_O" V 4250 10100 50  0000 R CNN
+F 2 "Connectors:PINTST" H 4150 10000 50  0001 C CNN
+F 3 "~" H 4150 10000 50  0001 C CNN
+F 4 "J" H 4150 10000 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 4150 10000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 4150 10000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4150 10000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J11
+U 1 1 5D2921E8
+P 7200 5950
+F 0 "J11" V 7164 5862 50  0000 R CNN
+F 1 "I_IN" V 7300 6000 50  0000 R CNN
+F 2 "Connectors:PINTST" H 7200 5950 50  0001 C CNN
+F 3 "~" H 7200 5950 50  0001 C CNN
+F 4 "J" H 7200 5950 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 7200 5950 50  0001 C CNN "Spice_Model"
+F 6 "N" H 7200 5950 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    7200 5950
+	0    -1   -1   0   
+$EndComp
+Connection ~ 7200 6150
+Wire Wire Line
+	7200 6150 7850 6150
+$Comp
+L Connector_Generic:Conn_01x01 J12
+U 1 1 5D292C55
+P 7600 8000
+F 0 "J12" V 7500 8150 50  0000 R CNN
+F 1 "Q_IN" V 7700 8100 50  0000 R CNN
+F 2 "Connectors:PINTST" H 7600 8000 50  0001 C CNN
+F 3 "~" H 7600 8000 50  0001 C CNN
+F 4 "J" H 7600 8000 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 7600 8000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 7600 8000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    7600 8000
+	0    1    1    0   
+$EndComp
+Connection ~ 7600 7800
+Wire Wire Line
+	7600 7800 7000 7800
+$Comp
+L Connector_Generic:Conn_01x01 J14
+U 1 1 5D293E41
+P 9150 7200
+F 0 "J14" H 9200 7300 50  0000 R CNN
+F 1 "Q_OUT" H 9450 7200 50  0000 R CNN
+F 2 "Connectors:PINTST" H 9150 7200 50  0001 C CNN
+F 3 "~" H 9150 7200 50  0001 C CNN
+F 4 "J" H 9150 7200 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 9150 7200 50  0001 C CNN "Spice_Model"
+F 6 "N" H 9150 7200 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9150 7200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J13
+U 1 1 5D2955BF
+P 9150 5800
+F 0 "J13" H 9200 5900 50  0000 R CNN
+F 1 "I_OUT" H 9450 5800 50  0000 R CNN
+F 2 "Connectors:PINTST" H 9150 5800 50  0001 C CNN
+F 3 "~" H 9150 5800 50  0001 C CNN
+F 4 "J" H 9150 5800 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 9150 5800 50  0001 C CNN "Spice_Model"
+F 6 "N" H 9150 5800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    9150 5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9550 6650 9550 7650
+$Comp
+L Connector_Generic:Conn_01x01 J7
+U 1 1 5D296A71
+P 5450 3650
+F 0 "J7" V 5350 3650 50  0000 R CNN
+F 1 "CLK0" V 5550 3750 50  0000 R CNN
+F 2 "Connectors:PINTST" H 5450 3650 50  0001 C CNN
+F 3 "~" H 5450 3650 50  0001 C CNN
+F 4 "J" H 5450 3650 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 5450 3650 50  0001 C CNN "Spice_Model"
+F 6 "N" H 5450 3650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5450 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J8
+U 1 1 5D29742C
+P 6450 6650
+F 0 "J8" V 6414 6562 50  0000 R CNN
+F 1 "LO_I" V 6550 6800 50  0000 R CNN
+F 2 "Connectors:PINTST" H 6450 6650 50  0001 C CNN
+F 3 "~" H 6450 6650 50  0001 C CNN
+F 4 "J" H 6450 6650 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 6450 6650 50  0001 C CNN "Spice_Model"
+F 6 "N" H 6450 6650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6450 6650
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J9
+U 1 1 5D2987CB
+P 6550 8300
+F 0 "J9" V 6514 8212 50  0000 R CNN
+F 1 "LO_Q" V 6650 8500 50  0000 R CNN
+F 2 "Connectors:PINTST" H 6550 8300 50  0001 C CNN
+F 3 "~" H 6550 8300 50  0001 C CNN
+F 4 "J" H 6550 8300 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 6550 8300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 6550 8300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    6550 8300
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J10
+U 1 1 5D2AD39B
+P 7150 6750
+F 0 "J10" H 7230 6792 50  0000 L CNN
+F 1 "GNDA" H 7230 6701 50  0000 L CNN
+F 2 "Connectors:PINTST" H 7150 6750 50  0001 C CNN
+F 3 "~" H 7150 6750 50  0001 C CNN
+F 4 "J" H 7150 6750 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 7150 6750 50  0001 C CNN "Spice_Model"
+F 6 "N" H 7150 6750 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    7150 6750
+	-1   0    0    1   
+$EndComp
+Connection ~ 4150 10200
+Wire Wire Line
+	4150 10200 4350 10200
+$Comp
+L power:+5V #PWR061
+U 1 1 5D2B5C35
+P 7600 6350
+F 0 "#PWR061" H 7600 6200 50  0001 C CNN
+F 1 "+5V" H 7700 6450 50  0000 C CNN
+F 2 "" H 7600 6350 50  0001 C CNN
+F 3 "" H 7600 6350 50  0001 C CNN
+	1    7600 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR043
+U 1 1 5D2B75BE
+P 5050 8850
+F 0 "#PWR043" H 5050 8700 50  0001 C CNN
+F 1 "+5V" H 5150 8900 50  0000 C CNN
+F 2 "" H 5050 8850 50  0001 C CNN
+F 3 "" H 5050 8850 50  0001 C CNN
+	1    5050 8850
+	1    0    0    -1  
+$EndComp
+Text Notes 700  4700 0    50   ~ 0
+.param freq=10000000
+Text Notes 700  4800 0    50   ~ 0
+.param if_freq={freq + 1000}
+Text Label 1400 9650 0    50   ~ 0
+RF_IN
+Connection ~ 1400 9750
+Wire Wire Line
+	1400 9750 1550 9750
+$Comp
+L myspice:VSOURCE V1
+U 1 1 5D2E799E
+P 1200 8700
+F 0 "V1" H 1428 8700 50  0000 L CNN
+F 1 "sin(0 10u {freq})" H 1750 8600 50  0000 C CNN
+F 2 "" H 1200 8700 50  0001 C CNN
+F 3 "~" H 1200 8700 50  0001 C CNN
+	1    1200 8700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR08
+U 1 1 5D2E7E15
+P 1200 9000
+F 0 "#PWR08" H 1200 8750 50  0001 C CNN
+F 1 "GND" H 1205 8827 50  0000 C CNN
+F 2 "" H 1200 9000 50  0001 C CNN
+F 3 "" H 1200 9000 50  0001 C CNN
+	1    1200 9000
+	1    0    0    -1  
+$EndComp
+Text Label 1200 8400 0    50   ~ 0
+RF_IN
+$Comp
+L Amplifier_Operational:NJM5532 U5
+U 1 1 5CEF3C1C
+P 8650 6250
+F 0 "U5" H 8600 6250 50  0000 C CNN
+F 1 "SA5532 or LT6231" H 8650 6500 50  0000 C CNN
+F 2 "SMA:DMP8" H 8650 6250 50  0001 C CNN
+F 3 "http://www.njr.com/semicon/PDF/NJM5532_E.pdf" H 8650 6250 50  0001 C CNN
+F 4 "X" H 8650 6250 50  0001 C CNN "Spice_Primitive"
+F 5 "NJM5532" H 8650 6250 50  0001 C CNN "Spice_Model"
+F 6 "N" H 8650 6250 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "IQ_SDR_Spice.lib" H 8650 6250 50  0001 C CNN "Spice_Lib_File"
+	1    8650 6250
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6500 5000 6500 4400
+Wire Wire Line
+	6500 4400 6300 4400
+NoConn ~ 6300 4300
+$Comp
+L Connector_Generic:Conn_01x01 J5
+U 1 1 5CF440B9
+P 4800 4500
+F 0 "J5" V 4850 4400 50  0000 R CNN
+F 1 "CLK2" V 4900 4600 50  0000 R CNN
+F 2 "Connectors:PINTST" H 4800 4500 50  0001 C CNN
+F 3 "~" H 4800 4500 50  0001 C CNN
+F 4 "J" H 4800 4500 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 4800 4500 50  0001 C CNN "Spice_Model"
+F 6 "N" H 4800 4500 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4800 4500
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J6
+U 1 1 5CF44A30
+P 4900 4300
+F 0 "J6" V 4750 4400 50  0000 R CNN
+F 1 "CLK1" V 5000 4400 50  0000 R CNN
+F 2 "Connectors:PINTST" H 4900 4300 50  0001 C CNN
+F 3 "~" H 4900 4300 50  0001 C CNN
+F 4 "J" H 4900 4300 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 4900 4300 50  0001 C CNN "Spice_Model"
+F 6 "N" H 4900 4300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4900 4300
+	0    1    1    0   
+$EndComp
+Connection ~ 5300 4200
+Text Notes 6650 4400 0    50   ~ 0
+LO_I and LO_Q can be \nmoved to the uninverted \noutputs if it is better for \nrouting.
+Wire Wire Line
+	9750 6450 9750 6300
+Wire Wire Line
+	9750 6300 9650 6300
+Text Notes 9700 7000 0    50   ~ 0
+I on left\nQ on right
+$Comp
+L Device:Transformer_1P_SS T1
+U 1 1 5CFEE179
+P 5350 6950
+F 0 "T1" H 5350 7331 50  0000 C CNN
+F 1 "Transformer_1P_SS" H 5350 7240 50  0000 C CNN
+F 2 "SMA:4_to_1_Transmission_Line_TransformerTHT" H 5350 6950 50  0001 C CNN
+F 3 "~" H 5350 6950 50  0001 C CNN
+	1    5350 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L nl7w66:TS5A23157 U3
+U 2 1 5D011D80
+P 5050 9350
+F 0 "U3" H 5050 9592 50  0000 C CNN
+F 1 "TS5A23157" H 5050 10000 50  0000 C CNN
+F 2 "SMA:DGS0010A" H 5050 9050 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/ts5a23157-q1.pdf" H 5050 9350 50  0001 C CNN
+	2    5050 9350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L nl7w66:TS5A23157 U3
+U 1 1 5D01ACAD
+P 6450 6050
+F 0 "U3" H 6350 6050 50  0000 L CNN
+F 1 "TS5A23157" H 6300 6200 50  0000 L CNN
+F 2 "SMA:DGS0010A" H 6450 5750 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/ts5a23157-q1.pdf" H 6450 6050 50  0001 C CNN
+	1    6450 6050
+	-1   0    0    -1  
+$EndComp
+$Comp
+L nl7w66:TS5A23157 U3
+U 3 1 5D022C84
+P 6550 7700
+F 0 "U3" H 6500 7700 50  0000 C CNN
+F 1 "TS5A23157" H 6550 7851 50  0000 C CNN
+F 2 "SMA:DGS0010A" H 6550 7400 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/ts5a23157-q1.pdf" H 6550 7700 50  0001 C CNN
+	3    6550 7700
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	5900 6750 5900 6050
+Wire Wire Line
+	5900 6050 6150 6050
+Wire Wire Line
+	5900 7700 6250 7700
+Wire Wire Line
+	5900 6750 5900 7700
+Connection ~ 5900 6750
+Wire Wire Line
+	5750 7150 5850 7150
+Wire Wire Line
+	5850 7150 5850 7900
+Wire Wire Line
+	5850 7900 6250 7900
+Wire Wire Line
+	5850 7150 5850 6250
+Wire Wire Line
+	5850 6250 6150 6250
+Connection ~ 5850 7150
+$Comp
+L power:GND #PWR044
+U 1 1 5D0FFA63
+P 5050 9850
+F 0 "#PWR044" H 5050 9600 50  0001 C CNN
+F 1 "GND" H 5055 9677 50  0000 C CNN
+F 2 "" H 5050 9850 50  0001 C CNN
+F 3 "" H 5050 9850 50  0001 C CNN
+	1    5050 9850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C35
+U 1 1 5D1000AE
+P 5350 9200
+F 0 "C35" H 5465 9246 50  0000 L CNN
+F 1 "0.01" H 5465 9155 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5388 9050 50  0001 C CNN
+F 3 "~" H 5350 9200 50  0001 C CNN
+	1    5350 9200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 9050 5350 8850
+Wire Wire Line
+	5350 8850 5050 8850
+$Comp
+L power:GND #PWR047
+U 1 1 5D10A4C9
+P 5350 9350
+F 0 "#PWR047" H 5350 9100 50  0001 C CNN
+F 1 "GND" H 5300 9200 50  0000 C CNN
+F 2 "" H 5350 9350 50  0001 C CNN
+F 3 "" H 5350 9350 50  0001 C CNN
+	1    5350 9350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 6750 4350 10200
+Connection ~ 7350 6750
+Wire Wire Line
+	7900 6350 7900 6750
+$Comp
+L Device:C C10
+U 1 1 5CF88663
+P 1900 9900
+F 0 "C10" H 1800 10000 50  0000 L CNN
+F 1 "0.1uF" H 1650 9800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1938 9750 50  0001 C CNN
+F 3 "~" H 1900 9900 50  0001 C CNN
+	1    1900 9900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5CF894FB
+P 2250 10050
+F 0 "R2" V 2043 10050 50  0000 C CNN
+F 1 "10k" V 2134 10050 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2180 10050 50  0001 C CNN
+F 3 "~" H 2250 10050 50  0001 C CNN
+F 4 "R" H 2250 10050 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 2250 10050 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2250 10050 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2250 10050
+	0    1    1    0   
+$EndComp
+Connection ~ 2400 10050
+Wire Wire Line
+	2400 10050 2400 9900
+$Comp
+L Device:R R3
+U 1 1 5CF8A67E
+P 2550 10200
+F 0 "R3" V 2450 10150 50  0000 C CNN
+F 1 "10k" V 2450 10300 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2480 10200 50  0001 C CNN
+F 3 "~" H 2550 10200 50  0001 C CNN
+F 4 "R" H 2550 10200 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 2550 10200 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2550 10200 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2550 10200
+	0    1    1    0   
+$EndComp
+Connection ~ 2400 10200
+$Comp
+L power:GND #PWR022
+U 1 1 5CF8B24C
+P 2750 10200
+F 0 "#PWR022" H 2750 9950 50  0001 C CNN
+F 1 "GND" H 2900 10150 50  0000 C CNN
+F 2 "" H 2750 10200 50  0001 C CNN
+F 3 "" H 2750 10200 50  0001 C CNN
+	1    2750 10200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 10050 2100 9900
+Connection ~ 2100 9900
+Wire Wire Line
+	2100 9900 2150 9900
+Wire Wire Line
+	1900 10200 1900 10050
+Wire Wire Line
+	2700 10200 2750 10200
+$Comp
+L Device:R R4
+U 1 1 5CFA98E1
+P 4650 7500
+F 0 "R4" H 4750 7500 50  0000 C CNN
+F 1 "10k" H 4500 7500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 4580 7500 50  0001 C CNN
+F 3 "~" H 4650 7500 50  0001 C CNN
+F 4 "R" H 4650 7500 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 4650 7500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4650 7500 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4650 7500
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5CFAC99A
+P 4650 7800
+F 0 "R5" H 4750 7800 50  0000 C CNN
+F 1 "10k" H 4500 7800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 4580 7800 50  0001 C CNN
+F 3 "~" H 4650 7800 50  0001 C CNN
+F 4 "R" H 4650 7800 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 4650 7800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4650 7800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4650 7800
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C C34
+U 1 1 5CFADA4F
+P 5150 7800
+F 0 "C34" H 5200 7900 50  0000 L CNN
+F 1 "0.1uF" H 5200 7700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5188 7650 50  0001 C CNN
+F 3 "~" H 5150 7800 50  0001 C CNN
+	1    5150 7800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR041
+U 1 1 5CFC5A8C
+P 4650 7350
+F 0 "#PWR041" H 4650 7200 50  0001 C CNN
+F 1 "+5V" H 4750 7450 50  0000 C CNN
+F 2 "" H 4650 7350 50  0001 C CNN
+F 3 "" H 4650 7350 50  0001 C CNN
+	1    4650 7350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 7950 4950 7950
+Wire Wire Line
+	5150 7950 4950 7950
+Connection ~ 4950 7950
+Wire Wire Line
+	5150 7650 4950 7650
+Connection ~ 4650 7650
+Wire Wire Line
+	4950 7150 4950 7650
+Connection ~ 4950 7650
+Wire Wire Line
+	4950 7650 4650 7650
+$Comp
+L Device:C C33
+U 1 1 5D009B64
+P 5150 7500
+F 0 "C33" H 5200 7600 50  0000 L CNN
+F 1 "0.1uF" H 5200 7400 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5188 7350 50  0001 C CNN
+F 3 "~" H 5150 7500 50  0001 C CNN
+	1    5150 7500
+	1    0    0    -1  
+$EndComp
+Connection ~ 5150 7650
+$Comp
+L power:+5V #PWR045
+U 1 1 5D009EA5
+P 5150 7350
+F 0 "#PWR045" H 5150 7200 50  0001 C CNN
+F 1 "+5V" H 5250 7450 50  0000 C CNN
+F 2 "" H 5150 7350 50  0001 C CNN
+F 3 "" H 5150 7350 50  0001 C CNN
+	1    5150 7350
+	1    0    0    -1  
+$EndComp
+Text Notes 7050 9350 0    50   ~ 0
+A very nice description of how op amp noise effects the noise figure\nis given in this data sheet \nhttps://www.ti.com/lit/ds/symlink/lmh6629.pdf \nin sections 7.3.4 and 7.3.5 (pages 24-7).   Finding an optimum R_g\n(input resistance for the inverting amplifier) seems to imply that\nthe optimum gets better as it goes to zero, assuming R_s is fixed.\nThe excess noise is approximately (e_n)^2+(i_n-)^2*(R_s+R_g)^2+4kTR_g, \nso minimizing e_n and i_n and R_g is\nthe best you can do.  The effect of i_n-  can be compared to e_n, by\nmultiplying by Rs_+Rg, so for R_g = 10 and R_s  = 50, e_n is more \nimportant in all the cases I've seen so far.  A nice calculator\nis at:\nhttp://dicks-website.eu/noisecalculator/index.html
+Text Notes 6750 5650 0    50   ~ 0
+LT6231 has lower noise figure (6 dB), \nbut costs about 7 times as much\nas the SA5532.
+$Comp
+L Device:R R1
+U 1 1 5CFC1244
+P 1400 9350
+F 0 "R1" H 1500 9350 50  0000 C CNN
+F 1 "2.2k" H 1250 9350 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 1330 9350 50  0001 C CNN
+F 3 "~" H 1400 9350 50  0001 C CNN
+F 4 "R" H 1400 9350 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 1400 9350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1400 9350 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1400 9350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1400 9500 1400 9750
+Text Label 1400 9150 0    50   ~ 0
+MUTE
+Wire Wire Line
+	1400 9200 1400 9150
+Text Label 10600 9000 2    50   ~ 0
+MUTE
+Connection ~ 5050 8850
+Wire Wire Line
+	4800 3900 5450 3900
+Wire Wire Line
+	4800 4100 4900 4100
+$Comp
+L onsemi:FST3253 U4
+U 1 1 5D0D49C5
+P 11000 4300
+F 0 "U4" H 11300 3650 50  0000 R CNN
+F 1 "FST3253" H 11150 3450 50  0000 R CNN
+F 2 "IPC7351-Nominal:SOIC127P600X180-16" H 11000 3400 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/FST3253-D.pdf" H 11000 3200 50  0001 C CNN
+F 4 "DIST DIGIKEY FST3253MXFSCT-ND" H 11000 3300 60  0001 C CNN "BOM"
+F 5 "R" H 11000 4300 50  0001 C CNN "Spice_Primitive"
+F 6 "10" H 11000 4300 50  0001 C CNN "Spice_Model"
+F 7 "N" H 11000 4300 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    11000 4300
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5450 3850 5450 3900
+Connection ~ 5450 3900
+$Comp
+L power:GND #PWR053
+U 1 1 5D0F97D3
+P 11350 5100
+F 0 "#PWR053" H 11350 4850 50  0001 C CNN
+F 1 "GND" H 11500 5050 50  0001 C CNN
+F 2 "" H 11350 5100 50  0001 C CNN
+F 3 "" H 11350 5100 50  0001 C CNN
+	1    11350 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR048
+U 1 1 5D0FDBCD
+P 10300 4900
+F 0 "#PWR048" H 10300 4750 50  0001 C CNN
+F 1 "+5V" H 10315 5073 50  0000 C CNN
+F 2 "" H 10300 4900 50  0001 C CNN
+F 3 "" H 10300 4900 50  0001 C CNN
+	1    10300 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C36
+U 1 1 5D0FDBD4
+P 10150 4900
+F 0 "C36" H 10265 4946 50  0000 L CNN
+F 1 "0.01" H 10265 4855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 10188 4750 50  0001 C CNN
+F 3 "~" H 10150 4900 50  0001 C CNN
+	1    10150 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR049
+U 1 1 5D0FDBDA
+P 10000 4900
+F 0 "#PWR049" H 10000 4650 50  0001 C CNN
+F 1 "GND" H 10150 4850 50  0000 C CNN
+F 2 "" H 10000 4900 50  0001 C CNN
+F 3 "" H 10000 4900 50  0001 C CNN
+	1    10000 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5D11B46F
+P 9550 2350
+F 0 "C3" H 9600 2450 50  0000 L CNN
+F 1 "1500pF" H 9250 2250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 9588 2200 50  0001 C CNN
+F 3 "~" H 9550 2350 50  0001 C CNN
+	1    9550 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR04
+U 1 1 5D11B475
+P 9550 2500
+F 0 "#PWR04" H 9550 2250 50  0001 C CNN
+F 1 "GND" H 9555 2327 50  0000 C CNN
+F 2 "" H 9550 2500 50  0001 C CNN
+F 3 "" H 9550 2500 50  0001 C CNN
+	1    9550 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5D126588
+P 9550 1800
+F 0 "C2" H 9600 1900 50  0000 L CNN
+F 1 "1500pF" H 9250 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 9588 1650 50  0001 C CNN
+F 3 "~" H 9550 1800 50  0001 C CNN
+	1    9550 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5D12658E
+P 9550 1950
+F 0 "#PWR03" H 9550 1700 50  0001 C CNN
+F 1 "GND" H 9555 1777 50  0000 C CNN
+F 2 "" H 9550 1950 50  0001 C CNN
+F 3 "" H 9550 1950 50  0001 C CNN
+	1    9550 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5D1317C1
+P 9550 1250
+F 0 "C1" H 9600 1350 50  0000 L CNN
+F 1 "1500pF" H 9250 1150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 9588 1100 50  0001 C CNN
+F 3 "~" H 9550 1250 50  0001 C CNN
+	1    9550 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR02
+U 1 1 5D1317C7
+P 9550 1400
+F 0 "#PWR02" H 9550 1150 50  0001 C CNN
+F 1 "GND" H 9555 1227 50  0000 C CNN
+F 2 "" H 9550 1400 50  0001 C CNN
+F 3 "" H 9550 1400 50  0001 C CNN
+	1    9550 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5D13C7A0
+P 9550 2900
+F 0 "C4" H 9600 3000 50  0000 L CNN
+F 1 "1500pF" H 9250 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 9588 2750 50  0001 C CNN
+F 3 "~" H 9550 2900 50  0001 C CNN
+	1    9550 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR05
+U 1 1 5D13C7A6
+P 9550 3050
+F 0 "#PWR05" H 9550 2800 50  0001 C CNN
+F 1 "GND" H 9555 2877 50  0000 C CNN
+F 2 "" H 9550 3050 50  0001 C CNN
+F 3 "" H 9550 3050 50  0001 C CNN
+	1    9550 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C8
+U 1 1 5D1496EB
+P 10450 2350
+F 0 "C8" H 10500 2450 50  0000 L CNN
+F 1 "1500pF" H 10150 2250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 10488 2200 50  0001 C CNN
+F 3 "~" H 10450 2350 50  0001 C CNN
+	1    10450 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 5D1496F1
+P 10450 2500
+F 0 "#PWR014" H 10450 2250 50  0001 C CNN
+F 1 "GND" H 10455 2327 50  0000 C CNN
+F 2 "" H 10450 2500 50  0001 C CNN
+F 3 "" H 10450 2500 50  0001 C CNN
+	1    10450 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C7
+U 1 1 5D1496F7
+P 10450 1800
+F 0 "C7" H 10500 1900 50  0000 L CNN
+F 1 "1500pF" H 10150 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 10488 1650 50  0001 C CNN
+F 3 "~" H 10450 1800 50  0001 C CNN
+	1    10450 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5D1496FD
+P 10450 1950
+F 0 "#PWR013" H 10450 1700 50  0001 C CNN
+F 1 "GND" H 10455 1777 50  0000 C CNN
+F 2 "" H 10450 1950 50  0001 C CNN
+F 3 "" H 10450 1950 50  0001 C CNN
+	1    10450 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C6
+U 1 1 5D149703
+P 10450 1250
+F 0 "C6" H 10500 1350 50  0000 L CNN
+F 1 "1500pF" H 10150 1150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 10488 1100 50  0001 C CNN
+F 3 "~" H 10450 1250 50  0001 C CNN
+	1    10450 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR012
+U 1 1 5D149709
+P 10450 1400
+F 0 "#PWR012" H 10450 1150 50  0001 C CNN
+F 1 "GND" H 10455 1227 50  0000 C CNN
+F 2 "" H 10450 1400 50  0001 C CNN
+F 3 "" H 10450 1400 50  0001 C CNN
+	1    10450 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C9
+U 1 1 5D14970F
+P 10450 2900
+F 0 "C9" H 10500 3000 50  0000 L CNN
+F 1 "1500pF" H 10150 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 10488 2750 50  0001 C CNN
+F 3 "~" H 10450 2900 50  0001 C CNN
+	1    10450 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 5D149715
+P 10450 3050
+F 0 "#PWR015" H 10450 2800 50  0001 C CNN
+F 1 "GND" H 10455 2877 50  0000 C CNN
+F 2 "" H 10450 3050 50  0001 C CNN
+F 3 "" H 10450 3050 50  0001 C CNN
+	1    10450 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C21
+U 1 1 5D156058
+P 11400 2350
+F 0 "C21" H 11450 2450 50  0000 L CNN
+F 1 "1500pF" H 11100 2250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 11438 2200 50  0001 C CNN
+F 3 "~" H 11400 2350 50  0001 C CNN
+	1    11400 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR025
+U 1 1 5D15605E
+P 11400 2500
+F 0 "#PWR025" H 11400 2250 50  0001 C CNN
+F 1 "GND" H 11405 2327 50  0000 C CNN
+F 2 "" H 11400 2500 50  0001 C CNN
+F 3 "" H 11400 2500 50  0001 C CNN
+	1    11400 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C20
+U 1 1 5D156064
+P 11400 1800
+F 0 "C20" H 11450 1900 50  0000 L CNN
+F 1 "1500pF" H 11100 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 11438 1650 50  0001 C CNN
+F 3 "~" H 11400 1800 50  0001 C CNN
+	1    11400 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR024
+U 1 1 5D15606A
+P 11400 1950
+F 0 "#PWR024" H 11400 1700 50  0001 C CNN
+F 1 "GND" H 11405 1777 50  0000 C CNN
+F 2 "" H 11400 1950 50  0001 C CNN
+F 3 "" H 11400 1950 50  0001 C CNN
+	1    11400 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C19
+U 1 1 5D156070
+P 11400 1250
+F 0 "C19" H 11450 1350 50  0000 L CNN
+F 1 "1500pF" H 11100 1150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 11438 1100 50  0001 C CNN
+F 3 "~" H 11400 1250 50  0001 C CNN
+	1    11400 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR023
+U 1 1 5D156076
+P 11400 1400
+F 0 "#PWR023" H 11400 1150 50  0001 C CNN
+F 1 "GND" H 11405 1227 50  0000 C CNN
+F 2 "" H 11400 1400 50  0001 C CNN
+F 3 "" H 11400 1400 50  0001 C CNN
+	1    11400 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C22
+U 1 1 5D15607C
+P 11400 2900
+F 0 "C22" H 11450 3000 50  0000 L CNN
+F 1 "1500pF" H 11100 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 11438 2750 50  0001 C CNN
+F 3 "~" H 11400 2900 50  0001 C CNN
+	1    11400 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR026
+U 1 1 5D156082
+P 11400 3050
+F 0 "#PWR026" H 11400 2800 50  0001 C CNN
+F 1 "GND" H 11405 2877 50  0000 C CNN
+F 2 "" H 11400 3050 50  0001 C CNN
+F 3 "" H 11400 3050 50  0001 C CNN
+	1    11400 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L1
+U 1 1 5D161A27
+P 10000 1100
+F 0 "L1" V 10190 1100 50  0000 C CNN
+F 1 "5.5uH" V 10099 1100 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 10000 1100 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 10000 1100 50  0001 C CNN
+	1    10000 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L2
+U 1 1 5D163215
+P 10000 1650
+F 0 "L2" V 10190 1650 50  0000 C CNN
+F 1 "5.5uH" V 10099 1650 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 10000 1650 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 10000 1650 50  0001 C CNN
+	1    10000 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L3
+U 1 1 5D171947
+P 10000 2200
+F 0 "L3" V 10190 2200 50  0000 C CNN
+F 1 "5.5uH" V 10099 2200 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 10000 2200 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 10000 2200 50  0001 C CNN
+	1    10000 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L4
+U 1 1 5D17194D
+P 10000 2750
+F 0 "L4" V 10190 2750 50  0000 C CNN
+F 1 "5.5uH" V 10099 2750 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 10000 2750 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 10000 2750 50  0001 C CNN
+	1    10000 2750
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L9
+U 1 1 5D180F5C
+P 10950 1100
+F 0 "L9" V 11140 1100 50  0000 C CNN
+F 1 "5.5uH" V 11049 1100 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 10950 1100 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 10950 1100 50  0001 C CNN
+	1    10950 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L10
+U 1 1 5D180F62
+P 10950 1650
+F 0 "L10" V 11140 1650 50  0000 C CNN
+F 1 "5.5uH" V 11049 1650 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 10950 1650 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 10950 1650 50  0001 C CNN
+	1    10950 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L11
+U 1 1 5D180F68
+P 10950 2200
+F 0 "L11" V 11140 2200 50  0000 C CNN
+F 1 "5.5uH" V 11049 2200 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 10950 2200 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 10950 2200 50  0001 C CNN
+	1    10950 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L12
+U 1 1 5D180F6E
+P 10950 2750
+F 0 "L12" V 11140 2750 50  0000 C CNN
+F 1 "5.5uH" V 11049 2750 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 10950 2750 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 10950 2750 50  0001 C CNN
+	1    10950 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10150 1100 10450 1100
+Wire Wire Line
+	10450 1100 10800 1100
+Connection ~ 10450 1100
+Wire Wire Line
+	11100 1100 11400 1100
+Wire Wire Line
+	9550 1650 9850 1650
+Wire Wire Line
+	10150 1650 10450 1650
+Wire Wire Line
+	10450 1650 10800 1650
+Connection ~ 10450 1650
+Wire Wire Line
+	11100 1650 11400 1650
+Wire Wire Line
+	11400 2200 11100 2200
+Wire Wire Line
+	10800 2200 10450 2200
+Wire Wire Line
+	10450 2200 10150 2200
+Connection ~ 10450 2200
+Wire Wire Line
+	9850 2200 9550 2200
+Wire Wire Line
+	9550 2750 9850 2750
+Wire Wire Line
+	10150 2750 10450 2750
+Wire Wire Line
+	10450 2750 10800 2750
+Connection ~ 10450 2750
+Wire Wire Line
+	11100 2750 11400 2750
+Wire Wire Line
+	4400 3600 4200 3600
+Connection ~ 4200 3600
+$Comp
+L Device:C C30
+U 1 1 5D007032
+P 12350 2350
+F 0 "C30" H 12400 2450 50  0000 L CNN
+F 1 "1500pF" H 12050 2250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 12388 2200 50  0001 C CNN
+F 3 "~" H 12350 2350 50  0001 C CNN
+	1    12350 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR037
+U 1 1 5D007038
+P 12350 2500
+F 0 "#PWR037" H 12350 2250 50  0001 C CNN
+F 1 "GND" H 12355 2327 50  0000 C CNN
+F 2 "" H 12350 2500 50  0001 C CNN
+F 3 "" H 12350 2500 50  0001 C CNN
+	1    12350 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C29
+U 1 1 5D00703E
+P 12350 1800
+F 0 "C29" H 12400 1900 50  0000 L CNN
+F 1 "1500pF" H 12050 1700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 12388 1650 50  0001 C CNN
+F 3 "~" H 12350 1800 50  0001 C CNN
+	1    12350 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR036
+U 1 1 5D007044
+P 12350 1950
+F 0 "#PWR036" H 12350 1700 50  0001 C CNN
+F 1 "GND" H 12355 1777 50  0000 C CNN
+F 2 "" H 12350 1950 50  0001 C CNN
+F 3 "" H 12350 1950 50  0001 C CNN
+	1    12350 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C28
+U 1 1 5D00704A
+P 12350 1250
+F 0 "C28" H 12400 1350 50  0000 L CNN
+F 1 "1500pF" H 12050 1150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 12388 1100 50  0001 C CNN
+F 3 "~" H 12350 1250 50  0001 C CNN
+	1    12350 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR035
+U 1 1 5D007050
+P 12350 1400
+F 0 "#PWR035" H 12350 1150 50  0001 C CNN
+F 1 "GND" H 12355 1227 50  0000 C CNN
+F 2 "" H 12350 1400 50  0001 C CNN
+F 3 "" H 12350 1400 50  0001 C CNN
+	1    12350 1400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C31
+U 1 1 5D007056
+P 12350 2900
+F 0 "C31" H 12400 3000 50  0000 L CNN
+F 1 "1500pF" H 12050 2800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 12388 2750 50  0001 C CNN
+F 3 "~" H 12350 2900 50  0001 C CNN
+	1    12350 2900
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR038
+U 1 1 5D00705C
+P 12350 3050
+F 0 "#PWR038" H 12350 2800 50  0001 C CNN
+F 1 "GND" H 12355 2877 50  0000 C CNN
+F 2 "" H 12350 3050 50  0001 C CNN
+F 3 "" H 12350 3050 50  0001 C CNN
+	1    12350 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:L L21
+U 1 1 5D007062
+P 11900 1100
+F 0 "L21" V 12090 1100 50  0000 C CNN
+F 1 "5.5uH" V 11999 1100 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 11900 1100 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 11900 1100 50  0001 C CNN
+	1    11900 1100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L22
+U 1 1 5D007068
+P 11900 1650
+F 0 "L22" V 12090 1650 50  0000 C CNN
+F 1 "5.5uH" V 11999 1650 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 11900 1650 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 11900 1650 50  0001 C CNN
+	1    11900 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L23
+U 1 1 5D00706E
+P 11900 2200
+F 0 "L23" V 12090 2200 50  0000 C CNN
+F 1 "5.5uH" V 11999 2200 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 11900 2200 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 11900 2200 50  0001 C CNN
+	1    11900 2200
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:L L24
+U 1 1 5D007074
+P 11900 2750
+F 0 "L24" V 12090 2750 50  0000 C CNN
+F 1 "5.5uH" V 11999 2750 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 11900 2750 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 11900 2750 50  0001 C CNN
+	1    11900 2750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11400 1100 11750 1100
+Wire Wire Line
+	12050 1100 12350 1100
+Wire Wire Line
+	11400 1650 11750 1650
+Wire Wire Line
+	12050 1650 12350 1650
+Wire Wire Line
+	12350 2200 12050 2200
+Wire Wire Line
+	11750 2200 11400 2200
+Wire Wire Line
+	11400 2750 11750 2750
+Wire Wire Line
+	12050 2750 12350 2750
+Wire Wire Line
+	5450 3900 5550 3900
+Wire Wire Line
+	5550 4300 5550 3900
+Connection ~ 5550 3900
+Wire Wire Line
+	5550 3900 5600 3900
+Connection ~ 10300 4900
+Wire Wire Line
+	9100 3500 9100 2750
+Wire Wire Line
+	9100 2750 9550 2750
+Connection ~ 9550 2750
+Wire Wire Line
+	9150 3450 9150 2200
+Wire Wire Line
+	9150 2200 9550 2200
+Connection ~ 9550 2200
+Wire Wire Line
+	9200 3400 9200 1650
+Wire Wire Line
+	9200 1650 9550 1650
+Connection ~ 9550 1650
+Wire Wire Line
+	9250 3350 9250 1100
+Wire Wire Line
+	9250 1100 9550 1100
+Connection ~ 9550 1100
+Wire Wire Line
+	9550 1100 9850 1100
+Wire Wire Line
+	4200 3600 2900 3600
+Wire Wire Line
+	2900 3600 2900 3650
+$Comp
+L Device:C C32
+U 1 1 5D1705BC
+P 4900 3450
+F 0 "C32" H 4700 3550 50  0000 L CNN
+F 1 "0.1uF" H 4650 3350 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4938 3300 50  0001 C CNN
+F 3 "~" H 4900 3450 50  0001 C CNN
+	1    4900 3450
+	1    0    0    -1  
+$EndComp
+Connection ~ 4900 4100
+Wire Wire Line
+	4900 3600 4900 4100
+Wire Wire Line
+	10550 5300 10550 4900
+Text Label 11500 4900 3    50   ~ 0
+B0
+Text Label 11600 4900 3    50   ~ 0
+B1
+Wire Wire Line
+	11750 4900 11750 5100
+Wire Wire Line
+	11750 5100 11350 5100
+Wire Wire Line
+	10650 4900 10650 5300
+Wire Wire Line
+	11350 5300 11350 5100
+Connection ~ 11350 5100
+Wire Wire Line
+	11250 4900 11350 4900
+Wire Wire Line
+	11350 4900 11350 5100
+$Comp
+L Connector_Generic:Conn_01x01 J1
+U 1 1 5D009013
+P 1000 3500
+F 0 "J1" V 900 3500 50  0000 R CNN
+F 1 "GND" V 1100 3600 50  0000 R CNN
+F 2 "Connectors:PINTST" H 1000 3500 50  0001 C CNN
+F 3 "~" H 1000 3500 50  0001 C CNN
+F 4 "J" H 1000 3500 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 1000 3500 50  0001 C CNN "Spice_Model"
+F 6 "N" H 1000 3500 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1000 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5D009F69
+P 1000 3700
+F 0 "#PWR06" H 1000 3450 50  0001 C CNN
+F 1 "GND" H 1005 3527 50  0000 C CNN
+F 2 "" H 1000 3700 50  0001 C CNN
+F 3 "" H 1000 3700 50  0001 C CNN
+	1    1000 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 5D00A685
+P 1250 3500
+F 0 "J3" V 1150 3500 50  0000 R CNN
+F 1 "GND" V 1350 3600 50  0000 R CNN
+F 2 "Connectors:PINTST" H 1250 3500 50  0001 C CNN
+F 3 "~" H 1250 3500 50  0001 C CNN
+F 4 "J" H 1250 3500 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 1250 3500 50  0001 C CNN "Spice_Model"
+F 6 "N" H 1250 3500 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1250 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR09
+U 1 1 5D00A68B
+P 1250 3700
+F 0 "#PWR09" H 1250 3450 50  0001 C CNN
+F 1 "GND" H 1255 3527 50  0000 C CNN
+F 2 "" H 1250 3700 50  0001 C CNN
+F 3 "" H 1250 3700 50  0001 C CNN
+	1    1250 3700
+	1    0    0    -1  
+$EndComp
+Text Notes 950  4100 0    50   ~ 0
+Wire for\nscope probes
+$Comp
+L dk_Transistors-FETs-MOSFETs-Single:2N7000 Q?
+U 1 1 5D04E07A
+P 9500 9750
+F 0 "Q?" H 9608 9803 60  0000 L CNN
+F 1 "BSD316SN" H 9608 9697 60  0000 L CNN
+F 2 "SMA:TUMT3" H 9700 9950 60  0001 L CNN
+F 3 "https://www.rohm.com/datasheet/RTF016N05/rtf016n05-e" H 9700 10050 60  0001 L CNN
+F 4 "" H 9700 10150 60  0001 L CNN "Digi-Key_PN"
+F 5 "" H 9700 10250 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 9700 10350 60  0001 L CNN "Category"
+F 7 "Transistors - FETs, MOSFETs - Single" H 9700 10450 60  0001 L CNN "Family"
+F 8 "" H 9700 10550 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "" H 9700 10650 60  0001 L CNN "DK_Detail_Page"
+F 10 "" H 9700 10750 60  0001 L CNN "Description"
+F 11 "" H 9700 10850 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 9700 10950 60  0001 L CNN "Status"
+	1    9500 9750
+	1    0    0    -1  
+$EndComp
+Connection ~ 11400 1100
+Connection ~ 11400 1650
+Connection ~ 11400 2200
+Connection ~ 11400 2750
+Wire Wire Line
+	9100 3500 10550 3500
+Wire Wire Line
+	10550 3500 10550 3700
+Wire Wire Line
+	9150 3450 10650 3450
+Wire Wire Line
+	10650 3450 10650 3700
+Wire Wire Line
+	9200 3400 10750 3400
+Wire Wire Line
+	10750 3400 10750 3700
+Wire Wire Line
+	9250 3350 10850 3350
+Wire Wire Line
+	10850 3350 10850 3700
+Wire Wire Line
+	11150 3700 11150 3350
+Wire Wire Line
+	11150 3350 12650 3350
+Wire Wire Line
+	12650 3350 12650 2750
+Wire Wire Line
+	12650 2750 12350 2750
+Connection ~ 12350 2750
+Wire Wire Line
+	11250 3700 11250 3400
+Wire Wire Line
+	11250 3400 12700 3400
+Wire Wire Line
+	12700 3400 12700 2200
+Wire Wire Line
+	12700 2200 12350 2200
+Connection ~ 12350 2200
+Wire Wire Line
+	11350 3450 12750 3450
+Wire Wire Line
+	12750 3450 12750 1650
+Wire Wire Line
+	12750 1650 12350 1650
+Wire Wire Line
+	11350 3700 11350 3450
+Connection ~ 12350 1650
+Wire Wire Line
+	11450 3700 11450 3500
+Wire Wire Line
+	11450 3500 12800 3500
+Wire Wire Line
+	12800 3500 12800 1100
+Wire Wire Line
+	12800 1100 12350 1100
+Connection ~ 12350 1100
+Wire Wire Line
+	1550 8500 1550 7750
+Wire Wire Line
+	1550 7750 2000 7750
+Wire Wire Line
+	1600 8450 1600 7200
+Wire Wire Line
+	1600 7200 2000 7200
+Wire Wire Line
+	1650 8400 1650 6650
+Wire Wire Line
+	1650 6650 2000 6650
+Wire Wire Line
+	1700 8350 1700 6100
+Wire Wire Line
+	1700 6100 2000 6100
+Wire Wire Line
+	1550 8500 2400 8500
+Wire Wire Line
+	2400 8500 2400 8700
+Wire Wire Line
+	1600 8450 2500 8450
+Wire Wire Line
+	2500 8450 2500 8700
+Wire Wire Line
+	1650 8400 2600 8400
+Wire Wire Line
+	2600 8400 2600 8700
+Wire Wire Line
+	2700 8350 2700 8700
+Wire Wire Line
+	4000 8350 4000 7750
+Wire Wire Line
+	4000 7750 3700 7750
+Wire Wire Line
+	4050 8400 4050 7200
+Wire Wire Line
+	4050 7200 3700 7200
+Wire Wire Line
+	4100 8450 4100 6650
+Wire Wire Line
+	4100 6650 3700 6650
+Wire Wire Line
+	4150 8500 4150 6100
+Wire Wire Line
+	4150 6100 3700 6100
+Wire Wire Line
+	1700 8350 2700 8350
+Wire Wire Line
+	3000 8700 3000 8350
+Wire Wire Line
+	3000 8350 4000 8350
+Wire Wire Line
+	3100 8700 3100 8400
+Wire Wire Line
+	3100 8400 4050 8400
+Wire Wire Line
+	3200 8700 3200 8450
+Wire Wire Line
+	3200 8450 4100 8450
+Wire Wire Line
+	3300 8700 3300 8500
+Wire Wire Line
+	3300 8500 4150 8500
+$EndSCHEMATC

@@ -1,0 +1,7 @@
+(fp_lib_table
+  (lib (name digikey-kicad-library)(type KiCad)(uri ${KIPRJMOD}/digikey-kicad-library)(options "")(descr ""))
+  (lib (name EtherkitKicadLibrary)(type KiCad)(uri ${KIPRJMOD}/EtherkitKicadLibrary.pretty)(options "")(descr ""))
+  (lib (name kilibs)(type KiCad)(uri ${KIPRJMOD}/kilibs.pretty-master)(options "")(descr ""))
+  (lib (name SMA)(type KiCad)(uri ${KIPRJMOD}/SMA.pretty)(options "")(descr ""))
+  (lib (name SparkFun-DigitalIC)(type KiCad)(uri ${KIPRJMOD}/SparkFun-DigitalIC.pretty)(options "")(descr ""))
+)
