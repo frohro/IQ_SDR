@@ -343,7 +343,7 @@ ENDDEF
 #
 # myspice_VSOURCE
 #
-DEF myspice_VSOURCE V 0 40 Y Y 1 F N
+DEF ~myspice_VSOURCE V 0 40 Y Y 1 F N
 F0 "V" -250 300 50 H V C CNN
 F1 "myspice_VSOURCE" 0 0 50 H I C CNN
 F2 "" 0 0 50 H I C CNN
