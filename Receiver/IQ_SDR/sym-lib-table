@@ -148,4 +148,5 @@
   (lib (name dk_USB-DVI-HDMI-Connectors)(type Legacy)(uri ${KIPRJMOD}/digikey-kicad-library/digikey-symbols/dk_USB-DVI-HDMI-Connectors.lib)(options "")(descr ""))
   (lib (name onsemi)(type Legacy)(uri ${KIPRJMOD}/onsemi.lib)(options "")(descr ""))
   (lib (name myspice)(type Legacy)(uri /home/frohro/Classes/Electronics/myspice.lib)(options "")(descr ""))
+  (lib (name Connector)(type Legacy)(uri ${KIPRJMOD}/Connector.lib)(options "")(descr ""))
 )

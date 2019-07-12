@@ -544,99 +544,99 @@ NoConn ~ 11600 8400
 $Comp
 L Device:C C17
 U 1 1 5CFAE5FB
-P 2700 6850
-F 0 "C17" H 2750 6950 50  0000 L CNN
-F 1 "680pF" H 2450 6750 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 2738 6700 50  0001 C CNN
-F 3 "~" H 2700 6850 50  0001 C CNN
-	1    2700 6850
+P 2700 7350
+F 0 "C17" H 2750 7450 50  0000 L CNN
+F 1 "680pF" H 2450 7250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2738 7200 50  0001 C CNN
+F 3 "~" H 2700 7350 50  0001 C CNN
+	1    2700 7350
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L19
 U 1 1 5CFAFFA5
-P 3250 6700
-F 0 "L19" V 3440 6700 50  0000 C CNN
-F 1 "1.0uH" V 3349 6700 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3250 6700 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3250 6700 50  0001 C CNN
-	1    3250 6700
+P 3250 7200
+F 0 "L19" V 3440 7200 50  0000 C CNN
+F 1 "1.0uH" V 3349 7200 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3250 7200 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3250 7200 50  0001 C CNN
+	1    3250 7200
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C C26
 U 1 1 5CFB25E4
-P 3550 6700
-F 0 "C26" V 3298 6700 50  0000 C CNN
-F 1 "180pF" V 3389 6700 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 3588 6550 50  0001 C CNN
-F 3 "~" H 3550 6700 50  0001 C CNN
-	1    3550 6700
+P 3550 7200
+F 0 "C26" V 3298 7200 50  0000 C CNN
+F 1 "180pF" V 3389 7200 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3588 7050 50  0001 C CNN
+F 3 "~" H 3550 7200 50  0001 C CNN
+	1    3550 7200
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR020
 U 1 1 5CFB2B25
-P 2700 7000
-F 0 "#PWR020" H 2700 6750 50  0001 C CNN
-F 1 "GND" H 2705 6827 50  0000 C CNN
-F 2 "" H 2700 7000 50  0001 C CNN
-F 3 "" H 2700 7000 50  0001 C CNN
-	1    2700 7000
+P 2700 7500
+F 0 "#PWR020" H 2700 7250 50  0001 C CNN
+F 1 "GND" H 2705 7327 50  0000 C CNN
+F 2 "" H 2700 7500 50  0001 C CNN
+F 3 "" H 2700 7500 50  0001 C CNN
+	1    2700 7500
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR030
 U 1 1 5CFB3821
-P 2950 7000
-F 0 "#PWR030" H 2950 6750 50  0001 C CNN
-F 1 "GND" H 2955 6827 50  0000 C CNN
-F 2 "" H 2950 7000 50  0001 C CNN
-F 3 "" H 2950 7000 50  0001 C CNN
-	1    2950 7000
+P 2950 7500
+F 0 "#PWR030" H 2950 7250 50  0001 C CNN
+F 1 "GND" H 2955 7327 50  0000 C CNN
+F 2 "" H 2950 7500 50  0001 C CNN
+F 3 "" H 2950 7500 50  0001 C CNN
+	1    2950 7500
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L15
 U 1 1 5CFBF0C4
-P 2950 6850
-F 0 "L15" H 3003 6896 50  0000 L CNN
-F 1 "0.27uH" H 3003 6805 50  0000 L CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 6850 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 6850 50  0001 C CNN
-	1    2950 6850
+P 2950 7350
+F 0 "L15" H 3003 7396 50  0000 L CNN
+F 1 "0.27uH" H 3003 7305 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 7350 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 7350 50  0001 C CNN
+	1    2950 7350
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L7
 U 1 1 5CFD3358
-P 2150 6700
-F 0 "L7" V 2340 6700 50  0000 C CNN
-F 1 "1.0uH" V 2249 6700 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2150 6700 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2150 6700 50  0001 C CNN
-	1    2150 6700
+P 2150 7200
+F 0 "L7" V 2340 7200 50  0000 C CNN
+F 1 "1.0uH" V 2249 7200 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2150 7200 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2150 7200 50  0001 C CNN
+	1    2150 7200
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C C13
 U 1 1 5CFD335E
-P 2450 6700
-F 0 "C13" V 2198 6700 50  0000 C CNN
-F 1 "180pF" V 2289 6700 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 2488 6550 50  0001 C CNN
-F 3 "~" H 2450 6700 50  0001 C CNN
-	1    2450 6700
+P 2450 7200
+F 0 "C13" V 2500 7050 50  0000 C CNN
+F 1 "180pF" V 2289 7200 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 2488 7050 50  0001 C CNN
+F 3 "~" H 2450 7200 50  0001 C CNN
+	1    2450 7200
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2600 6700 2700 6700
+	2600 7200 2700 7200
 Wire Wire Line
-	2700 6700 2950 6700
-Connection ~ 2700 6700
+	2700 7200 2950 7200
+Connection ~ 2700 7200
 Wire Wire Line
-	2950 6700 3100 6700
-Connection ~ 2950 6700
+	2950 7200 3100 7200
+Connection ~ 2950 7200
 $Comp
 L Device:R R6
 U 1 1 5CFD8143
@@ -1061,291 +1061,291 @@ Doubly Balanced\nSampling Mixers
 $Comp
 L Device:C C16
 U 1 1 5D0A5CE8
-P 2700 6050
-F 0 "C16" H 2750 6150 50  0000 L CNN
-F 1 "1500pF" H 2400 5950 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 2738 5900 50  0001 C CNN
-F 3 "~" H 2700 6050 50  0001 C CNN
-	1    2700 6050
+P 2700 6800
+F 0 "C16" H 2750 6900 50  0000 L CNN
+F 1 "1500pF" H 2400 6700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2738 6650 50  0001 C CNN
+F 3 "~" H 2700 6800 50  0001 C CNN
+	1    2700 6800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L18
 U 1 1 5D0A5CEE
-P 3250 5900
-F 0 "L18" V 3440 5900 50  0000 C CNN
-F 1 "2.0uH" V 3349 5900 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3250 5900 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3250 5900 50  0001 C CNN
-	1    3250 5900
+P 3250 6650
+F 0 "L18" V 3440 6650 50  0000 C CNN
+F 1 "2.0uH" V 3349 6650 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3250 6650 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3250 6650 50  0001 C CNN
+	1    3250 6650
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C C25
 U 1 1 5D0A5CF4
-P 3550 5900
-F 0 "C25" V 3298 5900 50  0000 C CNN
-F 1 "390pF" V 3389 5900 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 3588 5750 50  0001 C CNN
-F 3 "~" H 3550 5900 50  0001 C CNN
-	1    3550 5900
+P 3550 6650
+F 0 "C25" V 3298 6650 50  0000 C CNN
+F 1 "390pF" V 3389 6650 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3588 6500 50  0001 C CNN
+F 3 "~" H 3550 6650 50  0001 C CNN
+	1    3550 6650
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR019
 U 1 1 5D0A5CFA
-P 2700 6200
-F 0 "#PWR019" H 2700 5950 50  0001 C CNN
-F 1 "GND" H 2705 6027 50  0000 C CNN
-F 2 "" H 2700 6200 50  0001 C CNN
-F 3 "" H 2700 6200 50  0001 C CNN
-	1    2700 6200
+P 2700 6950
+F 0 "#PWR019" H 2700 6700 50  0001 C CNN
+F 1 "GND" H 2705 6777 50  0000 C CNN
+F 2 "" H 2700 6950 50  0001 C CNN
+F 3 "" H 2700 6950 50  0001 C CNN
+	1    2700 6950
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR029
 U 1 1 5D0A5D00
-P 2950 6200
-F 0 "#PWR029" H 2950 5950 50  0001 C CNN
-F 1 "GND" H 2955 6027 50  0000 C CNN
-F 2 "" H 2950 6200 50  0001 C CNN
-F 3 "" H 2950 6200 50  0001 C CNN
-	1    2950 6200
+P 2950 6950
+F 0 "#PWR029" H 2950 6700 50  0001 C CNN
+F 1 "GND" H 2955 6777 50  0000 C CNN
+F 2 "" H 2950 6950 50  0001 C CNN
+F 3 "" H 2950 6950 50  0001 C CNN
+	1    2950 6950
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L14
 U 1 1 5D0A5D07
-P 2950 6050
-F 0 "L14" H 3003 6096 50  0000 L CNN
-F 1 "0.46uH" H 3003 6005 50  0000 L CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 6050 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 6050 50  0001 C CNN
-	1    2950 6050
+P 2950 6800
+F 0 "L14" H 3003 6846 50  0000 L CNN
+F 1 "0.46uH" H 3003 6755 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 6800 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 6800 50  0001 C CNN
+	1    2950 6800
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L6
 U 1 1 5D0A5D0D
-P 2150 5900
-F 0 "L6" V 2340 5900 50  0000 C CNN
-F 1 "2.0uH" V 2249 5900 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2150 5900 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2150 5900 50  0001 C CNN
-	1    2150 5900
+P 2150 6650
+F 0 "L6" V 2340 6650 50  0000 C CNN
+F 1 "2.0uH" V 2249 6650 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2150 6650 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2150 6650 50  0001 C CNN
+	1    2150 6650
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C C12
 U 1 1 5D0A5D13
-P 2450 5900
-F 0 "C12" V 2198 5900 50  0000 C CNN
-F 1 "390pF" V 2289 5900 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 2488 5750 50  0001 C CNN
-F 3 "~" H 2450 5900 50  0001 C CNN
-	1    2450 5900
+P 2450 6650
+F 0 "C12" V 2500 6500 50  0000 C CNN
+F 1 "390pF" V 2289 6650 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 2488 6500 50  0001 C CNN
+F 3 "~" H 2450 6650 50  0001 C CNN
+	1    2450 6650
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2600 5900 2700 5900
+	2600 6650 2700 6650
 Wire Wire Line
-	2700 5900 2950 5900
-Connection ~ 2700 5900
+	2700 6650 2950 6650
+Connection ~ 2700 6650
 Wire Wire Line
-	2950 5900 3100 5900
-Connection ~ 2950 5900
+	2950 6650 3100 6650
+Connection ~ 2950 6650
 $Comp
 L Device:C C15
 U 1 1 5D0AC8B4
-P 2700 5250
-F 0 "C15" H 2750 5350 50  0000 L CNN
-F 1 "1500pF" H 2400 5150 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 2738 5100 50  0001 C CNN
-F 3 "~" H 2700 5250 50  0001 C CNN
-	1    2700 5250
+P 2700 6250
+F 0 "C15" H 2750 6350 50  0000 L CNN
+F 1 "1500pF" H 2400 6150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2738 6100 50  0001 C CNN
+F 3 "~" H 2700 6250 50  0001 C CNN
+	1    2700 6250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L17
 U 1 1 5D0AC8BA
-P 3250 5100
-F 0 "L17" V 3440 5100 50  0000 C CNN
-F 1 "5.5uH" V 3349 5100 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3250 5100 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3250 5100 50  0001 C CNN
-	1    3250 5100
+P 3250 6100
+F 0 "L17" V 3440 6100 50  0000 C CNN
+F 1 "5.5uH" V 3349 6100 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3250 6100 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3250 6100 50  0001 C CNN
+	1    3250 6100
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C C24
 U 1 1 5D0AC8C0
-P 3550 5100
-F 0 "C24" V 3298 5100 50  0000 C CNN
-F 1 "680pF" V 3389 5100 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 3588 4950 50  0001 C CNN
-F 3 "~" H 3550 5100 50  0001 C CNN
-	1    3550 5100
+P 3550 6100
+F 0 "C24" V 3298 6100 50  0000 C CNN
+F 1 "680pF" V 3389 6100 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3588 5950 50  0001 C CNN
+F 3 "~" H 3550 6100 50  0001 C CNN
+	1    3550 6100
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR018
 U 1 1 5D0AC8C6
-P 2700 5400
-F 0 "#PWR018" H 2700 5150 50  0001 C CNN
-F 1 "GND" H 2705 5227 50  0000 C CNN
-F 2 "" H 2700 5400 50  0001 C CNN
-F 3 "" H 2700 5400 50  0001 C CNN
-	1    2700 5400
+P 2700 6400
+F 0 "#PWR018" H 2700 6150 50  0001 C CNN
+F 1 "GND" H 2705 6227 50  0000 C CNN
+F 2 "" H 2700 6400 50  0001 C CNN
+F 3 "" H 2700 6400 50  0001 C CNN
+	1    2700 6400
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR028
 U 1 1 5D0AC8CC
-P 2950 5400
-F 0 "#PWR028" H 2950 5150 50  0001 C CNN
-F 1 "GND" H 2955 5227 50  0000 C CNN
-F 2 "" H 2950 5400 50  0001 C CNN
-F 3 "" H 2950 5400 50  0001 C CNN
-	1    2950 5400
+P 2950 6400
+F 0 "#PWR028" H 2950 6150 50  0001 C CNN
+F 1 "GND" H 2955 6227 50  0000 C CNN
+F 2 "" H 2950 6400 50  0001 C CNN
+F 3 "" H 2950 6400 50  0001 C CNN
+	1    2950 6400
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L13
 U 1 1 5D0AC8D3
-P 2950 5250
-F 0 "L13" H 3003 5296 50  0000 L CNN
-F 1 "2.6uH" H 3003 5205 50  0000 L CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 5250 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 5250 50  0001 C CNN
-	1    2950 5250
+P 2950 6250
+F 0 "L13" H 3003 6296 50  0000 L CNN
+F 1 "2.6uH" H 3003 6205 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 6250 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 6250 50  0001 C CNN
+	1    2950 6250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L5
 U 1 1 5D0AC8D9
-P 2150 5100
-F 0 "L5" V 2340 5100 50  0000 C CNN
-F 1 "5.5uH" V 2249 5100 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2150 5100 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2150 5100 50  0001 C CNN
-	1    2150 5100
+P 2150 6100
+F 0 "L5" V 2340 6100 50  0000 C CNN
+F 1 "5.5uH" V 2249 6100 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2150 6100 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2150 6100 50  0001 C CNN
+	1    2150 6100
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C C11
 U 1 1 5D0AC8DF
-P 2450 5100
-F 0 "C11" V 2198 5100 50  0000 C CNN
-F 1 "680pF" V 2289 5100 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 2488 4950 50  0001 C CNN
-F 3 "~" H 2450 5100 50  0001 C CNN
-	1    2450 5100
+P 2450 6100
+F 0 "C11" V 2198 6100 50  0000 C CNN
+F 1 "680pF" V 2289 6100 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 2488 5950 50  0001 C CNN
+F 3 "~" H 2450 6100 50  0001 C CNN
+	1    2450 6100
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2600 5100 2700 5100
+	2600 6100 2700 6100
 Wire Wire Line
-	2700 5100 2950 5100
-Connection ~ 2700 5100
+	2700 6100 2950 6100
+Connection ~ 2700 6100
 Wire Wire Line
-	2950 5100 3100 5100
-Connection ~ 2950 5100
+	2950 6100 3100 6100
+Connection ~ 2950 6100
 $Comp
 L Device:C C18
 U 1 1 5D0B1C54
-P 2700 7700
-F 0 "C18" H 2750 7800 50  0000 L CNN
-F 1 "390pF" H 2700 7600 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 2738 7550 50  0001 C CNN
-F 3 "~" H 2700 7700 50  0001 C CNN
-	1    2700 7700
+P 2700 7900
+F 0 "C18" H 2750 8000 50  0000 L CNN
+F 1 "390pF" H 2700 7800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2738 7750 50  0001 C CNN
+F 3 "~" H 2700 7900 50  0001 C CNN
+	1    2700 7900
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L20
 U 1 1 5D0B1C5A
-P 3250 7550
-F 0 "L20" V 3440 7550 50  0000 C CNN
-F 1 "0.46uH" V 3349 7550 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3250 7550 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3250 7550 50  0001 C CNN
-	1    3250 7550
+P 3250 7750
+F 0 "L20" V 3440 7750 50  0000 C CNN
+F 1 "0.46uH" V 3349 7750 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3250 7750 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3250 7750 50  0001 C CNN
+	1    3250 7750
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C C27
 U 1 1 5D0B1C60
-P 3550 7550
-F 0 "C27" V 3298 7550 50  0000 C CNN
-F 1 "100pF" V 3389 7550 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 3588 7400 50  0001 C CNN
-F 3 "~" H 3550 7550 50  0001 C CNN
-	1    3550 7550
+P 3550 7750
+F 0 "C27" V 3298 7750 50  0000 C CNN
+F 1 "100pF" V 3389 7750 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3588 7600 50  0001 C CNN
+F 3 "~" H 3550 7750 50  0001 C CNN
+	1    3550 7750
 	0    1    1    0   
 $EndComp
 $Comp
 L power:GND #PWR021
 U 1 1 5D0B1C66
-P 2700 7850
-F 0 "#PWR021" H 2700 7600 50  0001 C CNN
-F 1 "GND" H 2705 7677 50  0000 C CNN
-F 2 "" H 2700 7850 50  0001 C CNN
-F 3 "" H 2700 7850 50  0001 C CNN
-	1    2700 7850
+P 2700 8050
+F 0 "#PWR021" H 2700 7800 50  0001 C CNN
+F 1 "GND" H 2705 7877 50  0000 C CNN
+F 2 "" H 2700 8050 50  0001 C CNN
+F 3 "" H 2700 8050 50  0001 C CNN
+	1    2700 8050
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR031
 U 1 1 5D0B1C6C
-P 2950 7850
-F 0 "#PWR031" H 2950 7600 50  0001 C CNN
-F 1 "GND" H 2955 7677 50  0000 C CNN
-F 2 "" H 2950 7850 50  0001 C CNN
-F 3 "" H 2950 7850 50  0001 C CNN
-	1    2950 7850
+P 2950 8050
+F 0 "#PWR031" H 2950 7800 50  0001 C CNN
+F 1 "GND" H 2955 7877 50  0000 C CNN
+F 2 "" H 2950 8050 50  0001 C CNN
+F 3 "" H 2950 8050 50  0001 C CNN
+	1    2950 8050
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L16
 U 1 1 5D0B1C73
-P 2950 7700
-F 0 "L16" H 3003 7746 50  0000 L CNN
-F 1 "0.13uH" H 3003 7655 50  0000 L CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 7700 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 7700 50  0001 C CNN
-	1    2950 7700
+P 2950 7900
+F 0 "L16" H 3003 7946 50  0000 L CNN
+F 1 "0.13uH" H 3003 7855 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 7900 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 7900 50  0001 C CNN
+	1    2950 7900
 	1    0    0    -1  
 $EndComp
 $Comp
 L Device:L L8
 U 1 1 5D0B1C79
-P 2150 7550
-F 0 "L8" V 2340 7550 50  0000 C CNN
-F 1 "0.46uH" V 2249 7550 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2150 7550 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2150 7550 50  0001 C CNN
-	1    2150 7550
+P 2150 7750
+F 0 "L8" V 2340 7750 50  0000 C CNN
+F 1 "0.46uH" V 2249 7750 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2150 7750 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2150 7750 50  0001 C CNN
+	1    2150 7750
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:C C14
 U 1 1 5D0B1C7F
-P 2450 7550
-F 0 "C14" V 2198 7550 50  0000 C CNN
-F 1 "100pF" V 2289 7550 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 2488 7400 50  0001 C CNN
-F 3 "~" H 2450 7550 50  0001 C CNN
-	1    2450 7550
+P 2450 7750
+F 0 "C14" V 2500 7600 50  0000 C CNN
+F 1 "100pF" V 2289 7750 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 2488 7600 50  0001 C CNN
+F 3 "~" H 2450 7750 50  0001 C CNN
+	1    2450 7750
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	2600 7550 2700 7550
+	2600 7750 2700 7750
 Wire Wire Line
-	2700 7550 2950 7550
-Connection ~ 2700 7550
+	2700 7750 2950 7750
+Connection ~ 2700 7750
 Wire Wire Line
-	2950 7550 3100 7550
-Connection ~ 2950 7550
+	2950 7750 3100 7750
+Connection ~ 2950 7750
 $Comp
 L onsemi:FST3253 U1
 U 1 1 5D1B613B
@@ -1361,38 +1361,6 @@ F 7 "N" H 2850 9300 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    2850 9300
 	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	2550 7800 2550 8100
-Wire Wire Line
-	2550 8100 2700 8100
-Wire Wire Line
-	2700 8100 2700 8700
-Wire Wire Line
-	3000 8700 3000 8100
-Wire Wire Line
-	2600 8700 2600 8200
-Wire Wire Line
-	2600 8200 2450 8200
-Wire Wire Line
-	2450 8200 2450 7900
-Wire Wire Line
-	3100 8700 3100 8200
-Wire Wire Line
-	3200 8700 3200 8300
-Wire Wire Line
-	2500 8700 2500 8300
-Wire Wire Line
-	2500 8300 2350 8300
-Wire Wire Line
-	2350 8300 2350 8000
-Wire Wire Line
-	2400 8700 2400 8400
-Wire Wire Line
-	2400 8400 2250 8400
-Wire Wire Line
-	2250 8400 2250 8100
-Wire Wire Line
-	3300 8400 3300 8700
 Wire Wire Line
 	1900 10200 2400 10200
 Wire Wire Line
@@ -1857,8 +1825,6 @@ Wire Wire Line
 Connection ~ 7350 6750
 Wire Wire Line
 	7900 6350 7900 6750
-Text Notes 1300 8250 0    50   ~ 0
-Fix DC bias on filters.
 $Comp
 L Device:C C10
 U 1 1 5CF88663
@@ -2833,4 +2799,120 @@ Wire Wire Line
 Wire Wire Line
 	12800 1100 12350 1100
 Connection ~ 12350 1100
+Wire Wire Line
+	1550 8500 1550 7750
+Wire Wire Line
+	1550 7750 2000 7750
+Wire Wire Line
+	1600 8450 1600 7200
+Wire Wire Line
+	1600 7200 2000 7200
+Wire Wire Line
+	1650 8400 1650 6650
+Wire Wire Line
+	1650 6650 2000 6650
+Wire Wire Line
+	1700 8350 1700 6100
+Wire Wire Line
+	1700 6100 2000 6100
+Wire Wire Line
+	1550 8500 2400 8500
+Wire Wire Line
+	2400 8500 2400 8700
+Wire Wire Line
+	1600 8450 2500 8450
+Wire Wire Line
+	2500 8450 2500 8700
+Wire Wire Line
+	1650 8400 2600 8400
+Wire Wire Line
+	2600 8400 2600 8700
+Wire Wire Line
+	2700 8350 2700 8700
+Wire Wire Line
+	4000 8350 4000 7750
+Wire Wire Line
+	4000 7750 3700 7750
+Wire Wire Line
+	4050 8400 4050 7200
+Wire Wire Line
+	4050 7200 3700 7200
+Wire Wire Line
+	4100 8450 4100 6650
+Wire Wire Line
+	4100 6650 3700 6650
+Wire Wire Line
+	4150 8500 4150 6100
+Wire Wire Line
+	4150 6100 3700 6100
+Wire Wire Line
+	1700 8350 2700 8350
+Wire Wire Line
+	3000 8700 3000 8350
+Wire Wire Line
+	3000 8350 4000 8350
+Wire Wire Line
+	3100 8700 3100 8400
+Wire Wire Line
+	3100 8400 4050 8400
+Wire Wire Line
+	3200 8700 3200 8450
+Wire Wire Line
+	3200 8450 4100 8450
+Wire Wire Line
+	3300 8700 3300 8500
+Wire Wire Line
+	3300 8500 4150 8500
+$Comp
+L power:GND #PWR?
+U 1 1 5D7DE8EC
+P 11750 9850
+F 0 "#PWR?" H 11750 9600 50  0001 C CNN
+F 1 "GND" H 11755 9677 50  0000 C CNN
+F 2 "" H 11750 9850 50  0001 C CNN
+F 3 "" H 11750 9850 50  0001 C CNN
+	1    11750 9850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11750 9550 11750 9500
+$Comp
+L Device:R R?
+U 1 1 5D7DE8F3
+P 11750 9700
+F 0 "R?" H 11820 9746 50  0000 L CNN
+F 1 "2.2k" H 11820 9655 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 11680 9700 50  0001 C CNN
+F 3 "~" H 11750 9700 50  0001 C CNN
+	1    11750 9700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5D7F1048
+P 12000 9750
+F 0 "#PWR?" H 12000 9500 50  0001 C CNN
+F 1 "GND" H 12005 9577 50  0000 C CNN
+F 2 "" H 12000 9750 50  0001 C CNN
+F 3 "" H 12000 9750 50  0001 C CNN
+	1    12000 9750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12000 9450 12000 9400
+$Comp
+L Device:R R?
+U 1 1 5D7F104F
+P 12000 9600
+F 0 "R?" H 12070 9646 50  0000 L CNN
+F 1 "2.2k" H 12070 9555 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 11930 9600 50  0001 C CNN
+F 3 "~" H 12000 9600 50  0001 C CNN
+	1    12000 9600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11600 9400 12000 9400
+Wire Wire Line
+	11600 9500 11750 9500
 $EndSCHEMATC

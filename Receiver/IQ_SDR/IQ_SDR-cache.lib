@@ -36,6 +36,48 @@ X V+ 8 -100 300 150 D 50 50 3 1 W
 ENDDRAW
 ENDDEF
 #
+# Connector_Barrel_Jack_Switch
+#
+DEF Connector_Barrel_Jack_Switch J 0 20 Y N 1 F N
+F0 "J" 0 210 50 H V C CNN
+F1 "Connector_Barrel_Jack_Switch" 0 -200 50 H V C CNN
+F2 "" 50 -40 50 H I C CNN
+F3 "" 50 -40 50 H I C CNN
+$FPLIST
+ BarrelJack*
+$ENDFPLIST
+DRAW
+A -130 100 25 901 -901 0 1 10 F -130 125 -130 75
+A -130 100 25 901 -901 0 1 10 N -130 125 -130 75
+S -200 150 200 -150 0 1 10 f
+S 145 125 -130 75 0 1 10 F
+P 2 0 1 10 50 -90 75 -65 N
+P 2 0 1 10 200 100 150 100 N
+P 4 0 1 10 200 0 50 0 50 -90 25 -65 N
+P 6 0 1 10 -150 -100 -100 -100 -50 -50 0 -100 100 -100 200 -100 N
+X ~ 1 300 100 100 L 50 50 1 1 P
+X ~ 2 300 -100 100 L 50 50 1 1 P
+X ~ 3 300 0 100 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Connector_Conn_01x01_Male
+#
+DEF Connector_Conn_01x01_Male J 0 40 Y N 1 F N
+F0 "J" 0 100 50 H V C CNN
+F1 "Connector_Conn_01x01_Male" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ Connector*:*
+$ENDFPLIST
+DRAW
+S 34 5 0 -5 1 1 6 F
+P 2 1 1 6 50 0 34 0 N
+X Pin_1 1 200 0 150 L 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
 # Connector_Generic_Conn_01x01
 #
 DEF Connector_Generic_Conn_01x01 J 0 40 Y N 1 F N
@@ -203,6 +245,25 @@ C 0 0 20 0 1 8 N
 C 0 0 70 0 1 12 N
 X In 1 -150 0 130 R 40 40 1 1 P
 X Ext 2 0 -200 130 U 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+# Jumper_Jumper_2_Open
+#
+DEF Jumper_Jumper_2_Open JP 0 0 Y N 1 F N
+F0 "JP" 0 110 50 H V C CNN
+F1 "Jumper_Jumper_2_Open" 0 -90 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ SolderJumper*Open*
+$ENDFPLIST
+DRAW
+A 0 -30 100 1269 531 0 1 0 N -60 50 60 50
+C -80 0 20 0 0 0 N
+C 80 0 20 0 0 0 N
+X A 1 -200 0 100 R 50 50 1 1 P
+X B 2 200 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

@@ -5,12 +5,12 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "IQ_SDR Receiver"
-Date "2019-05-29"
+Title "Arduino HF SDR Receiver"
+Date "2019-07-11"
 Rev "0.1"
 Comp "Walla Walla University"
-Comment1 "Ultra Cheap HF QSD SDR"
-Comment2 ""
+Comment1 "Rob Frohne, KL7NA"
+Comment2 "Open Hardware License"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -20,7 +20,7 @@ U 1 1 5CEEB368
 P 4100 1750
 F 0 "U2" H 4100 1750 50  0000 C CNN
 F 1 "Si5351A-B-GT" H 3700 1300 50  0000 C CNN
-F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 4100 950 50  0001 C CNN
+F 2 "EtherkitKicadLibrary:MSOP-10" H 4100 950 50  0001 C CNN
 F 3 "https://www.silabs.com/documents/public/data-sheets/Si5351-B.pdf" H 3750 1650 50  0001 C CNN
 F 4 "X" H 4100 1750 50  0001 C CNN "Spice_Primitive"
 F 5 "Si5351a" H 4100 1750 50  0001 C CNN "Spice_Model"
@@ -34,8 +34,8 @@ L MCU_Module:Arduino_Nano_v3.x A1
 U 1 1 5D491311
 P 9550 1950
 F 0 "A1" H 9550 1900 50  0000 C CNN
-F 1 "Arduino_Nano_v3.x" H 10050 1000 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 9700 1000 50  0001 L CNN
+F 1 "Arduino_Nano_v3.x" H 9650 650 50  0000 C CNN
+F 2 "Modules:Arduino_Nano" H 9700 1000 50  0001 L CNN
 F 3 "https://www.arduino.cc/en/uploads/Main/Arduino_Nano-Rev3.2-SCH.pdf" H 9550 950 50  0001 C CNN
 F 4 "R" H 9550 1950 50  0001 C CNN "Spice_Primitive"
 F 5 "10" H 9550 1950 50  0001 C CNN "Spice_Model"
@@ -966,7 +966,7 @@ U 1 1 5D1B613B
 P 2700 6800
 F 0 "U1" V 2746 5970 50  0000 R CNN
 F 1 "FST3253" V 2655 5970 50  0000 R CNN
-F 2 "IPC7351-Nominal:SOIC127P600X180-16" H 2700 5900 50  0001 C CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 2700 5900 50  0001 C CNN
 F 3 "https://www.onsemi.com/pub/Collateral/FST3253-D.pdf" H 2700 5700 50  0001 C CNN
 F 4 "DIST DIGIKEY FST3253MXFSCT-ND" H 2700 5800 60  0001 C CNN "BOM"
 F 5 "R" H 2700 6800 50  0001 C CNN "Spice_Primitive"
@@ -1308,7 +1308,7 @@ F 1 "Transformer_1P_SS" H 5200 4740 50  0000 C CNN
 F 2 "SMA:4_to_1_Transmission_Line_TransformerTHT" H 5200 4450 50  0001 C CNN
 F 3 "~" H 5200 4450 50  0001 C CNN
 	1    5200 4450
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L nl7w66:TS5A23157 U3
@@ -1520,7 +1520,7 @@ $EndComp
 Connection ~ 5000 5150
 Text Notes 7500 6700 0    50   ~ 0
 A very nice description of how op amp noise effects the noise figure\nis given in this data sheet \nhttps://www.ti.com/lit/ds/symlink/lmh6629.pdf \nin sections 7.3.4 and 7.3.5 (pages 24-7).   Finding an optimum R_g\n(input resistance for the inverting amplifier) seems to imply that\nthe optimum gets better as it goes to zero, assuming R_s is fixed.\nThe excess noise is approximately (e_n)^2+(i_n-)^2*(R_s+R_g)^2+4kTR_g, \nso minimizing e_n and i_n and R_g is\nthe best you can do.  The effect of i_n-  can be compared to e_n, by\nmultiplying by Rs_+Rg, so for R_g = 10 and R_s  = 50, e_n is more \nimportant in all the cases I've seen so far.  A nice calculator\nis at:\nhttp://dicks-website.eu/noisecalculator/index.html
-Text Notes 6600 3150 0    50   ~ 0
+Text Notes 5550 3300 0    50   ~ 0
 LT6231 has lower noise figure (4.7 dB), \nbut costs about 7 times as much\nas the SA5532.  LME49860 is \nintermediate option.  LM4562\ncould be even better (10.6 dB)\n2.7nV/sqrt(Hz).
 $Comp
 L Device:R R1
@@ -1558,9 +1558,6 @@ F 6 "N" H 4600 2550 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4600 2550
 	0    -1   1    0   
 $EndComp
-Wire Wire Line
-	4600 1950 4600 2400
-Connection ~ 4600 1950
 Wire Wire Line
 	4800 2550 4800 2650
 $Comp
@@ -1618,10 +1615,10 @@ F 6 "N" H 1750 1550 50  0001 C CNN "Spice_Netlist_Enabled"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR09
+L power:GND #PWR08
 U 1 1 5CFDCC76
 P 1750 1750
-F 0 "#PWR09" H 1750 1500 50  0001 C CNN
+F 0 "#PWR08" H 1750 1500 50  0001 C CNN
 F 1 "GND" H 1755 1577 50  0000 C CNN
 F 2 "" H 1750 1750 50  0001 C CNN
 F 3 "" H 1750 1750 50  0001 C CNN
@@ -1873,10 +1870,10 @@ F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 355
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR010
+L power:GND #PWR09
 U 1 1 5D1D401E
 P 1750 4450
-F 0 "#PWR010" H 1750 4200 50  0001 C CNN
+F 0 "#PWR09" H 1750 4200 50  0001 C CNN
 F 1 "GND" H 1755 4277 50  0001 C CNN
 F 2 "" H 1750 4450 50  0001 C CNN
 F 3 "" H 1750 4450 50  0001 C CNN
@@ -2355,12 +2352,12 @@ F 3 "" H 8700 700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Jumper:Jumper_3_Bridged12 JP1
+L Jumper:Jumper_3_Bridged12 JP2
 U 1 1 5D208330
 P 8450 900
-F 0 "JP1" H 8450 1013 50  0000 C CNN
+F 0 "JP2" H 8450 1013 50  0000 C CNN
 F 1 "Jumper_3_Bridged12" H 8450 1013 50  0001 C CNN
-F 2 "" H 8450 900 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03_Pitch2.54mm" H 8450 900 50  0001 C CNN
 F 3 "~" H 8450 900 50  0001 C CNN
 	1    8450 900 
 	1    0    0    -1  
@@ -2398,20 +2395,20 @@ U 1 1 5D27D09E
 P 1450 2650
 F 0 "J3" H 1600 2700 50  0000 C CNN
 F 1 "V_IN pin header" H 1850 2600 50  0000 C CNN
-F 2 "" H 1450 2650 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 1450 2650 50  0001 C CNN
 F 3 "~" H 1450 2650 50  0001 C CNN
 	1    1450 2650
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR08
+L power:GND #PWR010
 U 1 1 5D289723
-P 1650 2750
-F 0 "#PWR08" H 1650 2500 50  0001 C CNN
-F 1 "GND" H 1655 2577 50  0000 C CNN
-F 2 "" H 1650 2750 50  0001 C CNN
-F 3 "" H 1650 2750 50  0001 C CNN
-	1    1650 2750
+P 1800 2850
+F 0 "#PWR010" H 1800 2600 50  0001 C CNN
+F 1 "GND" H 1805 2677 50  0000 C CNN
+F 2 "" H 1800 2850 50  0001 C CNN
+F 3 "" H 1800 2850 50  0001 C CNN
+	1    1800 2850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2425,19 +2422,6 @@ F 3 "" H 1650 2650 50  0001 C CNN
 	1    1650 2650
 	1    0    0    -1  
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J5
-U 1 1 5D2A8ED8
-P 1850 2650
-F 0 "J5" H 1930 2642 50  0000 L CNN
-F 1 "Barrel Connector" H 1930 2551 50  0000 L CNN
-F 2 "" H 1850 2650 50  0001 C CNN
-F 3 "~" H 1850 2650 50  0001 C CNN
-	1    1850 2650
-	1    0    0    -1  
-$EndComp
-Connection ~ 1650 2650
-Connection ~ 1650 2750
 Text Notes 650  2600 0    50   ~ 0
 V_IN is an optional\nDC Voltage for up to\n+30V.
 Wire Wire Line
@@ -2563,12 +2547,11 @@ Text Notes 7550 950  0    50   ~ 0
 External DC in\nto run op amps\nif desired.
 Text Notes 650  3000 0    50   ~ 0
 Inputs for external\nDC input for op\namps.
-Connection ~ 8400 3850
 $Comp
-L power:PWR_FLAG #FLG0101
+L power:PWR_FLAG #FLG05
 U 1 1 5D47EB15
 P 8700 800
-F 0 "#FLG0101" H 8700 875 50  0001 C CNN
+F 0 "#FLG05" H 8700 875 50  0001 C CNN
 F 1 "PWR_FLAG" V 8700 928 50  0000 L CNN
 F 2 "" H 8700 800 50  0001 C CNN
 F 3 "~" H 8700 800 50  0001 C CNN
@@ -2579,10 +2562,10 @@ Connection ~ 8700 800
 Wire Wire Line
 	8700 800  8700 900 
 $Comp
-L power:PWR_FLAG #FLG0102
+L power:PWR_FLAG #FLG04
 U 1 1 5D47F235
 P 8450 1150
-F 0 "#FLG0102" H 8450 1225 50  0001 C CNN
+F 0 "#FLG04" H 8450 1225 50  0001 C CNN
 F 1 "PWR_FLAG" V 8450 1277 50  0000 L CNN
 F 2 "" H 8450 1150 50  0001 C CNN
 F 3 "~" H 8450 1150 50  0001 C CNN
@@ -2592,10 +2575,118 @@ $EndComp
 Connection ~ 8450 1150
 Wire Wire Line
 	8450 1150 8450 1250
-Text Notes 8350 1700 0    50   ~ 0
-Connect J15\nto J16 to \nremove\neffect of CC\nsmoother.
 Text Notes 6850 5200 0    50   ~ 0
 R9-10 can be\nup to 100\nwith LM4562.
 Text Notes 4700 4000 0    50   ~ 0
 Making T1 a step up\ntransformer makes\nthe S/N and NF better.
+$Comp
+L Jumper:Jumper_2_Open JP1
+U 1 1 5D205EC2
+P 7150 2100
+F 0 "JP1" V 7196 2012 50  0000 R CNN
+F 1 "smooth disable" V 7400 2400 50  0000 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 7150 2100 50  0001 C CNN
+F 3 "~" H 7150 2100 50  0001 C CNN
+	1    7150 2100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7150 1900 7150 1800
+Wire Wire Line
+	7150 1800 7700 1800
+Connection ~ 7700 1800
+Wire Wire Line
+	7150 2300 7150 2550
+Wire Wire Line
+	7150 2550 8200 2550
+Connection ~ 8200 2550
+$Comp
+L Connector:Barrel_Jack_Switch J5
+U 1 1 5D263CFA
+P 2100 2750
+F 0 "J5" H 1870 2792 50  0000 R CNN
+F 1 "V_IN" H 1870 2701 50  0000 R CNN
+F 2 "Connectors:BARREL_JACK" H 2150 2710 50  0001 C CNN
+F 3 "https://www.cui.com/product/resource/pj-002a.pdf" H 2150 2710 50  0001 C CNN
+	1    2100 2750
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1650 2650 1800 2650
+Connection ~ 1650 2650
+Wire Wire Line
+	1800 2850 1650 2850
+Wire Wire Line
+	1650 2850 1650 2750
+Connection ~ 1800 2850
+NoConn ~ 1800 2750
+$Comp
+L Connector:Conn_01x01_Male J20
+U 1 1 5D381DCF
+P 4600 2200
+F 0 "J20" V 4708 2244 50  0000 L CNN
+F 1 "Conn_01x01_Male" V 4753 2244 50  0001 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 4600 2200 50  0001 C CNN
+F 3 "~" H 4600 2200 50  0001 C CNN
+	1    4600 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x01_Male J19
+U 1 1 5D383943
+P 4600 2150
+F 0 "J19" V 4708 2062 50  0000 R CNN
+F 1 "Conn_01x01_Male" V 4663 2062 50  0001 R CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x01_Pitch2.54mm" H 4600 2150 50  0001 C CNN
+F 3 "~" H 4600 2150 50  0001 C CNN
+	1    4600 2150
+	0    -1   -1   0   
+$EndComp
+Connection ~ 4600 1950
+$Comp
+L Device:R R15
+U 1 1 5D5200C2
+P 10150 2950
+F 0 "R15" H 9950 3000 50  0000 L CNN
+F 1 "4.7k" H 9900 2900 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 10080 2950 50  0001 C CNN
+F 3 "~" H 10150 2950 50  0001 C CNN
+	1    10150 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R16
+U 1 1 5D520742
+P 10300 2950
+F 0 "R16" H 10350 2950 50  0000 L CNN
+F 1 "4.7k" H 10350 2850 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 10230 2950 50  0001 C CNN
+F 3 "~" H 10300 2950 50  0001 C CNN
+	1    10300 2950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10150 2800 10150 2450
+Wire Wire Line
+	10150 2450 10050 2450
+Wire Wire Line
+	10300 2800 10300 2350
+Wire Wire Line
+	10300 2350 10050 2350
+$Comp
+L power:+3.3V #PWR070
+U 1 1 5D5880C9
+P 9850 3100
+F 0 "#PWR070" H 9850 2950 50  0001 C CNN
+F 1 "+3.3V" H 9800 3250 50  0000 C CNN
+F 2 "" H 9850 3100 50  0001 C CNN
+F 3 "" H 9850 3100 50  0001 C CNN
+	1    9850 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9850 3100 10150 3100
+Wire Wire Line
+	10150 3100 10300 3100
+Connection ~ 10150 3100
 $EndSCHEMATC
