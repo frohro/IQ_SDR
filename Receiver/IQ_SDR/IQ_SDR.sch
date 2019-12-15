@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:IQ_SDR-cache
 EELAYER 30 0
 EELAYER END
 $Descr USLetter 11000 8500
@@ -30,7 +29,7 @@ F 7 "IQ_SDR_Spice.lib" H 4100 1750 50  0001 C CNN "Spice_Lib_File"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCU_Module:Arduino_Nano_v3.x A1
+L IQ_SDR-rescue:Arduino_Nano_v3.x-MCU_Module A1
 U 1 1 5D491311
 P 9550 1950
 F 0 "A1" H 9550 1900 50  0000 C CNN
@@ -84,7 +83,7 @@ F 3 "http://www.njr.com/semicon/PDF/NJM5532_E.pdf" H 5750 6950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Barrel-Audio-Connectors:SJ1-3523N CON1
+L IQ_SDR-rescue:SJ1-3523N-dk_Barrel-Audio-Connectors CON1
 U 1 1 5D491316
 P 10000 4050
 F 0 "CON1" H 10050 4350 60  0000 R CNN
@@ -245,7 +244,7 @@ Wire Wire Line
 	2900 1750 3000 1750
 Connection ~ 3000 1750
 $Comp
-L dk_Logic-Flip-Flops:SN74HC74N U5
+L IQ_SDR-rescue:SN74HC74N-dk_Logic-Flip-Flops U5
 U 1 1 5CF21139
 P 5800 1850
 F 0 "U5" H 5700 1300 60  0000 C CNN
@@ -1219,7 +1218,7 @@ Connection ~ 1250 7250
 Wire Wire Line
 	1250 7250 1400 7250
 $Comp
-L myspice:VSOURCE V1
+L IQ_SDR-rescue:VSOURCE-myspice V1
 U 1 1 5D2E799E
 P 1050 6200
 F 0 "V1" H 1278 6200 50  0000 L CNN
@@ -1984,6 +1983,7 @@ F 0 "L4" H 2153 4896 50  0000 L CNN
 F 1 "497nH" H 2153 4805 50  0000 L CNN
 F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2100 4850 50  0001 C CNN
 F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2100 4850 50  0001 C CNN
+F 4 "T37-6 13 turns" H 2100 4850 50  0001 C CNN "Toroid"
 	1    2100 4850
 	1    0    0    -1  
 $EndComp
@@ -2006,6 +2006,7 @@ F 0 "L10" H 3553 4896 50  0000 L CNN
 F 1 "497nH" H 3553 4805 50  0000 L CNN
 F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3500 4850 50  0001 C CNN
 F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3500 4850 50  0001 C CNN
+F 4 "T37-6 13 turns" H 3500 4850 50  0001 C CNN "Toroid"
 	1    3500 4850
 	1    0    0    -1  
 $EndComp
@@ -2316,7 +2317,7 @@ F 3 "" H 8800 2700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Transistors-Bipolar-BJT-Single:MMBT2222A-TP Q1
+L IQ_SDR-rescue:MMBT2222A-TP-dk_Transistors-Bipolar-BJT-Single Q1
 U 1 1 5D24AC2F
 P 8100 2100
 F 0 "Q1" H 8288 2153 60  0000 L CNN
