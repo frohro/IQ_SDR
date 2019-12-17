@@ -15,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Oscillator:Si5351A-B-GT U2
+L IQ_SDR-rescue:Si5351A-B-GT-Oscillator U2
 U 1 1 5CEEB368
 P 4100 1750
 F 0 "U2" H 4100 1750 50  0000 C CNN
@@ -30,7 +30,7 @@ F 7 "IQ_SDR_Spice.lib" H 4100 1750 50  0001 C CNN "Spice_Lib_File"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCU_Module:Arduino_Nano_v3.x A1
+L IQ_SDR-rescue:Arduino_Nano_v3.x-MCU_Module A1
 U 1 1 5D491311
 P 9550 1950
 F 0 "A1" H 9550 1900 50  0000 C CNN
@@ -58,7 +58,7 @@ F 6 "N" H 750 7250 50  0001 C CNN "Spice_Netlist_Enabled"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Amplifier_Operational:NJM5532 U4
+L IQ_SDR-rescue:NJM5532-Amplifier_Operational U4
 U 2 1 5CEF95BA
 P 8500 5150
 F 0 "U4" H 8450 5150 50  0000 C CNN
@@ -73,7 +73,7 @@ F 7 "IQ_SDR_Spice.lib" H 8500 5150 50  0001 C CNN "Spice_Lib_File"
 	1    0    0    1   
 $EndComp
 $Comp
-L Amplifier_Operational:NJM5532 U4
+L IQ_SDR-rescue:NJM5532-Amplifier_Operational U4
 U 3 1 5D491315
 P 5750 6950
 F 0 "U4" H 5708 6996 50  0000 L CNN
@@ -104,7 +104,7 @@ F 12 "Active" H 10200 5250 60  0001 L CNN "Status"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:+5V #PWR067
+L IQ_SDR-rescue:+5V-power #PWR067
 U 1 1 5D491317
 P 9750 900
 F 0 "#PWR067" H 9750 750 50  0001 C CNN
@@ -115,7 +115,7 @@ F 3 "" H 9750 900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR032
+L IQ_SDR-rescue:+3.3V-power #PWR032
 U 1 1 5D491319
 P 4000 850
 F 0 "#PWR032" H 4000 700 50  0001 C CNN
@@ -126,7 +126,7 @@ F 3 "" H 4000 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR066
+L IQ_SDR-rescue:+3.3V-power #PWR066
 U 1 1 5D49131A
 P 9650 650
 F 0 "#PWR066" H 9650 500 50  0001 C CNN
@@ -137,7 +137,7 @@ F 3 "" H 9650 650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR044
+L IQ_SDR-rescue:GND-power #PWR044
 U 1 1 5D49131B
 P 5650 7250
 F 0 "#PWR044" H 5650 7000 50  0001 C CNN
@@ -148,7 +148,7 @@ F 3 "" H 5650 7250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR033
+L IQ_SDR-rescue:GND-power #PWR033
 U 1 1 5D49131C
 P 4100 2250
 F 0 "#PWR033" H 4100 2000 50  0001 C CNN
@@ -159,7 +159,7 @@ F 3 "" H 4100 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR01
+L IQ_SDR-rescue:GND-power #PWR01
 U 1 1 5CF13F37
 P 750 7450
 F 0 "#PWR01" H 750 7200 50  0001 C CNN
@@ -170,7 +170,7 @@ F 3 "" H 750 7450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR064
+L IQ_SDR-rescue:GND-power #PWR064
 U 1 1 5CF1458E
 P 9500 3800
 F 0 "#PWR064" H 9500 3550 50  0001 C CNN
@@ -181,7 +181,7 @@ F 3 "" H 9500 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR065
+L IQ_SDR-rescue:GND-power #PWR065
 U 1 1 5CF1500E
 P 9600 3000
 F 0 "#PWR065" H 9600 2750 50  0001 C CNN
@@ -227,7 +227,7 @@ Wire Wire Line
 Wire Wire Line
 	3600 1700 3100 1700
 $Comp
-L power:GND #PWR022
+L IQ_SDR-rescue:GND-power #PWR022
 U 1 1 5CF1E1F5
 P 3000 1750
 F 0 "#PWR022" H 3000 1500 50  0001 C CNN
@@ -269,7 +269,7 @@ F 16 "IQ_SDR_Spice.lib" H 5800 1850 50  0001 C CNN "Spice_Lib_File"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR046
+L IQ_SDR-rescue:GND-power #PWR046
 U 1 1 5D491323
 P 5900 2450
 F 0 "#PWR046" H 5900 2200 50  0001 C CNN
@@ -280,7 +280,7 @@ F 3 "" H 5900 2450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR045
+L IQ_SDR-rescue:+3.3V-power #PWR045
 U 1 1 5D491324
 P 5900 1200
 F 0 "#PWR045" H 5900 1050 50  0001 C CNN
@@ -295,7 +295,7 @@ Wire Wire Line
 Wire Wire Line
 	9400 4150 9600 4150
 $Comp
-L power:GND #PWR037
+L IQ_SDR-rescue:GND-power #PWR037
 U 1 1 5CF50DFE
 P 4800 5450
 F 0 "#PWR037" H 4800 5200 50  0001 C CNN
@@ -312,7 +312,7 @@ LO_I
 Text Label 6400 5600 0    50   ~ 0
 LO_Q
 $Comp
-L power:GNDA #PWR042
+L IQ_SDR-rescue:GNDA-power #PWR042
 U 1 1 5CF5C6F9
 P 5600 4450
 F 0 "#PWR042" H 5600 4200 50  0001 C CNN
@@ -323,7 +323,7 @@ F 3 "" H 5600 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3.3V #PWR040
+L IQ_SDR-rescue:+3.3V-power #PWR040
 U 1 1 5CF636F6
 P 5100 1850
 F 0 "#PWR040" H 5100 1700 50  0001 C CNN
@@ -388,7 +388,7 @@ Wire Wire Line
 Wire Wire Line
 	5900 1200 5900 1250
 $Comp
-L power:GND #PWR034
+L IQ_SDR-rescue:GND-power #PWR034
 U 1 1 5CF7DFD5
 P 4350 1200
 F 0 "#PWR034" H 4350 950 50  0001 C CNN
@@ -406,7 +406,7 @@ Wire Wire Line
 Wire Wire Line
 	4350 900  4200 900 
 $Comp
-L Device:C C15
+L IQ_SDR-rescue:C-Device C15
 U 1 1 5CF79F41
 P 4350 1050
 F 0 "C15" H 4465 1096 50  0000 L CNN
@@ -417,7 +417,7 @@ F 3 "~" H 4350 1050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C20
+L IQ_SDR-rescue:C-Device C20
 U 1 1 5CF85568
 P 6200 1400
 F 0 "C20" H 6315 1446 50  0000 L CNN
@@ -428,7 +428,7 @@ F 3 "~" H 6200 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR048
+L IQ_SDR-rescue:GND-power #PWR048
 U 1 1 5CF85EBD
 P 6200 1550
 F 0 "#PWR048" H 6200 1300 50  0001 C CNN
@@ -446,7 +446,7 @@ Wire Wire Line
 Wire Wire Line
 	5650 6450 5650 6550
 $Comp
-L Device:C C19
+L IQ_SDR-rescue:C-Device C19
 U 1 1 5CF8D1A8
 P 5950 6700
 F 0 "C19" H 6065 6746 50  0000 L CNN
@@ -457,7 +457,7 @@ F 3 "~" H 5950 6700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR047
+L IQ_SDR-rescue:GND-power #PWR047
 U 1 1 5CF8D9FF
 P 5950 6850
 F 0 "#PWR047" H 5950 6600 50  0001 C CNN
@@ -473,7 +473,7 @@ Connection ~ 5650 6550
 Wire Wire Line
 	5650 6550 5650 6650
 $Comp
-L Device:C C31
+L IQ_SDR-rescue:C-Device C31
 U 1 1 5CF8F2B6
 P 10200 1100
 F 0 "C31" H 10200 1000 50  0000 L CNN
@@ -484,7 +484,7 @@ F 3 "~" H 10200 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C32
+L IQ_SDR-rescue:C-Device C32
 U 1 1 5D491335
 P 10400 850
 F 0 "C32" H 10200 950 50  0000 L CNN
@@ -496,7 +496,7 @@ F 3 "~" H 10400 850 50  0001 C CNN
 $EndComp
 Connection ~ 9650 700 
 $Comp
-L power:GND #PWR069
+L IQ_SDR-rescue:GND-power #PWR069
 U 1 1 5D491336
 P 10400 1000
 F 0 "#PWR069" H 10400 750 50  0001 C CNN
@@ -507,7 +507,7 @@ F 3 "" H 10400 1000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR068
+L IQ_SDR-rescue:GND-power #PWR068
 U 1 1 5D491337
 P 10200 1250
 F 0 "#PWR068" H 10200 1000 50  0001 C CNN
@@ -538,7 +538,7 @@ NoConn ~ 10050 1750
 NoConn ~ 10050 1450
 NoConn ~ 10050 1350
 $Comp
-L Device:R R6
+L IQ_SDR-rescue:R-Device R6
 U 1 1 5CFD8143
 P 7450 4000
 F 0 "R6" H 7520 4046 50  0000 L CNN
@@ -549,7 +549,7 @@ F 3 "~" H 7450 4000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR055
+L IQ_SDR-rescue:GNDA-power #PWR055
 U 1 1 5D491346
 P 7750 4600
 F 0 "#PWR055" H 7750 4350 50  0001 C CNN
@@ -560,7 +560,7 @@ F 3 "" H 7750 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR053
+L IQ_SDR-rescue:GND-power #PWR053
 U 1 1 5CFD92C7
 P 7450 4600
 F 0 "#PWR053" H 7450 4350 50  0001 C CNN
@@ -578,7 +578,7 @@ Connection ~ 7450 4250
 Wire Wire Line
 	7450 4250 7450 4150
 $Comp
-L Device:R R7
+L IQ_SDR-rescue:R-Device R7
 U 1 1 5D491348
 P 7450 4450
 F 0 "R7" H 7520 4496 50  0000 L CNN
@@ -594,7 +594,7 @@ Wire Wire Line
 	7750 3850 8200 3850
 Connection ~ 7750 4250
 $Comp
-L power:GNDA #PWR059
+L IQ_SDR-rescue:GNDA-power #PWR059
 U 1 1 5D491349
 P 8200 5250
 F 0 "#PWR059" H 8200 5000 50  0001 C CNN
@@ -605,7 +605,7 @@ F 3 "" H 8200 5250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C22
+L IQ_SDR-rescue:C-Device C22
 U 1 1 5D49134A
 P 6850 5450
 F 0 "C22" H 6965 5496 50  0000 L CNN
@@ -617,7 +617,7 @@ F 4 "X7R 50V" H 6850 5450 50  0001 C CNN "Field4"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C21
+L IQ_SDR-rescue:C-Device C21
 U 1 1 5D49134B
 P 6750 3800
 F 0 "C21" H 6865 3846 50  0000 L CNN
@@ -629,7 +629,7 @@ F 4 "X7R 50V" H 6750 3800 50  0001 C CNN "Field4"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR049
+L IQ_SDR-rescue:GND-power #PWR049
 U 1 1 5D49134C
 P 6750 3950
 F 0 "#PWR049" H 6750 3700 50  0001 C CNN
@@ -640,7 +640,7 @@ F 3 "" H 6750 3950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR050
+L IQ_SDR-rescue:GND-power #PWR050
 U 1 1 5D49134D
 P 6850 5600
 F 0 "#PWR050" H 6850 5350 50  0001 C CNN
@@ -655,7 +655,7 @@ Wire Wire Line
 Wire Wire Line
 	6750 3650 6600 3650
 $Comp
-L Device:C C29
+L IQ_SDR-rescue:C-Device C29
 U 1 1 5D49134E
 P 8950 3750
 F 0 "C29" V 8698 3750 50  0000 C CNN
@@ -666,7 +666,7 @@ F 3 "~" H 8950 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R13
+L IQ_SDR-rescue:R-Device R13
 U 1 1 5D49134F
 P 9250 3750
 F 0 "R13" V 9043 3750 50  0000 C CNN
@@ -677,7 +677,7 @@ F 3 "~" H 9250 3750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C30
+L IQ_SDR-rescue:C-Device C30
 U 1 1 5D491351
 P 8950 5150
 F 0 "C30" V 8698 5150 50  0000 C CNN
@@ -688,7 +688,7 @@ F 3 "~" H 8950 5150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R14
+L IQ_SDR-rescue:R-Device R14
 U 1 1 5CFEEFF5
 P 9250 5150
 F 0 "R14" V 9043 5150 50  0000 C CNN
@@ -699,7 +699,7 @@ F 3 "~" H 9250 5150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R10
+L IQ_SDR-rescue:R-Device R10
 U 1 1 5CFF66E0
 P 7900 5050
 F 0 "R10" V 7693 5050 50  0000 C CNN
@@ -713,7 +713,7 @@ F 6 "Y" H 7900 5050 50  0001 C CNN "Spice_Netlist_Enabled"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R12
+L IQ_SDR-rescue:R-Device R12
 U 1 1 5CFF71A6
 P 8500 4700
 F 0 "R12" V 8293 4700 50  0000 C CNN
@@ -724,7 +724,7 @@ F 3 "~" H 8500 4700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C27
+L IQ_SDR-rescue:C-Device C27
 U 1 1 5CFF7C11
 P 8500 4350
 F 0 "C27" V 8450 4500 50  0000 C CNN
@@ -735,7 +735,7 @@ F 3 "~" H 8500 4350 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R9
+L IQ_SDR-rescue:R-Device R9
 U 1 1 5CFF8217
 P 7850 3650
 F 0 "R9" V 7643 3650 50  0000 C CNN
@@ -746,7 +746,7 @@ F 3 "~" H 7850 3650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R11
+L IQ_SDR-rescue:R-Device R11
 U 1 1 5D00029B
 P 8500 3300
 F 0 "R11" V 8293 3300 50  0000 C CNN
@@ -757,7 +757,7 @@ F 3 "~" H 8500 3300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C26
+L IQ_SDR-rescue:C-Device C26
 U 1 1 5D0002A1
 P 8500 2950
 F 0 "C26" V 8450 3200 50  0000 C CNN
@@ -817,7 +817,7 @@ Connection ~ 8800 4700
 Wire Wire Line
 	9400 3750 9400 4050
 $Comp
-L Device:C C23
+L IQ_SDR-rescue:C-Device C23
 U 1 1 5D043017
 P 7200 4450
 F 0 "C23" H 7300 4550 50  0000 C CNN
@@ -828,7 +828,7 @@ F 3 "~" H 7200 4450 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR051
+L IQ_SDR-rescue:GND-power #PWR051
 U 1 1 5D0438C2
 P 7200 4600
 F 0 "#PWR051" H 7200 4350 50  0001 C CNN
@@ -843,7 +843,7 @@ Wire Wire Line
 Wire Wire Line
 	7200 4250 7450 4250
 $Comp
-L Device:C C25
+L IQ_SDR-rescue:C-Device C25
 U 1 1 5D491360
 P 7950 5400
 F 0 "C25" H 8100 5250 50  0000 C CNN
@@ -854,7 +854,7 @@ F 3 "~" H 7950 5400 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR056
+L IQ_SDR-rescue:GND-power #PWR056
 U 1 1 5D04EBE8
 P 7950 5550
 F 0 "#PWR056" H 7950 5300 50  0001 C CNN
@@ -867,7 +867,7 @@ $EndComp
 Wire Wire Line
 	7950 5250 8200 5250
 $Comp
-L Device:D_ALT D2
+L IQ_SDR-rescue:D_ALT-Device D2
 U 1 1 5D051BF1
 P 1400 7400
 F 0 "D2" V 1354 7479 50  0000 L CNN
@@ -882,7 +882,7 @@ F 7 "IQ_SDR_Spice.lib" H 1400 7400 50  0001 C CNN "Spice_Lib_File"
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR02
+L IQ_SDR-rescue:GND-power #PWR02
 U 1 1 5D491363
 P 1000 7550
 F 0 "#PWR02" H 1000 7300 50  0001 C CNN
@@ -893,7 +893,7 @@ F 3 "" H 1000 7550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR04
+L IQ_SDR-rescue:GND-power #PWR04
 U 1 1 5D491364
 P 1400 7550
 F 0 "#PWR04" H 1400 7300 50  0001 C CNN
@@ -913,7 +913,7 @@ Connection ~ 6850 5300
 Wire Wire Line
 	9400 4050 9600 4050
 $Comp
-L power:PWR_FLAG #FLG02
+L IQ_SDR-rescue:PWR_FLAG-power #FLG02
 U 1 1 5D491365
 P 7750 4250
 F 0 "#FLG02" H 7750 4325 50  0001 C CNN
@@ -927,7 +927,7 @@ F 6 "N" H 7750 4250 50  0001 C CNN "Spice_Netlist_Enabled"
 	0    1    1    0   
 $EndComp
 $Comp
-L power:PWR_FLAG #FLG01
+L IQ_SDR-rescue:PWR_FLAG-power #FLG01
 U 1 1 5D491366
 P 5650 7250
 F 0 "#FLG01" H 5650 7325 50  0001 C CNN
@@ -941,7 +941,7 @@ Connection ~ 5650 7250
 Wire Wire Line
 	900  7250 1000 7250
 $Comp
-L Device:D_ALT D1
+L IQ_SDR-rescue:D_ALT-Device D1
 U 1 1 5D491367
 P 1000 7400
 F 0 "D1" V 1100 7250 50  0000 L CNN
@@ -986,7 +986,7 @@ Wire Wire Line
 Wire Wire Line
 	2850 7700 4000 7700
 $Comp
-L power:GND #PWR028
+L IQ_SDR-rescue:GND-power #PWR028
 U 1 1 5D491384
 P 3450 7400
 F 0 "#PWR028" H 3450 7150 50  0001 C CNN
@@ -997,7 +997,7 @@ F 3 "" H 3450 7400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR021
+L IQ_SDR-rescue:GND-power #PWR021
 U 1 1 5D491385
 P 2950 7400
 F 0 "#PWR021" H 2950 7150 50  0001 C CNN
@@ -1008,7 +1008,7 @@ F 3 "" H 2950 7400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR019
+L IQ_SDR-rescue:GND-power #PWR019
 U 1 1 5D491386
 P 2350 7400
 F 0 "#PWR019" H 2350 7150 50  0001 C CNN
@@ -1021,7 +1021,7 @@ $EndComp
 Wire Wire Line
 	1850 6650 1850 6800
 $Comp
-L Device:C C1
+L IQ_SDR-rescue:C-Device C1
 U 1 1 5D24A68D
 P 1550 6950
 F 0 "C1" H 1665 6996 50  0000 L CNN
@@ -1032,7 +1032,7 @@ F 3 "~" H 1550 6950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR06
+L IQ_SDR-rescue:GND-power #PWR06
 U 1 1 5D24A693
 P 1550 7100
 F 0 "#PWR06" H 1550 6850 50  0001 C CNN
@@ -1056,7 +1056,7 @@ B0
 Text Label 9050 1850 2    50   ~ 0
 B1
 $Comp
-L Connector_Generic:Conn_01x01 J1
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J1
 U 1 1 5D286945
 P 1000 7050
 F 0 "J1" V 964 6962 50  0000 R CNN
@@ -1070,7 +1070,7 @@ F 6 "N" H 1000 7050 50  0001 C CNN "Spice_Netlist_Enabled"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J6
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J6
 U 1 1 5D49138B
 P 4000 7500
 F 0 "J6" V 3964 7412 50  0000 R CNN
@@ -1084,7 +1084,7 @@ F 6 "N" H 4000 7500 50  0001 C CNN "Spice_Netlist_Enabled"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J13
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J13
 U 1 1 5D49138C
 P 7050 3450
 F 0 "J13" V 7014 3362 50  0000 R CNN
@@ -1101,7 +1101,7 @@ Connection ~ 7050 3650
 Wire Wire Line
 	7050 3650 7700 3650
 $Comp
-L Connector_Generic:Conn_01x01 J14
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J14
 U 1 1 5D49138D
 P 7450 5500
 F 0 "J14" V 7350 5650 50  0000 R CNN
@@ -1118,7 +1118,7 @@ Connection ~ 7450 5300
 Wire Wire Line
 	7450 5300 6850 5300
 $Comp
-L Connector_Generic:Conn_01x01 J18
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J18
 U 1 1 5D49138E
 P 9000 4700
 F 0 "J18" H 9050 4800 50  0000 R CNN
@@ -1132,7 +1132,7 @@ F 6 "N" H 9000 4700 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J17
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J17
 U 1 1 5D49138F
 P 9000 3300
 F 0 "J17" H 9050 3400 50  0000 R CNN
@@ -1148,7 +1148,7 @@ $EndComp
 Wire Wire Line
 	9400 4150 9400 5150
 $Comp
-L Connector_Generic:Conn_01x01 J9
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J9
 U 1 1 5D296A71
 P 4900 1350
 F 0 "J9" V 4864 1262 50  0000 R CNN
@@ -1165,7 +1165,7 @@ Connection ~ 4900 1550
 Wire Wire Line
 	4900 1550 5350 1550
 $Comp
-L Connector_Generic:Conn_01x01 J10
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J10
 U 1 1 5D29742C
 P 6300 4150
 F 0 "J10" V 6264 4062 50  0000 R CNN
@@ -1179,7 +1179,7 @@ F 6 "N" H 6300 4150 50  0001 C CNN "Spice_Netlist_Enabled"
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J11
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J11
 U 1 1 5D2987CB
 P 6400 5800
 F 0 "J11" V 6364 5712 50  0000 R CNN
@@ -1193,7 +1193,7 @@ F 6 "N" H 6400 5800 50  0001 C CNN "Spice_Netlist_Enabled"
 	0    1    1    0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J12
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J12
 U 1 1 5D2AD39B
 P 7000 4250
 F 0 "J12" H 7080 4292 50  0000 L CNN
@@ -1230,7 +1230,7 @@ F 3 "~" H 1050 6200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR03
+L IQ_SDR-rescue:GND-power #PWR03
 U 1 1 5D491397
 P 1050 6500
 F 0 "#PWR03" H 1050 6250 50  0001 C CNN
@@ -1243,7 +1243,7 @@ $EndComp
 Text Label 1050 5900 0    50   ~ 0
 RF_IN
 $Comp
-L Amplifier_Operational:NJM5532 U4
+L IQ_SDR-rescue:NJM5532-Amplifier_Operational U4
 U 1 1 5D491313
 P 8500 3750
 F 0 "U4" H 8450 3750 50  0000 C CNN
@@ -1263,7 +1263,7 @@ Wire Wire Line
 	6300 2050 6100 2050
 NoConn ~ 6100 1950
 $Comp
-L Connector_Generic:Conn_01x01 J8
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J8
 U 1 1 5CF440B9
 P 4800 1950
 F 0 "J8" H 4950 1950 50  0000 R CNN
@@ -1277,7 +1277,7 @@ F 6 "N" H 4800 1950 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J7
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J7
 U 1 1 5CF44A30
 P 4800 1750
 F 0 "J7" H 4700 1700 50  0000 R CNN
@@ -1300,7 +1300,7 @@ Wire Wire Line
 Text Notes 9550 4500 0    50   ~ 0
 I on left\nQ on right
 $Comp
-L Device:Transformer_1P_SS T1
+L IQ_SDR-rescue:Transformer_1P_SS-Device T1
 U 1 1 5D491350
 P 5200 4450
 F 0 "T1" H 5200 4831 50  0000 C CNN
@@ -1365,7 +1365,7 @@ Wire Wire Line
 	5700 3750 6000 3750
 Connection ~ 5700 4650
 $Comp
-L power:GND #PWR039
+L IQ_SDR-rescue:GND-power #PWR039
 U 1 1 5D0FFA63
 P 4900 7350
 F 0 "#PWR039" H 4900 7100 50  0001 C CNN
@@ -1376,7 +1376,7 @@ F 3 "" H 4900 7350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C18
+L IQ_SDR-rescue:C-Device C18
 U 1 1 5D1000AE
 P 5200 6700
 F 0 "C18" H 5315 6746 50  0000 L CNN
@@ -1391,7 +1391,7 @@ Wire Wire Line
 Wire Wire Line
 	5200 6350 4900 6350
 $Comp
-L power:GND #PWR041
+L IQ_SDR-rescue:GND-power #PWR041
 U 1 1 5D10A4C9
 P 5200 6850
 F 0 "#PWR041" H 5200 6600 50  0001 C CNN
@@ -1405,7 +1405,7 @@ Connection ~ 7200 4250
 Wire Wire Line
 	7750 3850 7750 4250
 $Comp
-L Device:C C3
+L IQ_SDR-rescue:C-Device C3
 U 1 1 5D49132E
 P 1750 7400
 F 0 "C3" H 1600 7500 50  0000 L CNN
@@ -1416,7 +1416,7 @@ F 3 "~" H 1750 7400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
+L IQ_SDR-rescue:R-Device R2
 U 1 1 5CF894FB
 P 2100 7550
 F 0 "R2" V 1893 7550 50  0000 C CNN
@@ -1433,7 +1433,7 @@ Connection ~ 2250 7550
 Wire Wire Line
 	2250 7550 2250 7400
 $Comp
-L Device:R R3
+L IQ_SDR-rescue:R-Device R3
 U 1 1 5CF8A67E
 P 2400 7700
 F 0 "R3" V 2300 7650 50  0000 C CNN
@@ -1448,7 +1448,7 @@ F 6 "Y" H 2400 7700 50  0001 C CNN "Spice_Netlist_Enabled"
 $EndComp
 Connection ~ 2250 7700
 $Comp
-L power:GND #PWR020
+L IQ_SDR-rescue:GND-power #PWR020
 U 1 1 5CF8B24C
 P 2600 7700
 F 0 "#PWR020" H 2600 7450 50  0001 C CNN
@@ -1463,7 +1463,7 @@ Wire Wire Line
 Wire Wire Line
 	2550 7700 2600 7700
 $Comp
-L Device:R R4
+L IQ_SDR-rescue:R-Device R4
 U 1 1 5D491338
 P 4500 5000
 F 0 "R4" H 4600 5000 50  0000 C CNN
@@ -1477,7 +1477,7 @@ F 6 "Y" H 4500 5000 50  0001 C CNN "Spice_Netlist_Enabled"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R R5
+L IQ_SDR-rescue:R-Device R5
 U 1 1 5D491339
 P 4500 5300
 F 0 "R5" H 4600 5300 50  0000 C CNN
@@ -1491,7 +1491,7 @@ F 6 "Y" H 4500 5300 50  0001 C CNN "Spice_Netlist_Enabled"
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:C C17
+L IQ_SDR-rescue:C-Device C17
 U 1 1 5CFADA4F
 P 5000 5300
 F 0 "C17" H 5050 5400 50  0000 L CNN
@@ -1508,7 +1508,7 @@ Wire Wire Line
 Connection ~ 4800 5450
 Connection ~ 4500 5150
 $Comp
-L Device:C C16
+L IQ_SDR-rescue:C-Device C16
 U 1 1 5D491359
 P 5000 5000
 F 0 "C16" H 5050 5100 50  0000 L CNN
@@ -1524,7 +1524,7 @@ A very nice description of how op amp noise effects the noise figure\nis given i
 Text Notes 5550 3300 0    50   ~ 0
 LT6231 has lower noise figure (4.7 dB), \nbut costs about 7 times as much\nas the SA5532.  LME49860 is \nintermediate option.  LM4562\ncould be even better (10.6 dB)\n2.7nV/sqrt(Hz).
 $Comp
-L Device:R R1
+L IQ_SDR-rescue:R-Device R1
 U 1 1 5D491341
 P 1250 6850
 F 0 "R1" H 1350 6850 50  0000 C CNN
@@ -1562,7 +1562,7 @@ $EndComp
 Wire Wire Line
 	4800 2550 4800 2650
 $Comp
-L power:GND #PWR036
+L IQ_SDR-rescue:GND-power #PWR036
 U 1 1 5CFD635C
 P 4800 2650
 F 0 "#PWR036" H 4800 2400 50  0001 C CNN
@@ -1577,7 +1577,7 @@ Antenna\nIn
 Text Notes 4700 2500 0    50   ~ 0
 Oscillator\nOut
 $Comp
-L Connector_Generic:Conn_01x01 J2
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J2
 U 1 1 5CFDB298
 P 1450 1550
 F 0 "J2" V 1414 1462 50  0000 R CNN
@@ -1591,7 +1591,7 @@ F 6 "N" H 1450 1550 50  0001 C CNN "Spice_Netlist_Enabled"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR05
+L IQ_SDR-rescue:GND-power #PWR05
 U 1 1 5CFDBC93
 P 1450 1750
 F 0 "#PWR05" H 1450 1500 50  0001 C CNN
@@ -1602,7 +1602,7 @@ F 3 "" H 1450 1750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J4
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J4
 U 1 1 5CFDCC70
 P 1750 1550
 F 0 "J4" V 1714 1462 50  0000 R CNN
@@ -1616,7 +1616,7 @@ F 6 "N" H 1750 1550 50  0001 C CNN "Spice_Netlist_Enabled"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR08
+L IQ_SDR-rescue:GND-power #PWR08
 U 1 1 5CFDCC76
 P 1750 1750
 F 0 "#PWR08" H 1750 1500 50  0001 C CNN
@@ -1669,7 +1669,7 @@ Wire Wire Line
 Wire Wire Line
 	4200 4250 4800 4250
 $Comp
-L Device:L L8
+L IQ_SDR-rescue:L-Device L8
 U 1 1 5D17E138
 P 2700 3400
 F 0 "L8" V 2800 3500 50  0000 C CNN
@@ -1681,7 +1681,7 @@ F 4 "T50-6 #30 wire, 43 turns" V 2700 3400 50  0001 C CNN "Winding"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C10
+L IQ_SDR-rescue:C-Device C10
 U 1 1 5D17E962
 P 2700 3600
 F 0 "C10" V 2800 3750 50  0000 C CNN
@@ -1692,7 +1692,7 @@ F 3 "~" H 2700 3600 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C4
+L IQ_SDR-rescue:C-Device C4
 U 1 1 5D17EABA
 P 1800 3750
 F 0 "C4" H 1650 3850 50  0000 L CNN
@@ -1703,7 +1703,7 @@ F 3 "~" H 1800 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L2
+L IQ_SDR-rescue:L-Device L2
 U 1 1 5D17ECF6
 P 2000 3750
 F 0 "L2" H 2053 3796 50  0000 L CNN
@@ -1715,7 +1715,7 @@ F 4 "T50-6, #30 wire, 25 turns" H 2000 3750 50  0001 C CNN "Winding"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C14
+L IQ_SDR-rescue:C-Device C14
 U 1 1 5D17EF81
 P 3400 3750
 F 0 "C14" H 3200 3850 50  0000 L CNN
@@ -1726,7 +1726,7 @@ F 3 "~" H 3400 3750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L12
+L IQ_SDR-rescue:L-Device L12
 U 1 1 5D17EF88
 P 3600 3750
 F 0 "L12" H 3653 3796 50  0000 L CNN
@@ -1738,7 +1738,7 @@ F 4 "T50-6, #30 wire, 25 turns" H 3600 3750 50  0001 C CNN "Winding"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR011
+L IQ_SDR-rescue:GND-power #PWR011
 U 1 1 5D1894C5
 P 1800 3900
 F 0 "#PWR011" H 1800 3650 50  0001 C CNN
@@ -1749,7 +1749,7 @@ F 3 "" H 1800 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR016
+L IQ_SDR-rescue:GND-power #PWR016
 U 1 1 5D18958A
 P 2000 3900
 F 0 "#PWR016" H 2000 3650 50  0001 C CNN
@@ -1760,7 +1760,7 @@ F 3 "" H 2000 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR026
+L IQ_SDR-rescue:GND-power #PWR026
 U 1 1 5D18964F
 P 3400 3900
 F 0 "#PWR026" H 3400 3650 50  0001 C CNN
@@ -1771,7 +1771,7 @@ F 3 "" H 3400 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR031
+L IQ_SDR-rescue:GND-power #PWR031
 U 1 1 5D189714
 P 3600 3900
 F 0 "#PWR031" H 3600 3650 50  0001 C CNN
@@ -1808,7 +1808,7 @@ Wire Wire Line
 Wire Wire Line
 	1550 5850 1550 3600
 $Comp
-L Device:L L7
+L IQ_SDR-rescue:L-Device L7
 U 1 1 5D1D3FF4
 P 2650 3950
 F 0 "L7" V 2750 4000 50  0000 C CNN
@@ -1820,7 +1820,7 @@ F 4 "T50-6, #30 wire, 32 turns" V 2650 3950 50  0001 C CNN "Winding"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C9
+L IQ_SDR-rescue:C-Device C9
 U 1 1 5D1D3FFB
 P 2650 4150
 F 0 "C9" V 2750 4250 50  0000 C CNN
@@ -1831,7 +1831,7 @@ F 3 "~" H 2650 4150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C2
+L IQ_SDR-rescue:C-Device C2
 U 1 1 5D1D4002
 P 1900 4300
 F 0 "C2" H 1750 4400 50  0000 L CNN
@@ -1842,7 +1842,7 @@ F 3 "~" H 1900 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L1
+L IQ_SDR-rescue:L-Device L1
 U 1 1 5D1D4009
 P 2100 4300
 F 0 "L1" H 2153 4346 50  0000 L CNN
@@ -1854,7 +1854,7 @@ F 4 "T37-6, #30 wire, 18 turns" H 2100 4300 50  0001 C CNN "Winding"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C13
+L IQ_SDR-rescue:C-Device C13
 U 1 1 5D1D4010
 P 3350 4300
 F 0 "C13" H 3150 4400 50  0000 L CNN
@@ -1865,7 +1865,7 @@ F 3 "~" H 3350 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L11
+L IQ_SDR-rescue:L-Device L11
 U 1 1 5D1D4017
 P 3550 4300
 F 0 "L11" H 3603 4346 50  0000 L CNN
@@ -1877,7 +1877,7 @@ F 4 "T37-6, #30 wire, 18 turns" H 3550 4300 50  0001 C CNN "Winding"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR09
+L IQ_SDR-rescue:GND-power #PWR09
 U 1 1 5D1D401E
 P 1900 4450
 F 0 "#PWR09" H 1900 4200 50  0001 C CNN
@@ -1888,7 +1888,7 @@ F 3 "" H 1900 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR015
+L IQ_SDR-rescue:GND-power #PWR015
 U 1 1 5D1D4024
 P 2100 4450
 F 0 "#PWR015" H 2100 4200 50  0001 C CNN
@@ -1899,7 +1899,7 @@ F 3 "" H 2100 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR025
+L IQ_SDR-rescue:GND-power #PWR025
 U 1 1 5D1D402A
 P 3350 4450
 F 0 "#PWR025" H 3350 4200 50  0001 C CNN
@@ -1910,7 +1910,7 @@ F 3 "" H 3350 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR030
+L IQ_SDR-rescue:GND-power #PWR030
 U 1 1 5D1D4030
 P 3550 4450
 F 0 "#PWR030" H 3550 4200 50  0001 C CNN
@@ -1943,7 +1943,7 @@ Wire Wire Line
 	2800 3950 2800 4150
 Connection ~ 2800 4150
 $Comp
-L Device:L L6
+L IQ_SDR-rescue:L-Device L6
 U 1 1 5D22E31C
 P 2600 4500
 F 0 "L6" V 2700 4650 50  0000 C CNN
@@ -1955,7 +1955,7 @@ F 4 "T37-6, #30 wire, 26 turns" V 2600 4500 50  0001 C CNN "Winding"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C8
+L IQ_SDR-rescue:C-Device C8
 U 1 1 5D22E323
 P 2600 4700
 F 0 "C8" V 2700 4800 50  0000 C CNN
@@ -1966,7 +1966,7 @@ F 3 "~" H 2600 4700 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C6
+L IQ_SDR-rescue:C-Device C6
 U 1 1 5D22E32A
 P 1900 4850
 F 0 "C6" H 1750 4950 50  0000 L CNN
@@ -1977,7 +1977,7 @@ F 3 "~" H 1900 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L4
+L IQ_SDR-rescue:L-Device L4
 U 1 1 5D22E331
 P 2100 4850
 F 0 "L4" H 2153 4896 50  0000 L CNN
@@ -1988,7 +1988,7 @@ F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 210
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C12
+L IQ_SDR-rescue:C-Device C12
 U 1 1 5D22E338
 P 3300 4850
 F 0 "C12" H 3100 4950 50  0000 L CNN
@@ -1999,7 +1999,7 @@ F 3 "~" H 3300 4850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L10
+L IQ_SDR-rescue:L-Device L10
 U 1 1 5D22E33F
 P 3500 4850
 F 0 "L10" H 3553 4896 50  0000 L CNN
@@ -2010,7 +2010,7 @@ F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 350
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR014
+L IQ_SDR-rescue:GND-power #PWR014
 U 1 1 5D22E346
 P 1900 5000
 F 0 "#PWR014" H 1900 4750 50  0001 C CNN
@@ -2021,7 +2021,7 @@ F 3 "" H 1900 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR018
+L IQ_SDR-rescue:GND-power #PWR018
 U 1 1 5D22E34C
 P 2100 5000
 F 0 "#PWR018" H 2100 4750 50  0001 C CNN
@@ -2032,7 +2032,7 @@ F 3 "" H 2100 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR024
+L IQ_SDR-rescue:GND-power #PWR024
 U 1 1 5D22E352
 P 3300 5000
 F 0 "#PWR024" H 3300 4750 50  0001 C CNN
@@ -2043,7 +2043,7 @@ F 3 "" H 3300 5000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR029
+L IQ_SDR-rescue:GND-power #PWR029
 U 1 1 5D22E358
 P 3500 5000
 F 0 "#PWR029" H 3500 4750 50  0001 C CNN
@@ -2080,7 +2080,7 @@ Wire Wire Line
 Wire Wire Line
 	3050 5950 3950 5950
 $Comp
-L Device:L L5
+L IQ_SDR-rescue:L-Device L5
 U 1 1 5D258FC6
 P 2550 5050
 F 0 "L5" V 2650 5100 50  0000 C CNN
@@ -2092,7 +2092,7 @@ F 4 "T37-6, #30 wire, 20 turns" V 2550 5050 50  0001 C CNN "Winding"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Device:C C7
+L IQ_SDR-rescue:C-Device C7
 U 1 1 5D258FCD
 P 2550 5250
 F 0 "C7" V 2650 5350 50  0000 C CNN
@@ -2103,7 +2103,7 @@ F 3 "~" H 2550 5250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C5
+L IQ_SDR-rescue:C-Device C5
 U 1 1 5D258FD4
 P 1800 5400
 F 0 "C5" H 1650 5500 50  0000 L CNN
@@ -2114,7 +2114,7 @@ F 3 "~" H 1800 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L3
+L IQ_SDR-rescue:L-Device L3
 U 1 1 5D258FDB
 P 2000 5400
 F 0 "L3" H 2053 5446 50  0000 L CNN
@@ -2126,7 +2126,7 @@ F 4 "T37-6, #30 wire, 9 turns" H 2000 5400 50  0001 C CNN "Winding"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C11
+L IQ_SDR-rescue:C-Device C11
 U 1 1 5D258FE2
 P 3250 5400
 F 0 "C11" H 3050 5500 50  0000 L CNN
@@ -2137,7 +2137,7 @@ F 3 "~" H 3250 5400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L9
+L IQ_SDR-rescue:L-Device L9
 U 1 1 5D258FE9
 P 3450 5400
 F 0 "L9" H 3503 5446 50  0000 L CNN
@@ -2149,7 +2149,7 @@ F 4 "T37-6, #30 wire, 9 turns" H 3450 5400 50  0001 C CNN "Winding"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR012
+L IQ_SDR-rescue:GND-power #PWR012
 U 1 1 5D258FF0
 P 1800 5550
 F 0 "#PWR012" H 1800 5300 50  0001 C CNN
@@ -2160,7 +2160,7 @@ F 3 "" H 1800 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR017
+L IQ_SDR-rescue:GND-power #PWR017
 U 1 1 5D258FF6
 P 2000 5550
 F 0 "#PWR017" H 2000 5300 50  0001 C CNN
@@ -2171,7 +2171,7 @@ F 3 "" H 2000 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR023
+L IQ_SDR-rescue:GND-power #PWR023
 U 1 1 5D258FFC
 P 3250 5550
 F 0 "#PWR023" H 3250 5300 50  0001 C CNN
@@ -2182,7 +2182,7 @@ F 3 "" H 3250 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR027
+L IQ_SDR-rescue:GND-power #PWR027
 U 1 1 5D259002
 P 3450 5550
 F 0 "#PWR027" H 3450 5300 50  0001 C CNN
@@ -2219,7 +2219,7 @@ Wire Wire Line
 Wire Wire Line
 	1450 4700 1450 5950
 $Comp
-L Device:R R8
+L IQ_SDR-rescue:R-Device R8
 U 1 1 5D200AE8
 P 7700 1950
 F 0 "R8" H 7770 1996 50  0000 L CNN
@@ -2234,7 +2234,7 @@ Wire Wire Line
 Wire Wire Line
 	8200 2300 8200 2400
 $Comp
-L Device:C C24
+L IQ_SDR-rescue:C-Device C24
 U 1 1 5D255E57
 P 7700 2250
 F 0 "C24" H 7500 2350 50  0000 L CNN
@@ -2246,7 +2246,7 @@ F 4 "Ceramic" H 7700 2250 50  0001 C CNN "Field4"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR054
+L IQ_SDR-rescue:GND-power #PWR054
 U 1 1 5D262479
 P 7700 2400
 F 0 "#PWR054" H 7700 2150 50  0001 C CNN
@@ -2257,7 +2257,7 @@ F 3 "" H 7700 2400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J15
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J15
 U 1 1 5D1DCCD0
 P 8400 1800
 F 0 "J15" H 8500 1700 50  0000 R CNN
@@ -2271,7 +2271,7 @@ F 6 "N" H 8400 1800 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x01 J16
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J16
 U 1 1 5D1DF2FE
 P 8400 2550
 F 0 "J16" H 8450 2650 50  0000 R CNN
@@ -2294,7 +2294,7 @@ Wire Wire Line
 Wire Wire Line
 	9650 2950 9650 3000
 $Comp
-L Device:C C28
+L IQ_SDR-rescue:C-Device C28
 U 1 1 5D23ADA3
 P 8800 2550
 F 0 "C28" H 8650 2650 50  0000 L CNN
@@ -2305,7 +2305,7 @@ F 3 "~" H 8800 2550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR063
+L IQ_SDR-rescue:GND-power #PWR063
 U 1 1 5D23BBE5
 P 8800 2700
 F 0 "#PWR063" H 8800 2450 50  0001 C CNN
@@ -2341,7 +2341,7 @@ Connection ~ 7700 2100
 Wire Wire Line
 	7700 1800 8200 1800
 $Comp
-L power:PWR_FLAG #FLG03
+L IQ_SDR-rescue:PWR_FLAG-power #FLG03
 U 1 1 5D1F3DF3
 P 8200 2400
 F 0 "#FLG03" H 8200 2475 50  0001 C CNN
@@ -2363,7 +2363,7 @@ F 3 "" H 8700 700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Jumper:Jumper_3_Bridged12 JP2
+L IQ_SDR-rescue:Jumper_3_Bridged12-Jumper JP2
 U 1 1 5D208330
 P 8450 900
 F 0 "JP2" H 8450 1013 50  0000 C CNN
@@ -2401,7 +2401,7 @@ F 3 "" H 5650 6450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x02 J3
+L IQ_SDR-rescue:Conn_01x02-Connector_Generic J3
 U 1 1 5D27D09E
 P 1450 2650
 F 0 "J3" H 1600 2700 50  0000 C CNN
@@ -2412,7 +2412,7 @@ F 3 "~" H 1450 2650 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR010
+L IQ_SDR-rescue:GND-power #PWR010
 U 1 1 5D289723
 P 1800 2850
 F 0 "#PWR010" H 1800 2600 50  0001 C CNN
@@ -2455,7 +2455,7 @@ Connection ~ 1950 7400
 Wire Wire Line
 	1850 7400 1950 7400
 $Comp
-L power:+5V #PWR058
+L IQ_SDR-rescue:+5V-power #PWR058
 U 1 1 5D3790E6
 P 8200 1700
 F 0 "#PWR058" H 8200 1550 50  0001 C CNN
@@ -2559,7 +2559,7 @@ External DC in\nto run op amps\nif desired.
 Text Notes 650  3000 0    50   ~ 0
 Inputs for external\nDC input for op\namps.
 $Comp
-L power:PWR_FLAG #FLG05
+L IQ_SDR-rescue:PWR_FLAG-power #FLG05
 U 1 1 5D47EB15
 P 8700 800
 F 0 "#FLG05" H 8700 875 50  0001 C CNN
@@ -2573,7 +2573,7 @@ Connection ~ 8700 800
 Wire Wire Line
 	8700 800  8700 900 
 $Comp
-L power:PWR_FLAG #FLG04
+L IQ_SDR-rescue:PWR_FLAG-power #FLG04
 U 1 1 5D47F235
 P 8450 1150
 F 0 "#FLG04" H 8450 1225 50  0001 C CNN
@@ -2591,7 +2591,7 @@ R9-10 can be\nup to 100\nwith LM4562.
 Text Notes 4700 4000 0    50   ~ 0
 Making T1 a step up\ntransformer makes\nthe S/N and NF better.
 $Comp
-L Jumper:Jumper_2_Open JP1
+L IQ_SDR-rescue:Jumper_2_Open-Jumper JP1
 U 1 1 5D205EC2
 P 7150 2100
 F 0 "JP1" V 7196 2012 50  0000 R CNN
@@ -2655,7 +2655,7 @@ F 3 "~" H 4600 2150 50  0001 C CNN
 $EndComp
 Connection ~ 4600 1950
 $Comp
-L Device:R R15
+L IQ_SDR-rescue:R-Device R15
 U 1 1 5D5200C2
 P 10150 2950
 F 0 "R15" H 9950 3000 50  0000 L CNN
@@ -2666,7 +2666,7 @@ F 3 "~" H 10150 2950 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R16
+L IQ_SDR-rescue:R-Device R16
 U 1 1 5D520742
 P 10300 2950
 F 0 "R16" H 10350 2950 50  0000 L CNN
@@ -2685,7 +2685,7 @@ Wire Wire Line
 Wire Wire Line
 	10300 2350 10050 2350
 $Comp
-L power:+3.3V #PWR070
+L IQ_SDR-rescue:+3.3V-power #PWR070
 U 1 1 5D5880C9
 P 9850 3100
 F 0 "#PWR070" H 9850 2950 50  0001 C CNN
@@ -2704,4 +2704,12 @@ Text Notes 750  4150 0    50   ~ 0
 BPF Responses:\n1.8MHz-4MHz\n4MHz-8MHz\n8MHz-16MHz\n16MHz-30MHZ
 Text Notes 6800 3300 0    50   ~ 0
 We could use differential amplifiers\nto eliminate T1.  (Switch the mixer\nchips around.)
+Text Notes 700  7900 0    50   ~ 0
+Maybe change these diodes to LEDs.
+Text Notes 4900 1200 0    50   ~ 0
+PO74G74A would \nbe faster for the divider.
+Text Notes 6000 4950 0    50   ~ 0
+MASWSS0136 might\nbe better for mixers.
+Text Notes 5100 3650 0    50   ~ 0
+PO3B14A might\nbe better for\nTayloe mixer.
 $EndSCHEMATC
