@@ -1957,8 +1957,8 @@ $Comp
 L Device:C C8
 U 1 1 5D22E323
 P 2600 4700
-F 0 "C8" V 2700 4800 50  0000 C CNN
-F 1 "100pF" V 2450 4700 50  0000 C CNN
+F 0 "C8" V 2700 4600 50  0000 C CNN
+F 1 "100pF" V 2700 4900 50  0000 C CNN
 F 2 "Capacitors_SMD:C_0805" H 2638 4550 50  0001 C CNN
 F 3 "~" H 2600 4700 50  0001 C CNN
 	1    2600 4700
@@ -2096,8 +2096,8 @@ $Comp
 L Device:C C7
 U 1 1 5D258FCD
 P 2550 5250
-F 0 "C7" V 2650 5350 50  0000 C CNN
-F 1 "47pF" V 2400 5250 50  0000 C CNN
+F 0 "C7" V 2650 5150 50  0000 C CNN
+F 1 "47pF" V 2650 5400 50  0000 C CNN
 F 2 "Capacitors_SMD:C_0805" H 2588 5100 50  0001 C CNN
 F 3 "~" H 2550 5250 50  0001 C CNN
 	1    2550 5250
@@ -2705,4 +2705,8 @@ Text Notes 750  4150 0    50   ~ 0
 BPF Responses:\n1.8MHz-4MHz\n4MHz-8MHz\n8MHz-16MHz\n16MHz-30MHZ
 Text Notes 6800 3300 0    50   ~ 0
 We could use differential amplifiers\nto eliminate T1.  (Switch the mixer\nchips around.)
+Text Notes 1650 6200 0    50   ~ 0
+Note: switches start at 1, not 0, so 00 => 1\nand 01=>2, etc.
+Text Label 5300 5150 0    50   ~ 0
+1.5V_bias
 $EndSCHEMATC
