@@ -149,4 +149,5 @@
   (lib (name onsemi)(type Legacy)(uri ${KIPRJMOD}/onsemi.lib)(options "")(descr ""))
   (lib (name myspice)(type Legacy)(uri /home/frohro/Classes/Electronics/myspice.lib)(options "")(descr ""))
   (lib (name Connector)(type Legacy)(uri ${KIPRJMOD}/Connector.lib)(options "")(descr ""))
+  (lib (name gnda_1.5)(type Legacy)(uri ${KIPRJMOD}/gnda_1.5.lib)(options "")(descr ""))
 )
