@@ -2720,4 +2720,6 @@ Text Notes 1750 3200 0    50   ~ 0
 Inductors need to go to 1.5VDC in BPF instead of GND.
 Text Notes 5900 4400 0    50   ~ 0
 C22 and C23 are too big.\n
+Text Notes 4650 5900 0    50   ~ 0
+Input impedance was maybe 10 Ohms.\nMake R9-R12 five times larger, 50 Ohms\nand 5k.  C26-C27 should be 1/5 the size.
 $EndSCHEMATC
