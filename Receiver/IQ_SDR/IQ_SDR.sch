@@ -2688,7 +2688,7 @@ F 3 "" H 5300 5150 50  0001 C CNN
 $EndComp
 Connection ~ 5300 5150
 $Comp
-L power:GNDA #PWR?
+L IQ_SDR-rescue:GNDA-power #PWR?
 U 1 1 5E0B56F4
 P 5600 4450
 F 0 "#PWR?" H 5600 4200 50  0001 C CNN
@@ -2699,7 +2699,7 @@ F 3 "" H 5600 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR?
+L IQ_SDR-rescue:GNDA-power #PWR?
 U 1 1 5E0B69D9
 P 7750 4600
 F 0 "#PWR?" H 7750 4350 50  0001 C CNN
@@ -2710,7 +2710,7 @@ F 3 "" H 7750 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GNDA #PWR?
+L IQ_SDR-rescue:GNDA-power #PWR?
 U 1 1 5E0B6E6F
 P 8200 5250
 F 0 "#PWR?" H 8200 5000 50  0001 C CNN
@@ -2722,7 +2722,7 @@ F 3 "" H 8200 5250 50  0001 C CNN
 $EndComp
 Connection ~ 8200 5250
 $Comp
-L power:GNDA #PWR?
+L IQ_SDR-rescue:GNDA-power #PWR?
 U 1 1 5E0B8361
 P 7950 3850
 F 0 "#PWR?" H 7950 3600 50  0001 C CNN
@@ -2735,4 +2735,6 @@ $EndComp
 Connection ~ 7950 3850
 Wire Wire Line
 	7950 3850 8200 3850
+Text Notes 7500 7050 0    50   ~ 0
+Problems yet to solve:\nIn Quisk or maybe hardware, need to switch I and Q.\nNoise goes down significantly if USB is disconnected.
 $EndSCHEMATC
