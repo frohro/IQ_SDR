@@ -45,15 +45,15 @@ $EndComp
 $Comp
 L IQ_SDR-rescue:BNC-lt6231 P1
 U 1 1 5D491312
-P 750 7250
-F 0 "P1" H 704 7488 50  0000 C CNN
-F 1 "BNC" H 704 7397 50  0000 C CNN
-F 2 "Connectors_TE-Connectivity:BNC_Socket_TYCO-AMP_LargePads" H 750 7250 50  0001 C CNN
-F 3 "" H 750 7250 50  0000 C CNN
-F 4 "R" H 750 7250 50  0001 C CNN "Spice_Primitive"
-F 5 "10" H 750 7250 50  0001 C CNN "Spice_Model"
-F 6 "N" H 750 7250 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    750  7250
+P 700 6200
+F 0 "P1" H 654 6438 50  0000 C CNN
+F 1 "BNC" H 654 6347 50  0000 C CNN
+F 2 "Connectors_TE-Connectivity:BNC_Socket_TYCO-AMP_LargePads" H 700 6200 50  0001 C CNN
+F 3 "" H 700 6200 50  0000 C CNN
+F 4 "R" H 700 6200 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 700 6200 50  0001 C CNN "Spice_Model"
+F 6 "N" H 700 6200 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    700  6200
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -63,7 +63,7 @@ P 8500 5150
 F 0 "U4" H 8450 5150 50  0000 C CNN
 F 1 "LM4562 or LT6231" H 8750 5350 50  0000 C CNN
 F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 8500 5150 50  0001 C CNN
-F 3 "https://www.analog.com/media/en/technical-documentation/data-sheets/623012fc.pdf" H 8500 5150 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lm4562.pdf" H 8500 5150 50  0001 C CNN
 F 4 "X" H 8500 5150 50  0001 C CNN "Spice_Primitive"
 F 5 "NJM5532" H 8500 5150 50  0001 C CNN "Spice_Model"
 F 6 "N" H 8500 5150 50  0001 C CNN "Spice_Netlist_Enabled"
@@ -77,8 +77,8 @@ U 3 1 5D491315
 P 5750 6950
 F 0 "U4" H 5708 6996 50  0000 L CNN
 F 1 "LM4562 or LT6231" H 5800 7450 50  0000 L CNN
-F 2 "SMA:DMP8" H 5750 6950 50  0001 C CNN
-F 3 "http://www.njr.com/semicon/PDF/NJM5532_E.pdf" H 5750 6950 50  0001 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 5750 6950 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/lm4562.pdf" H 5750 6950 50  0001 C CNN
 	3    5750 6950
 	1    0    0    -1  
 $EndComp
@@ -160,12 +160,12 @@ $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR01
 U 1 1 5CF13F37
-P 750 7450
-F 0 "#PWR01" H 750 7200 50  0001 C CNN
-F 1 "GND" H 755 7277 50  0000 C CNN
-F 2 "" H 750 7450 50  0001 C CNN
-F 3 "" H 750 7450 50  0001 C CNN
-	1    750  7450
+P 700 7200
+F 0 "#PWR01" H 700 6950 50  0001 C CNN
+F 1 "GND" H 705 7027 50  0000 C CNN
+F 2 "" H 700 7200 50  0001 C CNN
+F 3 "" H 700 7200 50  0001 C CNN
+	1    700  7200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -182,12 +182,12 @@ $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR065
 U 1 1 5CF1500E
-P 9600 3000
-F 0 "#PWR065" H 9600 2750 50  0001 C CNN
-F 1 "GND" H 9605 2827 50  0000 C CNN
-F 2 "" H 9600 3000 50  0001 C CNN
-F 3 "" H 9600 3000 50  0001 C CNN
-	1    9600 3000
+P 9600 3600
+F 0 "#PWR065" H 9600 3350 50  0001 C CNN
+F 1 "GND" H 9700 3500 50  0000 C CNN
+F 2 "" H 9600 3600 50  0001 C CNN
+F 3 "" H 9600 3600 50  0001 C CNN
+	1    9600 3600
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -835,41 +835,41 @@ Wire Wire Line
 $Comp
 L IQ_SDR-rescue:D_ALT-Device D2
 U 1 1 5D051BF1
-P 1400 7400
-F 0 "D2" V 1354 7479 50  0000 L CNN
-F 1 "1N914" V 1400 7100 50  0000 L CNN
-F 2 "Diodes_SMD:D_SOD-323" H 1400 7400 50  0001 C CNN
-F 3 "https://www.onsemi.com/pub/Collateral/1N914BWS-D.pdf" H 1400 7400 50  0001 C CNN
-F 4 "D" H 1400 7400 50  0001 C CNN "Spice_Primitive"
-F 5 "1N914" H 1400 7400 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 1400 7400 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "IQ_SDR_Spice.lib" H 1400 7400 50  0001 C CNN "Spice_Lib_File"
-	1    1400 7400
+P 1700 7350
+F 0 "D2" V 1600 7400 50  0000 L CNN
+F 1 "1N914" V 1800 7350 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-323" H 1700 7350 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/1N914BWS-D.pdf" H 1700 7350 50  0001 C CNN
+F 4 "D" H 1700 7350 50  0001 C CNN "Spice_Primitive"
+F 5 "1N914" H 1700 7350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1700 7350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "IQ_SDR_Spice.lib" H 1700 7350 50  0001 C CNN "Spice_Lib_File"
+	1    1700 7350
 	0    1    1    0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR02
 U 1 1 5D491363
-P 1000 7550
-F 0 "#PWR02" H 1000 7300 50  0001 C CNN
-F 1 "GND" H 1005 7377 50  0000 C CNN
-F 2 "" H 1000 7550 50  0001 C CNN
-F 3 "" H 1000 7550 50  0001 C CNN
-	1    1000 7550
+P 1450 7500
+F 0 "#PWR02" H 1450 7250 50  0001 C CNN
+F 1 "GND" H 1455 7327 50  0000 C CNN
+F 2 "" H 1450 7500 50  0001 C CNN
+F 3 "" H 1450 7500 50  0001 C CNN
+	1    1450 7500
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR04
 U 1 1 5D491364
-P 1400 7550
-F 0 "#PWR04" H 1400 7300 50  0001 C CNN
-F 1 "GND" H 1405 7377 50  0000 C CNN
-F 2 "" H 1400 7550 50  0001 C CNN
-F 3 "" H 1400 7550 50  0001 C CNN
-	1    1400 7550
+P 1700 7500
+F 0 "#PWR04" H 1700 7250 50  0001 C CNN
+F 1 "GND" H 1705 7327 50  0000 C CNN
+F 2 "" H 1700 7500 50  0001 C CNN
+F 3 "" H 1700 7500 50  0001 C CNN
+	1    1700 7500
 	1    0    0    -1  
 $EndComp
-Connection ~ 1400 7250
+Connection ~ 1700 7200
 Wire Wire Line
 	6750 3650 7050 3650
 Wire Wire Line
@@ -903,118 +903,116 @@ F 3 "~" H 5650 7250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Connection ~ 5650 7250
-Wire Wire Line
-	900  7250 1000 7250
 $Comp
 L IQ_SDR-rescue:D_ALT-Device D1
 U 1 1 5D491367
-P 1000 7400
-F 0 "D1" V 1100 7250 50  0000 L CNN
-F 1 "1N914" V 850 7150 50  0000 L CNN
-F 2 "Diodes_SMD:D_SOD-323" H 1000 7400 50  0001 C CNN
-F 3 "https://www.onsemi.com/pub/Collateral/1N914BWS-D.pdf" H 1000 7400 50  0001 C CNN
-F 4 "D" H 1000 7400 50  0001 C CNN "Spice_Primitive"
-F 5 "1N914" H 1000 7400 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 1000 7400 50  0001 C CNN "Spice_Netlist_Enabled"
-F 7 "IQ_SDR_Spice.lib" H 1000 7400 50  0001 C CNN "Spice_Lib_File"
-	1    1000 7400
+P 1450 7350
+F 0 "D1" V 1550 7200 50  0000 L CNN
+F 1 "1N914" V 1350 7100 50  0000 L CNN
+F 2 "Diodes_SMD:D_SOD-323" H 1450 7350 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/1N914BWS-D.pdf" H 1450 7350 50  0001 C CNN
+F 4 "D" H 1450 7350 50  0001 C CNN "Spice_Primitive"
+F 5 "1N914" H 1450 7350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1450 7350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "IQ_SDR_Spice.lib" H 1450 7350 50  0001 C CNN "Spice_Lib_File"
+	1    1450 7350
 	0    -1   -1   0   
 $EndComp
-Connection ~ 1000 7250
+Connection ~ 1450 7200
 Wire Wire Line
-	1000 7250 1250 7250
+	1450 7200 1550 7200
 Text Notes 6050 4650 0    50   ~ 0
 Doubly Balanced\nSampling Mixers
 $Comp
 L onsemi:FST3253 U1
 U 1 1 5D1B613B
-P 2700 6800
-F 0 "U1" V 2746 5970 50  0000 R CNN
-F 1 "FST3253 or TS3A5017 " V 2650 6350 50  0000 R CNN
-F 2 "Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm" H 2700 5900 50  0001 C CNN
-F 3 "https://www.onsemi.com/pub/Collateral/FST3253-D.pdf" H 2700 5700 50  0001 C CNN
-F 4 "DIST DIGIKEY FST3253MXFSCT-ND" H 2700 5800 60  0001 C CNN "BOM"
-F 5 "R" H 2700 6800 50  0001 C CNN "Spice_Primitive"
-F 6 "10" H 2700 6800 50  0001 C CNN "Spice_Model"
-F 7 "N" H 2700 6800 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    2700 6800
+P 3000 6750
+F 0 "U1" V 3046 5920 50  0000 R CNN
+F 1 "FST3253 or TS3A5017 " V 2950 6300 50  0000 R CNN
+F 2 "Housings_SSOP:TSSOP-16_4.4x5mm_Pitch0.65mm" H 3000 5850 50  0001 C CNN
+F 3 "https://www.onsemi.com/pub/Collateral/FST3253-D.pdf" H 3000 5650 50  0001 C CNN
+F 4 "DIST DIGIKEY FST3253MXFSCT-ND" H 3000 5750 60  0001 C CNN "BOM"
+F 5 "R" H 3000 6750 50  0001 C CNN "Spice_Primitive"
+F 6 "10" H 3000 6750 50  0001 C CNN "Spice_Model"
+F 7 "N" H 3000 6750 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3000 6750
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	1750 7700 2250 7700
+	1950 7650 2550 7650
 Wire Wire Line
-	2250 7700 2250 7550
+	2550 7650 2550 7500
 Wire Wire Line
-	1400 7250 1750 7250
+	1700 7200 1950 7200
 Wire Wire Line
-	2850 7400 2850 7700
+	3150 7350 3150 7650
 Wire Wire Line
-	2850 7700 4000 7700
+	3150 7650 4150 7650
 $Comp
 L IQ_SDR-rescue:GND-power #PWR028
 U 1 1 5D491384
-P 3450 7400
-F 0 "#PWR028" H 3450 7150 50  0001 C CNN
-F 1 "GND" H 3455 7227 50  0000 C CNN
-F 2 "" H 3450 7400 50  0001 C CNN
-F 3 "" H 3450 7400 50  0001 C CNN
-	1    3450 7400
+P 3750 7350
+F 0 "#PWR028" H 3750 7100 50  0001 C CNN
+F 1 "GND" H 3755 7177 50  0000 C CNN
+F 2 "" H 3750 7350 50  0001 C CNN
+F 3 "" H 3750 7350 50  0001 C CNN
+	1    3750 7350
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR021
 U 1 1 5D491385
-P 2950 7400
-F 0 "#PWR021" H 2950 7150 50  0001 C CNN
-F 1 "GND" H 2955 7227 50  0000 C CNN
-F 2 "" H 2950 7400 50  0001 C CNN
-F 3 "" H 2950 7400 50  0001 C CNN
-	1    2950 7400
+P 3250 7350
+F 0 "#PWR021" H 3250 7100 50  0001 C CNN
+F 1 "GND" H 3255 7177 50  0000 C CNN
+F 2 "" H 3250 7350 50  0001 C CNN
+F 3 "" H 3250 7350 50  0001 C CNN
+	1    3250 7350
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR019
 U 1 1 5D491386
-P 2350 7400
-F 0 "#PWR019" H 2350 7150 50  0001 C CNN
-F 1 "GND" H 2450 7400 50  0000 C CNN
-F 2 "" H 2350 7400 50  0001 C CNN
-F 3 "" H 2350 7400 50  0001 C CNN
-	1    2350 7400
+P 2650 7350
+F 0 "#PWR019" H 2650 7100 50  0001 C CNN
+F 1 "GND" H 2750 7350 50  0000 C CNN
+F 2 "" H 2650 7350 50  0001 C CNN
+F 3 "" H 2650 7350 50  0001 C CNN
+	1    2650 7350
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1850 6650 1850 6800
+	2150 6600 2150 6750
 $Comp
 L IQ_SDR-rescue:C-Device C1
 U 1 1 5D24A68D
-P 1550 6950
-F 0 "C1" H 1665 6996 50  0000 L CNN
-F 1 "0.01" H 1665 6905 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1588 6800 50  0001 C CNN
-F 3 "~" H 1550 6950 50  0001 C CNN
-	1    1550 6950
+P 1850 6900
+F 0 "C1" H 1965 6946 50  0000 L CNN
+F 1 "0.01" H 1965 6855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1888 6750 50  0001 C CNN
+F 3 "~" H 1850 6900 50  0001 C CNN
+	1    1850 6900
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR06
 U 1 1 5D24A693
-P 1550 7100
-F 0 "#PWR06" H 1550 6850 50  0001 C CNN
-F 1 "GND" H 1700 7050 50  0000 C CNN
-F 2 "" H 1550 7100 50  0001 C CNN
-F 3 "" H 1550 7100 50  0001 C CNN
-	1    1550 7100
+P 1850 7050
+F 0 "#PWR06" H 1850 6800 50  0001 C CNN
+F 1 "GND" H 2000 7000 50  0000 C CNN
+F 2 "" H 1850 7050 50  0001 C CNN
+F 3 "" H 1850 7050 50  0001 C CNN
+	1    1850 7050
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 6800 1850 6800
-Connection ~ 1850 6800
+	1850 6750 2150 6750
+Connection ~ 2150 6750
 Wire Wire Line
-	1850 6800 1850 7400
-Text Label 3200 7400 3    50   ~ 0
+	2150 6750 2150 7350
+Text Label 3500 7350 3    50   ~ 0
 B0
-Text Label 3300 7400 3    50   ~ 0
+Text Label 3600 7350 3    50   ~ 0
 B1
 Text Label 9050 1750 2    50   ~ 0
 B0
@@ -1023,29 +1021,29 @@ B1
 $Comp
 L IQ_SDR-rescue:Conn_01x01-Connector_Generic J1
 U 1 1 5D286945
-P 1000 7050
-F 0 "J1" V 964 6962 50  0000 R CNN
-F 1 "ANT" V 1100 7100 50  0000 R CNN
-F 2 "Connectors:PINTST" H 1000 7050 50  0001 C CNN
-F 3 "~" H 1000 7050 50  0001 C CNN
-F 4 "J" H 1000 7050 50  0001 C CNN "Spice_Primitive"
-F 5 "Conn_01x01" H 1000 7050 50  0001 C CNN "Spice_Model"
-F 6 "N" H 1000 7050 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    1000 7050
+P 1450 7000
+F 0 "J1" V 1350 7000 50  0000 R CNN
+F 1 "ANT" V 1550 7100 50  0000 R CNN
+F 2 "Connectors:PINTST" H 1450 7000 50  0001 C CNN
+F 3 "~" H 1450 7000 50  0001 C CNN
+F 4 "J" H 1450 7000 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 1450 7000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 1450 7000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1450 7000
 	0    -1   -1   0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:Conn_01x01-Connector_Generic J6
 U 1 1 5D49138B
-P 4000 7500
-F 0 "J6" V 3964 7412 50  0000 R CNN
-F 1 "FIL_O" V 4100 7600 50  0000 R CNN
-F 2 "Connectors:PINTST" H 4000 7500 50  0001 C CNN
-F 3 "~" H 4000 7500 50  0001 C CNN
-F 4 "J" H 4000 7500 50  0001 C CNN "Spice_Primitive"
-F 5 "Conn_01x01" H 4000 7500 50  0001 C CNN "Spice_Model"
-F 6 "N" H 4000 7500 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    4000 7500
+P 4150 7450
+F 0 "J6" V 4114 7362 50  0000 R CNN
+F 1 "FIL_O" V 4250 7550 50  0000 R CNN
+F 2 "Connectors:PINTST" H 4150 7450 50  0001 C CNN
+F 3 "~" H 4150 7450 50  0001 C CNN
+F 4 "J" H 4150 7450 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 4150 7450 50  0001 C CNN "Spice_Model"
+F 6 "N" H 4150 7450 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4150 7450
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -1171,49 +1169,22 @@ F 6 "N" H 7000 4250 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    7000 4250
 	-1   0    0    1   
 $EndComp
-Connection ~ 4000 7700
-Wire Wire Line
-	4000 7700 4200 7700
 Text Notes 1000 850  0    50   ~ 0
 .param freq=10000000
 Text Notes 1000 950  0    50   ~ 0
 .param if_freq={freq + 1000}
-Text Label 1250 7150 0    50   ~ 0
+Text Label 1550 7100 0    50   ~ 0
 RF_IN
-Connection ~ 1250 7250
+Connection ~ 1550 7200
 Wire Wire Line
-	1250 7250 1400 7250
-$Comp
-L IQ_SDR-rescue:VSOURCE-myspice V1
-U 1 1 5D2E799E
-P 1050 6200
-F 0 "V1" H 1278 6200 50  0000 L CNN
-F 1 "sin(0 10u {freq})" H 1600 6100 50  0000 C CNN
-F 2 "" H 1050 6200 50  0001 C CNN
-F 3 "~" H 1050 6200 50  0001 C CNN
-	1    1050 6200
-	1    0    0    -1  
-$EndComp
-$Comp
-L IQ_SDR-rescue:GND-power #PWR03
-U 1 1 5D491397
-P 1050 6500
-F 0 "#PWR03" H 1050 6250 50  0001 C CNN
-F 1 "GND" H 1055 6327 50  0000 C CNN
-F 2 "" H 1050 6500 50  0001 C CNN
-F 3 "" H 1050 6500 50  0001 C CNN
-	1    1050 6500
-	1    0    0    -1  
-$EndComp
-Text Label 1050 5900 0    50   ~ 0
-RF_IN
+	1550 7200 1700 7200
 $Comp
 L IQ_SDR-rescue:NJM5532-Amplifier_Operational U4
 U 1 1 5D491313
 P 8500 3750
 F 0 "U4" H 8450 3750 50  0000 C CNN
 F 1 "LM4562 or LT6231" H 8500 4000 50  0000 C CNN
-F 2 "SMA:DMP8" H 8500 3750 50  0001 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 8500 3750 50  0001 C CNN
 F 3 "https://www.ti.com/lit/ds/symlink/lm4562.pdf" H 8500 3750 50  0001 C CNN
 F 4 "X" H 8500 3750 50  0001 C CNN "Spice_Primitive"
 F 5 "NJM5532" H 8500 3750 50  0001 C CNN "Spice_Model"
@@ -1372,61 +1343,61 @@ Wire Wire Line
 $Comp
 L IQ_SDR-rescue:C-Device C3
 U 1 1 5D49132E
-P 1750 7400
-F 0 "C3" H 1600 7500 50  0000 L CNN
-F 1 "0.1uF" H 1500 7300 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1788 7250 50  0001 C CNN
-F 3 "~" H 1750 7400 50  0001 C CNN
-	1    1750 7400
+P 1950 7350
+F 0 "C3" H 2000 7250 50  0000 L CNN
+F 1 "0.1uF" H 1950 7150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1988 7200 50  0001 C CNN
+F 3 "~" H 1950 7350 50  0001 C CNN
+	1    1950 7350
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:R-Device R2
 U 1 1 5CF894FB
-P 2100 7550
-F 0 "R2" V 1893 7550 50  0000 C CNN
-F 1 "10k" V 1984 7550 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 2030 7550 50  0001 C CNN
-F 3 "~" H 2100 7550 50  0001 C CNN
-F 4 "R" H 2100 7550 50  0001 C CNN "Spice_Primitive"
-F 5 "10" H 2100 7550 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 2100 7550 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    2100 7550
+P 2400 7500
+F 0 "R2" V 2193 7500 50  0000 C CNN
+F 1 "10k" V 2284 7500 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2330 7500 50  0001 C CNN
+F 3 "~" H 2400 7500 50  0001 C CNN
+F 4 "R" H 2400 7500 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 2400 7500 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2400 7500 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2400 7500
 	0    1    1    0   
 $EndComp
-Connection ~ 2250 7550
+Connection ~ 2550 7500
 Wire Wire Line
-	2250 7550 2250 7400
+	2550 7500 2550 7350
 $Comp
 L IQ_SDR-rescue:R-Device R3
 U 1 1 5CF8A67E
-P 2400 7700
-F 0 "R3" V 2300 7650 50  0000 C CNN
-F 1 "5.6k" V 2300 7800 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 2330 7700 50  0001 C CNN
-F 3 "~" H 2400 7700 50  0001 C CNN
-F 4 "R" H 2400 7700 50  0001 C CNN "Spice_Primitive"
-F 5 "10" H 2400 7700 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 2400 7700 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    2400 7700
+P 2700 7650
+F 0 "R3" V 2600 7600 50  0000 C CNN
+F 1 "5.6k" V 2600 7750 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 2630 7650 50  0001 C CNN
+F 3 "~" H 2700 7650 50  0001 C CNN
+F 4 "R" H 2700 7650 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 2700 7650 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2700 7650 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2700 7650
 	0    1    1    0   
 $EndComp
-Connection ~ 2250 7700
+Connection ~ 2550 7650
 $Comp
 L IQ_SDR-rescue:GND-power #PWR020
 U 1 1 5CF8B24C
-P 2600 7700
-F 0 "#PWR020" H 2600 7450 50  0001 C CNN
-F 1 "GND" H 2750 7650 50  0000 C CNN
-F 2 "" H 2600 7700 50  0001 C CNN
-F 3 "" H 2600 7700 50  0001 C CNN
-	1    2600 7700
+P 2900 7650
+F 0 "#PWR020" H 2900 7400 50  0001 C CNN
+F 1 "GND" H 3050 7600 50  0000 C CNN
+F 2 "" H 2900 7650 50  0001 C CNN
+F 3 "" H 2900 7650 50  0001 C CNN
+	1    2900 7650
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1750 7700 1750 7550
+	1950 7650 1950 7500
 Wire Wire Line
-	2550 7700 2600 7700
+	2850 7650 2900 7650
 $Comp
 L IQ_SDR-rescue:R-Device R4
 U 1 1 5D491338
@@ -1455,17 +1426,6 @@ F 6 "Y" H 4500 5300 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    4500 5300
 	-1   0    0    1   
 $EndComp
-$Comp
-L IQ_SDR-rescue:C-Device C17
-U 1 1 5CFADA4F
-P 5000 5300
-F 0 "C17" H 5050 5400 50  0000 L CNN
-F 1 "0.1uF" H 5050 5200 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 5038 5150 50  0001 C CNN
-F 3 "~" H 5000 5300 50  0001 C CNN
-	1    5000 5300
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4500 5450 4800 5450
 Wire Wire Line
@@ -1486,28 +1446,28 @@ $EndComp
 Connection ~ 5000 5150
 Text Notes 7500 6700 0    50   ~ 0
 A very nice description of how op amp noise effects the noise figure\nis given in this data sheet \nhttps://www.ti.com/lit/ds/symlink/lmh6629.pdf \nin sections 7.3.4 and 7.3.5 (pages 24-7).   Finding an optimum R_g\n(input resistance for the inverting amplifier) seems to imply that\nthe optimum gets better as it goes to zero, assuming R_s is fixed.\nThe excess noise is approximately (e_n)^2+(i_n-)^2*(R_s+R_g)^2+4kTR_g, \nso minimizing e_n and i_n and R_g is\nthe best you can do.  The effect of i_n-  can be compared to e_n, by\nmultiplying by Rs_+Rg, so for R_g = 10 and R_s  = 50, e_n is more \nimportant in all the cases I've seen so far.  A nice calculator\nis at:\nhttp://dicks-website.eu/noisecalculator/index.html
-Text Notes 5550 3300 0    50   ~ 0
+Text Notes 5300 3300 0    50   ~ 0
 LT6231 has lower noise figure (4.7 dB), \nbut costs about 7 times as much\nas the SA5532.  LME49860 is \nintermediate option.  LM4562\ncould be even better (10.6 dB)\n2.7nV/sqrt(Hz).
 $Comp
 L IQ_SDR-rescue:R-Device R1
 U 1 1 5D491341
-P 1250 6850
-F 0 "R1" H 1350 6850 50  0000 C CNN
-F 1 "2.2k" H 1100 6850 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 1180 6850 50  0001 C CNN
-F 3 "~" H 1250 6850 50  0001 C CNN
-F 4 "R" H 1250 6850 50  0001 C CNN "Spice_Primitive"
-F 5 "10" H 1250 6850 50  0001 C CNN "Spice_Model"
-F 6 "Y" H 1250 6850 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    1250 6850
+P 1550 6800
+F 0 "R1" H 1650 6800 50  0000 C CNN
+F 1 "2.2k" H 1400 6800 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805" V 1480 6800 50  0001 C CNN
+F 3 "~" H 1550 6800 50  0001 C CNN
+F 4 "R" H 1550 6800 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 1550 6800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 1550 6800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    1550 6800
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1250 7000 1250 7250
-Text Label 1250 6650 0    50   ~ 0
+	1550 6950 1550 7200
+Text Label 1550 6600 0    50   ~ 0
 MUTE
 Wire Wire Line
-	1250 6700 1250 6650
+	1550 6650 1550 6600
 Text Label 9050 1950 2    50   ~ 0
 MUTE
 $Comp
@@ -1537,7 +1497,7 @@ F 3 "" H 4800 2650 50  0001 C CNN
 	1    4800 2650
 	1    0    0    -1  
 $EndComp
-Text Notes 600  7000 0    50   ~ 0
+Text Notes 750  6450 0    50   ~ 0
 Antenna\nIn
 Text Notes 4700 2500 0    50   ~ 0
 Oscillator\nOut
@@ -1594,509 +1554,505 @@ $EndComp
 Text Notes 1400 2150 0    50   ~ 0
 Wire for\nscope probes
 Wire Wire Line
-	1400 6000 1400 5250
+	1700 5950 1700 5200
 Wire Wire Line
-	1400 6000 2250 6000
+	1700 5950 2550 5950
 Wire Wire Line
-	2250 6000 2250 6200
+	2550 5950 2550 6150
 Wire Wire Line
-	1450 5950 2350 5950
+	1750 5900 2650 5900
 Wire Wire Line
-	2350 5950 2350 6200
+	2650 5900 2650 6150
 Wire Wire Line
-	1500 5900 2450 5900
+	1800 5850 2750 5850
 Wire Wire Line
-	2450 5900 2450 6200
+	2750 5850 2750 6150
 Wire Wire Line
-	2550 5850 2550 6200
+	2850 5800 2850 6150
 Wire Wire Line
-	3850 5850 3850 5250
+	4150 5800 4150 5200
 Wire Wire Line
-	4000 6000 4000 3600
+	4300 5950 4300 3550
 Wire Wire Line
-	1550 5850 2550 5850
+	1850 5800 2850 5800
 Wire Wire Line
-	2850 6200 2850 5850
+	3150 6150 3150 5800
 Wire Wire Line
-	2850 5850 3850 5850
+	3150 5800 4150 5800
 Wire Wire Line
-	2950 6200 2950 5900
+	3250 6150 3250 5850
 Wire Wire Line
-	2950 5900 3900 5900
+	3250 5850 4200 5850
 Wire Wire Line
-	3050 6200 3050 5950
+	3350 6150 3350 5900
 Wire Wire Line
-	3150 6200 3150 6000
+	3450 6150 3450 5950
 Wire Wire Line
-	3150 6000 4000 6000
-Wire Wire Line
-	4200 7700 4200 4250
-Wire Wire Line
-	4200 4250 4800 4250
+	3450 5950 4300 5950
 $Comp
 L IQ_SDR-rescue:L-Device L8
 U 1 1 5D17E138
-P 2700 3400
-F 0 "L8" V 2800 3500 50  0000 C CNN
-F 1 "7.2uH" V 2800 3300 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2700 3400 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2700 3400 50  0001 C CNN
-F 4 "T50-6 #30 wire, 43 turns" V 2700 3400 50  0001 C CNN "Winding"
-	1    2700 3400
+P 3000 3350
+F 0 "L8" V 3100 3450 50  0000 C CNN
+F 1 "7.2uH" V 3100 3250 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3000 3350 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3000 3350 50  0001 C CNN
+F 4 "T50-6 #30 wire, 43 turns" V 3000 3350 50  0001 C CNN "Winding"
+	1    3000 3350
 	0    -1   -1   0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C10
 U 1 1 5D17E962
-P 2700 3600
-F 0 "C10" V 2800 3750 50  0000 C CNN
-F 1 "470pF" V 2550 3600 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 2738 3450 50  0001 C CNN
-F 3 "~" H 2700 3600 50  0001 C CNN
-	1    2700 3600
+P 3000 3550
+F 0 "C10" V 3100 3700 50  0000 C CNN
+F 1 "470pF" V 2850 3550 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3038 3400 50  0001 C CNN
+F 3 "~" H 3000 3550 50  0001 C CNN
+	1    3000 3550
 	0    1    1    0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C4
 U 1 1 5D17EABA
-P 1800 3750
-F 0 "C4" H 1650 3850 50  0000 L CNN
-F 1 "1.5nF" H 1550 3650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1838 3600 50  0001 C CNN
-F 3 "~" H 1800 3750 50  0001 C CNN
-	1    1800 3750
+P 2100 3700
+F 0 "C4" H 1950 3800 50  0000 L CNN
+F 1 "1.5nF" H 1850 3600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2138 3550 50  0001 C CNN
+F 3 "~" H 2100 3700 50  0001 C CNN
+	1    2100 3700
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:L-Device L2
 U 1 1 5D17ECF6
-P 2000 3750
-F 0 "L2" H 2053 3796 50  0000 L CNN
-F 1 "2.4uH" H 2053 3705 50  0000 L CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2000 3750 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2000 3750 50  0001 C CNN
-F 4 "T50-6, #30 wire, 25 turns" H 2000 3750 50  0001 C CNN "Winding"
-	1    2000 3750
+P 2300 3700
+F 0 "L2" H 2353 3746 50  0000 L CNN
+F 1 "2.4uH" H 2353 3655 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2300 3700 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2300 3700 50  0001 C CNN
+F 4 "T50-6, #30 wire, 25 turns" H 2300 3700 50  0001 C CNN "Winding"
+	1    2300 3700
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C14
 U 1 1 5D17EF81
-P 3400 3750
-F 0 "C14" H 3200 3850 50  0000 L CNN
-F 1 "1.5nF" H 3100 3650 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 3438 3600 50  0001 C CNN
-F 3 "~" H 3400 3750 50  0001 C CNN
-	1    3400 3750
+P 3700 3700
+F 0 "C14" H 3500 3800 50  0000 L CNN
+F 1 "1.5nF" H 3400 3600 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3738 3550 50  0001 C CNN
+F 3 "~" H 3700 3700 50  0001 C CNN
+	1    3700 3700
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:L-Device L12
 U 1 1 5D17EF88
-P 3600 3750
-F 0 "L12" H 3653 3796 50  0000 L CNN
-F 1 "2.4uH" H 3653 3705 50  0000 L CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3600 3750 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3600 3750 50  0001 C CNN
-F 4 "T50-6, #30 wire, 25 turns" H 3600 3750 50  0001 C CNN "Winding"
-	1    3600 3750
+P 3900 3700
+F 0 "L12" H 3953 3746 50  0000 L CNN
+F 1 "2.4uH" H 3953 3655 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3900 3700 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3900 3700 50  0001 C CNN
+F 4 "T50-6, #30 wire, 25 turns" H 3900 3700 50  0001 C CNN "Winding"
+	1    3900 3700
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR011
 U 1 1 5D1894C5
-P 1800 3900
-F 0 "#PWR011" H 1800 3650 50  0001 C CNN
-F 1 "GND" H 1805 3727 50  0001 C CNN
-F 2 "" H 1800 3900 50  0001 C CNN
-F 3 "" H 1800 3900 50  0001 C CNN
-	1    1800 3900
+P 2100 3850
+F 0 "#PWR011" H 2100 3600 50  0001 C CNN
+F 1 "GND" H 2105 3677 50  0001 C CNN
+F 2 "" H 2100 3850 50  0001 C CNN
+F 3 "" H 2100 3850 50  0001 C CNN
+	1    2100 3850
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR026
 U 1 1 5D18964F
-P 3400 3900
-F 0 "#PWR026" H 3400 3650 50  0001 C CNN
-F 1 "GND" H 3405 3727 50  0001 C CNN
-F 2 "" H 3400 3900 50  0001 C CNN
-F 3 "" H 3400 3900 50  0001 C CNN
-	1    3400 3900
+P 3700 3850
+F 0 "#PWR026" H 3700 3600 50  0001 C CNN
+F 1 "GND" H 3705 3677 50  0001 C CNN
+F 2 "" H 3700 3850 50  0001 C CNN
+F 3 "" H 3700 3850 50  0001 C CNN
+	1    3700 3850
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1550 3600 1800 3600
-Connection ~ 1800 3600
+	1850 3550 2100 3550
+Connection ~ 2100 3550
 Wire Wire Line
-	1800 3600 2000 3600
-Connection ~ 2000 3600
+	2100 3550 2300 3550
+Connection ~ 2300 3550
 Wire Wire Line
-	2000 3600 2550 3600
+	2300 3550 2850 3550
 Wire Wire Line
-	2850 3600 3400 3600
-Connection ~ 3400 3600
+	3150 3550 3700 3550
+Connection ~ 3700 3550
 Wire Wire Line
-	3400 3600 3600 3600
-Connection ~ 3600 3600
+	3700 3550 3900 3550
+Connection ~ 3900 3550
 Wire Wire Line
-	3600 3600 4000 3600
+	3900 3550 4300 3550
 Wire Wire Line
-	2550 3400 2550 3600
-Connection ~ 2550 3600
+	2850 3350 2850 3550
+Connection ~ 2850 3550
 Wire Wire Line
-	2850 3400 2850 3600
-Connection ~ 2850 3600
+	3150 3350 3150 3550
+Connection ~ 3150 3550
 Wire Wire Line
-	3950 5950 3950 4150
+	4250 5900 4250 4100
 Wire Wire Line
-	1550 5850 1550 3600
+	1850 5800 1850 3550
 $Comp
 L IQ_SDR-rescue:L-Device L7
 U 1 1 5D1D3FF4
-P 2650 3950
-F 0 "L7" V 2750 4000 50  0000 C CNN
-F 1 "4uH" V 2750 3850 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2650 3950 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2650 3950 50  0001 C CNN
-F 4 "T50-6, #30 wire, 32 turns" V 2650 3950 50  0001 C CNN "Winding"
-	1    2650 3950
+P 2950 3900
+F 0 "L7" V 3050 3950 50  0000 C CNN
+F 1 "4uH" V 3050 3800 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 3900 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 3900 50  0001 C CNN
+F 4 "T50-6, #30 wire, 32 turns" V 2950 3900 50  0001 C CNN "Winding"
+	1    2950 3900
 	0    -1   -1   0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C9
 U 1 1 5D1D3FFB
-P 2650 4150
-F 0 "C9" V 2750 4250 50  0000 C CNN
-F 1 "180pF" V 2500 4150 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 2688 4000 50  0001 C CNN
-F 3 "~" H 2650 4150 50  0001 C CNN
-	1    2650 4150
+P 2950 4100
+F 0 "C9" V 3050 4200 50  0000 C CNN
+F 1 "180pF" V 2800 4100 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 2988 3950 50  0001 C CNN
+F 3 "~" H 2950 4100 50  0001 C CNN
+	1    2950 4100
 	0    1    1    0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C2
 U 1 1 5D1D4002
-P 1900 4300
-F 0 "C2" H 1750 4400 50  0000 L CNN
-F 1 "820pF" H 1650 4200 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1938 4150 50  0001 C CNN
-F 3 "~" H 1900 4300 50  0001 C CNN
-	1    1900 4300
+P 2200 4250
+F 0 "C2" H 2050 4350 50  0000 L CNN
+F 1 "820pF" H 1950 4150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2238 4100 50  0001 C CNN
+F 3 "~" H 2200 4250 50  0001 C CNN
+	1    2200 4250
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:L-Device L1
 U 1 1 5D1D4009
-P 2100 4300
-F 0 "L1" H 2153 4346 50  0000 L CNN
-F 1 "1uH" H 2153 4255 50  0000 L CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2100 4300 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2100 4300 50  0001 C CNN
-F 4 "T37-6, #30 wire, 18 turns" H 2100 4300 50  0001 C CNN "Winding"
-	1    2100 4300
+P 2400 4250
+F 0 "L1" H 2453 4296 50  0000 L CNN
+F 1 "1uH" H 2453 4205 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2400 4250 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2400 4250 50  0001 C CNN
+F 4 "T37-6, #30 wire, 18 turns" H 2400 4250 50  0001 C CNN "Winding"
+	1    2400 4250
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C13
 U 1 1 5D1D4010
-P 3350 4300
-F 0 "C13" H 3150 4400 50  0000 L CNN
-F 1 "820pF" H 3100 4200 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 3388 4150 50  0001 C CNN
-F 3 "~" H 3350 4300 50  0001 C CNN
-	1    3350 4300
+P 3650 4250
+F 0 "C13" H 3450 4350 50  0000 L CNN
+F 1 "820pF" H 3400 4150 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3688 4100 50  0001 C CNN
+F 3 "~" H 3650 4250 50  0001 C CNN
+	1    3650 4250
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:L-Device L11
 U 1 1 5D1D4017
-P 3550 4300
-F 0 "L11" H 3603 4346 50  0000 L CNN
-F 1 "1uH" H 3603 4255 50  0000 L CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3550 4300 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3550 4300 50  0001 C CNN
-F 4 "T37-6, #30 wire, 18 turns" H 3550 4300 50  0001 C CNN "Winding"
-	1    3550 4300
+P 3850 4250
+F 0 "L11" H 3903 4296 50  0000 L CNN
+F 1 "1uH" H 3903 4205 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3850 4250 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3850 4250 50  0001 C CNN
+F 4 "T37-6, #30 wire, 18 turns" H 3850 4250 50  0001 C CNN "Winding"
+	1    3850 4250
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR09
 U 1 1 5D1D401E
-P 1900 4450
-F 0 "#PWR09" H 1900 4200 50  0001 C CNN
-F 1 "GND" H 1905 4277 50  0001 C CNN
-F 2 "" H 1900 4450 50  0001 C CNN
-F 3 "" H 1900 4450 50  0001 C CNN
-	1    1900 4450
+P 2200 4400
+F 0 "#PWR09" H 2200 4150 50  0001 C CNN
+F 1 "GND" H 2205 4227 50  0001 C CNN
+F 2 "" H 2200 4400 50  0001 C CNN
+F 3 "" H 2200 4400 50  0001 C CNN
+	1    2200 4400
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR025
 U 1 1 5D1D402A
-P 3350 4450
-F 0 "#PWR025" H 3350 4200 50  0001 C CNN
-F 1 "GND-power" H 3355 4277 50  0001 C CNN
-F 2 "" H 3350 4450 50  0001 C CNN
-F 3 "" H 3350 4450 50  0001 C CNN
-	1    3350 4450
+P 3650 4400
+F 0 "#PWR025" H 3650 4150 50  0001 C CNN
+F 1 "GND-power" H 3655 4227 50  0001 C CNN
+F 2 "" H 3650 4400 50  0001 C CNN
+F 3 "" H 3650 4400 50  0001 C CNN
+	1    3650 4400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1500 4150 1900 4150
-Connection ~ 1900 4150
+	1800 4100 2200 4100
+Connection ~ 2200 4100
 Wire Wire Line
-	1900 4150 2100 4150
-Connection ~ 2100 4150
+	2200 4100 2400 4100
+Connection ~ 2400 4100
 Wire Wire Line
-	2100 4150 2500 4150
+	2400 4100 2800 4100
 Wire Wire Line
-	2800 4150 3350 4150
-Connection ~ 3350 4150
+	3100 4100 3650 4100
+Connection ~ 3650 4100
 Wire Wire Line
-	3350 4150 3550 4150
-Connection ~ 3550 4150
+	3650 4100 3850 4100
+Connection ~ 3850 4100
 Wire Wire Line
-	3550 4150 3950 4150
+	3850 4100 4250 4100
 Wire Wire Line
-	2500 3950 2500 4150
-Connection ~ 2500 4150
+	2800 3900 2800 4100
+Connection ~ 2800 4100
 Wire Wire Line
-	2800 3950 2800 4150
-Connection ~ 2800 4150
+	3100 3900 3100 4100
+Connection ~ 3100 4100
 $Comp
 L IQ_SDR-rescue:L-Device L6
 U 1 1 5D22E31C
-P 2600 4500
-F 0 "L6" V 2700 4650 50  0000 C CNN
-F 1 "1.98uH" V 2700 4400 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2600 4500 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2600 4500 50  0001 C CNN
-F 4 "T37-6, #30 wire, 26 turns" V 2600 4500 50  0001 C CNN "Winding"
-	1    2600 4500
+P 2900 4450
+F 0 "L6" V 3000 4600 50  0000 C CNN
+F 1 "1.98uH" V 3000 4350 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2900 4450 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2900 4450 50  0001 C CNN
+F 4 "T37-6, #30 wire, 26 turns" V 2900 4450 50  0001 C CNN "Winding"
+	1    2900 4450
 	0    -1   -1   0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C8
 U 1 1 5D22E323
-P 2600 4700
-F 0 "C8" V 2700 4800 50  0000 C CNN
-F 1 "100pF" V 2450 4700 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 2638 4550 50  0001 C CNN
-F 3 "~" H 2600 4700 50  0001 C CNN
-	1    2600 4700
+P 2900 4650
+F 0 "C8" V 3000 4750 50  0000 C CNN
+F 1 "100pF" V 2750 4650 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 2938 4500 50  0001 C CNN
+F 3 "~" H 2900 4650 50  0001 C CNN
+	1    2900 4650
 	0    1    1    0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C6
 U 1 1 5D22E32A
-P 1900 4850
-F 0 "C6" H 1750 4950 50  0000 L CNN
-F 1 "390pF" H 1650 4750 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1938 4700 50  0001 C CNN
-F 3 "~" H 1900 4850 50  0001 C CNN
-	1    1900 4850
+P 2200 4800
+F 0 "C6" H 2050 4900 50  0000 L CNN
+F 1 "390pF" H 1950 4700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2238 4650 50  0001 C CNN
+F 3 "~" H 2200 4800 50  0001 C CNN
+	1    2200 4800
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:L-Device L4
 U 1 1 5D22E331
-P 2100 4850
-F 0 "L4" H 2153 4896 50  0000 L CNN
-F 1 "497nH" H 2153 4805 50  0000 L CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2100 4850 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2100 4850 50  0001 C CNN
-F 4 "T37-6 13 turns" H 2100 4850 50  0001 C CNN "Toroid"
-	1    2100 4850
+P 2400 4800
+F 0 "L4" H 2453 4846 50  0000 L CNN
+F 1 "497nH" H 2453 4755 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2400 4800 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2400 4800 50  0001 C CNN
+F 4 "T37-6 13 turns" H 2400 4800 50  0001 C CNN "Toroid"
+	1    2400 4800
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C12
 U 1 1 5D22E338
-P 3300 4850
-F 0 "C12" H 3100 4950 50  0000 L CNN
-F 1 "390pF" H 3050 4750 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 3338 4700 50  0001 C CNN
-F 3 "~" H 3300 4850 50  0001 C CNN
-	1    3300 4850
+P 3600 4800
+F 0 "C12" H 3400 4900 50  0000 L CNN
+F 1 "390pF" H 3350 4700 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3638 4650 50  0001 C CNN
+F 3 "~" H 3600 4800 50  0001 C CNN
+	1    3600 4800
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:L-Device L10
 U 1 1 5D22E33F
-P 3500 4850
-F 0 "L10" H 3553 4896 50  0000 L CNN
-F 1 "497nH" H 3553 4805 50  0000 L CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3500 4850 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3500 4850 50  0001 C CNN
-F 4 "T37-6 13 turns" H 3500 4850 50  0001 C CNN "Toroid"
-	1    3500 4850
+P 3800 4800
+F 0 "L10" H 3853 4846 50  0000 L CNN
+F 1 "497nH" H 3853 4755 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3800 4800 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3800 4800 50  0001 C CNN
+F 4 "T37-6 13 turns" H 3800 4800 50  0001 C CNN "Toroid"
+	1    3800 4800
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR014
 U 1 1 5D22E346
-P 1900 5000
-F 0 "#PWR014" H 1900 4750 50  0001 C CNN
-F 1 "GND" H 1905 4827 50  0001 C CNN
-F 2 "" H 1900 5000 50  0001 C CNN
-F 3 "" H 1900 5000 50  0001 C CNN
-	1    1900 5000
+P 2200 4950
+F 0 "#PWR014" H 2200 4700 50  0001 C CNN
+F 1 "GND" H 2205 4777 50  0001 C CNN
+F 2 "" H 2200 4950 50  0001 C CNN
+F 3 "" H 2200 4950 50  0001 C CNN
+	1    2200 4950
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR024
 U 1 1 5D22E352
-P 3300 5000
-F 0 "#PWR024" H 3300 4750 50  0001 C CNN
-F 1 "GND" H 3305 4827 50  0001 C CNN
-F 2 "" H 3300 5000 50  0001 C CNN
-F 3 "" H 3300 5000 50  0001 C CNN
-	1    3300 5000
+P 3600 4950
+F 0 "#PWR024" H 3600 4700 50  0001 C CNN
+F 1 "GND" H 3605 4777 50  0001 C CNN
+F 2 "" H 3600 4950 50  0001 C CNN
+F 3 "" H 3600 4950 50  0001 C CNN
+	1    3600 4950
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1450 4700 1900 4700
-Connection ~ 1900 4700
+	1750 4650 2200 4650
+Connection ~ 2200 4650
 Wire Wire Line
-	1900 4700 2100 4700
-Connection ~ 2100 4700
+	2200 4650 2400 4650
+Connection ~ 2400 4650
 Wire Wire Line
-	2100 4700 2450 4700
+	2400 4650 2750 4650
 Wire Wire Line
-	2750 4700 3300 4700
-Connection ~ 3300 4700
+	3050 4650 3600 4650
+Connection ~ 3600 4650
 Wire Wire Line
-	3300 4700 3500 4700
-Connection ~ 3500 4700
+	3600 4650 3800 4650
+Connection ~ 3800 4650
 Wire Wire Line
-	3500 4700 3900 4700
+	3800 4650 4200 4650
 Wire Wire Line
-	2450 4500 2450 4700
-Connection ~ 2450 4700
+	2750 4450 2750 4650
+Connection ~ 2750 4650
 Wire Wire Line
-	2750 4500 2750 4700
-Connection ~ 2750 4700
+	3050 4450 3050 4650
+Connection ~ 3050 4650
 Wire Wire Line
-	3900 5900 3900 4700
+	4200 5850 4200 4650
 Wire Wire Line
-	3050 5950 3950 5950
+	3350 5900 4250 5900
 $Comp
 L IQ_SDR-rescue:L-Device L5
 U 1 1 5D258FC6
-P 2550 5050
-F 0 "L5" V 2650 5100 50  0000 C CNN
-F 1 "1.137uH" V 2650 4850 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2550 5050 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2550 5050 50  0001 C CNN
-F 4 "T37-6, #30 wire, 20 turns" V 2550 5050 50  0001 C CNN "Winding"
-	1    2550 5050
+P 2850 5000
+F 0 "L5" V 2950 5050 50  0000 C CNN
+F 1 "1.137uH" V 2950 4800 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2850 5000 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2850 5000 50  0001 C CNN
+F 4 "T37-6, #30 wire, 20 turns" V 2850 5000 50  0001 C CNN "Winding"
+	1    2850 5000
 	0    -1   -1   0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C7
 U 1 1 5D258FCD
-P 2550 5250
-F 0 "C7" V 2650 5350 50  0000 C CNN
-F 1 "47pF" V 2400 5250 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 2588 5100 50  0001 C CNN
-F 3 "~" H 2550 5250 50  0001 C CNN
-	1    2550 5250
+P 2850 5200
+F 0 "C7" V 2950 5300 50  0000 C CNN
+F 1 "47pF" V 2700 5200 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 2888 5050 50  0001 C CNN
+F 3 "~" H 2850 5200 50  0001 C CNN
+	1    2850 5200
 	0    1    1    0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C5
 U 1 1 5D258FD4
-P 1800 5400
-F 0 "C5" H 1650 5500 50  0000 L CNN
-F 1 "220pF" H 1550 5300 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 1838 5250 50  0001 C CNN
-F 3 "~" H 1800 5400 50  0001 C CNN
-	1    1800 5400
+P 2100 5350
+F 0 "C5" H 1950 5450 50  0000 L CNN
+F 1 "220pF" H 1850 5250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2138 5200 50  0001 C CNN
+F 3 "~" H 2100 5350 50  0001 C CNN
+	1    2100 5350
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:L-Device L3
 U 1 1 5D258FDB
-P 2000 5400
-F 0 "L3" H 2053 5446 50  0000 L CNN
-F 1 "232nH" H 2053 5355 50  0000 L CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2000 5400 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2000 5400 50  0001 C CNN
-F 4 "T37-6, #30 wire, 9 turns" H 2000 5400 50  0001 C CNN "Winding"
-	1    2000 5400
+P 2300 5350
+F 0 "L3" H 2353 5396 50  0000 L CNN
+F 1 "232nH" H 2353 5305 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2300 5350 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2300 5350 50  0001 C CNN
+F 4 "T37-6, #30 wire, 9 turns" H 2300 5350 50  0001 C CNN "Winding"
+	1    2300 5350
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C11
 U 1 1 5D258FE2
-P 3250 5400
-F 0 "C11" H 3050 5500 50  0000 L CNN
-F 1 "220pF" H 3000 5300 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 3288 5250 50  0001 C CNN
-F 3 "~" H 3250 5400 50  0001 C CNN
-	1    3250 5400
+P 3550 5350
+F 0 "C11" H 3350 5450 50  0000 L CNN
+F 1 "220pF" H 3300 5250 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3588 5200 50  0001 C CNN
+F 3 "~" H 3550 5350 50  0001 C CNN
+	1    3550 5350
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:L-Device L9
 U 1 1 5D258FE9
-P 3450 5400
-F 0 "L9" H 3503 5446 50  0000 L CNN
-F 1 "232nH" H 3503 5355 50  0000 L CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3450 5400 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3450 5400 50  0001 C CNN
-F 4 "T37-6, #30 wire, 9 turns" H 3450 5400 50  0001 C CNN "Winding"
-	1    3450 5400
+P 3750 5350
+F 0 "L9" H 3803 5396 50  0000 L CNN
+F 1 "232nH" H 3803 5305 50  0000 L CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3750 5350 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3750 5350 50  0001 C CNN
+F 4 "T37-6, #30 wire, 9 turns" H 3750 5350 50  0001 C CNN "Winding"
+	1    3750 5350
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR012
 U 1 1 5D258FF0
-P 1800 5550
-F 0 "#PWR012" H 1800 5300 50  0001 C CNN
-F 1 "GND" H 1805 5377 50  0001 C CNN
-F 2 "" H 1800 5550 50  0001 C CNN
-F 3 "" H 1800 5550 50  0001 C CNN
-	1    1800 5550
+P 2100 5500
+F 0 "#PWR012" H 2100 5250 50  0001 C CNN
+F 1 "GND" H 2105 5327 50  0001 C CNN
+F 2 "" H 2100 5500 50  0001 C CNN
+F 3 "" H 2100 5500 50  0001 C CNN
+	1    2100 5500
 	1    0    0    -1  
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR023
 U 1 1 5D258FFC
-P 3250 5550
-F 0 "#PWR023" H 3250 5300 50  0001 C CNN
-F 1 "GND" H 3255 5377 50  0001 C CNN
-F 2 "" H 3250 5550 50  0001 C CNN
-F 3 "" H 3250 5550 50  0001 C CNN
-	1    3250 5550
+P 3550 5500
+F 0 "#PWR023" H 3550 5250 50  0001 C CNN
+F 1 "GND" H 3555 5327 50  0001 C CNN
+F 2 "" H 3550 5500 50  0001 C CNN
+F 3 "" H 3550 5500 50  0001 C CNN
+	1    3550 5500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1400 5250 1800 5250
-Connection ~ 1800 5250
+	1700 5200 2100 5200
+Connection ~ 2100 5200
 Wire Wire Line
-	1800 5250 2000 5250
-Connection ~ 2000 5250
+	2100 5200 2300 5200
+Connection ~ 2300 5200
 Wire Wire Line
-	2000 5250 2400 5250
+	2300 5200 2700 5200
 Wire Wire Line
-	2700 5250 3250 5250
-Connection ~ 3250 5250
+	3000 5200 3550 5200
+Connection ~ 3550 5200
 Wire Wire Line
-	3250 5250 3450 5250
-Connection ~ 3450 5250
+	3550 5200 3750 5200
+Connection ~ 3750 5200
 Wire Wire Line
-	3450 5250 3850 5250
+	3750 5200 4150 5200
 Wire Wire Line
-	2400 5050 2400 5250
-Connection ~ 2400 5250
+	2700 5000 2700 5200
+Connection ~ 2700 5200
 Wire Wire Line
-	2700 5050 2700 5250
-Connection ~ 2700 5250
+	3000 5000 3000 5200
+Connection ~ 3000 5200
 Wire Wire Line
-	1500 5900 1500 4150
+	1800 5850 1800 4100
 Wire Wire Line
-	1450 4700 1450 5950
+	1750 4650 1750 5900
 $Comp
 L IQ_SDR-rescue:R-Device R8
 U 1 1 5D200AE8
@@ -2327,12 +2283,12 @@ Wire Wire Line
 Wire Wire Line
 	5300 5150 5000 5150
 Wire Wire Line
-	1950 7550 1950 7400
+	2250 7500 2250 7350
 Wire Wire Line
-	1950 7400 2000 7400
-Connection ~ 1950 7400
+	2250 7350 2300 7350
+Connection ~ 2250 7350
 Wire Wire Line
-	1850 7400 1950 7400
+	2150 7350 2250 7350
 $Comp
 L IQ_SDR-rescue:+5V-power #PWR058
 U 1 1 5D3790E6
@@ -2359,12 +2315,12 @@ Connection ~ 4500 4850
 $Comp
 L lt6231:+4.3V #PWR013
 U 1 1 5D37CC94
-P 1850 6650
-F 0 "#PWR013" H 1850 6500 50  0001 C CNN
-F 1 "+4.3V" H 1700 6750 50  0000 C CNN
-F 2 "" H 1850 6650 50  0001 C CNN
-F 3 "" H 1850 6650 50  0001 C CNN
-	1    1850 6650
+P 2150 6600
+F 0 "#PWR013" H 2150 6450 50  0001 C CNN
+F 1 "+4.3V" H 2000 6700 50  0000 C CNN
+F 2 "" H 2150 6600 50  0001 C CNN
+F 3 "" H 2150 6600 50  0001 C CNN
+	1    2150 6600
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2579,107 +2535,107 @@ Wire Wire Line
 Wire Wire Line
 	10150 3100 10300 3100
 Connection ~ 10150 3100
-Text Notes 750  4150 0    50   ~ 0
+Text Notes 1050 4100 0    50   ~ 0
 BPF Responses:\n1.8MHz-4MHz\n4MHz-8MHz\n8MHz-16MHz\n16MHz-30MHZ
 Text Notes 6800 3300 0    50   ~ 0
 We could use differential amplifiers\nto eliminate T1.  (Switch the mixer\nchips around.)
-Text Notes 1750 5850 0    50   ~ 0
+Text Notes 2050 5800 0    50   ~ 0
 Note: The switch numbers are not 0-3, but 1-4,\nso 00=>1, 01=>2, 10=>3, and 11=>4.
-Text Notes 1700 3250 0    50   ~ 0
+Text Notes 2000 3200 0    50   ~ 0
 Inductors in bandpass filters need to go to 1.5_GND, not GND.\nThey will short out the bias for the switches.
 $Comp
-L IQ_SDR-rescue:GNDA_1.5 #PWR?
+L IQ_SDR-rescue:GNDA_1.5 #PWR0101
 U 1 1 5DFD18B6
-P 3450 5550
-F 0 "#PWR?" H 3450 5300 50  0001 C CNN
-F 1 "GNDA_1.5" H 3650 5450 50  0000 C CNN
-F 2 "" H 3450 5550 50  0001 C CNN
-F 3 "" H 3450 5550 50  0001 C CNN
-	1    3450 5550
+P 3750 5500
+F 0 "#PWR0101" H 3750 5250 50  0001 C CNN
+F 1 "GNDA_1.5" H 3950 5400 50  0000 C CNN
+F 2 "" H 3750 5500 50  0001 C CNN
+F 3 "" H 3750 5500 50  0001 C CNN
+	1    3750 5500
 	1    0    0    -1  
 $EndComp
 $Comp
-L IQ_SDR-rescue:GNDA_1.5 #PWR?
+L IQ_SDR-rescue:GNDA_1.5 #PWR0102
 U 1 1 5DFD20EC
-P 2000 5550
-F 0 "#PWR?" H 2000 5300 50  0001 C CNN
-F 1 "GNDA_1.5" H 2200 5450 50  0000 C CNN
-F 2 "" H 2000 5550 50  0001 C CNN
-F 3 "" H 2000 5550 50  0001 C CNN
-	1    2000 5550
+P 2300 5500
+F 0 "#PWR0102" H 2300 5250 50  0001 C CNN
+F 1 "GNDA_1.5" H 2500 5400 50  0000 C CNN
+F 2 "" H 2300 5500 50  0001 C CNN
+F 3 "" H 2300 5500 50  0001 C CNN
+	1    2300 5500
 	1    0    0    -1  
 $EndComp
 $Comp
-L IQ_SDR-rescue:GNDA_1.5 #PWR?
+L IQ_SDR-rescue:GNDA_1.5 #PWR0103
 U 1 1 5DFD2615
-P 2100 5000
-F 0 "#PWR?" H 2100 4750 50  0001 C CNN
-F 1 "GNDA_1.5" H 2150 4850 50  0000 C CNN
-F 2 "" H 2100 5000 50  0001 C CNN
-F 3 "" H 2100 5000 50  0001 C CNN
-	1    2100 5000
+P 2400 4950
+F 0 "#PWR0103" H 2400 4700 50  0001 C CNN
+F 1 "GNDA_1.5" H 2450 4800 50  0000 C CNN
+F 2 "" H 2400 4950 50  0001 C CNN
+F 3 "" H 2400 4950 50  0001 C CNN
+	1    2400 4950
 	1    0    0    -1  
 $EndComp
 $Comp
-L IQ_SDR-rescue:GNDA_1.5 #PWR?
+L IQ_SDR-rescue:GNDA_1.5 #PWR0104
 U 1 1 5DFD2B56
-P 3500 5000
-F 0 "#PWR?" H 3500 4750 50  0001 C CNN
-F 1 "GNDA_1.5" H 3550 4850 50  0000 C CNN
-F 2 "" H 3500 5000 50  0001 C CNN
-F 3 "" H 3500 5000 50  0001 C CNN
-	1    3500 5000
+P 3800 4950
+F 0 "#PWR0104" H 3800 4700 50  0001 C CNN
+F 1 "GNDA_1.5" H 3850 4800 50  0000 C CNN
+F 2 "" H 3800 4950 50  0001 C CNN
+F 3 "" H 3800 4950 50  0001 C CNN
+	1    3800 4950
 	1    0    0    -1  
 $EndComp
 $Comp
-L IQ_SDR-rescue:GNDA_1.5 #PWR?
+L IQ_SDR-rescue:GNDA_1.5 #PWR0105
 U 1 1 5DFE0E2F
-P 3550 4450
-F 0 "#PWR?" H 3550 4200 50  0001 C CNN
-F 1 "GNDA_1.5" H 3600 4300 50  0000 C CNN
-F 2 "" H 3550 4450 50  0001 C CNN
-F 3 "" H 3550 4450 50  0001 C CNN
-	1    3550 4450
+P 3850 4400
+F 0 "#PWR0105" H 3850 4150 50  0001 C CNN
+F 1 "GNDA_1.5" H 3900 4250 50  0000 C CNN
+F 2 "" H 3850 4400 50  0001 C CNN
+F 3 "" H 3850 4400 50  0001 C CNN
+	1    3850 4400
 	1    0    0    -1  
 $EndComp
 $Comp
-L IQ_SDR-rescue:GNDA_1.5 #PWR?
+L IQ_SDR-rescue:GNDA_1.5 #PWR0106
 U 1 1 5DFE128D
-P 2100 4450
-F 0 "#PWR?" H 2100 4200 50  0001 C CNN
-F 1 "GNDA_1.5" H 2150 4300 50  0000 C CNN
-F 2 "" H 2100 4450 50  0001 C CNN
-F 3 "" H 2100 4450 50  0001 C CNN
-	1    2100 4450
+P 2400 4400
+F 0 "#PWR0106" H 2400 4150 50  0001 C CNN
+F 1 "GNDA_1.5" H 2450 4250 50  0000 C CNN
+F 2 "" H 2400 4400 50  0001 C CNN
+F 3 "" H 2400 4400 50  0001 C CNN
+	1    2400 4400
 	1    0    0    -1  
 $EndComp
 $Comp
-L IQ_SDR-rescue:GNDA_1.5 #PWR?
+L IQ_SDR-rescue:GNDA_1.5 #PWR0107
 U 1 1 5DFE192D
-P 3600 3900
-F 0 "#PWR?" H 3600 3650 50  0001 C CNN
-F 1 "GNDA_1.5" H 3650 3750 50  0000 C CNN
-F 2 "" H 3600 3900 50  0001 C CNN
-F 3 "" H 3600 3900 50  0001 C CNN
-	1    3600 3900
+P 3900 3850
+F 0 "#PWR0107" H 3900 3600 50  0001 C CNN
+F 1 "GNDA_1.5" H 3950 3700 50  0000 C CNN
+F 2 "" H 3900 3850 50  0001 C CNN
+F 3 "" H 3900 3850 50  0001 C CNN
+	1    3900 3850
 	1    0    0    -1  
 $EndComp
 $Comp
-L IQ_SDR-rescue:GNDA_1.5 #PWR?
+L IQ_SDR-rescue:GNDA_1.5 #PWR0108
 U 1 1 5DFE1C8B
-P 2000 3900
-F 0 "#PWR?" H 2000 3650 50  0001 C CNN
-F 1 "GNDA_1.5" H 2050 3750 50  0000 C CNN
-F 2 "" H 2000 3900 50  0001 C CNN
-F 3 "" H 2000 3900 50  0001 C CNN
-	1    2000 3900
+P 2300 3850
+F 0 "#PWR0108" H 2300 3600 50  0001 C CNN
+F 1 "GNDA_1.5" H 2350 3700 50  0000 C CNN
+F 2 "" H 2300 3850 50  0001 C CNN
+F 3 "" H 2300 3850 50  0001 C CNN
+	1    2300 3850
 	1    0    0    -1  
 $EndComp
 $Comp
-L IQ_SDR-rescue:GNDA_1.5 #PWR?
+L IQ_SDR-rescue:GNDA_1.5 #PWR0109
 U 1 1 5DFE2205
 P 5300 5150
-F 0 "#PWR?" H 5300 4900 50  0001 C CNN
+F 0 "#PWR0109" H 5300 4900 50  0001 C CNN
 F 1 "GNDA_1.5" H 5350 5000 50  0000 C CNN
 F 2 "" H 5300 5150 50  0001 C CNN
 F 3 "" H 5300 5150 50  0001 C CNN
@@ -2688,10 +2644,10 @@ F 3 "" H 5300 5150 50  0001 C CNN
 $EndComp
 Connection ~ 5300 5150
 $Comp
-L IQ_SDR-rescue:GNDA-power #PWR?
+L IQ_SDR-rescue:GNDA-power #PWR0110
 U 1 1 5E0B56F4
 P 5600 4450
-F 0 "#PWR?" H 5600 4200 50  0001 C CNN
+F 0 "#PWR0110" H 5600 4200 50  0001 C CNN
 F 1 "GNDA" H 5450 4350 50  0000 C CNN
 F 2 "" H 5600 4450 50  0001 C CNN
 F 3 "" H 5600 4450 50  0001 C CNN
@@ -2699,10 +2655,10 @@ F 3 "" H 5600 4450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L IQ_SDR-rescue:GNDA-power #PWR?
+L IQ_SDR-rescue:GNDA-power #PWR0111
 U 1 1 5E0B69D9
 P 7750 4600
-F 0 "#PWR?" H 7750 4350 50  0001 C CNN
+F 0 "#PWR0111" H 7750 4350 50  0001 C CNN
 F 1 "GNDA" H 7755 4427 50  0000 C CNN
 F 2 "" H 7750 4600 50  0001 C CNN
 F 3 "" H 7750 4600 50  0001 C CNN
@@ -2710,10 +2666,10 @@ F 3 "" H 7750 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L IQ_SDR-rescue:GNDA-power #PWR?
+L IQ_SDR-rescue:GNDA-power #PWR0112
 U 1 1 5E0B6E6F
 P 8200 5250
-F 0 "#PWR?" H 8200 5000 50  0001 C CNN
+F 0 "#PWR0112" H 8200 5000 50  0001 C CNN
 F 1 "GNDA" H 8205 5077 50  0000 C CNN
 F 2 "" H 8200 5250 50  0001 C CNN
 F 3 "" H 8200 5250 50  0001 C CNN
@@ -2722,10 +2678,10 @@ F 3 "" H 8200 5250 50  0001 C CNN
 $EndComp
 Connection ~ 8200 5250
 $Comp
-L IQ_SDR-rescue:GNDA-power #PWR?
+L IQ_SDR-rescue:GNDA-power #PWR0113
 U 1 1 5E0B8361
 P 7950 3850
-F 0 "#PWR?" H 7950 3600 50  0001 C CNN
+F 0 "#PWR0113" H 7950 3600 50  0001 C CNN
 F 1 "GNDA" H 7955 3677 50  0000 C CNN
 F 2 "" H 7950 3850 50  0001 C CNN
 F 3 "" H 7950 3850 50  0001 C CNN
@@ -2735,6 +2691,78 @@ $EndComp
 Connection ~ 7950 3850
 Wire Wire Line
 	7950 3850 8200 3850
-Text Notes 7500 7050 0    50   ~ 0
-Problems yet to solve:\nIn Quisk or maybe hardware, need to switch I and Q.\nNoise goes down significantly if USB is disconnected.
+Text Notes 7500 7250 0    50   ~ 0
+Problems yet to solve:\nIn Quisk or maybe hardware, need to switch I and Q.\nOptional jumpers added to combat\nground loops without extra isolation.
+$Comp
+L IQ_SDR-rescue:C-Device C17
+U 1 1 5CFADA4F
+P 5000 5300
+F 0 "C17" H 5050 5400 50  0000 L CNN
+F 1 "0.1uF" H 5050 5200 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 5038 5150 50  0001 C CNN
+F 3 "~" H 5000 5300 50  0001 C CNN
+	1    5000 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 7650 4350 7650
+Wire Wire Line
+	4350 7650 4350 4250
+Wire Wire Line
+	4350 4250 4800 4250
+Connection ~ 4150 7650
+$Comp
+L Device:Transformer_1P_1S T2
+U 1 1 5E7E7BBF
+P 900 6800
+F 0 "T2" V 854 7044 50  0000 L CNN
+F 1 "Transformer_1P_1S" V 1600 6450 50  0001 L CNN
+F 2 "" H 900 6800 50  0001 C CNN
+F 3 "~" H 900 6800 50  0001 C CNN
+F 4 "Ferrite core pretty full" V 900 6800 50  0001 C CNN "Type"
+	1    900  6800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1100 7200 1450 7200
+Wire Wire Line
+	850  6200 1100 6200
+Wire Wire Line
+	1100 6200 1100 6400
+$Comp
+L Device:Jumper JP3
+U 1 1 5E902CE9
+P 9600 3300
+F 0 "JP3" V 9554 3427 50  0000 L CNN
+F 1 "Jumper" V 9645 3427 50  0000 L CNN
+F 2 "" H 9600 3300 50  0001 C CNN
+F 3 "~" H 9600 3300 50  0001 C CNN
+	1    9600 3300
+	0    1    1    0   
+$EndComp
+Text Notes 9700 3500 0    50   ~ 0
+For ground loops
+Text Notes 750  7300 0    50   ~ 0
+T2 for \nground \nloops.\nMay be\nunnecessary.
+$Comp
+L Device:Jumper JP4
+U 1 1 5E907CC4
+P 600 6750
+F 0 "JP4" V 600 6800 50  0000 R CNN
+F 1 "Jumper" V 555 6662 50  0001 R CNN
+F 2 "" H 600 6750 50  0001 C CNN
+F 3 "~" H 600 6750 50  0001 C CNN
+	1    600  6750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	700  6400 600  6400
+Wire Wire Line
+	600  6400 600  6450
+Connection ~ 700  6400
+Wire Wire Line
+	700  7200 600  7200
+Wire Wire Line
+	600  7200 600  7050
+Connection ~ 700  7200
 $EndSCHEMATC
