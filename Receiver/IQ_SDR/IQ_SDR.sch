@@ -669,7 +669,7 @@ L IQ_SDR-rescue:R-Device R10
 U 1 1 5CFF66E0
 P 7900 5050
 F 0 "R10" V 7693 5050 50  0000 C CNN
-F 1 "51" V 7784 5050 50  0000 C CNN
+F 1 "10" V 7784 5050 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805" V 7830 5050 50  0001 C CNN
 F 3 "~" H 7900 5050 50  0001 C CNN
 F 4 "R" H 7900 5050 50  0001 C CNN "Spice_Primitive"
@@ -683,7 +683,7 @@ L IQ_SDR-rescue:R-Device R12
 U 1 1 5CFF71A6
 P 8500 4700
 F 0 "R12" V 8293 4700 50  0000 C CNN
-F 1 "5.1k" V 8384 4700 50  0000 C CNN
+F 1 "1k" V 8384 4700 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805" V 8430 4700 50  0001 C CNN
 F 3 "~" H 8500 4700 50  0001 C CNN
 	1    8500 4700
@@ -705,7 +705,7 @@ L IQ_SDR-rescue:R-Device R9
 U 1 1 5CFF8217
 P 7850 3650
 F 0 "R9" V 7643 3650 50  0000 C CNN
-F 1 "51" V 7734 3650 50  0000 C CNN
+F 1 "10" V 7734 3650 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805" V 7780 3650 50  0001 C CNN
 F 3 "~" H 7850 3650 50  0001 C CNN
 	1    7850 3650
@@ -716,7 +716,7 @@ L IQ_SDR-rescue:R-Device R11
 U 1 1 5D00029B
 P 8500 3300
 F 0 "R11" V 8293 3300 50  0000 C CNN
-F 1 "5.1k" V 8384 3300 50  0000 C CNN
+F 1 "1k" V 8384 3300 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805" V 8430 3300 50  0001 C CNN
 F 3 "~" H 8500 3300 50  0001 C CNN
 	1    8500 3300
@@ -1446,7 +1446,7 @@ $EndComp
 Connection ~ 5000 5150
 Text Notes 7500 6700 0    50   ~ 0
 A very nice description of how op amp noise effects the noise figure\nis given in this data sheet \nhttps://www.ti.com/lit/ds/symlink/lmh6629.pdf \nin sections 7.3.4 and 7.3.5 (pages 24-7).   Finding an optimum R_g\n(input resistance for the inverting amplifier) seems to imply that\nthe optimum gets better as it goes to zero, assuming R_s is fixed.\nThe excess noise is approximately (e_n)^2+(i_n-)^2*(R_s+R_g)^2+4kTR_g, \nso minimizing e_n and i_n and R_g is\nthe best you can do.  The effect of i_n-  can be compared to e_n, by\nmultiplying by Rs_+Rg, so for R_g = 10 and R_s  = 50, e_n is more \nimportant in all the cases I've seen so far.  A nice calculator\nis at:\nhttp://dicks-website.eu/noisecalculator/index.html
-Text Notes 5300 3300 0    50   ~ 0
+Text Notes 4500 3700 0    50   ~ 0
 LT6231 has lower noise figure (4.7 dB), \nbut costs about 7 times as much\nas the SA5532.  LME49860 is \nintermediate option.  LM4562\ncould be even better (10.6 dB)\n2.7nV/sqrt(Hz).
 $Comp
 L IQ_SDR-rescue:R-Device R1
@@ -1592,24 +1592,24 @@ Wire Wire Line
 $Comp
 L IQ_SDR-rescue:L-Device L8
 U 1 1 5D17E138
-P 3000 3350
-F 0 "L8" V 3100 3450 50  0000 C CNN
-F 1 "7.2uH" V 3100 3250 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 3000 3350 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 3000 3350 50  0001 C CNN
-F 4 "T50-6 #30 wire, 43 turns" V 3000 3350 50  0001 C CNN "Winding"
-	1    3000 3350
+P 2750 3550
+F 0 "L8" V 2850 3650 50  0000 C CNN
+F 1 "7.2uH" V 2850 3450 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2750 3550 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2750 3550 50  0001 C CNN
+F 4 "T50-6 #30 wire, 43 turns" V 2750 3550 50  0001 C CNN "Winding"
+	1    2750 3550
 	0    -1   -1   0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C10
 U 1 1 5D17E962
-P 3000 3550
-F 0 "C10" V 3100 3700 50  0000 C CNN
-F 1 "470pF" V 2850 3550 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 3038 3400 50  0001 C CNN
-F 3 "~" H 3000 3550 50  0001 C CNN
-	1    3000 3550
+P 3150 3550
+F 0 "C10" V 3250 3700 50  0000 C CNN
+F 1 "470pF" V 3000 3550 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3188 3400 50  0001 C CNN
+F 3 "~" H 3150 3550 50  0001 C CNN
+	1    3150 3550
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1685,23 +1685,11 @@ Wire Wire Line
 Connection ~ 2100 3550
 Wire Wire Line
 	2100 3550 2300 3550
-Connection ~ 2300 3550
-Wire Wire Line
-	2300 3550 2850 3550
-Wire Wire Line
-	3150 3550 3700 3550
-Connection ~ 3700 3550
 Wire Wire Line
 	3700 3550 3900 3550
 Connection ~ 3900 3550
 Wire Wire Line
 	3900 3550 4300 3550
-Wire Wire Line
-	2850 3350 2850 3550
-Connection ~ 2850 3550
-Wire Wire Line
-	3150 3350 3150 3550
-Connection ~ 3150 3550
 Wire Wire Line
 	4250 5900 4250 4100
 Wire Wire Line
@@ -1709,24 +1697,24 @@ Wire Wire Line
 $Comp
 L IQ_SDR-rescue:L-Device L7
 U 1 1 5D1D3FF4
-P 2950 3900
-F 0 "L7" V 3050 3950 50  0000 C CNN
-F 1 "4uH" V 3050 3800 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2950 3900 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2950 3900 50  0001 C CNN
-F 4 "T50-6, #30 wire, 32 turns" V 2950 3900 50  0001 C CNN "Winding"
-	1    2950 3900
+P 2750 4100
+F 0 "L7" V 2850 4150 50  0000 C CNN
+F 1 "4uH" V 2850 4000 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2750 4100 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2750 4100 50  0001 C CNN
+F 4 "T50-6, #30 wire, 32 turns" V 2750 4100 50  0001 C CNN "Winding"
+	1    2750 4100
 	0    -1   -1   0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C9
 U 1 1 5D1D3FFB
-P 2950 4100
-F 0 "C9" V 3050 4200 50  0000 C CNN
-F 1 "180pF" V 2800 4100 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 2988 3950 50  0001 C CNN
-F 3 "~" H 2950 4100 50  0001 C CNN
-	1    2950 4100
+P 3150 4100
+F 0 "C9" V 3250 4200 50  0000 C CNN
+F 1 "180pF" V 3000 4100 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3188 3950 50  0001 C CNN
+F 3 "~" H 3150 4100 50  0001 C CNN
+	1    3150 4100
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1802,44 +1790,32 @@ Wire Wire Line
 Connection ~ 2200 4100
 Wire Wire Line
 	2200 4100 2400 4100
-Connection ~ 2400 4100
-Wire Wire Line
-	2400 4100 2800 4100
-Wire Wire Line
-	3100 4100 3650 4100
-Connection ~ 3650 4100
 Wire Wire Line
 	3650 4100 3850 4100
 Connection ~ 3850 4100
 Wire Wire Line
 	3850 4100 4250 4100
-Wire Wire Line
-	2800 3900 2800 4100
-Connection ~ 2800 4100
-Wire Wire Line
-	3100 3900 3100 4100
-Connection ~ 3100 4100
 $Comp
 L IQ_SDR-rescue:L-Device L6
 U 1 1 5D22E31C
-P 2900 4450
-F 0 "L6" V 3000 4600 50  0000 C CNN
-F 1 "1.98uH" V 3000 4350 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2900 4450 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2900 4450 50  0001 C CNN
-F 4 "T37-6, #30 wire, 26 turns" V 2900 4450 50  0001 C CNN "Winding"
-	1    2900 4450
+P 2750 4650
+F 0 "L6" V 2850 4800 50  0000 C CNN
+F 1 "1.98uH" V 2850 4550 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2750 4650 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2750 4650 50  0001 C CNN
+F 4 "T37-6, #30 wire, 26 turns" V 2750 4650 50  0001 C CNN "Winding"
+	1    2750 4650
 	0    -1   -1   0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C8
 U 1 1 5D22E323
-P 2900 4650
-F 0 "C8" V 3000 4750 50  0000 C CNN
-F 1 "100pF" V 2750 4650 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 2938 4500 50  0001 C CNN
-F 3 "~" H 2900 4650 50  0001 C CNN
-	1    2900 4650
+P 3150 4650
+F 0 "C8" V 3250 4750 50  0000 C CNN
+F 1 "100pF" V 3000 4650 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3188 4500 50  0001 C CNN
+F 3 "~" H 3150 4650 50  0001 C CNN
+	1    3150 4650
 	0    1    1    0   
 $EndComp
 $Comp
@@ -1915,23 +1891,11 @@ Wire Wire Line
 Connection ~ 2200 4650
 Wire Wire Line
 	2200 4650 2400 4650
-Connection ~ 2400 4650
-Wire Wire Line
-	2400 4650 2750 4650
-Wire Wire Line
-	3050 4650 3600 4650
-Connection ~ 3600 4650
 Wire Wire Line
 	3600 4650 3800 4650
 Connection ~ 3800 4650
 Wire Wire Line
 	3800 4650 4200 4650
-Wire Wire Line
-	2750 4450 2750 4650
-Connection ~ 2750 4650
-Wire Wire Line
-	3050 4450 3050 4650
-Connection ~ 3050 4650
 Wire Wire Line
 	4200 5850 4200 4650
 Wire Wire Line
@@ -1939,24 +1903,24 @@ Wire Wire Line
 $Comp
 L IQ_SDR-rescue:L-Device L5
 U 1 1 5D258FC6
-P 2850 5000
-F 0 "L5" V 2950 5050 50  0000 C CNN
-F 1 "1.137uH" V 2950 4800 50  0000 C CNN
-F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2850 5000 50  0001 C CNN
-F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2850 5000 50  0001 C CNN
-F 4 "T37-6, #30 wire, 20 turns" V 2850 5000 50  0001 C CNN "Winding"
-	1    2850 5000
+P 2750 5200
+F 0 "L5" V 2850 5250 50  0000 C CNN
+F 1 "1.137uH" V 2850 5000 50  0000 C CNN
+F 2 "Inductors_THT:L_Toroid_Vertical_L10.0mm_W5.0mm_P5.08mm" H 2750 5200 50  0001 C CNN
+F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 2750 5200 50  0001 C CNN
+F 4 "T37-6, #30 wire, 20 turns" V 2750 5200 50  0001 C CNN "Winding"
+	1    2750 5200
 	0    -1   -1   0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:C-Device C7
 U 1 1 5D258FCD
-P 2850 5200
-F 0 "C7" V 2950 5300 50  0000 C CNN
-F 1 "47pF" V 2700 5200 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 2888 5050 50  0001 C CNN
-F 3 "~" H 2850 5200 50  0001 C CNN
-	1    2850 5200
+P 3150 5200
+F 0 "C7" V 3250 5300 50  0000 C CNN
+F 1 "47pF" V 3000 5200 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 3188 5050 50  0001 C CNN
+F 3 "~" H 3150 5200 50  0001 C CNN
+	1    3150 5200
 	0    1    1    0   
 $EndComp
 $Comp
@@ -2032,23 +1996,11 @@ Wire Wire Line
 Connection ~ 2100 5200
 Wire Wire Line
 	2100 5200 2300 5200
-Connection ~ 2300 5200
-Wire Wire Line
-	2300 5200 2700 5200
-Wire Wire Line
-	3000 5200 3550 5200
-Connection ~ 3550 5200
 Wire Wire Line
 	3550 5200 3750 5200
 Connection ~ 3750 5200
 Wire Wire Line
 	3750 5200 4150 5200
-Wire Wire Line
-	2700 5000 2700 5200
-Connection ~ 2700 5200
-Wire Wire Line
-	3000 5000 3000 5200
-Connection ~ 3000 5200
 Wire Wire Line
 	1800 5850 1800 4100
 Wire Wire Line
@@ -2537,8 +2489,8 @@ Wire Wire Line
 Connection ~ 10150 3100
 Text Notes 1050 4100 0    50   ~ 0
 BPF Responses:\n1.8MHz-4MHz\n4MHz-8MHz\n8MHz-16MHz\n16MHz-30MHZ
-Text Notes 6800 3300 0    50   ~ 0
-We could use differential amplifiers\nto eliminate T1.  (Switch the mixer\nchips around.)
+Text Notes 6100 3200 0    50   ~ 0
+We could use differential amplifiers\nto eliminate T1.  (Switch the mixer\nchips around.)   For a second order\nMFB op amp design see this, making\nit differential.  \nhttps://webench.ti.com/filter-design-tool/export/11
 Text Notes 2050 5800 0    50   ~ 0
 Note: The switch numbers are not 0-3, but 1-4,\nso 00=>1, 01=>2, 10=>3, and 11=>4.
 Text Notes 2000 3200 0    50   ~ 0
@@ -2570,7 +2522,7 @@ L IQ_SDR-rescue:GNDA_1.5 #PWR0103
 U 1 1 5DFD2615
 P 2400 4950
 F 0 "#PWR0103" H 2400 4700 50  0001 C CNN
-F 1 "GNDA_1.5" H 2450 4800 50  0000 C CNN
+F 1 "GNDA_1.5" H 2150 4800 50  0000 C CNN
 F 2 "" H 2400 4950 50  0001 C CNN
 F 3 "" H 2400 4950 50  0001 C CNN
 	1    2400 4950
@@ -2603,7 +2555,7 @@ L IQ_SDR-rescue:GNDA_1.5 #PWR0106
 U 1 1 5DFE128D
 P 2400 4400
 F 0 "#PWR0106" H 2400 4150 50  0001 C CNN
-F 1 "GNDA_1.5" H 2450 4250 50  0000 C CNN
+F 1 "GNDA_1.5" H 2200 4250 50  0000 C CNN
 F 2 "" H 2400 4400 50  0001 C CNN
 F 3 "" H 2400 4400 50  0001 C CNN
 	1    2400 4400
@@ -2765,4 +2717,36 @@ Wire Wire Line
 Wire Wire Line
 	600  7200 600  7050
 Connection ~ 700  7200
+Wire Wire Line
+	2300 3550 2600 3550
+Connection ~ 2300 3550
+Wire Wire Line
+	2900 3550 3000 3550
+Wire Wire Line
+	3300 3550 3700 3550
+Connection ~ 3700 3550
+Wire Wire Line
+	2300 5200 2600 5200
+Connection ~ 2300 5200
+Wire Wire Line
+	2900 5200 3000 5200
+Wire Wire Line
+	3300 5200 3550 5200
+Connection ~ 3550 5200
+Wire Wire Line
+	3300 4650 3600 4650
+Connection ~ 3600 4650
+Wire Wire Line
+	2400 4650 2600 4650
+Connection ~ 2400 4650
+Wire Wire Line
+	2900 4650 3000 4650
+Wire Wire Line
+	2400 4100 2600 4100
+Connection ~ 2400 4100
+Wire Wire Line
+	2900 4100 3000 4100
+Wire Wire Line
+	3300 4100 3650 4100
+Connection ~ 3650 4100
 $EndSCHEMATC
