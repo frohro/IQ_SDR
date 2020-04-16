@@ -1,0 +1,90 @@
+Circuit: * Z:\home\frohro\Projects\IQ_SDR\Receiver\LTSpice Simualitons\Tran_SDR_IQ.asc
+
+Early termination of direct N-R iteration.
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-05
+Gmin = 1.6455e-06
+Gmin = 1.76685e-07
+Gmin = 1.89714e-08
+vernier = 0.5
+vernier = 0.25
+vernier = 0.125
+vernier = 0.0625
+vernier = 0.03125
+Gmin = 1.58715e-08
+vernier = 0.0416667
+vernier = 0.0208333
+vernier = 0.0104167
+Gmin = 1.51866e-08
+vernier = 0.0138889
+vernier = 0.0185185
+Gmin = 1.46904e-08
+vernier = 0.0246913
+vernier = 0.0123457
+Gmin = 1.42229e-08
+vernier = 0.0164609
+vernier = 0.0219478
+vernier = 0.0109739
+Gmin = 1.37915e-08
+vernier = 0.0146319
+Gmin = 1.33577e-08
+vernier = 0.0195092
+vernier = 0.00975459
+vernier = 0.0130061
+Gmin = 1.30628e-08
+vernier = 0.0173415
+Gmin = 1.25639e-08
+vernier = 0.023122
+vernier = 0.0308293
+Gmin = 1.17698e-08
+vernier = 0.0411057
+vernier = 0.0548076
+Gmin = 1.06081e-08
+vernier = 0.0730768
+Gmin = 9.01201e-09
+vernier = 0.0974357
+vernier = 0.129914
+Gmin = 6.86411e-09
+vernier = 0.173219
+vernier = 0.230959
+Gmin = 4.4627e-09
+vernier = 0.307945
+Gmin = 2.28466e-09
+vernier = 0.410593
+vernier = 0.547457
+Gmin = 7.60967e-10
+vernier = 0.729942
+vernier = 0.973256
+Gmin = 1.3932e-10
+vernier = 1
+Gmin = 1.52837e-11
+Gmin = 1.64107e-12
+Gmin = 1.76209e-13
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+
+Date: Thu Apr 16 14:13:56 2020
+Total elapsed time: 52.999 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 1595465
+traniter = 1593438
+tranpoints = 716858
+accept = 463338
+rejected = 253520
+matrix size = 42
+fillins = 138
+solver = Normal
+Matrix Compiler1: 12.10 KB object code size  3.9/3.8/[1.1]
+Matrix Compiler2: 5.95 KB object code size  17.6/2.4/[1.0]
+
