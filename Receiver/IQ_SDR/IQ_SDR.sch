@@ -526,51 +526,9 @@ NoConn ~ 15150 7000
 NoConn ~ 15150 6800
 NoConn ~ 15150 6500
 NoConn ~ 15150 6400
-$Comp
-L IQ_SDR-rescue:R-Device R6
-U 1 1 5CFD8143
-P 7450 7400
-F 0 "R6" H 7520 7446 50  0000 L CNN
-F 1 "2.2k" H 7520 7355 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805" V 7380 7400 50  0001 C CNN
-F 3 "~" H 7450 7400 50  0001 C CNN
-	1    7450 7400
-	1    0    0    -1  
-$EndComp
-$Comp
-L IQ_SDR-rescue:GND-power #PWR053
-U 1 1 5CFD92C7
-P 7450 8000
-F 0 "#PWR053" H 7450 7750 50  0001 C CNN
-F 1 "GND" H 7455 7827 50  0000 C CNN
-F 2 "" H 7450 8000 50  0001 C CNN
-F 3 "" H 7450 8000 50  0001 C CNN
-	1    7450 8000
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	7450 7700 7450 7650
-Wire Wire Line
-	7450 7650 7750 7650
-Connection ~ 7450 7650
-Wire Wire Line
-	7450 7650 7450 7550
-$Comp
-L IQ_SDR-rescue:R-Device R7
-U 1 1 5D491348
-P 7450 7850
-F 0 "R7" H 7520 7896 50  0000 L CNN
-F 1 "2.2k" H 7520 7805 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805" V 7380 7850 50  0001 C CNN
-F 3 "~" H 7450 7850 50  0001 C CNN
-	1    7450 7850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7750 8000 7750 7650
-Wire Wire Line
-	7750 7250 7950 7250
-Connection ~ 7750 7650
+	8050 5200 8050 5150
+Connection ~ 8050 5150
 $Comp
 L IQ_SDR-rescue:C-Device C22
 U 1 1 5D49134A
@@ -786,29 +744,29 @@ Wire Wire Line
 $Comp
 L IQ_SDR-rescue:C-Device C23
 U 1 1 5D043017
-P 7200 7850
-F 0 "C23" H 7300 7950 50  0000 C CNN
-F 1 "10uF" H 7450 7850 50  0000 C CNN
-F 2 "Capacitors_SMD:C_0805" H 7238 7700 50  0001 C CNN
-F 3 "~" H 7200 7850 50  0001 C CNN
-	1    7200 7850
+P 7800 5350
+F 0 "C23" H 7900 5450 50  0000 C CNN
+F 1 "10uF" H 8050 5350 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805" H 7838 5200 50  0001 C CNN
+F 3 "~" H 7800 5350 50  0001 C CNN
+	1    7800 5350
 	-1   0    0    1   
 $EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR051
 U 1 1 5D0438C2
-P 7200 8000
-F 0 "#PWR051" H 7200 7750 50  0001 C CNN
-F 1 "GND" H 7205 7827 50  0000 C CNN
-F 2 "" H 7200 8000 50  0001 C CNN
-F 3 "" H 7200 8000 50  0001 C CNN
-	1    7200 8000
+P 7800 5500
+F 0 "#PWR051" H 7800 5250 50  0001 C CNN
+F 1 "GND" H 7800 5300 50  0000 C CNN
+F 2 "" H 7800 5500 50  0001 C CNN
+F 3 "" H 7800 5500 50  0001 C CNN
+	1    7800 5500
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	7200 7700 7200 7650
+	7800 5200 7800 5150
 Wire Wire Line
-	7200 7650 7450 7650
+	7800 5150 8050 5150
 $Comp
 L IQ_SDR-rescue:C-Device C25
 U 1 1 5D491360
@@ -878,20 +836,6 @@ Wire Wire Line
 Connection ~ 6850 8700
 Wire Wire Line
 	9400 7450 9600 7450
-$Comp
-L IQ_SDR-rescue:PWR_FLAG-power #FLG02
-U 1 1 5D491365
-P 7750 7650
-F 0 "#FLG02" H 7750 7725 50  0001 C CNN
-F 1 "PWR_FLAG" V 7750 7778 50  0000 L CNN
-F 2 "" H 7750 7650 50  0001 C CNN
-F 3 "~" H 7750 7650 50  0001 C CNN
-F 4 "R" H 7750 7650 50  0001 C CNN "Spice_Primitive"
-F 5 "1" H 7750 7650 50  0001 C CNN "Spice_Model"
-F 6 "N" H 7750 7650 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    7750 7650
-	0    1    1    0   
-$EndComp
 $Comp
 L IQ_SDR-rescue:PWR_FLAG-power #FLG01
 U 1 1 5D491366
@@ -1159,16 +1103,16 @@ $EndComp
 $Comp
 L IQ_SDR-rescue:Conn_01x01-Connector_Generic J12
 U 1 1 5D2AD39B
-P 7000 7650
-F 0 "J12" H 7080 7692 50  0000 L CNN
-F 1 "GNDA" H 7080 7601 50  0000 L CNN
-F 2 "Connectors:PINTST" H 7000 7650 50  0001 C CNN
-F 3 "~" H 7000 7650 50  0001 C CNN
-F 4 "J" H 7000 7650 50  0001 C CNN "Spice_Primitive"
-F 5 "Conn_01x01" H 7000 7650 50  0001 C CNN "Spice_Model"
-F 6 "N" H 7000 7650 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    7000 7650
-	-1   0    0    1   
+P 8550 5800
+F 0 "J12" V 8550 5600 50  0000 L CNN
+F 1 "GNDA" V 8650 5700 50  0000 L CNN
+F 2 "Connectors:PINTST" H 8550 5800 50  0001 C CNN
+F 3 "~" H 8550 5800 50  0001 C CNN
+F 4 "J" H 8550 5800 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 8550 5800 50  0001 C CNN "Spice_Model"
+F 6 "N" H 8550 5800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    8550 5800
+	0    1    1    0   
 $EndComp
 Text Label 1550 7100 0    50   ~ 0
 RF_IN
@@ -1334,9 +1278,6 @@ F 3 "" H 5000 9700 50  0001 C CNN
 	1    5000 9700
 	1    0    0    -1  
 $EndComp
-Connection ~ 7200 7650
-Wire Wire Line
-	7750 7250 7750 7650
 $Comp
 L IQ_SDR-rescue:C-Device C3
 U 1 1 5D49132E
@@ -2148,12 +2089,12 @@ Wire Wire Line
 $Comp
 L lt6231:V_CC #PWR052
 U 1 1 5D237FD0
-P 7450 7250
-F 0 "#PWR052" H 7450 7100 50  0001 C CNN
-F 1 "V_CC" H 7600 7350 50  0000 C CNN
-F 2 "" H 7450 7250 50  0001 C CNN
-F 3 "" H 7450 7250 50  0001 C CNN
-	1    7450 7250
+P 8550 4750
+F 0 "#PWR052" H 8550 4600 50  0001 C CNN
+F 1 "V_CC" H 8700 4850 50  0000 C CNN
+F 2 "" H 8550 4750 50  0001 C CNN
+F 3 "" H 8550 4750 50  0001 C CNN
+	1    8550 4750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -2570,17 +2511,6 @@ F 3 "" H 4950 7850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L IQ_SDR-rescue:GNDA-power #PWR0111
-U 1 1 5E0B69D9
-P 7750 8000
-F 0 "#PWR0111" H 7750 7750 50  0001 C CNN
-F 1 "GNDA" H 7755 7827 50  0000 C CNN
-F 2 "" H 7750 8000 50  0001 C CNN
-F 3 "" H 7750 8000 50  0001 C CNN
-	1    7750 8000
-	1    0    0    -1  
-$EndComp
-$Comp
 L IQ_SDR-rescue:GNDA-power #PWR0112
 U 1 1 5E0B6E6F
 P 8200 8650
@@ -2603,7 +2533,6 @@ F 3 "" H 7950 7250 50  0001 C CNN
 	1    7950 7250
 	1    0    0    -1  
 $EndComp
-Connection ~ 7950 7250
 Wire Wire Line
 	7950 7250 8200 7250
 $Comp
@@ -3644,4 +3573,136 @@ Wire Wire Line
 Connection ~ 5300 8600
 Wire Wire Line
 	3700 3550 4300 3550
+$Comp
+L IQ_SDR-rescue:R-Device R?
+U 1 1 5E9FE9F4
+P 8050 5000
+F 0 "R?" H 8120 5046 50  0000 L CNN
+F 1 "4.7k" H 7800 5000 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 7980 5000 50  0001 C CNN
+F 3 "~" H 8050 5000 50  0001 C CNN
+	1    8050 5000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 4850 8550 4950
+Wire Wire Line
+	8550 5350 8550 5450
+$Comp
+L IQ_SDR-rescue:GND-power #PWR?
+U 1 1 5E9FEA03
+P 8050 5500
+F 0 "#PWR?" H 8050 5250 50  0001 C CNN
+F 1 "GND" H 8050 5300 50  0000 C CNN
+F 2 "" H 8050 5500 50  0001 C CNN
+F 3 "" H 8050 5500 50  0001 C CNN
+	1    8050 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L IQ_SDR-rescue:Conn_01x01-Connector_Generic J?
+U 1 1 5E9FEA0C
+P 8750 4850
+F 0 "J?" H 8850 4750 50  0000 R CNN
+F 1 "V_CC" H 9000 4850 50  0000 R CNN
+F 2 "Connectors:PINTST" H 8750 4850 50  0001 C CNN
+F 3 "~" H 8750 4850 50  0001 C CNN
+F 4 "J" H 8750 4850 50  0001 C CNN "Spice_Primitive"
+F 5 "Conn_01x01" H 8750 4850 50  0001 C CNN "Spice_Model"
+F 6 "N" H 8750 4850 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    8750 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 5600 8550 5450
+Connection ~ 8550 5450
+$Comp
+L IQ_SDR-rescue:C-Device C?
+U 1 1 5E9FEA1D
+P 9150 5600
+F 0 "C?" H 9000 5700 50  0000 L CNN
+F 1 "0.1uF" H 8900 5500 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 9188 5450 50  0001 C CNN
+F 3 "~" H 9150 5600 50  0001 C CNN
+	1    9150 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L IQ_SDR-rescue:GND-power #PWR?
+U 1 1 5E9FEA23
+P 9150 5750
+F 0 "#PWR?" H 9150 5500 50  0001 C CNN
+F 1 "GND" H 9300 5700 50  0000 C CNN
+F 2 "" H 9150 5750 50  0001 C CNN
+F 3 "" H 9150 5750 50  0001 C CNN
+	1    9150 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L IQ_SDR-rescue:MMBT2222A-TP-dk_Transistors-Bipolar-BJT-Single Q?
+U 1 1 5E9FEA32
+P 8450 5150
+F 0 "Q?" H 8638 5203 60  0000 L CNN
+F 1 "MMBT2222A-TP" H 8650 5050 60  0000 L CNN
+F 2 "digikey-footprints:SOT-23-3" H 8650 5350 60  0001 L CNN
+F 3 "https://www.mouser.com/datasheet/2/308/MMBT2222A-1301352.pdf" H 8650 5450 60  0001 L CNN
+F 4 "MMBT2222ATPMSCT-ND" H 8650 5550 60  0001 L CNN "Digi-Key_PN"
+F 5 "MMBT2222A-TP" H 8650 5650 60  0001 L CNN "MPN"
+F 6 "Discrete Semiconductor Products" H 8650 5750 60  0001 L CNN "Category"
+F 7 "Transistors - Bipolar (BJT) - Single" H 8650 5850 60  0001 L CNN "Family"
+F 8 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" H 8650 5950 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/micro-commercial-co/MMBT2222A-TP/MMBT2222ATPMSCT-ND/717394" H 8650 6050 60  0001 L CNN "DK_Detail_Page"
+F 10 "TRANS NPN 40V 0.6A SOT23" H 8650 6150 60  0001 L CNN "Description"
+F 11 "Micro Commercial Co" H 8650 6250 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 8650 6350 60  0001 L CNN "Status"
+	1    8450 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8050 5150 8250 5150
+Wire Wire Line
+	8050 4850 8550 4850
+$Comp
+L IQ_SDR-rescue:PWR_FLAG-power #FLG?
+U 1 1 5E9FEA3B
+P 9150 5450
+F 0 "#FLG?" H 9150 5525 50  0001 C CNN
+F 1 "PWR_FLAG" H 8700 5500 50  0000 L CNN
+F 2 "" H 9150 5450 50  0001 C CNN
+F 3 "~" H 9150 5450 50  0001 C CNN
+	1    9150 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 4750 8550 4850
+Connection ~ 8550 4850
+Text Notes 8050 4450 0    50   ~ 0
+Emitter follower\nto smooth USB\n+5V.
+Wire Wire Line
+	8550 5450 9150 5450
+$Comp
+L LED_Solid:LED_Solid D?
+U 1 1 5EB0C444
+P 8050 5350
+F 0 "D?" V 8089 5233 50  0000 R CNN
+F 1 "LED_Solid" V 7998 5233 50  0000 R CNN
+F 2 "" H 8050 5350 50  0001 C CNN
+F 3 "~" H 8050 5350 50  0001 C CNN
+	1    8050 5350
+	0    -1   -1   0   
+$EndComp
+Connection ~ 9150 5450
+$Comp
+L IQ_SDR-rescue:GNDA-power #PWR?
+U 1 1 5EB0E2E2
+P 9450 5450
+F 0 "#PWR?" H 9450 5200 50  0001 C CNN
+F 1 "GNDA" H 9455 5277 50  0000 C CNN
+F 2 "" H 9450 5450 50  0001 C CNN
+F 3 "" H 9450 5450 50  0001 C CNN
+	1    9450 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 5450 9450 5450
 $EndSCHEMATC
