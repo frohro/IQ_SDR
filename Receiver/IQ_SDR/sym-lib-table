@@ -150,4 +150,6 @@
   (lib (name myspice)(type Legacy)(uri /home/frohro/Classes/Electronics/myspice.lib)(options "")(descr ""))
   (lib (name Connector)(type Legacy)(uri ${KIPRJMOD}/Connector.lib)(options "")(descr ""))
   (lib (name gnda_1.5)(type Legacy)(uri ${KIPRJMOD}/gnda_1.5.lib)(options "")(descr ""))
+  (lib (name blue_pill)(type Legacy)(uri ${KIPRJMOD}/bluepill.lib)(options "")(descr ""))
+  (lib (name bp)(type Legacy)(uri ${KIPRJMOD}/bp.lib)(options "")(descr ""))
 )
