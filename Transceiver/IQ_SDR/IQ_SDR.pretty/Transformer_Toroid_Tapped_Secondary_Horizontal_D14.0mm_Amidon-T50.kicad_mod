@@ -1,4 +1,4 @@
-(module Transformer_Toroid_Tapped_Secondary_Horizontal_D14.0mm_Amidon-T50 (layer F.Cu) (tedit 5EA105E7)
+(module Transformer_Toroid_Tapped_Secondary_Horizontal_D14.0mm_Amidon-T50 (layer F.Cu) (tedit 5EA1E409)
   (descr "Transformer, Toroid, tapped, horizontal, laying, Diameter 14mm, Amidon T50,")
   (tags "Transformer Toroid tapped horizontal laying Diameter 14mm Amidon T50 ")
   (fp_text reference REF** (at 12.6 -14.5) (layer F.SilkS)
