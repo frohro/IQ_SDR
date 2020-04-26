@@ -45,15 +45,15 @@ $EndComp
 $Comp
 L IQ_SDR-rescue:BNC-lt6231 P1
 U 1 1 5D491312
-P 15250 2450
-F 0 "P1" H 15204 2688 50  0000 C CNN
-F 1 "BNC" H 15204 2597 50  0000 C CNN
-F 2 "Connectors_TE-Connectivity:BNC_Socket_TYCO-AMP_LargePads" H 15250 2450 50  0001 C CNN
-F 3 "" H 15250 2450 50  0000 C CNN
-F 4 "R" H 15250 2450 50  0001 C CNN "Spice_Primitive"
-F 5 "10" H 15250 2450 50  0001 C CNN "Spice_Model"
-F 6 "N" H 15250 2450 50  0001 C CNN "Spice_Netlist_Enabled"
-	1    15250 2450
+P 15500 2450
+F 0 "P1" H 15454 2688 50  0000 C CNN
+F 1 "BNC" H 15454 2597 50  0000 C CNN
+F 2 "Connectors_TE-Connectivity:BNC_Socket_TYCO-AMP_LargePads" H 15500 2450 50  0001 C CNN
+F 3 "" H 15500 2450 50  0000 C CNN
+F 4 "R" H 15500 2450 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 15500 2450 50  0001 C CNN "Spice_Model"
+F 6 "N" H 15500 2450 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    15500 2450
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -496,8 +496,6 @@ NoConn ~ 13650 7800
 NoConn ~ 13650 7900
 NoConn ~ 13650 8000
 NoConn ~ 13650 8100
-NoConn ~ 14650 8100
-NoConn ~ 14650 8000
 NoConn ~ 14650 7700
 NoConn ~ 14650 7600
 NoConn ~ 14650 7500
@@ -1155,7 +1153,7 @@ U 1 1 5D491350
 P 4550 7850
 F 0 "T1" H 4350 7850 50  0000 C CNN
 F 1 "Transformer_1P_SS" H 4550 7550 50  0001 C CNN
-F 2 "IQ_SDR:Transformer_Toroid_Tapped_Secondary_Horizontal_D14.0mm_Amidon-T50" H 4550 7850 50  0001 C CNN
+F 2 "IQ_SDR:T50-2_vertical_5_pin" H 4550 7850 50  0001 C CNN
 F 3 "http://www.lodestonepacific.com/distrib/pdfs/Micrometals/RFA_Cat.pdf" H 4550 7850 50  0001 C CNN
 F 4 "T50-6 core with 39 turns #28 on the primary, and two sets of 10 turns on the secondary" H 4550 7850 50  0001 C CNN "Winding"
 	1    4550 7850
@@ -1408,7 +1406,7 @@ F 3 "" H 2700 2600 50  0001 C CNN
 	1    2700 2600
 	1    0    0    -1  
 $EndComp
-Text Notes 15350 2400 0    50   ~ 0
+Text Notes 15550 2350 0    50   ~ 0
 Antenna
 Text Notes 2600 2450 0    50   ~ 0
 Oscillator\nOut
@@ -2317,49 +2315,41 @@ Connection ~ 2500 1900
 $Comp
 L IQ_SDR-rescue:R-Device R15
 U 1 1 5D5200C2
-P 14750 8400
-F 0 "R15" H 14550 8450 50  0000 L CNN
-F 1 "4.7k" H 14500 8350 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805" V 14680 8400 50  0001 C CNN
-F 3 "~" H 14750 8400 50  0001 C CNN
-	1    14750 8400
-	1    0    0    -1  
+P 15300 7750
+F 0 "R15" H 15100 7800 50  0000 L CNN
+F 1 "4.7k" H 15050 7700 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 15230 7750 50  0001 C CNN
+F 3 "~" H 15300 7750 50  0001 C CNN
+	1    15300 7750
+	0    -1   1    0   
 $EndComp
 $Comp
 L IQ_SDR-rescue:R-Device R16
 U 1 1 5D520742
-P 14900 8400
-F 0 "R16" H 14950 8400 50  0000 L CNN
-F 1 "4.7k" H 14950 8300 50  0000 L CNN
-F 2 "Resistors_SMD:R_0805" V 14830 8400 50  0001 C CNN
-F 3 "~" H 14900 8400 50  0001 C CNN
-	1    14900 8400
-	1    0    0    -1  
+P 15300 7900
+F 0 "R16" H 15350 7900 50  0000 L CNN
+F 1 "4.7k" H 15350 7800 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" V 15230 7900 50  0001 C CNN
+F 3 "~" H 15300 7900 50  0001 C CNN
+	1    15300 7900
+	0    -1   1    0   
 $EndComp
-Wire Wire Line
-	14750 8250 14750 7900
-Wire Wire Line
-	14750 7900 14650 7900
-Wire Wire Line
-	14900 8250 14900 7800
-Wire Wire Line
-	14900 7800 14650 7800
 $Comp
 L IQ_SDR-rescue:+3.3V-power #PWR070
 U 1 1 5D5880C9
-P 14450 8550
-F 0 "#PWR070" H 14450 8400 50  0001 C CNN
-F 1 "+3.3V" H 14400 8700 50  0000 C CNN
-F 2 "" H 14450 8550 50  0001 C CNN
-F 3 "" H 14450 8550 50  0001 C CNN
-	1    14450 8550
+P 15450 7450
+F 0 "#PWR070" H 15450 7300 50  0001 C CNN
+F 1 "+3.3V" H 15400 7600 50  0000 C CNN
+F 2 "" H 15450 7450 50  0001 C CNN
+F 3 "" H 15450 7450 50  0001 C CNN
+	1    15450 7450
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	14450 8550 14750 8550
+	15450 7450 15450 7750
 Wire Wire Line
-	14750 8550 14900 8550
-Connection ~ 14750 8550
+	15450 7750 15450 7900
+Connection ~ 15450 7750
 Text Notes 1050 4100 0    50   ~ 0
 BPF Responses:\n1.8MHz-4MHz\n4MHz-8MHz\n8MHz-16MHz\n16MHz-30MHZ
 Text Notes 7200 5850 0    50   ~ 0
@@ -2522,7 +2512,7 @@ U 1 1 5E907CC4
 P 800 5700
 F 0 "JP4" V 800 5750 50  0000 R CNN
 F 1 "Ground loop mitigation for the RX antenna" V 1100 6000 50  0000 R CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.00mm_SMD_Pin1Right" H 800 5700 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 800 5700 50  0001 C CNN
 F 3 "~" H 800 5700 50  0001 C CNN
 	1    800  5700
 	0    -1   1    0   
@@ -2575,7 +2565,7 @@ L power:GND #PWR030
 U 1 1 5EB6E4C9
 P 12850 1750
 F 0 "#PWR030" H 12850 1500 50  0001 C CNN
-F 1 "GND" H 12855 1577 50  0000 C CNN
+F 1 "GND" H 12950 1750 50  0000 C CNN
 F 2 "" H 12850 1750 50  0001 C CNN
 F 3 "" H 12850 1750 50  0001 C CNN
 	1    12850 1750
@@ -2597,7 +2587,7 @@ L power:GND #PWR029
 U 1 1 5EB6E4D5
 P 12850 1200
 F 0 "#PWR029" H 12850 950 50  0001 C CNN
-F 1 "GND" H 12855 1027 50  0000 C CNN
+F 1 "GND" H 12950 1200 50  0000 C CNN
 F 2 "" H 12850 1200 50  0001 C CNN
 F 3 "" H 12850 1200 50  0001 C CNN
 	1    12850 1200
@@ -2641,7 +2631,7 @@ L power:GND #PWR059
 U 1 1 5EB6E505
 P 13800 1200
 F 0 "#PWR059" H 13800 950 50  0001 C CNN
-F 1 "GND" H 13805 1027 50  0000 C CNN
+F 1 "GND" H 13900 1200 50  0000 C CNN
 F 2 "" H 13800 1200 50  0001 C CNN
 F 3 "" H 13800 1200 50  0001 C CNN
 	1    13800 1200
@@ -2719,7 +2709,7 @@ L power:GND #PWR074
 U 1 1 5EB6E578
 P 14750 1200
 F 0 "#PWR074" H 14750 950 50  0001 C CNN
-F 1 "GND" H 14755 1027 50  0000 C CNN
+F 1 "GND" H 14850 1200 50  0000 C CNN
 F 2 "" H 14750 1200 50  0001 C CNN
 F 3 "" H 14750 1200 50  0001 C CNN
 	1    14750 1200
@@ -2951,10 +2941,6 @@ Wire Wire Line
 	5750 3850 6350 3850
 Wire Wire Line
 	6250 3400 6850 3400
-Wire Wire Line
-	6650 3850 6850 3850
-Wire Wire Line
-	6850 3850 6850 3400
 Connection ~ 6850 3400
 Wire Wire Line
 	6850 3400 7450 3400
@@ -2966,17 +2952,6 @@ Connection ~ 5750 2700
 Wire Wire Line
 	6850 2700 6250 2700
 Connection ~ 6250 2700
-$Comp
-L Device:Transformer_SP_1S T4
-U 1 1 5ED54EE2
-P 7850 2400
-F 0 "T4" H 7850 2700 50  0000 C CNN
-F 1 "Transformer_SP_1S" H 7850 2690 50  0001 C CNN
-F 2 "IQ_SDR:Transformer_Toroid_Tapped_Secondary_Horizontal_D14.0mm_Amidon-T50" H 7850 2400 50  0001 C CNN
-F 3 "~" H 7850 2400 50  0001 C CNN
-	1    7850 2400
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7450 1550 7450 2200
 Wire Wire Line
@@ -3015,17 +2990,6 @@ Wire Wire Line
 Wire Wire Line
 	7450 2400 7250 2400
 Connection ~ 7250 2400
-$Comp
-L Device:R R26
-U 1 1 5EEFEA1C
-P 5250 7650
-F 0 "R26" V 5043 7650 50  0000 C CNN
-F 1 "0" V 5134 7650 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 5180 7650 50  0001 C CNN
-F 3 "~" H 5250 7650 50  0001 C CNN
-	1    5250 7650
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	5400 7650 5750 7650
 $Comp
@@ -3034,7 +2998,7 @@ U 1 1 5EF1D79A
 P 5250 8050
 F 0 "R27" V 5043 8050 50  0000 C CNN
 F 1 "0" V 5134 8050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 5180 8050 50  0001 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm" V 5180 8050 50  0001 C CNN
 F 3 "~" H 5250 8050 50  0001 C CNN
 	1    5250 8050
 	0    1    1    0   
@@ -3429,7 +3393,7 @@ $EndComp
 Wire Wire Line
 	8900 1600 8900 1550
 Wire Wire Line
-	9200 1550 9450 1550
+	9200 1550 9350 1550
 Wire Wire Line
 	9750 1550 9950 1550
 Wire Wire Line
@@ -3594,7 +3558,7 @@ $EndComp
 Wire Wire Line
 	8900 3200 8900 3250
 Wire Wire Line
-	9200 3250 9450 3250
+	9200 3250 9350 3250
 Wire Wire Line
 	9750 3250 9950 3250
 Wire Wire Line
@@ -3679,8 +3643,6 @@ F 3 "" H 9950 3550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	9200 1900 8900 1900
-Wire Wire Line
 	9750 1900 9750 2400
 Wire Wire Line
 	9200 2300 9200 2400
@@ -3744,7 +3706,7 @@ $EndComp
 Wire Wire Line
 	9750 2800 9750 2900
 Wire Wire Line
-	9750 2900 9200 2900
+	9750 2900 9350 2900
 $Comp
 L IQ_SDR-rescue:+3.3V-power #PWR017
 U 1 1 5ECB40C8
@@ -3823,8 +3785,6 @@ Wire Wire Line
 Connection ~ 14300 3600
 NoConn ~ 14050 6400
 NoConn ~ 14000 3600
-NoConn ~ 14100 5700
-NoConn ~ 14000 5700
 Text Notes 14450 5950 0    50   ~ 0
 Populate the Blue Pill or the Nano,\nbut not both.
 $Comp
@@ -3891,9 +3851,9 @@ Wire Wire Line
 Wire Wire Line
 	13850 2950 14500 2950
 Wire Wire Line
-	15100 2850 15250 2850
+	15100 2850 15500 2850
 Wire Wire Line
-	15250 2650 15250 2850
+	15500 2650 15500 2850
 Wire Wire Line
 	13450 2950 13450 3050
 Wire Wire Line
@@ -3904,7 +3864,7 @@ U 1 1 5EF7C183
 P 1000 6650
 F 0 "T2" V 1200 6600 50  0000 L CNN
 F 1 "Transformer_1P_1S" V 1045 6894 50  0001 L CNN
-F 2 "IQ_SDR:Transformer_Toroid_Tapped_Secondary_Horizontal_D14.0mm_Amidon-T50" H 1000 6650 50  0001 C CNN
+F 2 "IQ_SDR:T50-2_vertical_4_pin" H 1000 6650 50  0001 C CNN
 F 3 "~" H 1000 6650 50  0001 C CNN
 	1    1000 6650
 	0    1    1    0   
@@ -4332,8 +4292,6 @@ NoConn ~ 13400 4950
 NoConn ~ 13400 5050
 NoConn ~ 13400 5150
 NoConn ~ 13400 5250
-NoConn ~ 14900 4050
-NoConn ~ 14900 4150
 NoConn ~ 14900 4250
 NoConn ~ 14900 4350
 NoConn ~ 14900 4450
@@ -4345,17 +4303,6 @@ NoConn ~ 14900 5250
 NoConn ~ 14900 5350
 NoConn ~ 14900 5450
 NoConn ~ 13400 5450
-$Comp
-L Device:Transformer_1P_1S T3
-U 1 1 5ED9CF52
-P 4800 2450
-F 0 "T3" H 4800 2750 50  0000 C CNN
-F 1 "Transformer_1P_1S" H 4800 2740 50  0001 C CNN
-F 2 "IQ_SDR:Transformer_Toroid_Tapped_Secondary_Horizontal_D14.0mm_Amidon-T50" H 4800 2450 50  0001 C CNN
-F 3 "~" H 4800 2450 50  0001 C CNN
-	1    4800 2450
-	1    0    0    -1  
-$EndComp
 $Comp
 L IQ_SDR-rescue:GND-power #PWR0118
 U 1 1 5ED9ECDB
@@ -4698,7 +4645,7 @@ U 1 1 5F489B2E
 P 15450 5250
 F 0 "J34" H 15750 5400 50  0000 R CNN
 F 1 "Conn_01x04_Male" H 15422 5133 50  0001 R CNN
-F 2 "Pin_Headers:Pin_Header_Angled_1x04_Pitch2.54mm" H 15450 5250 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04_Pitch2.54mm" H 15450 5250 50  0001 C CNN
 F 3 "~" H 15450 5250 50  0001 C CNN
 	1    15450 5250
 	-1   0    0    -1  
@@ -4903,7 +4850,7 @@ F 1 "2N3904" H 6350 3250 50  0000 L CNN
 F 2 "digikey-footprints:TO-92-3" H 6350 3125 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 6150 3200 50  0001 L CNN
 	1    6150 3200
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 Connection ~ 5950 3200
 Wire Wire Line
@@ -4917,7 +4864,7 @@ F 1 "2N3904" H 6950 3250 50  0000 L CNN
 F 2 "digikey-footprints:TO-92-3" H 6950 3125 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 6750 3200 50  0001 L CNN
 	1    6750 3200
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L IQ_SDR-rescue:BNC-lt6231 P5
@@ -4944,12 +4891,8 @@ F 3 "~" H 8500 2200 50  0001 C CNN
 	1    8500 2200
 	1    0    0    -1  
 $EndComp
-Connection ~ 9200 1900
-Connection ~ 9200 2900
 Wire Wire Line
-	9200 2900 8900 2900
-Wire Wire Line
-	9200 1900 9750 1900
+	9200 1900 9350 1900
 $Comp
 L Device:Jumper_NC_Small JP14
 U 1 1 5EBD321D
@@ -4973,4 +4916,109 @@ Wire Wire Line
 	4300 2700 4300 2250
 Wire Wire Line
 	4300 2250 4400 2250
+Text Label 14900 4050 0    50   ~ 0
+SDA
+Text Label 14900 4150 0    50   ~ 0
+SCL
+Text Label 14650 8000 0    50   ~ 0
+TX_BAND
+Text Label 14650 8100 0    50   ~ 0
+ANT_RLY
+Wire Wire Line
+	15150 7800 15150 7750
+Wire Wire Line
+	14650 7800 15150 7800
+Wire Wire Line
+	14650 7900 15150 7900
+Wire Wire Line
+	9350 2900 9350 3250
+Connection ~ 9350 2900
+Wire Wire Line
+	9350 2900 9200 2900
+Connection ~ 9350 3250
+Wire Wire Line
+	9350 3250 9450 3250
+Wire Wire Line
+	9350 1900 9350 1550
+Connection ~ 9350 1900
+Wire Wire Line
+	9350 1900 9750 1900
+Connection ~ 9350 1550
+Wire Wire Line
+	9350 1550 9450 1550
+Wire Wire Line
+	6650 3850 6850 3850
+Wire Wire Line
+	6850 3850 6850 3400
+$Comp
+L Device:Transformer_1P_1S T3
+U 1 1 5ED9CF52
+P 4800 2450
+F 0 "T3" H 4800 2750 50  0000 C CNN
+F 1 "Transformer_1P_1S" H 4800 2740 50  0001 C CNN
+F 2 "IQ_SDR:T50-2_vertical_4_pin" H 4800 2450 50  0001 C CNN
+F 3 "~" H 4800 2450 50  0001 C CNN
+	1    4800 2450
+	1    0    0    1   
+$EndComp
+$Comp
+L Device:R R26
+U 1 1 5EEFEA1C
+P 5250 7650
+F 0 "R26" V 5043 7650 50  0000 C CNN
+F 1 "0" V 5134 7650 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02_Pitch2.54mm" V 5180 7650 50  0001 C CNN
+F 3 "~" H 5250 7650 50  0001 C CNN
+	1    5250 7650
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Transformer_SP_1S T4
+U 1 1 5ED54EE2
+P 7850 2400
+F 0 "T4" H 7850 2700 50  0000 C CNN
+F 1 "Transformer_SP_1S" H 7850 2690 50  0001 C CNN
+F 2 "IQ_SDR:T50-2_vertical_5_pin" H 7850 2400 50  0001 C CNN
+F 3 "~" H 7850 2400 50  0001 C CNN
+	1    7850 2400
+	1    0    0    1   
+$EndComp
+Text Label 9950 1550 0    50   ~ 0
+PA_V_CC
+Text Label 9950 3250 0    50   ~ 0
+PA_V_CC
+Text Label 9350 3050 0    50   ~ 0
+PA_V_CCc
+Text Label 9350 1700 0    50   ~ 0
+PA_V_CCb
+Text Label 10650 2800 0    50   ~ 0
+RFa
+Text Label 15500 2850 0    50   ~ 0
+RFb
+Text Label 13550 3050 0    50   ~ 0
+RFc
+Text Label 12850 3150 0    50   ~ 0
+RFd
+Text Label 12100 1450 0    50   ~ 0
+Rfe
+Text Label 12600 1450 0    50   ~ 0
+RFf
+Text Label 12300 900  0    50   ~ 0
+RFg
+Text Label 14950 900  0    50   ~ 0
+RFh
+Text Label 14950 1450 0    50   ~ 0
+RFi
+Text Label 13850 1450 0    50   ~ 0
+RFj
+Text Label 13850 900  0    50   ~ 0
+RFk
+Text Label 14000 2550 0    50   ~ 0
+RFl
+Text Label 15350 2450 2    50   ~ 0
+RFm
+Wire Wire Line
+	15100 2450 15350 2450
+Text Label 15200 2850 0    50   ~ 0
+RFn
 $EndSCHEMATC
