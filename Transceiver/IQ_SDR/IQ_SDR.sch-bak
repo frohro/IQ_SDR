@@ -3701,7 +3701,7 @@ F 3 "http://www.amidoncorp.com/bn-43-6802/" H 10150 2600 50  0001 C CNN
 F 4 "http://www.amidoncorp.com/product_images/specifications/68_Material.pdf" H 10150 2600 50  0001 C CNN "Material 68"
 F 5 "1\"x1/2\" board area" H 10150 2600 50  0001 C CNN "Size"
 	1    10150 2600
-	1    0    0    1   
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	9750 2800 9750 2900
