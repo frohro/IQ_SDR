@@ -922,7 +922,7 @@ Connection ~ 1450 7200
 Wire Wire Line
 	1450 7200 1550 7200
 Text Notes 6050 4650 0    50   ~ 0
-Doubly Balanced\nSampling Mixers
+Doubly \nBalanced\nMixers
 $Comp
 L onsemi:FST3253 U1
 U 1 1 5D1B613B
@@ -2375,8 +2375,6 @@ Wire Wire Line
 	8450 1150 8450 1250
 Text Notes 6850 5200 0    50   ~ 0
 R9-10 can be\nup to 100\nwith LM4562.
-Text Notes 4700 4000 0    50   ~ 0
-Making T1 a step up\ntransformer makes\nthe S/N and NF better.
 $Comp
 L IQ_SDR-rescue:Jumper_2_Open-Jumper JP1
 U 1 1 5D205EC2
@@ -2749,4 +2747,6 @@ Wire Wire Line
 Wire Wire Line
 	3300 4100 3650 4100
 Connection ~ 3650 4100
+Text Notes 6700 2300 0    50   ~ 0
+Better\nenabled.
 $EndSCHEMATC
