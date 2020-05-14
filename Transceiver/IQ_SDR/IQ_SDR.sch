@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:IQ_SDR-cache
-EELAYER 29 0
+EELAYER 30 0
 EELAYER END
 $Descr USLedger 17000 11000
 encoding utf-8
@@ -30,7 +29,7 @@ F 7 "IQ_SDR_Spice.lib" H 4300 4100 50  0001 C CNN "Spice_Lib_File"
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCU_Module:Arduino_Nano_v3.x A1
+L IQ_SDR-rescue:Arduino_Nano_v3.x-MCU_Module A1
 U 1 1 5CEECC71
 P 11100 9000
 F 0 "A1" H 11100 8950 50  0000 C CNN
