@@ -4696,7 +4696,7 @@ TX
 Text Notes 15500 5250 0    50   ~ 0
 RX
 Text Notes 15500 5350 0    50   ~ 0
-+5V
+Don't USE!
 Text Notes 15500 5450 0    50   ~ 0
 DGND
 Text Notes 10950 1400 0    50   ~ 0
@@ -5021,4 +5021,6 @@ Wire Wire Line
 	15100 2450 15350 2450
 Text Label 15200 2850 0    50   ~ 0
 RFn
+Text Notes 15700 5200 0    50   ~ 0
+Don't use +5V.  \nYou need +3.3V \nto program over \nserial.
 $EndSCHEMATC
