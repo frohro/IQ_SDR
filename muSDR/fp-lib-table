@@ -1,0 +1,9 @@
+(fp_lib_table
+  (lib (name digikey-footprints)(type KiCad)(uri ${KIPRJMOD}/digikey-kicad-library/digikey-footprints.pretty)(options "")(descr ""))
+  (lib (name EtherkitKicadLibrary)(type KiCad)(uri ${KIPRJMOD}/EtherkitKicadLibrary.pretty)(options "")(descr ""))
+  (lib (name kilibs)(type KiCad)(uri ${KIPRJMOD}/kilibs.pretty-master)(options "")(descr ""))
+  (lib (name SMA)(type KiCad)(uri ${KIPRJMOD}/SMA.pretty)(options "")(descr ""))
+  (lib (name SparkFun-DigitalIC)(type KiCad)(uri ${KIPRJMOD}/SparkFun-DigitalIC.pretty)(options "")(descr ""))
+  (lib (name Encoder)(type KiCad)(uri ${KIPRJMOD}/Rotary_Encoder_Switched_PEC11R.kicad_mod)(options "")(descr ""))
+  (lib (name BP)(type KiCad)(uri ${KIPRJMOD}/BP.pretty)(options "")(descr ""))
+)

@@ -1,0 +1,13 @@
+(module SMA-BU-P_EdgeMount (layer F.Cu) (tedit 5572FC51)
+  (fp_text reference REF** (at 0 3.1) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.15)))
+  )
+  (fp_text value SMA-BU-P_EdgeMount (at 0 -3.3) (layer F.Fab) hide
+    (effects (font (size 1.5 1.5) (thickness 0.15)))
+  )
+  (fp_line (start 0 -2.275) (end -3.225 -2.275) (layer F.SilkS) (width 0.15))
+  (fp_line (start 0 -2.275) (end 3.225 -2.275) (layer F.SilkS) (width 0.15))
+  (pad 2 smd rect (at -2.6 0) (size 1.75 4) (layers B.Cu B.Paste B.Mask))
+  (pad 2 smd rect (at 2.6 0) (size 1.75 4) (layers B.Cu B.Paste B.Mask))
+  (pad 1 smd rect (at 0 0) (size 1.75 4) (layers F.Cu F.Paste F.Mask))
+)
