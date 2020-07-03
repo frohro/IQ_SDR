@@ -1,0 +1,7 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP BP
+F https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html
+$ENDCMP
+#
+#End Doc Library
