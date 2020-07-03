@@ -30,6 +30,18 @@ F 7 "IQ_SDR_Spice.lib" H 2000 1700 50  0001 C CNN "Spice_Lib_File"
 $EndComp
 $Comp
 L IQ_SDR-rescue:Arduino_Nano_v3.x-MCU_Module A1
+<<<<<<< HEAD
+U 1 1 5CEECC71
+P 11100 9000
+F 0 "A1" H 11100 8950 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 11600 8050 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 11250 8050 50  0001 L CNN
+F 3 "https://www.arduino.cc/en/uploads/Main/Arduino_Nano-Rev3.2-SCH.pdf" H 11100 8000 50  0001 C CNN
+F 4 "R" H 11100 9000 50  0001 C CNN "Spice_Primitive"
+F 5 "10" H 11100 9000 50  0001 C CNN "Spice_Model"
+F 6 "N" H 11100 9000 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    11100 9000
+=======
 U 1 1 5D491311
 P 14150 7400
 F 0 "A1" H 14150 7350 50  0000 C CNN
@@ -40,6 +52,7 @@ F 4 "R" H 14150 7400 50  0001 C CNN "Spice_Primitive"
 F 5 "10" H 14150 7400 50  0001 C CNN "Spice_Model"
 F 6 "N" H 14150 7400 50  0001 C CNN "Spice_Netlist_Enabled"
 	1    14150 7400
+>>>>>>> 8dfcc11ac3f94c0f9db9dcfca3174f5ccf4d6eea
 	1    0    0    -1  
 $EndComp
 $Comp
