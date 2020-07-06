@@ -103,33 +103,6 @@ X Pin_4 4 200 -200 150 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# Connector_Generic_Conn_02x03_Odd_Even
-#
-DEF Connector_Generic_Conn_02x03_Odd_Even J 0 40 Y N 1 F N
-F0 "J" 50 200 50 H V C CNN
-F1 "Connector_Generic_Conn_02x03_Odd_Even" 50 -200 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-$FPLIST
- Connector*:*_2x??_*
-$ENDFPLIST
-DRAW
-S -50 -95 0 -105 1 1 6 N
-S -50 5 0 -5 1 1 6 N
-S -50 105 0 95 1 1 6 N
-S -50 150 150 -150 1 1 10 f
-S 150 -95 100 -105 1 1 6 N
-S 150 5 100 -5 1 1 6 N
-S 150 105 100 95 1 1 6 N
-X Pin_1 1 -200 100 150 R 50 50 1 1 P
-X Pin_2 2 300 100 150 L 50 50 1 1 P
-X Pin_3 3 -200 0 150 R 50 50 1 1 P
-X Pin_4 4 300 0 150 L 50 50 1 1 P
-X Pin_5 5 -200 -100 150 R 50 50 1 1 P
-X Pin_6 6 300 -100 150 L 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # Connector_TestPoint
 #
 DEF Connector_TestPoint TP 0 30 N N 1 F N
@@ -387,6 +360,25 @@ X CLK1 9 500 0 100 L 50 50 1 1 O
 ENDDRAW
 ENDDEF
 #
+# Regulator_Linear_MC78M05_TO252
+#
+DEF Regulator_Linear_MC78M05_TO252 U 0 10 Y Y 1 F N
+F0 "U" -150 125 50 H V C CNN
+F1 "Regulator_Linear_MC78M05_TO252" 0 125 50 H V L CNN
+F2 "Package_TO_SOT_SMD:TO-252-2" 0 225 50 H I C CIN
+F3 "" 0 -50 50 H I C CNN
+ALIAS MC78M05_TO252 KA78M05_TO252 LF15_TO252 LF18_TO252 LF25_TO252 LF33_TO252 LF50_TO252 LF60_TO252 LF80_TO252 LF85_TO252 LF120_TO252 LP2950-3.0_TO252 LP2950-3.3_TO252 LP2950-5.0_TO252 LF47_TO252 LF90_TO252
+$FPLIST
+ TO?252*
+$ENDFPLIST
+DRAW
+S -200 75 200 -200 0 1 10 f
+X VI 1 -300 0 100 R 50 50 1 1 W
+X GND 2 0 -300 100 U 50 50 1 1 W
+X VO 3 300 0 100 L 50 50 1 1 w
+ENDDRAW
+ENDDEF
+#
 # Switch_SW_Push
 #
 DEF Switch_SW_Push SW 0 40 N N 1 F N
@@ -474,36 +466,6 @@ X GND 4 200 100 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# dk_Transistors-Bipolar-BJT-Single_MMBT2222A-TP
-#
-DEF dk_Transistors-Bipolar-BJT-Single_MMBT2222A-TP Q 0 0 Y Y 1 F N
-F0 "Q" -126 166 60 H V L CNN
-F1 "dk_Transistors-Bipolar-BJT-Single_MMBT2222A-TP" 206 0 60 V V C CNN
-F2 "digikey-footprints:SOT-23-3" 200 200 60 H I L CNN
-F3 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" 200 300 60 H I L CNN
-F4 "MMBT2222ATPMSCT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "MMBT2222A-TP" 200 500 60 H I L CNN "MPN"
-F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
-F7 "Transistors - Bipolar (BJT) - Single" 200 700 60 H I L CNN "Family"
-F8 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/micro-commercial-co/MMBT2222A-TP/MMBT2222ATPMSCT-ND/717394" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "TRANS NPN 40V 0.6A SOT23" 200 1000 60 H I L CNN "Description"
-F11 "Micro Commercial Co" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
-DRAW
-C 0 0 128 0 1 0 f
-P 2 0 1 0 -150 0 -100 0 N
-P 2 0 1 0 -140 0 0 0 N
-P 2 0 1 0 0 -50 100 -100 N
-P 2 0 1 0 0 50 100 100 N
-P 2 0 1 0 0 100 0 -100 N
-P 4 0 1 0 60 -50 80 -90 40 -100 60 -50 F
-X B 1 -200 0 100 R 50 50 1 1 I
-X E 2 100 -200 100 U 50 50 1 1 P
-X C 3 100 200 100 D 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
 # lt6231_+4.3V
 #
 DEF lt6231_+4.3V #PWR 0 0 Y Y 1 F P
@@ -557,6 +519,36 @@ X + 3 -300 100 100 R 50 50 1 1 I
 X + 5 -300 100 100 R 50 50 2 1 I
 X - 6 -300 -100 100 R 50 50 2 1 I
 X ~ 7 300 0 100 L 50 50 2 1 O
+ENDDRAW
+ENDDEF
+#
+# muSDR-rescue_MMBT2222A-TP-dk_Transistors-Bipolar-BJT-Single
+#
+DEF muSDR-rescue_MMBT2222A-TP-dk_Transistors-Bipolar-BJT-Single Q 0 0 Y Y 1 F N
+F0 "Q" -126 166 60 H V L CNN
+F1 "muSDR-rescue_MMBT2222A-TP-dk_Transistors-Bipolar-BJT-Single" 206 0 60 V V C CNN
+F2 "digikey-footprints:SOT-23-3" 200 200 60 H I L CNN
+F3 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" 200 300 60 H I L CNN
+F4 "MMBT2222ATPMSCT-ND" 200 400 60 H I L CNN "Digi-Key_PN"
+F5 "MMBT2222A-TP" 200 500 60 H I L CNN "MPN"
+F6 "Discrete Semiconductor Products" 200 600 60 H I L CNN "Category"
+F7 "Transistors - Bipolar (BJT) - Single" 200 700 60 H I L CNN "Family"
+F8 "http://www.mccsemi.com/up_pdf/MMBT2222A(SOT-23).pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
+F9 "/product-detail/en/micro-commercial-co/MMBT2222A-TP/MMBT2222ATPMSCT-ND/717394" 200 900 60 H I L CNN "DK_Detail_Page"
+F10 "TRANS NPN 40V 0.6A SOT23" 200 1000 60 H I L CNN "Description"
+F11 "Micro Commercial Co" 200 1100 60 H I L CNN "Manufacturer"
+F12 "Active" 200 1200 60 H I L CNN "Status"
+DRAW
+C 0 0 128 0 1 0 f
+P 2 0 1 0 -150 0 -100 0 N
+P 2 0 1 0 -140 0 0 0 N
+P 2 0 1 0 0 -50 100 -100 N
+P 2 0 1 0 0 50 100 100 N
+P 2 0 1 0 0 100 0 -100 N
+P 4 0 1 0 60 -50 80 -90 40 -100 60 -50 F
+X B 1 -200 0 100 R 50 50 1 1 I
+X E 2 100 -200 100 U 50 50 1 1 P
+X C 3 100 200 100 D 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #

@@ -739,7 +739,7 @@ F 3 "~" H 800 5450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L dk_Transistors-Bipolar-BJT-Single:MMBT2222A-TP Q1
+L muSDR-rescue:MMBT2222A-TP-dk_Transistors-Bipolar-BJT-Single Q1
 U 1 1 5F1096CA
 P 1600 2200
 F 0 "Q1" H 1788 2253 60  0000 L CNN
@@ -759,28 +759,6 @@ F 12 "Active" H 1800 3400 60  0001 L CNN "Status"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
-U 1 1 5F10BB65
-P 950 1950
-F 0 "R2" H 1020 1996 50  0000 L CNN
-F 1 "R" H 1020 1905 50  0000 L CNN
-F 2 "" V 880 1950 50  0001 C CNN
-F 3 "~" H 950 1950 50  0001 C CNN
-	1    950  1950
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C1
-U 1 1 5F10C6C9
-P 950 2500
-F 0 "C1" H 1065 2546 50  0000 L CNN
-F 1 "1uF" H 1065 2455 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 988 2350 50  0001 C CNN
-F 3 "~" H 950 2500 50  0001 C CNN
-	1    950  2500
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+5V #PWR012
 U 1 1 5F10D3EC
 P 1700 1700
@@ -792,32 +770,19 @@ F 3 "" H 1700 1700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	950  1800 950  1700
-Wire Wire Line
 	950  1700 1700 1700
 Wire Wire Line
 	1700 2000 1700 1700
 Connection ~ 1700 1700
 $Comp
-L power:GND #PWR05
-U 1 1 5F1265A3
-P 950 2650
-F 0 "#PWR05" H 950 2400 50  0001 C CNN
-F 1 "GND" H 1100 2550 50  0001 C CNN
-F 2 "" H 950 2650 50  0001 C CNN
-F 3 "" H 950 2650 50  0001 C CNN
-	1    950  2650
-	1    0    0    -1  
-$EndComp
-$Comp
 L lt6231:+4.3V #PWR014
 U 1 1 5F12693B
-P 1950 2850
-F 0 "#PWR014" H 1950 2700 50  0001 C CNN
-F 1 "+4.3V" H 1965 3023 50  0000 C CNN
-F 2 "" H 1950 2850 50  0001 C CNN
-F 3 "" H 1950 2850 50  0001 C CNN
-	1    1950 2850
+P 2100 2850
+F 0 "#PWR014" H 2100 2700 50  0001 C CNN
+F 1 "+4.3V" H 2115 3023 50  0000 C CNN
+F 2 "" H 2100 2850 50  0001 C CNN
+F 3 "" H 2100 2850 50  0001 C CNN
+	1    2100 2850
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1175,8 +1140,6 @@ Wire Wire Line
 Connection ~ 1950 7150
 Wire Wire Line
 	1950 7150 1950 7050
-Wire Wire Line
-	950  2100 950  2200
 $Comp
 L Device:L L1
 U 1 1 5F30B9F3
@@ -1192,9 +1155,6 @@ Wire Wire Line
 	1400 2200 1350 2200
 Wire Wire Line
 	1050 2200 950  2200
-Connection ~ 950  2200
-Wire Wire Line
-	950  2200 950  2350
 Text Notes 7800 950  0    50   ~ 0
 Insert 1nF for 2 kHz cutoff\nDefault 100 kHz cutoff\n(both op amps)
 $Comp
@@ -1391,7 +1351,7 @@ $Comp
 L Connector:Conn_01x02_Male J4
 U 1 1 5F533B86
 P 3400 1750
-F 0 "J4" V 3350 1700 50  0000 C CNN
+F 0 "J4" V 3508 1794 50  0000 L CNN
 F 1 "Conn_01x02_Male" H 3508 1840 50  0001 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 3400 1750 50  0001 C CNN
 F 3 "~" H 3400 1750 50  0001 C CNN
@@ -1407,12 +1367,12 @@ J4 for optional BP filter
 $Comp
 L Connector:TestPoint TP1
 U 1 1 5F549AF1
-P 1950 2850
-F 0 "TP1" V 1950 3050 50  0000 L CNN
-F 1 "TestPoint" H 2008 2877 50  0001 L CNN
-F 2 "" H 2150 2850 50  0001 C CNN
-F 3 "~" H 2150 2850 50  0001 C CNN
-	1    1950 2850
+P 2100 2850
+F 0 "TP1" V 2100 3050 50  0000 L CNN
+F 1 "TestPoint" H 2158 2877 50  0001 L CNN
+F 2 "" H 2300 2850 50  0001 C CNN
+F 3 "~" H 2300 2850 50  0001 C CNN
+	1    2100 2850
 	0    1    1    0   
 $EndComp
 Wire Wire Line
@@ -1592,47 +1552,6 @@ RESET
 Text Label 3350 6500 2    50   ~ 0
 SCK
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J6
-U 1 1 5F66AF6A
-P 5050 7000
-F 0 "J6" H 5100 7225 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 5100 7226 50  0001 C CNN
-F 2 "" H 5050 7000 50  0001 C CNN
-F 3 "~" H 5050 7000 50  0001 C CNN
-	1    5050 7000
-	-1   0    0    1   
-$EndComp
-Text Label 4750 6900 2    50   ~ 0
-MISO
-Text Label 5250 7000 0    50   ~ 0
-MOSI
-Text Label 4750 7000 2    50   ~ 0
-SCK
-Text Label 4750 7100 2    50   ~ 0
-RESET
-$Comp
-L power:GND #PWR042
-U 1 1 5F66FA6D
-P 5250 7100
-F 0 "#PWR042" H 5250 6850 50  0001 C CNN
-F 1 "GND" H 5350 6950 50  0000 C CNN
-F 2 "" H 5250 7100 50  0001 C CNN
-F 3 "" H 5250 7100 50  0001 C CNN
-	1    5250 7100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR041
-U 1 1 5F6966EB
-P 5250 6900
-F 0 "#PWR041" H 5250 6750 50  0001 C CNN
-F 1 "+5V" H 5350 7000 50  0000 C CNN
-F 2 "" H 5250 6900 50  0001 C CNN
-F 3 "" H 5250 6900 50  0001 C CNN
-	1    5250 6900
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:+3.3V #PWR047
 U 1 1 5F6B33A4
 P 6650 4100
@@ -1704,8 +1623,6 @@ F 3 "" H 4950 5900 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	4350 5600 4950 5600
-Text Notes 4800 7600 0    50   ~ 0
-ATMEGA328\nprogramming\nheader/test\nport
 Text Notes 3950 7350 0    50   ~ 0
 Jumper for ground \nloop mediation
 $Comp
@@ -1870,7 +1787,7 @@ F 3 "" H 1400 3150 50  0001 C CNN
 	1    1400 3150
 	1    0    0    -1  
 $EndComp
-Text Notes 1800 2000 0    50   ~ 0
+Text Notes 1200 1950 0    50   ~ 0
 USB power\nsmooother
 Text Label 3800 2300 0    50   ~ 0
 4F
@@ -1879,12 +1796,12 @@ Text Label 3900 2500 0    50   ~ 0
 Wire Wire Line
 	6200 1900 5350 1900
 Connection ~ 5350 1900
-Connection ~ 1950 2850
+Connection ~ 2100 2850
 Wire Wire Line
 	1400 2850 1700 2850
 Connection ~ 1700 2850
 Wire Wire Line
-	1700 2850 1950 2850
+	1700 2850 1900 2850
 $Comp
 L lt6231:+4.3V #PWR037
 U 1 1 5F8AA93A
@@ -2092,51 +2009,51 @@ NoConn ~ 4350 6500
 $Comp
 L Connector:Conn_01x02_Male J2
 U 1 1 5FA2C049
-P 1450 800
-F 0 "J2" V 1400 750 50  0000 C CNN
-F 1 "Conn_01x02_Male" H 1558 890 50  0001 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 1450 800 50  0001 C CNN
-F 3 "~" H 1450 800 50  0001 C CNN
-	1    1450 800 
+P 850 800
+F 0 "J2" V 800 750 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 958 890 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 850 800 50  0001 C CNN
+F 3 "~" H 850 800 50  0001 C CNN
+	1    850  800 
 	0    1    1    0   
 $EndComp
-Text Label 2800 1000 0    50   ~ 0
+Text Label 1150 850  2    50   ~ 0
 V_IN
 $Comp
 L power:GND #PWR07
 U 1 1 5FA2E29E
-P 1350 1000
-F 0 "#PWR07" H 1350 750 50  0001 C CNN
-F 1 "GND" H 1200 850 50  0001 C CNN
-F 2 "" H 1350 1000 50  0001 C CNN
-F 3 "" H 1350 1000 50  0001 C CNN
-	1    1350 1000
+P 750 1000
+F 0 "#PWR07" H 750 750 50  0001 C CNN
+F 1 "GND" H 600 850 50  0001 C CNN
+F 2 "" H 750 1000 50  0001 C CNN
+F 3 "" H 750 1000 50  0001 C CNN
+	1    750  1000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2200 1000 2750 1000
-Text Notes 1200 700  0    50   ~ 0
+	2450 1000 3000 1000
+Text Notes 600  700  0    50   ~ 0
 Battery input
 $Comp
 L Device:C C4
 U 1 1 5FA60BD0
-P 2200 1150
-F 0 "C4" H 2315 1196 50  0000 L CNN
-F 1 "10uF" H 2315 1105 50  0000 L CNN
-F 2 "Capacitors_SMD:C_0805" H 2238 1000 50  0001 C CNN
-F 3 "~" H 2200 1150 50  0001 C CNN
-	1    2200 1150
+P 2450 1150
+F 0 "C4" H 2565 1196 50  0000 L CNN
+F 1 "10uF" H 2565 1105 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2488 1000 50  0001 C CNN
+F 3 "~" H 2450 1150 50  0001 C CNN
+	1    2450 1150
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR018
 U 1 1 5FA613D6
-P 2200 1300
-F 0 "#PWR018" H 2200 1050 50  0001 C CNN
-F 1 "GND" H 2350 1200 50  0001 C CNN
-F 2 "" H 2200 1300 50  0001 C CNN
-F 3 "" H 2200 1300 50  0001 C CNN
-	1    2200 1300
+P 2450 1300
+F 0 "#PWR018" H 2450 1050 50  0001 C CNN
+F 1 "GND" H 2600 1200 50  0001 C CNN
+F 2 "" H 2450 1300 50  0001 C CNN
+F 3 "" H 2450 1300 50  0001 C CNN
+	1    2450 1300
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -2169,7 +2086,7 @@ Wire Wire Line
 	1800 3200 1800 3100
 Wire Wire Line
 	1800 3100 1950 3100
-Text Notes 2150 900  0    50   ~ 0
+Text Notes 1850 800  0    50   ~ 0
 Power supplied here\nor from USB connector\non MCU
 Text Notes 8700 1650 0    50   ~ 0
 For connection\nto external \nsound card/\ncomputer
@@ -2199,22 +2116,7 @@ Text Label 5900 4950 2    50   ~ 0
 BUTTON
 Text Notes 2650 5050 0    50   ~ 0
 In the Nano\nAVCC is connected \ninternally to +5V.  \nThis may cause\nnoise problems.
-$Comp
-L Device:L L2
-U 1 1 5FBC2F2A
-P 1950 1000
-F 0 "L2" V 2140 1000 50  0000 C CNN
-F 1 "300uH" V 2049 1000 50  0000 C CNN
-F 2 "" H 1950 1000 50  0001 C CNN
-F 3 "~" H 1950 1000 50  0001 C CNN
-	1    1950 1000
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	1750 1000 1800 1000
-Wire Wire Line
-	2100 1000 2200 1000
-Connection ~ 2200 1000
+Connection ~ 2450 1000
 $Comp
 L Device:C C2
 U 1 1 5FBE8105
@@ -2268,12 +2170,12 @@ ADC mid\nvoltage,\nDVM\ngenerator
 $Comp
 L Diode:D_ALT D1
 U 1 1 5FCD6369
-P 1600 1000
-F 0 "D1" H 1600 900 50  0000 C CNN
-F 1 "MMBD4148" H 1550 1100 50  0000 C CNN
-F 2 "SMA:D_SOT-23_ANK" H 1600 1000 50  0001 C CNN
-F 3 "https://assets.nexperia.com/documents/data-sheet/MMBD4148.pdf" H 1600 1000 50  0001 C CNN
-	1    1600 1000
+P 1000 1000
+F 0 "D1" H 1000 900 50  0000 C CNN
+F 1 "MMBD4148" H 950 1100 50  0000 C CNN
+F 2 "SMA:D_SOT-23_ANK" H 1000 1000 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/MMBD4148.pdf" H 1000 1000 50  0001 C CNN
+	1    1000 1000
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -2335,28 +2237,25 @@ Wire Wire Line
 $Comp
 L power:PWR_FLAG #FLG0101
 U 1 1 5FEC948D
-P 2750 1000
-F 0 "#FLG0101" H 2750 1075 50  0001 C CNN
-F 1 "PWR_FLAG" H 2750 1173 50  0000 C CNN
-F 2 "" H 2750 1000 50  0001 C CNN
-F 3 "~" H 2750 1000 50  0001 C CNN
-	1    2750 1000
-	-1   0    0    1   
+P 1150 900
+F 0 "#FLG0101" H 1150 975 50  0001 C CNN
+F 1 "PWR_FLAG" V 1300 950 50  0001 C CNN
+F 2 "" H 1150 900 50  0001 C CNN
+F 3 "~" H 1150 900 50  0001 C CNN
+	1    1150 900 
+	0    -1   -1   0   
 $EndComp
-Connection ~ 2750 1000
-Wire Wire Line
-	2750 1000 2800 1000
 Wire Wire Line
 	6800 4100 7550 4100
 $Comp
 L power:PWR_FLAG #FLG0102
 U 1 1 5FEDD8CF
-P 1950 2850
-F 0 "#FLG0102" H 1950 2925 50  0001 C CNN
-F 1 "PWR_FLAG" H 1950 3023 50  0000 C CNN
-F 2 "" H 1950 2850 50  0001 C CNN
-F 3 "~" H 1950 2850 50  0001 C CNN
-	1    1950 2850
+P 2100 2850
+F 0 "#FLG0102" H 2100 2925 50  0001 C CNN
+F 1 "PWR_FLAG" H 2100 3023 50  0000 C CNN
+F 2 "" H 2100 2850 50  0001 C CNN
+F 3 "~" H 2100 2850 50  0001 C CNN
+	1    2100 2850
 	-1   0    0    1   
 $EndComp
 $Comp
@@ -2364,7 +2263,7 @@ L lt6231:LT6231 U5
 U 1 1 5F00833E
 P 7400 1650
 F 0 "U5" H 7150 1400 50  0000 C CNN
-F 1 "LT6231" H 7500 1850 50  0000 C CNN
+F 1 "LT6231 (or LM4562)" H 7750 1850 50  0000 C CNN
 F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 7350 1750 50  0001 C CNN
 F 3 "https://www.analog.com/en/products/lt6231.html" H 7450 1850 50  0001 C CNN
 	1    7400 1650
@@ -2375,7 +2274,7 @@ L lt6231:LT6231 U5
 U 2 1 5F00967E
 P 7400 2400
 F 0 "U5" H 7450 2550 50  0000 L CNN
-F 1 "LT6231" H 7400 2200 50  0000 L CNN
+F 1 "LT6231 (or LM4562)" H 7400 2050 50  0000 L CNN
 F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 7350 2500 50  0001 C CNN
 F 3 "https://www.analog.com/en/products/lt6231.html" H 7450 2600 50  0001 C CNN
 	2    7400 2400
@@ -2384,17 +2283,17 @@ $EndComp
 $Comp
 L power:PWR_FLAG #FLG0103
 U 1 1 5FEDF6AC
-P 2200 1300
-F 0 "#FLG0103" H 2200 1375 50  0001 C CNN
-F 1 "PWR_FLAG" V 2200 1428 50  0000 L CNN
-F 2 "" H 2200 1300 50  0001 C CNN
-F 3 "~" H 2200 1300 50  0001 C CNN
-	1    2200 1300
+P 2450 1300
+F 0 "#FLG0103" H 2450 1375 50  0001 C CNN
+F 1 "PWR_FLAG" V 2450 1428 50  0000 L CNN
+F 2 "" H 2450 1300 50  0001 C CNN
+F 3 "~" H 2450 1300 50  0001 C CNN
+	1    2450 1300
 	0    1    1    0   
 $EndComp
 Wire Wire Line
 	7550 3500 7700 3500
-Connection ~ 2200 1300
+Connection ~ 2450 1300
 $Comp
 L power:PWR_FLAG #FLG0104
 U 1 1 5FF0545A
@@ -2411,4 +2310,100 @@ Wire Wire Line
 	800  5800 800  5600
 Text Notes 2600 2050 0    50   ~ 0
 Antenna
+Wire Wire Line
+	950  1700 950  2200
+$Comp
+L power:GND #PWR04
+U 1 1 5F0DBDA2
+P 1650 1300
+F 0 "#PWR04" H 1650 1050 50  0001 C CNN
+F 1 "GND" H 1800 1200 50  0001 C CNN
+F 2 "" H 1650 1300 50  0001 C CNN
+F 3 "" H 1650 1300 50  0001 C CNN
+	1    1650 1300
+	1    0    0    -1  
+$EndComp
+Connection ~ 1150 1000
+$Comp
+L Device:C C1
+U 1 1 5F1109C9
+P 1300 1200
+F 0 "C1" H 1100 1200 50  0000 L CNN
+F 1 "1uF" H 1300 1100 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1338 1050 50  0001 C CNN
+F 3 "~" H 1300 1200 50  0001 C CNN
+	1    1300 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5F110E58
+P 1300 1350
+F 0 "#PWR01" H 1300 1100 50  0001 C CNN
+F 1 "GND" H 1450 1250 50  0001 C CNN
+F 2 "" H 1300 1350 50  0001 C CNN
+F 3 "" H 1300 1350 50  0001 C CNN
+	1    1300 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 850  1150 900 
+$Comp
+L power:+5V #PWR05
+U 1 1 5F163E95
+P 3000 1000
+F 0 "#PWR05" H 3000 850 50  0001 C CNN
+F 1 "+5V" H 3100 1100 50  0000 C CNN
+F 2 "" H 3000 1000 50  0001 C CNN
+F 3 "" H 3000 1000 50  0001 C CNN
+	1    3000 1000
+	1    0    0    -1  
+$EndComp
+Connection ~ 1150 900 
+Wire Wire Line
+	1150 900  1150 1000
+$Comp
+L Connector:Conn_01x02_Male J1
+U 1 1 5F16629C
+P 2100 2250
+F 0 "J1" H 2150 2350 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 2208 2340 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 2100 2250 50  0001 C CNN
+F 3 "~" H 2100 2250 50  0001 C CNN
+	1    2100 2250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1900 2150 1900 1700
+Wire Wire Line
+	1900 1700 1700 1700
+Wire Wire Line
+	1900 2250 1900 2850
+Wire Wire Line
+	1900 2850 2100 2850
+Connection ~ 1900 2850
+Text Notes 2000 2050 0    50   ~ 0
+Smoother\ndisable jumper\n(makes +4.3V \nall +5V)
+Wire Wire Line
+	1950 1000 2450 1000
+Wire Wire Line
+	1350 1000 1300 1000
+$Comp
+L Regulator_Linear:MC78M05_TO252 U6
+U 1 1 5F1E4A67
+P 1650 1000
+F 0 "U6" H 1650 1242 50  0000 C CNN
+F 1 "MC78M05_TO252" H 1650 1151 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:TO-252-2" H 1650 1225 50  0001 C CIN
+F 3 "http://www.fairchildsemi.com/ds/LM/LM78M05.pdf" H 1650 950 50  0001 C CNN
+	1    1650 1000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1300 1050 1300 1000
+Connection ~ 1300 1000
+Wire Wire Line
+	1300 1000 1150 1000
+Text Notes 750  1400 0    50   ~ 0
+Reverse\npolarity\nprotection
 $EndSCHEMATC

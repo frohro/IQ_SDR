@@ -144,4 +144,5 @@
   (lib (name Nano_MCU_Module)(type Legacy)(uri ${KIPRJMOD}/MCU_Module.lib)(options "")(descr ""))
   (lib (name bluepill)(type Legacy)(uri ${KIPRJMOD}/bluepill.lib)(options "")(descr ""))
   (lib (name Diode)(type Legacy)(uri ${KIPRJMOD}/Diode.lib)(options "")(descr ""))
+  (lib (name muSDR-rescue)(type Legacy)(uri ${KIPRJMOD}/muSDR-rescue.lib)(options "")(descr ""))
 )
