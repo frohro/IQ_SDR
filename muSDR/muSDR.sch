@@ -1203,7 +1203,7 @@ Wire Wire Line
 	7050 3150 7050 3500
 Text Notes 8800 2800 0    50   ~ 0
 Jumper for ground \nloop mediation
-Text Notes 3050 2400 0    50   ~ 0
+Text Notes 2450 2650 0    50   ~ 0
 Jumper for \nground loop \nmediation
 Text Notes 850  4650 0    50   ~ 0
 LCD Adjust
@@ -2406,4 +2406,19 @@ Wire Wire Line
 	1300 1000 1150 1000
 Text Notes 750  1400 0    50   ~ 0
 Reverse\npolarity\nprotection
+$Comp
+L Connector:Conn_01x02_Male J6
+U 1 1 5F23035F
+P 3400 2150
+F 0 "J6" V 3508 2194 50  0000 L CNN
+F 1 "Conn_01x02_Male" H 3508 2240 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 3400 2150 50  0001 C CNN
+F 3 "~" H 3400 2150 50  0001 C CNN
+	1    3400 2150
+	0    1    -1   0   
+$EndComp
+Connection ~ 3400 1950
+Connection ~ 3300 1950
+Text Notes 3050 2400 0    50   ~ 0
+Don't popluate\nJ6.  It is to solder\na BP filter hack.
 $EndSCHEMATC
