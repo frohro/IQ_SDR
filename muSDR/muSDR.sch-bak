@@ -52,7 +52,7 @@ U 1 1 5EFDC007
 P 4550 2300
 F 0 "U3" H 4550 2300 50  0000 C CNN
 F 1 "SN74CBT3253" H 4850 2900 50  0000 C CNN
-F 2 "Housings_SOIC:SOIC-14_3.9x8.7mm_Pitch1.27mm" H 4550 2300 50  0001 C CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 4550 2300 50  0001 C CNN
 F 3 "http://www.ti.com/lit/gpn/sn74cbt3253" H 4550 2300 50  0001 C CNN
 	1    4550 2300
 	1    0    0    -1  
@@ -113,7 +113,7 @@ U 1 1 5EFFC21A
 P 3000 3500
 F 0 "U2" H 3000 3550 50  0000 C CNN
 F 1 "Si5351A-B-GT" H 3000 3400 50  0000 C CNN
-F 2 "Package_SO:MSOP-10_3x3mm_P0.5mm" H 3000 2700 50  0001 C CNN
+F 2 "Housings_SSOP:MSOP-10_3x3mm_Pitch0.5mm" H 3000 2700 50  0001 C CNN
 F 3 "https://www.silabs.com/documents/public/data-sheets/Si5351-B.pdf" H 2650 3400 50  0001 C CNN
 	1    3000 3500
 	1    0    0    -1  
@@ -850,7 +850,7 @@ U 1 1 5F142720
 P 1050 4800
 F 0 "RV1" V 950 4800 50  0000 C CNN
 F 1 "10k" V 1050 4800 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" H 1050 4800 50  0001 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_ACP_CA6h_Vertical" H 1050 4800 50  0001 C CNN
 F 3 "~" H 1050 4800 50  0001 C CNN
 	1    1050 4800
 	0    1    1    0   
@@ -916,8 +916,8 @@ U 1 1 5F1B025B
 P 2450 6950
 F 0 "SW3" H 2450 6675 50  0000 C CNN
 F 1 "Rotary_Encoder_Switch" H 2450 6674 50  0001 C CNN
-F 2 "digikey-footprints:Rotary_Encoder_Switched_PEC11R" H 2300 7110 50  0001 C CNN
-F 3 "~" H 2450 7210 50  0001 C CNN
+F 2 "SMA:Rotary_Encoder_Switched_PEC11R" H 2300 7110 50  0001 C CNN
+F 3 "https://www.bourns.com/docs/product-datasheets/pec11r.pdf" H 2450 7210 50  0001 C CNN
 	1    2450 6950
 	-1   0    0    1   
 $EndComp
@@ -931,17 +931,6 @@ F 2 "Capacitors_SMD:C_0805" H 3688 1800 50  0001 C CNN
 F 3 "~" H 3650 1950 50  0001 C CNN
 	1    3650 1950
 	0    1    1    0   
-$EndComp
-$Comp
-L Connector:AudioJack3 J10
-U 1 1 5F1D69D0
-P 8900 1950
-F 0 "J10" H 8620 1883 50  0000 R CNN
-F 1 "AudioJack3" H 8620 1974 50  0001 R CNN
-F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 8900 1950 50  0001 C CNN
-F 3 "~" H 8900 1950 50  0001 C CNN
-	1    8900 1950
-	-1   0    0    1   
 $EndComp
 Wire Wire Line
 	8350 2400 8350 1950
@@ -1029,7 +1018,7 @@ U 1 1 5F21DB66
 P 3850 5800
 F 0 "A1" H 3850 5950 50  0000 C CNN
 F 1 "Arduino_Nano_v3.x" H 3850 6500 50  0000 C CNN
-F 2 "Module:Arduino_Nano" H 3850 5800 50  0001 C CIN
+F 2 "Modules:Arduino_Nano" H 3850 5800 50  0001 C CIN
 F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 3850 5800 50  0001 C CNN
 	1    3850 5800
 	1    0    0    -1  
@@ -1540,17 +1529,7 @@ Text Notes 1200 3850 0    50   ~ 0
 Scope \nGND\nconnections
 Text Label 7650 5450 0    50   ~ 0
 SIG_OUT
-Text Label 3350 6300 2    50   ~ 0
-MOSI
-Text Label 3350 6400 2    50   ~ 0
-MISO
-Text Label 4350 5300 0    50   ~ 0
-RESET
 NoConn ~ 4350 5200
-Text Label 5900 5950 2    50   ~ 0
-RESET
-Text Label 3350 6500 2    50   ~ 0
-SCK
 $Comp
 L power:+3.3V #PWR047
 U 1 1 5F6B33A4
@@ -1918,17 +1897,6 @@ F 3 "~" H 7800 4650 50  0001 C CNN
 	1    7800 4650
 	0    1    1    0   
 $EndComp
-$Comp
-L Connector:AudioJack3 J12
-U 1 1 5F95F929
-P 8900 4700
-F 0 "J12" H 8620 4633 50  0000 R CNN
-F 1 "AudioJack3" H 8620 4724 50  0001 R CNN
-F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 8900 4700 50  0001 C CNN
-F 3 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 8900 4700 50  0001 C CNN
-	1    8900 4700
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	7950 4650 8700 4650
 Wire Wire Line
@@ -2151,7 +2119,7 @@ U 1 1 5F710694
 P 6650 5150
 F 0 "U4" H 6650 5050 60  0000 C CNN
 F 1 "BluePill" H 6650 5150 60  0000 C CNN
-F 2 "blue_pill:BLUEPILL" H 6550 5900 60  0001 C CNN
+F 2 "BP:BLUEPILL" H 6550 5900 60  0001 C CNN
 F 3 "https://stm32-base.org/boards/STM32F103C8T6-Blue-Pill.html" H 6550 5900 60  0001 C CNN
 	1    6650 5150
 	1    0    0    -1  
@@ -2421,4 +2389,50 @@ Connection ~ 3400 1950
 Connection ~ 3300 1950
 Text Notes 3050 2400 0    50   ~ 0
 Don't popluate\nJ6.  It is to solder\na BP filter hack.
+NoConn ~ 3350 6500
+NoConn ~ 3350 6400
+NoConn ~ 3350 6300
+NoConn ~ 5900 5950
+NoConn ~ 4350 5300
+NoConn ~ 2200 4050
+$Comp
+L dk_Barrel-Audio-Connectors:SJ1-3523N CON2
+U 1 1 5F160AB4
+P 9100 4700
+F 0 "CON2" H 8772 4700 60  0000 R CNN
+F 1 "SJ1-3523N" H 8772 4647 60  0001 R CNN
+F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 9300 4900 60  0001 L CNN
+F 3 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 9300 5000 60  0001 L CNN
+F 4 "CP1-3523N-ND" H 9300 5100 60  0001 L CNN "Digi-Key_PN"
+F 5 "SJ1-3523N" H 9300 5200 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 9300 5300 60  0001 L CNN "Category"
+F 7 "Barrel - Audio Connectors" H 9300 5400 60  0001 L CNN "Family"
+F 8 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 9300 5500 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/cui-inc/SJ1-3523N/CP1-3523N-ND/738689" H 9300 5600 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN JACK STEREO 3.5MM R/A" H 9300 5700 60  0001 L CNN "Description"
+F 11 "CUI Inc." H 9300 5800 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 9300 5900 60  0001 L CNN "Status"
+	1    9100 4700
+	-1   0    0    -1  
+$EndComp
+$Comp
+L dk_Barrel-Audio-Connectors:SJ1-3523N CON1
+U 1 1 5F1644E0
+P 9100 1950
+F 0 "CON1" H 8772 1950 60  0000 R CNN
+F 1 "SJ1-3523N" H 8772 1897 60  0001 R CNN
+F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 9300 2150 60  0001 L CNN
+F 3 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 9300 2250 60  0001 L CNN
+F 4 "CP1-3523N-ND" H 9300 2350 60  0001 L CNN "Digi-Key_PN"
+F 5 "SJ1-3523N" H 9300 2450 60  0001 L CNN "MPN"
+F 6 "Connectors, Interconnects" H 9300 2550 60  0001 L CNN "Category"
+F 7 "Barrel - Audio Connectors" H 9300 2650 60  0001 L CNN "Family"
+F 8 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 9300 2750 60  0001 L CNN "DK_Datasheet_Link"
+F 9 "/product-detail/en/cui-inc/SJ1-3523N/CP1-3523N-ND/738689" H 9300 2850 60  0001 L CNN "DK_Detail_Page"
+F 10 "CONN JACK STEREO 3.5MM R/A" H 9300 2950 60  0001 L CNN "Description"
+F 11 "CUI Inc." H 9300 3050 60  0001 L CNN "Manufacturer"
+F 12 "Active" H 9300 3150 60  0001 L CNN "Status"
+	1    9100 1950
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
