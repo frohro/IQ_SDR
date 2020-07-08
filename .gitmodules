@@ -2,5 +2,5 @@
 	path = Transceiver/IQ_SDR/digikey-kicad-library
 	url = https://github.com/Digi-Key/digikey-kicad-library.git
 [submodule "muSDR/digikey-kicad-library"]
-	path = muSDR/digikey-kicad-library
+	path = muSDRx/digikey-kicad-library
 	url = https://github.com/Digi-Key/digikey-kicad-library.git

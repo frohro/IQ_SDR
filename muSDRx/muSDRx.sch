@@ -4,7 +4,7 @@ EELAYER END
 $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "muSDR Receiver"
+Title "muSDRx Receiver"
 Date "2020-07-01"
 Rev "0.1"
 Comp "Rob Frohne, KL7NA"
@@ -1059,7 +1059,7 @@ U 1 1 5F265F24
 P 1500 7150
 F 0 "SW1" H 1500 7343 50  0000 C CNN
 F 1 "SW_Push" H 1500 7344 50  0001 C CNN
-F 2 "Buttons_Switches_SMD:SW_SPST_B3S-1000" H 1500 7350 50  0001 C CNN
+F 2 "Buttons_Switches_THT:SW_PUSH_6mm_h4.3mm" H 1500 7350 50  0001 C CNN
 F 3 "~" H 1500 7350 50  0001 C CNN
 	1    1500 7150
 	1    0    0    -1  
@@ -1114,7 +1114,7 @@ U 1 1 5F2CFDD3
 P 1500 7350
 F 0 "SW2" H 1500 7250 50  0000 C CNN
 F 1 "SW_Push" H 1500 7544 50  0001 C CNN
-F 2 "Buttons_Switches_SMD:SW_SPST_B3S-1000" H 1500 7550 50  0001 C CNN
+F 2 "Buttons_Switches_THT:SW_PUSH_6mm_h4.3mm" H 1500 7550 50  0001 C CNN
 F 3 "~" H 1500 7550 50  0001 C CNN
 	1    1500 7350
 	1    0    0    -1  
@@ -2402,7 +2402,7 @@ P 9100 4700
 F 0 "CON2" H 8772 4700 60  0000 R CNN
 F 1 "SJ1-3523N" H 8772 4647 60  0001 R CNN
 F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 9300 4900 60  0001 L CNN
-F 3 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 9300 5000 60  0001 L CNN
+F 3 "https://www.cuidevices.com/product/resource/sj1-352xn.pdf" H 9300 5000 60  0001 L CNN
 F 4 "CP1-3523N-ND" H 9300 5100 60  0001 L CNN "Digi-Key_PN"
 F 5 "SJ1-3523N" H 9300 5200 60  0001 L CNN "MPN"
 F 6 "Connectors, Interconnects" H 9300 5300 60  0001 L CNN "Category"
@@ -2422,7 +2422,7 @@ P 9100 1950
 F 0 "CON1" H 8772 1950 60  0000 R CNN
 F 1 "SJ1-3523N" H 8772 1897 60  0001 R CNN
 F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 9300 2150 60  0001 L CNN
-F 3 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 9300 2250 60  0001 L CNN
+F 3 "https://www.cuidevices.com/product/resource/sj1-352xn.pdf" H 9300 2250 60  0001 L CNN
 F 4 "CP1-3523N-ND" H 9300 2350 60  0001 L CNN "Digi-Key_PN"
 F 5 "SJ1-3523N" H 9300 2450 60  0001 L CNN "MPN"
 F 6 "Connectors, Interconnects" H 9300 2550 60  0001 L CNN "Category"
