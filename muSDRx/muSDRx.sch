@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L lt6231:BNC P1
+L muSDRx-rescue:BNC-lt6231 P1
 U 1 1 5EFD1575
 P 3000 1950
 F 0 "P1" H 2954 2188 50  0000 C CNN
@@ -25,7 +25,7 @@ F 3 "" H 3000 1950 50  0000 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Connector:Conn_01x02_Male J3
+L muSDRx-rescue:Conn_01x02_Male-Connector J3
 U 1 1 5EFD7112
 P 2800 2300
 F 0 "J3" H 2850 2400 50  0000 C CNN
@@ -240,7 +240,7 @@ F 3 "~" H 4250 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L lt6231:+4.3V #PWR030
+L muSDRx-rescue:+4.3V-lt6231 #PWR030
 U 1 1 5F00D056
 P 4500 950
 F 0 "#PWR030" H 4500 800 50  0001 C CNN
@@ -651,7 +651,7 @@ Wire Wire Line
 Wire Wire Line
 	3000 2400 3000 2500
 $Comp
-L Connector:Conn_01x02_Male J5
+L muSDRx-rescue:Conn_01x02_Male-Connector J5
 U 1 1 5F0DCBF2
 P 3700 7250
 F 0 "J5" H 3600 7200 50  0000 C CNN
@@ -739,7 +739,7 @@ F 3 "~" H 800 5450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L muSDR-rescue:MMBT2222A-TP-dk_Transistors-Bipolar-BJT-Single Q1
+L muSDRx-rescue:MMBT2222A-TP-dk_Transistors-Bipolar-BJT-Single-muSDR-rescue Q1
 U 1 1 5F1096CA
 P 1600 2200
 F 0 "Q1" H 1788 2253 60  0000 L CNN
@@ -775,7 +775,7 @@ Wire Wire Line
 	1700 2000 1700 1700
 Connection ~ 1700 1700
 $Comp
-L lt6231:+4.3V #PWR014
+L muSDRx-rescue:+4.3V-lt6231 #PWR014
 U 1 1 5F12693B
 P 2100 2850
 F 0 "#PWR014" H 2100 2700 50  0001 C CNN
@@ -865,7 +865,7 @@ Wire Wire Line
 	1500 5100 1500 4800
 Connection ~ 1500 4800
 $Comp
-L LCD1602:LCD1602 U1
+L Display_Character:LCD1602 U1
 U 1 1 5F17AD7C
 P 1500 5900
 F 0 "U1" H 1500 6300 50  0000 C CNN
@@ -900,7 +900,7 @@ AUD_0
 Text Label 7900 2300 0    50   ~ 0
 AUD_1
 $Comp
-L lt6231:+4.3V #PWR036
+L muSDRx-rescue:+4.3V-lt6231 #PWR036
 U 1 1 5F1AEE46
 P 4950 1450
 F 0 "#PWR036" H 4950 1300 50  0001 C CNN
@@ -941,7 +941,7 @@ Wire Wire Line
 Wire Wire Line
 	8350 1850 8700 1850
 $Comp
-L Connector:Conn_01x02_Male J11
+L muSDRx-rescue:Conn_01x02_Male-Connector J11
 U 1 1 5F1EC561
 P 8900 2500
 F 0 "J11" H 8800 2450 50  0000 C CNN
@@ -1199,7 +1199,7 @@ LCD Adjust
 Text Label 3750 4800 2    50   ~ 0
 V_IN
 $Comp
-L Connector:TestPoint TP13
+L muSDRx-rescue:TestPoint-Connector TP13
 U 1 1 5F419082
 P 7900 1650
 F 0 "TP13" H 7958 1722 50  0000 L CNN
@@ -1210,7 +1210,7 @@ F 3 "~" H 8100 1650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP14
+L muSDRx-rescue:TestPoint-Connector TP14
 U 1 1 5F419D9A
 P 7900 2400
 F 0 "TP14" H 8000 2650 50  0000 R CNN
@@ -1227,7 +1227,7 @@ Connection ~ 7900 1650
 Wire Wire Line
 	7900 1650 7700 1650
 $Comp
-L Connector:TestPoint TP6
+L muSDRx-rescue:TestPoint-Connector TP6
 U 1 1 5F41BD7E
 P 6200 1550
 F 0 "TP6" H 6258 1622 50  0000 L CNN
@@ -1239,7 +1239,7 @@ F 3 "~" H 6400 1550 50  0001 C CNN
 $EndComp
 Connection ~ 6200 1550
 $Comp
-L Connector:TestPoint TP7
+L muSDRx-rescue:TestPoint-Connector TP7
 U 1 1 5F41CDD2
 P 6350 1750
 F 0 "TP7" H 6408 1822 50  0000 L CNN
@@ -1251,7 +1251,7 @@ F 3 "~" H 6550 1750 50  0001 C CNN
 $EndComp
 Connection ~ 6350 1750
 $Comp
-L Connector:TestPoint TP9
+L muSDRx-rescue:TestPoint-Connector TP9
 U 1 1 5F41D5B8
 P 6500 2300
 F 0 "TP9" V 6400 2350 50  0000 C CNN
@@ -1262,7 +1262,7 @@ F 3 "~" H 6700 2300 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:TestPoint TP8
+L muSDRx-rescue:TestPoint-Connector TP8
 U 1 1 5F41DC51
 P 6350 2500
 F 0 "TP8" H 6292 2572 50  0000 R CNN
@@ -1277,7 +1277,7 @@ Wire Wire Line
 	6350 2500 6600 2500
 Connection ~ 6500 2300
 $Comp
-L Connector:TestPoint TP5
+L muSDRx-rescue:TestPoint-Connector TP5
 U 1 1 5F420248
 P 3950 1600
 F 0 "TP5" V 4008 1672 50  0000 L CNN
@@ -1293,7 +1293,7 @@ Connection ~ 3950 1950
 Wire Wire Line
 	3950 1950 4150 1950
 $Comp
-L Connector:TestPoint TP2
+L muSDRx-rescue:TestPoint-Connector TP2
 U 1 1 5F5259B2
 P 3550 3300
 F 0 "TP2" H 3608 3372 50  0000 L CNN
@@ -1304,7 +1304,7 @@ F 3 "~" H 3750 3300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP3
+L muSDRx-rescue:TestPoint-Connector TP3
 U 1 1 5F526478
 P 3650 3500
 F 0 "TP3" H 3708 3572 50  0000 L CNN
@@ -1323,7 +1323,7 @@ Wire Wire Line
 Wire Wire Line
 	3500 3700 3750 3700
 $Comp
-L Connector:TestPoint TP4
+L muSDRx-rescue:TestPoint-Connector TP4
 U 1 1 5F531D25
 P 3750 3700
 F 0 "TP4" H 3808 3772 50  0000 L CNN
@@ -1337,7 +1337,7 @@ Connection ~ 3950 1600
 Wire Wire Line
 	3950 1600 3950 1950
 $Comp
-L Connector:Conn_01x02_Male J4
+L muSDRx-rescue:Conn_01x02_Male-Connector J4
 U 1 1 5F533B86
 P 3400 1750
 F 0 "J4" V 3508 1794 50  0000 L CNN
@@ -1354,7 +1354,7 @@ Wire Wire Line
 Text Notes 2900 1650 0    50   ~ 0
 J4 for optional BP filter
 $Comp
-L Connector:TestPoint TP1
+L muSDRx-rescue:TestPoint-Connector TP1
 U 1 1 5F549AF1
 P 2100 2850
 F 0 "TP1" V 2100 3050 50  0000 L CNN
@@ -1400,7 +1400,7 @@ FREQ_COUNT
 Wire Wire Line
 	7400 5850 7950 5850
 $Comp
-L Connector:TestPoint TP12
+L muSDRx-rescue:TestPoint-Connector TP12
 U 1 1 5F5BCB4E
 P 7950 5850
 F 0 "TP12" V 7950 6050 50  0000 L CNN
@@ -1447,7 +1447,7 @@ $EndComp
 Wire Wire Line
 	8150 5150 7400 5150
 $Comp
-L Connector:Conn_01x04_Male J9
+L muSDRx-rescue:Conn_01x04_Male-Connector J9
 U 1 1 5F5F2CED
 P 8650 5450
 F 0 "J9" H 8758 5117 50  0000 C CNN
@@ -1493,7 +1493,7 @@ F 3 "" H 800 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP10
+L muSDRx-rescue:TestPoint-Connector TP10
 U 1 1 5F61DDA9
 P 800 3850
 F 0 "TP10" H 700 4100 50  0000 L CNN
@@ -1515,7 +1515,7 @@ F 3 "" H 1100 3850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector:TestPoint TP11
+L muSDRx-rescue:TestPoint-Connector TP11
 U 1 1 5F61EF1D
 P 1100 3850
 F 0 "TP11" H 1000 4100 50  0000 L CNN
@@ -1782,7 +1782,7 @@ Connection ~ 1700 2850
 Wire Wire Line
 	1700 2850 1900 2850
 $Comp
-L lt6231:+4.3V #PWR037
+L muSDRx-rescue:+4.3V-lt6231 #PWR037
 U 1 1 5F8AA93A
 P 4950 5600
 F 0 "#PWR037" H 4950 5450 50  0001 C CNN
@@ -1962,7 +1962,7 @@ VHI
 Text Label 4950 3650 2    50   ~ 0
 VHI
 $Comp
-L lt6231:+4.3V #PWR053
+L muSDRx-rescue:+4.3V-lt6231 #PWR053
 U 1 1 5F9F0A34
 P 7500 2100
 F 0 "#PWR053" H 7500 1950 50  0001 C CNN
@@ -1975,7 +1975,7 @@ $EndComp
 NoConn ~ 4350 6400
 NoConn ~ 4350 6500
 $Comp
-L Connector:Conn_01x02_Male J2
+L muSDRx-rescue:Conn_01x02_Male-Connector J2
 U 1 1 5FA2C049
 P 850 800
 F 0 "J2" V 800 750 50  0000 C CNN
@@ -2040,7 +2040,7 @@ Wire Wire Line
 Wire Wire Line
 	2750 7100 2750 7050
 $Comp
-L cx3225:CX3225 Y1
+L muSDRx-rescue:CX3225-cx3225 Y1
 U 1 1 5FAB6A9E
 P 2050 3300
 F 0 "Y1" V 2096 3122 50  0000 R CNN
@@ -2162,7 +2162,7 @@ VHI
 Text Notes 7350 6400 0    50   ~ 0
 Drive VHI HIGH to \nset the HIGH logic\nlevel and correct\nDVM for the MCU\nused
 $Comp
-L Connector:TestPoint TP16
+L muSDRx-rescue:TestPoint-Connector TP16
 U 1 1 5FDC5CD5
 P 3950 4600
 F 0 "TP16" V 4008 4672 50  0000 L CNN
@@ -2173,7 +2173,7 @@ F 3 "~" H 4150 4600 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector:TestPoint TP17
+L muSDRx-rescue:TestPoint-Connector TP17
 U 1 1 5FDC80B9
 P 7550 4100
 F 0 "TP17" H 7608 4172 50  0000 L CNN
@@ -2187,7 +2187,7 @@ Connection ~ 7550 4100
 Wire Wire Line
 	7550 4100 7850 4100
 $Comp
-L Connector:TestPoint TP15
+L muSDRx-rescue:TestPoint-Connector TP15
 U 1 1 5FDC962F
 P 1050 5050
 F 0 "TP15" V 1050 5250 50  0000 L CNN
@@ -2227,7 +2227,7 @@ F 3 "~" H 2100 2850 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L lt6231:LT6231 U5
+L muSDRx-rescue:LT6231-lt6231 U5
 U 1 1 5F00833E
 P 7400 1650
 F 0 "U5" H 7150 1400 50  0000 C CNN
@@ -2238,7 +2238,7 @@ F 3 "https://www.analog.com/en/products/lt6231.html" H 7450 1850 50  0001 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L lt6231:LT6231 U5
+L muSDRx-rescue:LT6231-lt6231 U5
 U 2 1 5F00967E
 P 7400 2400
 F 0 "U5" H 7450 2550 50  0000 L CNN
@@ -2331,7 +2331,7 @@ Connection ~ 1150 900
 Wire Wire Line
 	1150 900  1150 1000
 $Comp
-L Connector:Conn_01x02_Male J1
+L muSDRx-rescue:Conn_01x02_Male-Connector J1
 U 1 1 5F16629C
 P 2100 2250
 F 0 "J1" H 2150 2350 50  0000 C CNN
@@ -2375,7 +2375,7 @@ Wire Wire Line
 Text Notes 750  1400 0    50   ~ 0
 Reverse\npolarity\nprotection
 $Comp
-L Connector:Conn_01x02_Male J6
+L muSDRx-rescue:Conn_01x02_Male-Connector J6
 U 1 1 5F23035F
 P 3400 2150
 F 0 "J6" V 3508 2194 50  0000 L CNN
