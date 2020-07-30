@@ -297,7 +297,7 @@ L Device:C C11
 U 1 1 5F01CA5E
 P 5050 2850
 F 0 "C11" H 5100 2950 50  0000 L CNN
-F 1 "0.47uF" H 5050 2750 50  0000 L CNN
+F 1 "0.01uF" H 5050 2750 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 5088 2700 50  0001 C CNN
 F 3 "~" H 5050 2850 50  0001 C CNN
 	1    5050 2850
@@ -320,7 +320,7 @@ L Device:C C12
 U 1 1 5F028B2A
 P 5400 2850
 F 0 "C12" H 5450 2950 50  0000 L CNN
-F 1 "0.47uF" H 5400 2750 50  0000 L CNN
+F 1 "0.01uF" H 5400 2750 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 5438 2700 50  0001 C CNN
 F 3 "~" H 5400 2850 50  0001 C CNN
 	1    5400 2850
@@ -342,7 +342,7 @@ L Device:C C14
 U 1 1 5F02A572
 P 5750 2850
 F 0 "C14" H 5800 2950 50  0000 L CNN
-F 1 "0.47uF" H 5750 2750 50  0000 L CNN
+F 1 "0.01uF" H 5750 2750 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 5788 2700 50  0001 C CNN
 F 3 "~" H 5750 2850 50  0001 C CNN
 	1    5750 2850
@@ -364,7 +364,7 @@ L Device:C C15
 U 1 1 5F02C62A
 P 6100 2850
 F 0 "C15" H 6150 2950 50  0000 L CNN
-F 1 "0.47uF" H 6100 2750 50  0000 L CNN
+F 1 "0.01uF" H 6100 2750 50  0000 L CNN
 F 2 "Capacitors_SMD:C_0805" H 6138 2700 50  0001 C CNN
 F 3 "~" H 6100 2850 50  0001 C CNN
 	1    6100 2850
@@ -1144,8 +1144,8 @@ Wire Wire Line
 	1400 2200 1350 2200
 Wire Wire Line
 	1050 2200 950  2200
-Text Notes 7800 950  0    50   ~ 0
-Insert 1nF for 2 kHz cutoff\nDefault 100 kHz cutoff\n(both op amps)
+Text Notes 7800 1300 0    50   ~ 0
+Insert 1nF for 2 kHz cutoff\nDefault 100 kHz cutoff\n(both op amps)  C11 ...C15\nshould be 0.01uF.  For 100kHz\nC11..C15 should be 0.47uF\nBW = 1(pi*4*R_ant*C)\nUse 2 kHz for optimum \nMCU demodulation\nand 100 kHz for 96kHz external\ncomputer demodulation.
 $Comp
 L Device:C C18
 U 1 1 5F3863A1
