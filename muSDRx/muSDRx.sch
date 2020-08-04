@@ -2363,7 +2363,7 @@ P 1650 1000
 F 0 "U6" H 1650 1242 50  0000 C CNN
 F 1 "MC78M05_TO252" H 1650 1151 50  0000 C CNN
 F 2 "TO_SOT_Packages_SMD:TO-252-2" H 1650 1225 50  0001 C CIN
-F 3 "http://www.fairchildsemi.com/ds/LM/LM78M05.pdf" H 1650 950 50  0001 C CNN
+F 3 "https://www.mouser.com/datasheet/2/308/MC78M00-D-1773627.pdf" H 1650 950 50  0001 C CNN
 	1    1650 1000
 	1    0    0    -1  
 $EndComp
@@ -2396,7 +2396,7 @@ NoConn ~ 5900 5950
 NoConn ~ 4350 5300
 NoConn ~ 2200 4050
 $Comp
-L dk_Barrel-Audio-Connectors:SJ1-3523N CON2
+L muSDRx-rescue:SJ1-3523N-dk_Barrel-Audio-Connectors CON2
 U 1 1 5F160AB4
 P 9100 4700
 F 0 "CON2" H 8772 4700 60  0000 R CNN
@@ -2416,7 +2416,7 @@ F 12 "Active" H 9300 5900 60  0001 L CNN "Status"
 	-1   0    0    -1  
 $EndComp
 $Comp
-L dk_Barrel-Audio-Connectors:SJ1-3523N CON1
+L muSDRx-rescue:SJ1-3523N-dk_Barrel-Audio-Connectors CON1
 U 1 1 5F1644E0
 P 9100 1950
 F 0 "CON1" H 8772 1950 60  0000 R CNN
