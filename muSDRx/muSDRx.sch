@@ -971,7 +971,7 @@ L Device:R R7
 U 1 1 5F1FCCD7
 P 2400 3950
 F 0 "R7" H 2470 3996 50  0000 L CNN
-F 1 "1k" H 2470 3905 50  0000 L CNN
+F 1 "4.7k" H 2470 3905 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805" V 2330 3950 50  0001 C CNN
 F 3 "~" H 2400 3950 50  0001 C CNN
 	1    2400 3950
@@ -985,7 +985,7 @@ L Device:R R5
 U 1 1 5F1FDCFC
 P 2000 3850
 F 0 "R5" H 2070 3896 50  0000 L CNN
-F 1 "1k" H 2070 3805 50  0000 L CNN
+F 1 "4.7k" H 2070 3805 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805" V 1930 3850 50  0001 C CNN
 F 3 "~" H 2000 3850 50  0001 C CNN
 	1    2000 3850
@@ -2082,7 +2082,7 @@ NoConn ~ 7400 4850
 NoConn ~ 5900 5050
 Text Label 5900 4950 2    50   ~ 0
 BUTTON
-Text Notes 2650 5050 0    50   ~ 0
+Text Notes 2800 5000 0    50   ~ 0
 In the Nano\nAVCC is connected \ninternally to +5V.  \nThis may cause\nnoise problems.
 Connection ~ 2450 1000
 $Comp
@@ -2394,7 +2394,6 @@ NoConn ~ 3350 6400
 NoConn ~ 3350 6300
 NoConn ~ 5900 5950
 NoConn ~ 4350 5300
-NoConn ~ 2200 4050
 $Comp
 L muSDRx-rescue:SJ1-3523N-dk_Barrel-Audio-Connectors CON2
 U 1 1 5F160AB4
@@ -2437,4 +2436,6 @@ F 12 "Active" H 9300 3150 60  0001 L CNN "Status"
 $EndComp
 Text Notes 4900 3200 0    50   ~ 0
 See note about BW above to the right.
+Text Notes 1750 4700 0    50   ~ 0
+We may need level shifters \nfor using the Nano.  It is 5V \nand the Si5351A is 3.3V.  I \nhave seen some, as yet \nunexplained, errors on I2C \nwithout them.  One Nano\nworks, the other doesn't.
 $EndSCHEMATC

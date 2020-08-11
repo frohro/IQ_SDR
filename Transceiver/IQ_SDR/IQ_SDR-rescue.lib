@@ -76,11 +76,11 @@ X D6 9 -500 0 100 R 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
-# Arduino_Nano_v3.x-MCU_Module
+# Arduino_Nano_v3.x-MCU_Module_0
 #
-DEF Arduino_Nano_v3.x-MCU_Module A 0 40 Y Y 1 F N
+DEF Arduino_Nano_v3.x-MCU_Module_0 A 0 40 Y Y 1 F N
 F0 "A" -200 1025 50 H V R CNN
-F1 "Arduino_Nano_v3.x-MCU_Module" -200 950 50 H V R CNN
+F1 "Arduino_Nano_v3.x-MCU_Module_0" -200 950 50 H V R CNN
 F2 "Module:Arduino_Nano" 150 -950 50 H I L CNN
 F3 "" 0 -1000 50 H I C CNN
 $FPLIST
@@ -317,6 +317,29 @@ A 0 25 25 -899 899 0 1 0 N 0 0 0 50
 A 0 75 25 -899 899 0 1 0 N 0 50 0 100
 X 1 1 0 150 50 D 50 50 1 1 P
 X 2 2 0 -150 50 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# LED_Solid-LED_Solid
+#
+DEF LED_Solid-LED_Solid D 0 40 N N 1 F N
+F0 "D" 0 100 50 H V C CNN
+F1 "LED_Solid-LED_Solid" 0 -100 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+$FPLIST
+ LED*
+ LED_SMD:*
+ LED_THT:*
+$ENDFPLIST
+DRAW
+P 2 0 1 8 -50 -50 -50 50 N
+P 2 0 1 0 -50 0 50 0 F
+P 4 0 1 8 50 -50 50 50 -50 0 50 -50 F
+P 5 0 1 0 -120 -30 -180 -90 -150 -90 -180 -90 -180 -60 N
+P 5 0 1 0 -70 -30 -130 -90 -100 -90 -130 -90 -130 -60 N
+X K 1 -150 0 100 R 50 50 1 1 P
+X A 2 150 0 100 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
