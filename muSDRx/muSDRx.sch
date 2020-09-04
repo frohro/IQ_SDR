@@ -5,8 +5,8 @@ $Descr A 11000 8500
 encoding utf-8
 Sheet 1 1
 Title "muSDRx Receiver"
-Date "2020-07-01"
-Rev "0.1"
+Date "2020-08-12"
+Rev "0.11"
 Comp "Rob Frohne, KL7NA"
 Comment1 "After µSDX: thanks to Guido, PE1NNZ"
 Comment2 ""
@@ -2278,8 +2278,6 @@ Wire Wire Line
 	800  5800 800  5600
 Text Notes 2600 2050 0    50   ~ 0
 Antenna
-Wire Wire Line
-	950  1700 950  2200
 $Comp
 L power:GND #PWR04
 U 1 1 5F0DBDA2
@@ -2438,4 +2436,16 @@ Text Notes 4900 3200 0    50   ~ 0
 See note about BW above to the right.
 Text Notes 1750 4700 0    50   ~ 0
 We may need level shifters \nfor using the Nano.  It is 5V \nand the Si5351A is 3.3V.  I \nhave seen some, as yet \nunexplained, errors on I2C \nwithout them.  One Nano\nworks, the other doesn't.
+Wire Wire Line
+	950  1700 950  2200
+Text Notes 6250 1750 0    50   ~ 0
+0
+Text Notes 6000 1550 0    50   ~ 0
+180\n
+Text Notes 6400 2250 0    50   ~ 0
+90
+Text Notes 6200 2600 0    50   ~ 0
+270
+Text Notes 5200 1300 0    50   ~ 0
+Sequence of clocks:  CLK1, CLK0\n0 degrees:   1,1\n90 degrees:  1,0\n180 degrees: 0,0\n270 degrees: 0,1
 $EndSCHEMATC
