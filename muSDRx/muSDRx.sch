@@ -2026,7 +2026,7 @@ NoConn ~ 7400 4850
 NoConn ~ 5900 5050
 Text Label 5900 4950 2    50   ~ 0
 BUTTON
-Text Notes 2950 4650 0    50   ~ 0
+Text Notes 3050 7150 0    50   ~ 0
 In the Nano\nAVCC is connected \ninternally to +5V.  \nThis may cause\nnoise problems.
 Connection ~ 2450 1000
 $Comp
