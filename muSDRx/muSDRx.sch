@@ -1842,24 +1842,19 @@ F 3 "~" H 7800 4650 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	7950 4650 8700 4650
-Wire Wire Line
-	8700 4600 8700 4650
-Wire Wire Line
-	8700 4700 8700 4650
-Connection ~ 8700 4650
+	7950 4650 8500 4650
 $Comp
 L power:GND #PWR060
 U 1 1 5F98D5DE
-P 8700 4800
-F 0 "#PWR060" H 8700 4550 50  0001 C CNN
-F 1 "GND" H 8705 4627 50  0001 C CNN
-F 2 "" H 8700 4800 50  0001 C CNN
-F 3 "" H 8700 4800 50  0001 C CNN
-	1    8700 4800
+P 8700 4750
+F 0 "#PWR060" H 8700 4500 50  0001 C CNN
+F 1 "GND" H 8705 4577 50  0001 C CNN
+F 2 "" H 8700 4750 50  0001 C CNN
+F 3 "" H 8700 4750 50  0001 C CNN
+	1    8700 4750
 	-1   0    0    -1  
 $EndComp
-Text Notes 8750 4450 0    50   ~ 0
+Text Notes 8700 4000 0    50   ~ 0
 Earphones
 Wire Wire Line
 	7400 4650 7500 4650
@@ -2333,46 +2328,6 @@ NoConn ~ 3350 6400
 NoConn ~ 3350 6300
 NoConn ~ 5900 5950
 NoConn ~ 4350 5300
-$Comp
-L muSDRx-rescue:SJ1-3523N-dk_Barrel-Audio-Connectors CON2
-U 1 1 5F160AB4
-P 9100 4700
-F 0 "CON2" H 8772 4700 60  0000 R CNN
-F 1 "SJ1-3523N" H 8772 4647 60  0001 R CNN
-F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 9300 4900 60  0001 L CNN
-F 3 "https://www.cuidevices.com/product/resource/sj1-352xn.pdf" H 9300 5000 60  0001 L CNN
-F 4 "CP1-3523N-ND" H 9300 5100 60  0001 L CNN "Digi-Key_PN"
-F 5 "SJ1-3523N" H 9300 5200 60  0001 L CNN "MPN"
-F 6 "Connectors, Interconnects" H 9300 5300 60  0001 L CNN "Category"
-F 7 "Barrel - Audio Connectors" H 9300 5400 60  0001 L CNN "Family"
-F 8 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 9300 5500 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/cui-inc/SJ1-3523N/CP1-3523N-ND/738689" H 9300 5600 60  0001 L CNN "DK_Detail_Page"
-F 10 "CONN JACK STEREO 3.5MM R/A" H 9300 5700 60  0001 L CNN "Description"
-F 11 "CUI Inc." H 9300 5800 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 9300 5900 60  0001 L CNN "Status"
-	1    9100 4700
-	-1   0    0    -1  
-$EndComp
-$Comp
-L muSDRx-rescue:SJ1-3523N-dk_Barrel-Audio-Connectors CON1
-U 1 1 5F1644E0
-P 9700 1950
-F 0 "CON1" H 9372 1950 60  0000 R CNN
-F 1 "SJ1-3523N" H 9372 1897 60  0001 R CNN
-F 2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" H 9900 2150 60  0001 L CNN
-F 3 "https://www.cuidevices.com/product/resource/sj1-352xn.pdf" H 9900 2250 60  0001 L CNN
-F 4 "CP1-3523N-ND" H 9900 2350 60  0001 L CNN "Digi-Key_PN"
-F 5 "SJ1-3523N" H 9900 2450 60  0001 L CNN "MPN"
-F 6 "Connectors, Interconnects" H 9900 2550 60  0001 L CNN "Category"
-F 7 "Barrel - Audio Connectors" H 9900 2650 60  0001 L CNN "Family"
-F 8 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" H 9900 2750 60  0001 L CNN "DK_Datasheet_Link"
-F 9 "/product-detail/en/cui-inc/SJ1-3523N/CP1-3523N-ND/738689" H 9900 2850 60  0001 L CNN "DK_Detail_Page"
-F 10 "CONN JACK STEREO 3.5MM R/A" H 9900 2950 60  0001 L CNN "Description"
-F 11 "CUI Inc." H 9900 3050 60  0001 L CNN "Manufacturer"
-F 12 "Active" H 9900 3150 60  0001 L CNN "Status"
-	1    9700 1950
-	-1   0    0    -1  
-$EndComp
 Text Notes 4900 3550 0    50   ~ 0
 See note about BW above to the right.
 Text Notes 1750 4950 0    50   ~ 0
@@ -2471,14 +2426,6 @@ Connection ~ 8750 1650
 Wire Wire Line
 	8400 2400 8750 2400
 Connection ~ 8750 2400
-Wire Wire Line
-	9100 2400 9100 1950
-Wire Wire Line
-	9100 1950 9300 1950
-Wire Wire Line
-	9300 1850 9100 1850
-Wire Wire Line
-	9100 1850 9100 1650
 Wire Wire Line
 	8750 2050 8750 2000
 Connection ~ 8750 2000
@@ -2799,4 +2746,65 @@ Wire Wire Line
 	8400 1750 8400 1650
 Wire Wire Line
 	7700 2400 8100 2400
+$Comp
+L 35RAPC4BHN2:35RAPC4BHN2 J7
+U 1 1 608B0BD2
+P 9600 1850
+F 0 "J7" H 9322 1787 50  0000 R CNN
+F 1 "35RAPC4BHN2" H 9322 1878 50  0000 R CNN
+F 2 "SWITCHCRAFT_35RAPC4BHN2" H 9600 1850 50  0001 L BNN
+F 3 "" H 9600 1850 50  0001 L BNN
+F 4 "1.01 USD" H 9600 1850 50  0001 L BNN "PRICE"
+F 5 "Manufacturer Recommendation" H 9600 1850 50  0001 L BNN "STANDARD"
+F 6 "None" H 9600 1850 50  0001 L BNN "PACKAGE"
+F 7 "Switchcraft" H 9600 1850 50  0001 L BNN "MF"
+F 8 "Conn 3.5MM Stereo Jack F 5 POS Solder RA Thru-Hole 5 Terminal 1 Port" H 9600 1850 50  0001 L BNN "DESCRIPTION"
+F 9 "Good" H 9600 1850 50  0001 L BNN "AVAILABILITY"
+F 10 "35RAPC4BHN2" H 9600 1850 50  0001 L BNN "MP"
+	1    9600 1850
+	-1   0    0    1   
+$EndComp
+NoConn ~ 9300 1750
+NoConn ~ 9300 1850
+$Comp
+L 35RAPC4BHN2:35RAPC4BHN2 J8
+U 1 1 608F6A1C
+P 9000 4550
+F 0 "J8" H 8722 4487 50  0000 R CNN
+F 1 "35RAPC4BHN2" H 8722 4578 50  0000 R CNN
+F 2 "SWITCHCRAFT_35RAPC4BHN2" H 9000 4550 50  0001 L BNN
+F 3 "" H 9000 4550 50  0001 L BNN
+F 4 "1.01 USD" H 9000 4550 50  0001 L BNN "PRICE"
+F 5 "Manufacturer Recommendation" H 9000 4550 50  0001 L BNN "STANDARD"
+F 6 "None" H 9000 4550 50  0001 L BNN "PACKAGE"
+F 7 "Switchcraft" H 9000 4550 50  0001 L BNN "MF"
+F 8 "Conn 3.5MM Stereo Jack F 5 POS Solder RA Thru-Hole 5 Terminal 1 Port" H 9000 4550 50  0001 L BNN "DESCRIPTION"
+F 9 "Good" H 9000 4550 50  0001 L BNN "AVAILABILITY"
+F 10 "35RAPC4BHN2" H 9000 4550 50  0001 L BNN "MP"
+	1    9000 4550
+	-1   0    0    1   
+$EndComp
+NoConn ~ 8700 4450
+NoConn ~ 8700 4550
+Wire Wire Line
+	8700 4350 8500 4350
+Wire Wire Line
+	8500 4350 8500 4650
+Connection ~ 8500 4650
+Wire Wire Line
+	8500 4650 8700 4650
+Wire Wire Line
+	9100 1650 9150 1650
+Wire Wire Line
+	9150 1650 9150 1950
+Wire Wire Line
+	9150 1950 9300 1950
+Wire Wire Line
+	9100 1750 9200 1750
+Wire Wire Line
+	9200 1750 9200 1650
+Wire Wire Line
+	9200 1650 9300 1650
+Wire Wire Line
+	9100 1750 9100 2400
 $EndSCHEMATC

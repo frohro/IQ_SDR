@@ -1,6 +1,48 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
+# 35RAPC4BHN2_35RAPC4BHN2
+#
+DEF 35RAPC4BHN2_35RAPC4BHN2 J 0 40 Y N 1 L N
+F0 "J" -201 221 50 H V L BNN
+F1 "35RAPC4BHN2_35RAPC4BHN2" -201 -301 50 H V L BNN
+F2 "SWITCHCRAFT_35RAPC4BHN2" 0 0 50 H I L BNN
+F3 "" 0 0 50 H I L BNN
+F4 "1.01 USD" 0 0 50 H I L BNN "PRICE"
+F5 "Manufacturer Recommendation" 0 0 50 H I L BNN "STANDARD"
+F6 "None" 0 0 50 H I L BNN "PACKAGE"
+F7 "Switchcraft" 0 0 50 H I L BNN "MF"
+F8 "Conn 3.5MM Stereo Jack F 5 POS Solder RA Thru-Hole 5 Terminal 1 Port" 0 0 50 H I L BNN "DESCRIPTION"
+F9 "Good" 0 0 50 H I L BNN "AVAILABILITY"
+F10 "35RAPC4BHN2" 0 0 50 H I L BNN "MP"
+DRAW
+S -251 -201 -200 199 0 0 0 F
+P 2 0 0 6 -100 50 -150 100 N
+P 2 0 0 6 -50 -200 0 -150 N
+P 2 0 0 6 -50 100 -100 50 N
+P 2 0 0 6 0 -150 50 -200 N
+P 2 0 0 6 50 -200 100 -200 N
+P 2 0 0 6 80 -170 100 -200 N
+P 2 0 0 6 80 70 100 70 N
+P 2 0 0 6 100 -200 120 -170 N
+P 2 0 0 6 100 -170 80 -170 N
+P 2 0 0 6 100 -170 100 -100 N
+P 2 0 0 6 100 70 100 0 N
+P 2 0 0 6 100 70 120 70 N
+P 2 0 0 6 100 100 -50 100 N
+P 2 0 0 6 100 100 80 70 N
+P 2 0 0 6 100 200 -200 200 N
+P 2 0 0 6 120 -170 100 -170 N
+P 2 0 0 6 120 70 100 100 N
+P 2 0 0 6 150 100 100 100 N
+X ~ 1 300 200 200 L 40 40 0 0 P
+X ~ 10 300 -100 200 L 40 40 0 0 P
+X ~ 11 300 0 200 L 40 40 0 0 P
+X ~ 2 300 -200 200 L 40 40 0 0 P
+X ~ 3 300 100 200 L 40 40 0 0 P
+ENDDRAW
+ENDDEF
+#
 # Analog_Switch_SN74CBT3253
 #
 DEF Analog_Switch_SN74CBT3253 U 0 20 Y Y 1 F N
@@ -526,33 +568,6 @@ P 4 0 1 0 60 -50 80 -90 40 -100 60 -50 F
 X B 1 -200 0 100 R 50 50 1 1 I
 X E 2 100 -200 100 U 50 50 1 1 P
 X C 3 100 200 100 D 50 50 1 1 P
-ENDDRAW
-ENDDEF
-#
-# muSDRx-rescue_SJ1-3523N-dk_Barrel-Audio-Connectors
-#
-DEF muSDRx-rescue_SJ1-3523N-dk_Barrel-Audio-Connectors CON 0 0 N Y 1 F N
-F0 "CON" -300 250 60 H V L CNN
-F1 "muSDRx-rescue_SJ1-3523N-dk_Barrel-Audio-Connectors" -50 -250 60 H V C CNN
-F2 "digikey-footprints:Headphone_Jack_2.5mm_SJ1-3523N" 200 200 60 H I L CNN
-F3 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" 200 300 60 H I L CNN
-F4 "CP1-3523N-ND" 200 400 60 H I L CNN "Digi-Key_PN"
-F5 "SJ1-3523N" 200 500 60 H I L CNN "MPN"
-F6 "Connectors, Interconnects" 200 600 60 H I L CNN "Category"
-F7 "Barrel - Audio Connectors" 200 700 60 H I L CNN "Family"
-F8 "https://www.cui.com/product/resource/digikeypdf/sj1-352xn_series.pdf" 200 800 60 H I L CNN "DK_Datasheet_Link"
-F9 "/product-detail/en/cui-inc/SJ1-3523N/CP1-3523N-ND/738689" 200 900 60 H I L CNN "DK_Detail_Page"
-F10 "CONN JACK STEREO 3.5MM R/A" 200 1000 60 H I L CNN "Description"
-F11 "CUI Inc." 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
-DRAW
-S 200 200 -300 -200 0 1 0 f
-P 4 0 1 0 200 0 100 0 50 -50 0 0 N
-P 4 0 1 0 200 100 0 100 -50 50 -100 100 N
-P 6 0 1 0 200 -100 -150 -100 -150 100 -200 100 -200 -50 -150 -50 N
-X S 1 400 -100 200 L 50 50 1 1 P
-X T 2 400 0 200 L 50 50 1 1 P
-X R 3 400 100 200 L 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
