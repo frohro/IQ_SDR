@@ -1,3 +1,11 @@
+#include <Wire.h>
+
+#include <Wire.h>
+
+#include <Wire.h>
+
+#include <si5351.h>
+
 /*
   OpenRadio Quisk Interface 
   Main
@@ -41,7 +49,6 @@
     PSK,<rate>,message	- Send message using Phase Shift Keying, with the specified symbol rate.
 */
 
-#include <Arduino.h>
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
@@ -66,7 +73,7 @@
 #define RX_FREQ 27000000
 #define TX_FREQ 27000000
 #define FREQ_LIMIT_LOWER 100000
-#define FREQ_LIMIT_UPPER 30000000 
+#define FREQ_LIMIT_UPPER 30000000
 
 #define SERIAL_BAUD     57600
 
@@ -322,16 +329,16 @@ int parsePSKFreq(String input){
 //
 
 uint8_t si5351_init(){
-    si5351.init(SI5351_CRYSTAL_LOAD_8PF);
+    si5351.init(SI5351_CRYSTAL_LOAD_8PF,0,0);
     si5351.set_pll(SI5351_PLL_FIXED, SI5351_PLLA);
     // Set output frequencies
     set_rx_freq(RX_FREQ);
     set_tx_freq(TX_FREQ);
 
     // Enable RX, and disable TX by default.
-    si5351.clock_enable(RX_CLOCK,1);
-    si5351.clock_enable(TX_CLOCK,0);
-    si5351.clock_enable(SPARE_CLOCK,0);
+    si5351.output_enable(RX_CLOCK,1);
+    si5351.output_enable(TX_CLOCK,0);
+    si5351.output_enable(SPARE_CLOCK,0);
 
     // Read the status register and return the chip revision ID.
     si5351.update_status();
@@ -345,24 +352,24 @@ static void set_rx_freq(uint32_t freq)
     settings.rx_freq = freq;
 
     // Quadrature mixer requires a 4X LO signal.
-    si5351.set_freq(freq * settings.cal_factor * 4, SI5351_PLL_FIXED,
-                    RX_CLOCK);
-if (freq <= 4.0e6){  // Set the band for the RX filters on the IQ_SDR
+    si5351.set_freq(freq * settings.cal_factor * 4, RX_CLOCK);
+
+	if( freq <= 4.0e6) {
 		digitalWrite(S0, HIGH);
 		digitalWrite(S1, HIGH);
-    }
-if ((freq <= 8.0e6)&&(freq > 4.0e6)){
+	}
+	else if (freq <= 8.0e6) {
 		digitalWrite(S0, LOW);
 		digitalWrite(S1, HIGH);
-    }
-if ((freq <= 16.0e6)&&(freq > 8.0e6)){
+	}
+	else if (freq <= 16.0e6) {
 		digitalWrite(S0, HIGH);
 		digitalWrite(S1, LOW);
-    }
-else {
+	}
+	else {
 		digitalWrite(S0, LOW);
 		digitalWrite(S1, LOW);
-		}				
+	}				
 }
 
 static void set_tx_freq(uint32_t freq)
@@ -371,16 +378,16 @@ static void set_tx_freq(uint32_t freq)
     settings.tx_freq = freq;
 
     // Let driver choose PLL settings. May glitch when changing frequencies.
-    si5351.set_freq(freq * settings.cal_factor, 0, TX_CLOCK);
+    si5351.set_freq(freq * settings.cal_factor, TX_CLOCK);
 }
 
 void tx_enable(){
-    si5351.clock_enable(TX_CLOCK,1);
+    si5351.output_enable(TX_CLOCK,1);
     tx_state = 1;
 }
 
 void tx_disable(){
-    si5351.clock_enable(TX_CLOCK,0);
+    si5351.output_enable(TX_CLOCK,0);
     tx_state = 0;
 }
 
