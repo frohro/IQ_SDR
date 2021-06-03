@@ -1,3 +1,11 @@
+#include <Wire.h>
+
+#include <Wire.h>
+
+#include <Wire.h>
+
+#include <si5351.h>
+
 /*
   OpenRadio Quisk Interface 
   Main
@@ -41,7 +49,6 @@
     PSK,<rate>,message	- Send message using Phase Shift Keying, with the specified symbol rate.
 */
 
-#include <Arduino.h>
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
@@ -66,9 +73,10 @@
 #define RX_FREQ 27000000
 #define TX_FREQ 27000000
 #define FREQ_LIMIT_LOWER 100000
-#define FREQ_LIMIT_UPPER 30000000 
+#define FREQ_LIMIT_UPPER 30000000
 
 #define SERIAL_BAUD     57600
+//#define USE_JOHNSON_COUNTER  // Select this if you have a Johnson counter and need the Si5351 to make signals at 4*freq.
 
 Si5351 si5351;
 
@@ -322,16 +330,16 @@ int parsePSKFreq(String input){
 //
 
 uint8_t si5351_init(){
-    si5351.init(SI5351_CRYSTAL_LOAD_8PF);
+    si5351.init(SI5351_CRYSTAL_LOAD_8PF,0,0);
     si5351.set_pll(SI5351_PLL_FIXED, SI5351_PLLA);
     // Set output frequencies
     set_rx_freq(RX_FREQ);
     set_tx_freq(TX_FREQ);
 
     // Enable RX, and disable TX by default.
-    si5351.clock_enable(RX_CLOCK,1);
-    si5351.clock_enable(TX_CLOCK,0);
-    si5351.clock_enable(SPARE_CLOCK,0);
+    si5351.output_enable(RX_CLOCK,1);
+    si5351.output_enable(TX_CLOCK,0);
+    si5351.output_enable(SPARE_CLOCK,0);
 
     // Read the status register and return the chip revision ID.
     si5351.update_status();
@@ -342,27 +350,59 @@ uint8_t si5351_init(){
 static void set_rx_freq(uint32_t freq)
 {
     // Save actual value
-    settings.rx_freq = freq;
+    settings.rx_freq = freq; // (Hz)
 
-    // Quadrature mixer requires a 4X LO signal.
+#ifdef USE_JOHNSON_COUNTER
+    // This is for models where quadrature mixer requires a 4X LO signal.
     si5351.set_freq(freq * settings.cal_factor * 4, SI5351_PLL_FIXED,
                     RX_CLOCK);
-if (freq <= 4.0e6){  // Set the band for the RX filters on the IQ_SDR
+#else
+	// This is for models that use the Si5351 to produce the I/Q on CLK0 and CLK1.
+	unsigned long long pll_freq;
+	uint_fast8_t mult;
+	
+	// mult must be less than 128 (7 bits) according to documentation
+	if (freq >= 26470588){
+		mult = 22;
+	} else if (freq >= 18000000) {
+		mult = 34;
+	} else if(freq > 12000000) {
+		mult = 50;
+	} else if (freq >= 8000000) {
+		mult = 75;
+	} else if (freq > 5357143) {
+		mult = 112;
+	} else {
+		mult = 128;
+	}
+	pll_freq = mult*freq;
+	si5351.set_freq_manual(freq, pll_freq, SI5351_CLK0);
+	si5351.set_freq_manual(freq, pll_freq, SI5351_CLK1);
+	// Now we can set CLK1 to have a 90 deg phase shift by entering
+	// mult in the CLK1 phase register, since the ratio of the PLL to
+	// the clock frequency is mult.
+	si5351.set_phase(SI5351_CLK0, 0);
+	si5351.set_phase(SI5351_CLK1, mult);
+	// We need to reset the PLL before they will be in phase alignment
+	si5351.pll_reset(SI5351_PLLA);
+#endif
+	// This is for switching bands in some models.
+	if( freq <= 4000000) {
 		digitalWrite(S0, HIGH);
 		digitalWrite(S1, HIGH);
-    }
-if ((freq <= 8.0e6)&&(freq > 4.0e6)){
+	}
+	else if (freq <= 8000000) {
 		digitalWrite(S0, LOW);
 		digitalWrite(S1, HIGH);
-    }
-if ((freq <= 16.0e6)&&(freq > 8.0e6)){
+	}
+	else if (freq <= 16000000) {
 		digitalWrite(S0, HIGH);
 		digitalWrite(S1, LOW);
-    }
-else {
+	}
+	else {
 		digitalWrite(S0, LOW);
 		digitalWrite(S1, LOW);
-		}				
+	}				
 }
 
 static void set_tx_freq(uint32_t freq)
@@ -371,16 +411,16 @@ static void set_tx_freq(uint32_t freq)
     settings.tx_freq = freq;
 
     // Let driver choose PLL settings. May glitch when changing frequencies.
-    si5351.set_freq(freq * settings.cal_factor, 0, TX_CLOCK);
+    si5351.set_freq(freq * settings.cal_factor, TX_CLOCK);
 }
 
 void tx_enable(){
-    si5351.clock_enable(TX_CLOCK,1);
+    si5351.output_enable(TX_CLOCK,1);
     tx_state = 1;
 }
 
 void tx_disable(){
-    si5351.clock_enable(TX_CLOCK,0);
+    si5351.output_enable(TX_CLOCK,0);
     tx_state = 0;
 }
 
