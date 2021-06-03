@@ -4,4 +4,5 @@
   (lib (name kilibs)(type KiCad)(uri ${KIPRJMOD}/kilibs.pretty-master)(options "")(descr ""))
   (lib (name SMA)(type KiCad)(uri ${KIPRJMOD}/SMA.pretty)(options "")(descr ""))
   (lib (name SparkFun-DigitalIC)(type KiCad)(uri ${KIPRJMOD}/SparkFun-DigitalIC.pretty)(options "")(descr ""))
+  (lib (name IQ_SDR)(type KiCad)(uri ${KIPRJMOD}/IQ_SDR.pretty)(options "")(descr ""))
 )

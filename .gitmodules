@@ -1,6 +1,6 @@
-[submodule "Transceiver/IQ_SDR/IQ_SDR/digikey-kicad-library"]
-	path = Transceiver/IQ_SDR/IQ_SDR/digikey-kicad-library
+[submodule "Transceiver/IQ_SDR/digikey-kicad-library"]
+	path = Transceiver/IQ_SDR/digikey-kicad-library
 	url = https://github.com/Digi-Key/digikey-kicad-library.git
-[submodule "Receiver/IQ_SDR/digikey-kicad-library"]
-	path = Receiver/IQ_SDR/digikey-kicad-library
+[submodule "muSDR/digikey-kicad-library"]
+	path = muSDRx/digikey-kicad-library
 	url = https://github.com/Digi-Key/digikey-kicad-library.git
