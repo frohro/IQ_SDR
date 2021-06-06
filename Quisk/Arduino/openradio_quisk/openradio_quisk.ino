@@ -68,6 +68,7 @@
 #define FREQ_LIMIT_LOWER 100000
 #define FREQ_LIMIT_UPPER 30000000
 
+
 #define SERIAL_BAUD     57600
 //#define USE_JOHNSON_COUNTER  // Select this if you have a Johnson counter and need the Si5351 to make signals at 4*freq.
 
@@ -351,15 +352,15 @@ static void set_rx_freq(uint32_t freq)
                     RX_CLOCK);
 #else
 	// This is for models that use the Si5351 to produce the I/Q on CLK0 and CLK1.
-	unsigned long long pll_freq;
+	uint64_t pll_freq;
 	uint_fast8_t mult;
-	
 	// mult must be less than 128 (7 bits) according to documentation
 	if (freq >= 26470588){
 		mult = 22;
 	} else if (freq >= 18000000) {
 		mult = 34;
 	} else if(freq > 12000000) {
+    Serial.println("in the right multiplier.");
 		mult = 50;
 	} else if (freq >= 8000000) {
 		mult = 75;
@@ -368,7 +369,8 @@ static void set_rx_freq(uint32_t freq)
 	} else {
 		mult = 128;
 	}
-	pll_freq = mult*freq;
+  freq = (uint64_t) (freq*100ULL*settings.cal_factor);
+	pll_freq = (uint64_t)mult*freq;
 	si5351.set_freq_manual(freq, pll_freq, SI5351_CLK0);
 	si5351.set_freq_manual(freq, pll_freq, SI5351_CLK1);
 	// Now we can set CLK1 to have a 90 deg phase shift by entering

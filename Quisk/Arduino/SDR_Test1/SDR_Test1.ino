@@ -9,8 +9,8 @@ void setup()
 {
   bool i2c_found;
   i2c_found = si5351.init(SI5351_CRYSTAL_LOAD_8PF, 0, 0);
-  si5351.set_freq(4*1400000000ULL, SI5351_CLK0);
-  Serial.begin(115200);
+  si5351.set_freq(1400000000ULL, SI5351_CLK0);
+  Serial.begin(57600);
 }
 
 
