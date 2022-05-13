@@ -50,7 +50,7 @@
 
 #warning __PGMSPACE_H_
 
-#include <EEPROM.h>
+//#include <EEPROM.h>
 #include <Wire.h>
 
 #include "si5351.h"
