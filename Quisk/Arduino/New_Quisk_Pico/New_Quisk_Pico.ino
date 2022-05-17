@@ -1,3 +1,6 @@
+#include <si5351.h>
+
+
 /*
   OpenRadio Quisk Interface 
   Main
@@ -54,7 +57,7 @@
 
 #include "settings.h"
 #include "pins.h"
-#include "ring_buffer.h"
+//#include "ring_buffer.h"
 
 #define VERSION "0.3"
 
@@ -143,7 +146,7 @@ void setup(){
 //    set_tx_freq(settings.tx_freq);
 
 // Perform Si5351 calibration
-    uint64_t rx_freq = 100002600ULL;  // Where you receive WWV before calibration...
+    uint64_t rx_freq = 1000024200ULL;  // Where you receive WWV before calibration...
     uint64_t target_freq = 1000000000ULL; // 10 MHz, in hundredths of hertz
     uint32_t cal_factor = (int32_t)(target_freq - rx_freq);
     si5351.set_correction(cal_factor, SI5351_PLL_INPUT_XO);
