@@ -22,11 +22,6 @@ from __future__ import division
 name_of_sound_capt = "pulse"
 name_of_sound_play = "pulse"
 
-# SERIAL PORT SETTINGS
-# Set this as appropriate for your OS.
-openradio_serial_port = "/dev/ttyUSB0"
-openradio_serial_rate = 57600
-
 
 # OpenRadio Frequency limits.
 # These are just within the limits set in the openradio_quisk firmware.
@@ -40,9 +35,22 @@ from quisk_hardware_model import Hardware as BaseHardware
 
 class Hardware(BaseHardware):
   def open(self):
+    # SERIAL PORT SETTINGS
+    # Set this as appropriate for your OS.
+    openradio_serial_port = "/dev/ttyUSB0"
+    openradio_serial_rate = 57600
     # Called once to open the Hardware
     # Open the serial port.
-    self.or_serial = serial.Serial(openradio_serial_port,openradio_serial_rate,timeout=3)
+    try:
+    	self.or_serial = serial.Serial(openradio_serial_port,openradio_serial_rate,timeout=3)
+    	self.or_serial = serial.Serial(openradio_serial_port,openradio_serial_rate,timeout=3)
+    except serial.serialutil.SerialException:
+    	openradio_serial_port = "/dev/ttyUSB1" # Set to the second serial port for your OS.
+    try:
+    	self.or_serial = serial.Serial(openradio_serial_port,openradio_serial_rate,timeout=3)
+    except serial.serialutil.SerialException:
+    	print ("Arduino not connected")
+    	raise
     print("Opened Serial Port.")
     # Wait for the Arduino Nano to restart and boot.
     time.sleep(2)
