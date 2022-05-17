@@ -62,8 +62,8 @@
 #define VERSION "0.3"
 
 // Default output frequency
-#define RX_FREQ 27000000
-#define TX_FREQ 27000000
+#define RX_FREQ 14200000
+#define TX_FREQ 14200000
 #define FREQ_LIMIT_LOWER 100000
 #define FREQ_LIMIT_UPPER 30000000 
 
@@ -134,16 +134,7 @@ void setup(){
     delay(300);
     digitalWrite(TX_RX_SWITCH, LOW);
 
-//    if (!read_settings()) {
-        //Serial.println(F("Resetting settings to defaults"));
-        settings.magic = SETTINGS_MAGIC;
-        settings.rx_freq = RX_FREQ;
-        settings.tx_freq = TX_FREQ;
-        settings.cal_factor = 1.0f;
-//    }
-//
-//    set_rx_freq(settings.rx_freq);
-//    set_tx_freq(settings.tx_freq);
+
 
 // Perform Si5351 calibration
     uint64_t rx_freq = 1000024200ULL;  // Where you receive WWV before calibration...
@@ -152,8 +143,17 @@ void setup(){
     si5351.set_correction(cal_factor, SI5351_PLL_INPUT_XO);
     si5351.set_pll(SI5351_PLL_FIXED, SI5351_PLLA);
     si5351.pll_reset(SI5351_PLLA);
-    si5351.set_freq(target_freq, SI5351_CLK0);
 
+   //    if (!read_settings()) {
+        //Serial.println(F("Resetting settings to defaults"));
+        settings.magic = SETTINGS_MAGIC;
+        settings.rx_freq = RX_FREQ;
+        settings.tx_freq = TX_FREQ;
+        settings.cal_factor = cal_factor;
+//    }
+    
+    set_rx_freq(settings.rx_freq);
+    set_tx_freq(settings.tx_freq);
 }
 
 void loop(){
@@ -357,11 +357,11 @@ uint8_t si5351_init(){
 static void set_rx_freq(uint32_t freq)
 {
     // Save actual value
- //   settings.rx_freq = freq;
+    settings.rx_freq = freq;
 
- #ifdef USE_JOHNSON_COUNTER
+#ifdef USE_JOHNSON_COUNTER
     // This is for models where quadrature mixer requires a 4X LO signal.
-    si5351.set_freq(freq * settings.cal_factor * 4, SI5351_PLL_FIXED,
+    si5351.set_freq(freq * 4, SI5351_PLL_FIXED,
                     RX_CLOCK);
 #else
  // This is for models that use the Si5351 to produce the I/Q on CLK0 and CLK1.
@@ -382,7 +382,7 @@ static void set_rx_freq(uint32_t freq)
   } else {
     mult = 128;
   }
-  freq = (uint64_t) (freq*100ULL*settings.cal_factor);
+  freq = (uint64_t) (freq*100ULL);
   pll_freq = (uint64_t)mult*freq;
   si5351.set_freq_manual(freq, pll_freq, SI5351_CLK0);
   si5351.set_freq_manual(freq, pll_freq, SI5351_CLK1);
@@ -418,7 +418,7 @@ static void set_tx_freq(uint32_t freq)
     settings.tx_freq = freq;
 
     // Let driver choose PLL settings. May glitch when changing frequencies.
-    si5351.set_freq(freq * settings.cal_factor, (si5351_clock)0);
+    si5351.set_freq(freq, (si5351_clock)0);
 }
 
 void tx_enable(){
