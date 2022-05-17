@@ -142,6 +142,14 @@ void setup(){
 //    set_rx_freq(settings.rx_freq);
 //    set_tx_freq(settings.tx_freq);
 
+// Perform Si5351 calibration
+    uint64_t rx_freq = 100002600ULL;  // Where you receive WWV before calibration...
+    uint64_t target_freq = 1000000000ULL; // 10 MHz, in hundredths of hertz
+    uint32_t cal_factor = (int32_t)(target_freq - rx_freq);
+    si5351.set_correction(cal_factor, SI5351_PLL_INPUT_XO);
+    si5351.set_pll(SI5351_PLL_FIXED, SI5351_PLLA);
+    si5351.pll_reset(SI5351_PLLA);
+    si5351.set_freq(target_freq, SI5351_CLK0);
 
 }
 
