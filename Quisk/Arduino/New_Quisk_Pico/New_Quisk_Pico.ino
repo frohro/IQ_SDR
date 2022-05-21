@@ -1,5 +1,7 @@
 #include <si5351.h>
 
+#include <si5351.h>
+
 
 /*
   OpenRadio Quisk Interface 
@@ -61,6 +63,7 @@
 
 #define VERSION "0.3"
 
+#define USE_JOHNSON_COUNTER
 // Default output frequency
 #define RX_FREQ 14200000
 #define TX_FREQ 14200000
@@ -361,8 +364,7 @@ static void set_rx_freq(uint32_t freq)
 
 #ifdef USE_JOHNSON_COUNTER
     // This is for models where quadrature mixer requires a 4X LO signal.
-    si5351.set_freq(freq * 4, SI5351_PLL_FIXED,
-                    RX_CLOCK);
+    si5351.set_freq(freq * 4, RX_CLOCK);
 #else
  // This is for models that use the Si5351 to produce the I/Q on CLK0 and CLK1.
   uint64_t pll_freq;
